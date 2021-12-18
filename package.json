@@ -13,7 +13,7 @@
     "validate": "jest",
     "diff": "ts-node scripts/diff.ts",
     "update": "ts-node scripts/update.ts",
-    "test": "yarn jest && prettier --check \"./src/**/*.ts\" && eslint --ext=.ts src/"
+    "test": "yarn jest && yarn prettier --check \"./src/**/*.ts\" && yarn eslint --ext=.ts src/"
   },
   "prettier": "@valora/prettier-config",
   "repository": "git@github.com:valora-inc/rtdb-data.git",
@@ -41,6 +41,7 @@
     "eslint-plugin-react-native": "^4.0.0",
     "husky": "^7.0.4",
     "jest": "^27.4.5",
+    "prettier": "^2.5.1",
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0"
   }
