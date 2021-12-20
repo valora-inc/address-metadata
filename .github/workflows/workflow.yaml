@@ -1,0 +1,63 @@
+name: Workflow
+
+on:
+  # Run on pushes to main..
+  push:
+    branches:
+      - main
+  # ..and any pull request.
+  pull_request:
+
+concurrency:
+  group: env-${{ github.ref }}
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          check-latest: true
+      - run: yarn
+      - run: yarn test
+  update-alfajores:
+    name: Update Alfajores RTDB
+    if: github.ref == 'refs/heads/main'
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: google-github-actions/setup-gcloud@master
+        with:
+          project_id: celo-mobile-alfajores
+          service_account_key: ${{ secrets.ALFAJORES_SERVICE_ACCOUNT_KEY }}
+          export_default_credentials: true
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          check-latest: true
+      - run: yarn
+      - run: yarn update --project=alfajores --database-url=https://celo-mobile-alfajores.firebaseio.com/
+  update-mainnet:
+    name: Update Mainnet RTDB
+    if: github.ref == 'refs/heads/main'
+    needs:
+      - update-alfajores
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: google-github-actions/setup-gcloud@master
+        with:
+          project_id: celo-mobile-mainnet
+          service_account_key: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
+          export_default_credentials: true
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          check-latest: true
+      - run: yarn
+      - run: yarn update --project=mainnet --database-url=https://celo-mobile-mainnet.firebaseio.com/
