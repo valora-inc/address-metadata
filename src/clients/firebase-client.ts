@@ -9,6 +9,7 @@ export class FirebaseClient {
   constructor(config: Config) {
     this.config = config
     this.firebaseApp = admin.initializeApp({
+      credential: admin.credential.applicationDefault(),
       databaseURL: config.databaseUrl,
     })
     this.firebaseDb = admin.database()
