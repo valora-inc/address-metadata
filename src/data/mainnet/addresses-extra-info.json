@@ -211,5 +211,9 @@
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/celo-mobile-alfajores.appspot.com/o/images%2Fcelo.jpg?alt=media&token=fff87029-c779-46d1-b8f5-765cd91ebe0f",
     "isCeloRewardSender" : true,
     "name" : "CELO Rewards"
+  },
+  "0x8a37f0290ae85d08522d2a605617e76128fd0712" : {
+    "name": "Ramp",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/celo-mobile-mainnet.appspot.com/o/images%2Framp.png?alt=media"
   }
 }
