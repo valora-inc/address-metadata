@@ -1,4 +1,4 @@
-# rtdb-data
+# address-metadata
 
 This repository contains utilities and automation for updating static data in Firebase's RTDB.
 
@@ -15,10 +15,10 @@ environments during CICD, on a merge to `main`.
 This repository also contains some nifty utilities. Running `yarn validate` will validate all the JSON blobs against
 their corresponding schemas, and will fail if any of the JSON blobs are poorly formed.
 
-`yarn diff --environment={mainnet|alfajores} --database-url={URL to Firebase RTDB location}` will display a
+`yarn diff --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}` will display a
 diff between the local JSON contents and the state within RTDB, much like `git diff`.
 
-`yarn update --environment={mainnet|alfajores} --database-url={URL to Firebase RTDB location}` will actually perform
+`yarn update --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}` will actually perform
 RTDB updates based off the local state. If some local JSON blob fails to validate, it will not be updated.
 Similarly, if the local state is already consistent with that in RTDB, we will not perform any write.
 
@@ -37,7 +37,7 @@ yarn validate
 ### Diff
 
 ```
-yarn diff --environment={mainnet|alfajores} --database-url={URL to Firebase RTDB location}
+yarn diff --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}
 ```
 
 ### Update RTDB
@@ -45,5 +45,5 @@ yarn diff --environment={mainnet|alfajores} --database-url={URL to Firebase RTDB
 This is done automatically during CICD; you should *not* need to run this locally.
 
 ```
-yarn update --environment={mainnet|alfajores} --database-url={URL to Firebase RTDB location}
+yarn update --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}
 ```

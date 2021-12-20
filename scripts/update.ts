@@ -7,10 +7,10 @@ async function main() {
   const config = loadConfig()
   const firebaseClient = new FirebaseClient(config)
 
-  const networkMetadata = allMetadata[config.environment]
+  const projectMetadata = allMetadata[config.project]
 
-  console.log(`Updating RTDB data for the ${config.environment} environment...`)
-  for (const {data, schema, rtdbLocation} of networkMetadata) {
+  console.log(`Updating RTDB data for the ${config.project} GCP project...`)
+  for (const {data, schema, rtdbLocation} of projectMetadata) {
     const validationResult = schema.validate(data)
     if (validationResult.error) {
       console.log(`Error while validating schema for ${rtdbLocation}, skipping: ${validationResult.error}`)
@@ -27,4 +27,9 @@ async function main() {
   }
 }
 
-main().then(() => (process.exit(0)))
+main()
+  .then(() => (process.exit(0)))
+  .catch((error) => {
+    console.log(`Error while updating RTDB data: ${error}`)
+    process.exit(1)
+  })

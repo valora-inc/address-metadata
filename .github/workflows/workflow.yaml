@@ -41,7 +41,7 @@ jobs:
           node-version: '16'
           check-latest: true
       - run: yarn
-      - run: yarn update --environment=alfajores --database-url=https://celo-mobile-alfajores.firebaseio.com/
+      - run: yarn update --project=alfajores --database-url=https://celo-mobile-alfajores.firebaseio.com/
   update-mainnet:
     name: Update Mainnet RTDB
     if: github.ref == 'refs/heads/main'
@@ -60,4 +60,4 @@ jobs:
           node-version: '16'
           check-latest: true
       - run: yarn
-      - run: yarn update --environment=mainnet --database-url=https://celo-mobile-mainnet.firebaseio.com/
+      - run: yarn update --project=mainnet --database-url=https://celo-mobile-mainnet.firebaseio.com/

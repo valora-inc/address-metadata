@@ -7,6 +7,6 @@ export interface RTDBMetadata {
 }
 
 export interface Config {
-  environment: string
+  project: string
   databaseUrl: string
 }

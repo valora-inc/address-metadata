@@ -7,8 +7,8 @@ export function loadConfig(): Config {
 
   const argv = yargs
     .env('')
-    .option('environment', {
-      description: 'Environment to update RTDB',
+    .option('project', {
+      description: 'Project to update RTDB',
       example: 'alfajores',
       type: 'string',
       choices: ['mainnet', 'alfajores'],
@@ -21,7 +21,7 @@ export function loadConfig(): Config {
     }).argv
 
   return {
-    environment: argv.environment,
+    project: argv.project,
     databaseUrl: argv['database-url'],
   }
 }

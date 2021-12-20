@@ -1,5 +1,5 @@
 {
-  "name": "rtdb-data",
+  "name": "address-metadata",
   "version": "0.0.1",
   "description": "Package for storing and updating static RTDB data",
   "private": true,
@@ -17,7 +17,8 @@
   },
   "prettier": "@valora/prettier-config",
   "repository": "git@github.com:valora-inc/rtdb-data.git",
-  "author": "Joseph Bergeron <jophish126@gmail.com>",
+  "author": "Valora Inc",
+  "contributors": ["Joseph Bergeron <jophish126@gmail.com>"],
   "license": "MIT",
   "dependencies": {
     "@types/node": "^17.0.0",
