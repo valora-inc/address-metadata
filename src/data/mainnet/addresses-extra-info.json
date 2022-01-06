@@ -202,6 +202,10 @@
     "isCeloRewardSender" : false,
     "name" : "CELO Network"
   },
+  "0xf60d112c55aef2a97fc434c84a5e3d9e91af75f6": {
+    "name": "Nomspace",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/celo-mobile-mainnet.appspot.com/o/images%2Fnomspace.jpeg?alt=media"
+  },
   "0xfaa7649e51ec69abf7ba21422a433896bbd9c3ca" : {
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/celo-mobile-alfajores.appspot.com/o/images%2Fcelo.jpg?alt=media&token=fff87029-c779-46d1-b8f5-765cd91ebe0f",
     "isCeloRewardSender" : true,
