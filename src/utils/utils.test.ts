@@ -55,4 +55,22 @@ describe('Map Nested Json Into', () => {
     const result = mapNestedJsonIntoPlain(inputJson)
     expect(result).toMatchObject(expectedJson)
   })
+
+  it('should map array to object with indexes as key', () => {
+    const inputJson = {
+      key1: ['this', 'is', 'a', 'test'],
+      key2: 3,
+    }
+
+    const expectedJson = {
+      'key1/0': 'this',
+      'key1/1': 'is',
+      'key1/2': 'a',
+      'key1/3': 'test',
+      key2: 3,
+    }
+
+    const result = mapNestedJsonIntoPlain(inputJson)
+    expect(result).toMatchObject(expectedJson)
+  })
 })

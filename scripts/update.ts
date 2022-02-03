@@ -22,7 +22,7 @@ async function main() {
       } else {
         if (shouldOverride) {
           await firebaseClient.writeToPath(rtdbLocation, data)
-          console.log(`Written data at ${rtdbLocation}.`)
+          console.log(`Wrote data to ${rtdbLocation}.`)
         } else {
           await firebaseClient.updateToPath(rtdbLocation, data)
           console.log(`Updated data at ${rtdbLocation}.`)
