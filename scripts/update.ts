@@ -10,7 +10,7 @@ async function main() {
   const projectMetadata = allMetadata[config.project]
 
   console.log(`Updating RTDB data for the ${config.project} GCP project...`)
-  for (const {data, schema, rtdbLocation} of projectMetadata) {
+  for (const {data, schema, rtdbLocation, shouldOverride} of projectMetadata) {
     const validationResult = schema.validate(data)
     if (validationResult.error) {
       console.log(`Error while validating schema for ${rtdbLocation}, skipping: ${validationResult.error}`)
@@ -18,10 +18,15 @@ async function main() {
       const rtdbData = await firebaseClient.readFromPath(rtdbLocation)
       const diff = diffString(rtdbData, data)
       if (!diff) {
-	console.log(`Diff is empty for data at ${rtdbLocation}, skipping...`)
+        console.log(`Diff is empty for data at ${rtdbLocation}, skipping...`)
       } else {
-	await firebaseClient.writeToPath(rtdbLocation, data)
-	console.log(`Updated data at ${rtdbLocation}.`)
+        if (shouldOverride) {
+          await firebaseClient.writeToPath(rtdbLocation, data)
+          console.log(`Written data at ${rtdbLocation}.`)
+        } else {
+          await firebaseClient.updateToPath(rtdbLocation, data)
+          console.log(`Updated data at ${rtdbLocation}.`)
+         } 
       }
     }
   }
