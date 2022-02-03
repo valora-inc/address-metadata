@@ -40,6 +40,10 @@ yarn validate
 yarn diff --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}
 ```
 
+#### Knonw issues
+
+For nodes without overrides, it may happen that there is always a diff between the data in `data` folder and the data in firebase.
+
 ### Update RTDB
 
 This is done automatically during CICD; you should *not* need to run this locally.
