@@ -42,7 +42,7 @@ yarn diff --project={mainnet|alfajores} --database-url={URL to Firebase RTDB loc
 
 #### Knonw issues
 
-For nodes without overrides, it may happen that there is always a diff between the data in `data` folder and the data in firebase.
+When updating nodes without overrides, there is no check to avoid sending the update request even if there is no update (e.g. info in firebase is already ok).
 
 ### Update RTDB
 

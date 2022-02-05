@@ -1,4 +1,4 @@
-import { mapNestedJsonIntoPlain } from './utils'
+import { deleteMissingKeysUpdateRequest, mapNestedJsonIntoPlain } from './utils'
 
 describe('Map Nested Json Into', () => {
   it('should map correctly when the json contains one level', () => {
@@ -72,5 +72,44 @@ describe('Map Nested Json Into', () => {
 
     const result = mapNestedJsonIntoPlain(inputJson)
     expect(result).toMatchObject(expectedJson)
+  })
+})
+
+describe('Delete Missing Keys UpdateRequest', () => {
+  it('return expected update request when there are missing keys', () => {
+    const expected = {
+      key1: 1,
+      key2: 'value',
+    }
+
+    const current = {
+      key1: 2,
+      key3: 'shouldBeDeleted',
+    }
+
+    const updateObject = deleteMissingKeysUpdateRequest(expected, current)
+
+    const expectedResult = {
+      key3: null,
+    }
+
+    expect(updateObject).toMatchObject(expectedResult)
+  })
+
+  it('return empty update request when there are not missing keys', () => {
+    const expected = {
+      key1: 1,
+      key2: 'value',
+      key3: 'extra',
+    }
+
+    const current = {
+      key1: 2,
+      key2: 'shouldNotBeDeleted',
+    }
+
+    const updateObject = deleteMissingKeysUpdateRequest(expected, current)
+
+    expect(updateObject).toMatchObject({})
   })
 })
