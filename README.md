@@ -42,7 +42,7 @@ yarn diff --project={mainnet|alfajores} --database-url={URL to Firebase RTDB loc
 
 #### Knonw issues
 
-When updating nodes without overrides, there is no check to avoid sending the update request even if there is no update (e.g. info in firebase is already ok).
+When updating nodes without overrides, there is no check to avoid sending the update request even if there is no update (i.e. info in firebase is already ok).
 
 ### Update RTDB
 

@@ -25,7 +25,7 @@ async function main() {
           await firebaseClient.writeToPath(rtdbLocation, data)
           console.log(`Wrote data to ${rtdbLocation}.`)
         } else {
-          var updateRequest = data
+          let updateRequest = data
           if (overrideType.deleteMissingKeys) {
             const deleteMissingKeys = deleteMissingKeysUpdateRequest(data, rtdbData)
             updateRequest = { ...updateRequest, ...deleteMissingKeys }
