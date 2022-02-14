@@ -40,6 +40,10 @@ yarn validate
 yarn diff --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}
 ```
 
+#### Knonw issues
+
+When updating nodes without overrides, there is no check to avoid sending the update request even if there is no update (i.e. info in firebase is already ok).
+
 ### Update RTDB
 
 This is done automatically during CICD; you should *not* need to run this locally.

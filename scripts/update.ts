@@ -2,6 +2,7 @@ import { diffString } from 'json-diff'
 import { loadConfig } from '../src/config'
 import { FirebaseClient } from '../src/clients/firebase-client'
 import allMetadata from '../src/data/'
+import { deleteMissingKeysUpdateRequest } from '../src/utils/utils'
 
 async function main() {
   const config = loadConfig()
@@ -10,7 +11,7 @@ async function main() {
   const projectMetadata = allMetadata[config.project]
 
   console.log(`Updating RTDB data for the ${config.project} GCP project...`)
-  for (const {data, schema, rtdbLocation} of projectMetadata) {
+  for (const {data, schema, rtdbLocation, overrideType} of projectMetadata) {
     const validationResult = schema.validate(data)
     if (validationResult.error) {
       console.log(`Error while validating schema for ${rtdbLocation}, skipping: ${validationResult.error}`)
@@ -18,10 +19,21 @@ async function main() {
       const rtdbData = await firebaseClient.readFromPath(rtdbLocation)
       const diff = diffString(rtdbData, data)
       if (!diff) {
-	console.log(`Diff is empty for data at ${rtdbLocation}, skipping...`)
+        console.log(`Diff is empty for data at ${rtdbLocation}, skipping...`)
       } else {
-	await firebaseClient.writeToPath(rtdbLocation, data)
-	console.log(`Updated data at ${rtdbLocation}.`)
+        if (overrideType.shouldOverride) {
+          await firebaseClient.writeToPath(rtdbLocation, data)
+          console.log(`Wrote data to ${rtdbLocation}.`)
+        } else {
+          let updateRequest = data
+          if (overrideType.deleteMissingKeys) {
+            const deleteMissingKeys = deleteMissingKeysUpdateRequest(data, rtdbData)
+            updateRequest = { ...updateRequest, ...deleteMissingKeys }
+          }
+          // TODO: Avoid updating the node if we already know there aren't changes
+          await firebaseClient.updateToPath(rtdbLocation, updateRequest)
+          console.log(`Updated data at ${rtdbLocation}.`)
+        }
       }
     }
   }
