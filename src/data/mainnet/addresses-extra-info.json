@@ -65,6 +65,10 @@
     "isCeloRewardSender" : true,
     "name" : "CELO Rewards"
   },
+  "0x572ff3ed7217616e8dee6ea72a065c17c5d62a7f" : {
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/celo-mobile-mainnet.appspot.com/o/images%2FCeloTax.jpeg?alt=media",
+    "name" : "Celo Tax"
+  },
   "0x57c46e439ae70cd15234f171aa8afc535f0f50c3" : {
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/celo-mobile-alfajores.appspot.com/o/images%2Fcelo.jpg?alt=media",
     "isCeloRewardSender" : false,
@@ -140,6 +144,10 @@
   "0x9be36dcc1ccebf6e926db0ae46996c59548ca190" : {
     "imageUrl" : "https://valoraapp.com/_next/static/images/icon-62b90ddabe4910b9c5d55ecabf817aa8.png",
     "name" : "DeFi Competition"
+  },
+  "0x99300109Cd3BccC0eE1c535b9bB0b5f4A6a2aDb4" : {
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/celo-mobile-mainnet.appspot.com/o/images%2Funchained.jpeg?alt=media",
+    "name" : "Unchain"
   },
   "0xa203bbf51a5bc4a8a82f8e145d01d0333471d411" : {
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/celo-mobile-mainnet.appspot.com/o/images%2Fdeposit.png?alt=media",
