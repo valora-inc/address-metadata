@@ -122,6 +122,10 @@
     "isCeloRewardSender" : true,
     "name" : "CELO Rewards"
   },
+  "0x8130314f4aa56a89f42faeaa69e7bfa04456ccec": {
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/celo-mobile-mainnet.appspot.com/o/images%2Fsupercharge_logo.png?alt=media",
+    "name": "Supercharge"
+  },
   "0x8af1400045e713d2f833ec6d1d76c2f0ea675418" : {
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/celo-mobile-alfajores.appspot.com/o/images%2Fcelo.jpg?alt=media&token=fff87029-c779-46d1-b8f5-765cd91ebe0f",
     "isCeloRewardSender" : true,
