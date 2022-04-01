@@ -228,19 +228,19 @@
     "name" : "Test Token",
     "symbol" : "TT"
   },
-  "0x7c64ad5f9804458b8c9f93f7300c15d55956ac2a": {
-    "address": "0x7c64ad5f9804458b8c9f93f7300c15d55956ac2a",
-    "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_SYMM.png",
-    "name": "Symmetric",
-    "symbol": "SYMM"
-  },
   "0x7d00cd74ff385c955ea3d79e47bf06bd7386387d" : {
     "address" : "0x7d00cd74ff385c955ea3d79e47bf06bd7386387d",
     "decimals" : 18,
     "imageUrl" : "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_mCELO.png",
     "name" : "Moola interest bearing CELO",
     "symbol" : "mCELO"
+  },
+  "0x8427bd503dd3169ccc9aff7326c15258bc305478": {
+    "address": "0x8427bd503dd3169ccc9aff7326c15258bc305478",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_SYMM.png",
+    "name": "Symmetric",
+    "symbol": "SYMM"
   },
   "0x8e3670fd7b0935d3fe832711debfe13bb689b690" : {
     "address" : "0x8e3670fd7b0935d3fe832711debfe13bb689b690",
