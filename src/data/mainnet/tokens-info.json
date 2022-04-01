@@ -228,6 +228,13 @@
     "name" : "Test Token",
     "symbol" : "TT"
   },
+  "0x7c64ad5f9804458b8c9f93f7300c15d55956ac2a": {
+    "address": "0x7c64ad5f9804458b8c9f93f7300c15d55956ac2a",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_SYMM.png",
+    "name": "Symmetric",
+    "symbol": "SYMM"
+  },
   "0x7d00cd74ff385c955ea3d79e47bf06bd7386387d" : {
     "address" : "0x7d00cd74ff385c955ea3d79e47bf06bd7386387d",
     "decimals" : 18,
