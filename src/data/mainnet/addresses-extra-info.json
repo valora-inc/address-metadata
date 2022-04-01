@@ -13,6 +13,10 @@
     "isCeloRewardSender" : false,
     "name" : "CELO Network"
   },
+  "0x185318be22136f2ec07edcb6fb2d65e45d06fc48": {
+    "name": "CC2022 Merchant Payment",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/celo-mobile-mainnet.appspot.com/o/images%2FCC2022ICON.png?alt=media"
+  },
   "0x198e0d8601ab509abf1b0b99fd8f234583ef1309" : {
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/celo-mobile-alfajores.appspot.com/o/images%2Fcelo.jpg?alt=media",
     "name" : "CELO Network"
