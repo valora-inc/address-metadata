@@ -52,7 +52,8 @@
     "decimals" : 18,
     "imageUrl" : "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_mcEURxOLD.png",
     "name" : "Moola cEUR MToken",
-    "symbol" : "mCEUR"
+    "symbol" : "mCEUR",
+    "pegTo" : "0x10c892a6ec43a53e45d0b916b4b7d383b1b78c0f"
   },
   "0x452ef5a4bd00796e62e5e5758548e0da6e8ccdf3" : {
     "address" : "0x452ef5a4bd00796e62e5e5758548e0da6e8ccdf3",
@@ -91,14 +92,16 @@
     "decimals" : 18,
     "imageUrl" : "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_mcUSDxOLD.png",
     "name" : "Moola cUSD AToken",
-    "symbol" : "mCUSD"
+    "symbol" : "mCUSD",
+    "pegTo" : "0x874069fa1eb16d44d622f2e0ca25eea172369bc1"
   },
   "0x86f61eb83e10e914fc6f321f5dd3c2dd4860a003" : {
     "address" : "0x86f61eb83e10e914fc6f321f5dd3c2dd4860a003",
     "decimals" : 18,
     "imageUrl" : "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_mCELOxOLD.png",
     "name" : "Moola CELO AToken",
-    "symbol" : "mCELO"
+    "symbol" : "mCELO",
+    "pegTo" : "0xf194afdf50b03e69bd7d057c1aa9e10c9954e4c9"
   },
   "0x874069fa1eb16d44d622f2e0ca25eea172369bc1" : {
     "address" : "0x874069fa1eb16d44d622f2e0ca25eea172369bc1",
