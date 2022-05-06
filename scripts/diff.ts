@@ -11,7 +11,7 @@ async function main() {
 
   console.log(`Calculating diffs for the ${config.project} GCP project...`)
   let hasDiff = false
-  for (const {data, rtdbLocation} of projectMetadata) {
+  for (const { data, rtdbLocation } of projectMetadata) {
     const rtdbData = await firebaseClient.readFromPath(rtdbLocation)
     const diff = diffString(rtdbData, data)
 

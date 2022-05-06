@@ -11,10 +11,12 @@ async function main() {
   const projectMetadata = allMetadata[config.project]
 
   console.log(`Updating RTDB data for the ${config.project} GCP project...`)
-  for (const {data, schema, rtdbLocation, overrideType} of projectMetadata) {
+  for (const { data, schema, rtdbLocation, overrideType } of projectMetadata) {
     const validationResult = schema.validate(data)
     if (validationResult.error) {
-      console.log(`Error while validating schema for ${rtdbLocation}, skipping: ${validationResult.error}`)
+      console.log(
+        `Error while validating schema for ${rtdbLocation}, skipping: ${validationResult.error}`,
+      )
     } else {
       const rtdbData = await firebaseClient.readFromPath(rtdbLocation)
       const diff = diffString(rtdbData, data)
@@ -27,7 +29,10 @@ async function main() {
         } else {
           let updateRequest = data
           if (overrideType.deleteMissingKeys) {
-            const deleteMissingKeys = deleteMissingKeysUpdateRequest(data, rtdbData)
+            const deleteMissingKeys = deleteMissingKeysUpdateRequest(
+              data,
+              rtdbData,
+            )
             updateRequest = { ...updateRequest, ...deleteMissingKeys }
           }
           // TODO: Avoid updating the node if we already know there aren't changes
@@ -40,7 +45,7 @@ async function main() {
 }
 
 main()
-  .then(() => (process.exit(0)))
+  .then(() => process.exit(0))
   .catch((error) => {
     console.log(`Error while updating RTDB data: ${error}`)
     process.exit(1)
