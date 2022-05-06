@@ -46,7 +46,7 @@ When updating nodes without overrides, there is no check to avoid sending the up
 
 ### Update RTDB
 
-This is done automatically during CICD; you should *not* need to run this locally.
+This is done automatically during CICD; you should _not_ need to run this locally.
 
 ```
 yarn update --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}
