@@ -9,11 +9,11 @@
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint --ext=.tsx,.ts --fix src/",
-    "format": "prettier --loglevel error --write \"./src/**/*.ts\"",
+    "format": "prettier --loglevel error --write .",
     "validate": "jest",
     "diff": "ts-node scripts/diff.ts",
     "update": "ts-node scripts/update.ts",
-    "test": "yarn jest && yarn prettier --check \"./src/**/*.ts\" && yarn eslint --ext=.ts src/"
+    "test": "yarn jest && yarn prettier --check . && yarn eslint --ext=.ts src/"
   },
   "prettier": "@valora/prettier-config",
   "repository": "git@github.com:valora-inc/rtdb-data.git",
