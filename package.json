@@ -18,7 +18,9 @@
   "prettier": "@valora/prettier-config",
   "repository": "git@github.com:valora-inc/rtdb-data.git",
   "author": "Valora Inc",
-  "contributors": ["Joseph Bergeron <jophish126@gmail.com>"],
+  "contributors": [
+    "Joseph Bergeron <jophish126@gmail.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "@types/node": "^17.0.0",
@@ -41,6 +43,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-react-native": "^4.0.0",
     "husky": "^7.0.4",
+    "image-size": "^1.0.1",
     "jest": "^27.4.5",
     "prettier": "^2.5.1",
     "ts-jest": "^27.1.2",

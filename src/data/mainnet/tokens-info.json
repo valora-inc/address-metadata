@@ -2,77 +2,77 @@
   {
     "address": "0x00400fcbf0816bebb94654259de7273f4a05c762",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_POOF.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/POOF.png",
     "name": "PoofCash",
     "symbol": "POOF"
   },
   {
     "address": "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_UBE.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UBE.png",
     "name": "Ubeswap",
     "symbol": "UBE"
   },
   {
     "address": "0x035ee610693a29cb77fd6efbeb9d9d278703e145",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_TFBX.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/TFBX.png",
     "name": "Truefeedback",
     "symbol": "TFBX"
   },
   {
     "address": "0x0a60c25ef6021fc3b479914e6bca7c03c18a97f1",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_stabilUSD.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/stabilUSD.png",
     "name": "Stabilite USD",
     "symbol": "stabilUSD"
   },
   {
     "address": "0x0a7432cf27f1ae3825c313f3c81e7d3efd7639ab",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_CRV.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png",
     "name": "Curve DAO Token",
     "symbol": "CRV"
   },
   {
     "address": "0x122013fd7df1c6f636a5bb8f03108e876548b455",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_WETH.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png",
     "name": "Wrapped Ether",
     "symbol": "WETH"
   },
   {
     "address": "0x173234922eb27d5138c5e481be9df5261faed450",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_SOL.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SOL.png",
     "name": "SOL",
     "symbol": "SOL"
   },
   {
     "address": "0x17700282592d6917f6a73d0bf8accf4d578c131e",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_MOO.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MOO.png",
     "name": "Moola",
     "symbol": "MOO"
   },
   {
     "address": "0x1a8dbe5958c597a744ba51763abebd3355996c3e",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_rCELO.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/rCELO.png",
     "name": "RewardsCELO",
     "symbol": "rCELO"
   },
   {
     "address": "0x20677d4f3d0f08e735ab512393524a3cfceb250c",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_ARI.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARI.png",
     "name": "Ari Swap",
     "symbol": "ARI"
   },
   {
     "address": "0x218c3c3d49d0e7b37aff0d8bb079de36ae61a4c0",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_FTM.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/FTM.png",
     "name": "Fantom",
     "symbol": "FTM"
   },
@@ -91,7 +91,7 @@
   {
     "address": "0x2879bfd5e7c4ef331384e908aaa3bd3014b703fa",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_sCELO.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/sCELO.png",
     "name": "Savings CELO",
     "symbol": "sCELO"
   },
@@ -104,56 +104,56 @@
   {
     "address": "0x2def4285787d58a2f811af24755a8150622f4361",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_cETH.svg",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cETH.png",
     "name": "Wrapped Ethereum",
     "symbol": "cETH"
   },
   {
     "address": "0x2e3487f967df2ebc2f236e16f8fcaeac7091324d",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_WMATIC.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WMATIC.png",
     "name": "Wrapped Matic",
     "symbol": "WMATIC"
   },
   {
     "address": "0x301a61d01a63c8d670c2b8a43f37d12ef181f997",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_pCELO.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/pCELO.png",
     "name": "Poof CELO",
     "symbol": "pCELO"
   },
   {
     "address": "0x32a9fe697a32135bfd313a6ac28792dae4d9979d",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_cMCO2.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cMCO2.png",
     "name": "cMCO2",
     "symbol": "cMCO2"
   },
   {
     "address": "0x3af556b48469d2398ab7be1563a0cfd80ea4ac84",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_WMATIC.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WMATIC.png",
     "name": "Wrapped Matic",
     "symbol": "WMATIC"
   },
   {
     "address": "0x452ef5a4bd00796e62e5e5758548e0da6e8ccdf3",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_cStar.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cStar.png",
     "name": "CeloStarter",
     "symbol": "cStar"
   },
   {
     "address": "0x46c9757c5497c5b1f2eb73ae79b6b67d119b0b58",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_PACT.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PACT.png",
     "name": "impactMarket",
     "symbol": "PACT"
   },
   {
     "address": "0x471ece3750da237f93b8e339c536989b8978a438",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_CELO.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png",
     "isCoreToken": true,
     "name": "Celo native asset",
     "symbol": "CELO"
@@ -161,7 +161,7 @@
   {
     "address": "0x47264ae1fc0c8e6418ebe78630718e11a07346a8",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_SBR.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SBR.png",
     "name": "SBR",
     "symbol": "SBR"
   },
@@ -174,28 +174,28 @@
   {
     "address": "0x503681c68f03bbbce48005dcd7b83ae8d4fd745c",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_AAVE.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/AAVE.png",
     "name": "Aave Token",
     "symbol": "AAVE"
   },
   {
     "address": "0x64defa3544c695db8c535d289d843a189aa26b98",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_mcUSDxOLD.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcUSDxOLD.png",
     "name": "Moola cUSD AToken",
     "symbol": "mCUSD"
   },
   {
     "address": "0x6e512bfc33be36f2666754e996ff103ad1680cc9",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_ABR.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ABR.png",
     "name": "Allbridge",
     "symbol": "ABR"
   },
   {
     "address": "0x7037f7296b2fc7908de7b57a89efaa8319f0c500",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_mCELOxOLD.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mCELOxOLD.png",
     "name": "Moola CELO AToken",
     "symbol": "mCELO",
     "pegTo": "0x471ece3750da237f93b8e339c536989b8978a438"
@@ -203,21 +203,21 @@
   {
     "address": "0x73a210637f6f6b7005512677ba6b3c96bb4aa44b",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_MOBI.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MOBI.png",
     "name": "Mobius DAO Token",
     "symbol": "MOBI"
   },
   {
     "address": "0x74c0c58b99b68cf16a717279ac2d056a34ba2bfe",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_SOURCE.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SOURCE.png",
     "name": "Source",
     "symbol": "SOURCE"
   },
   {
     "address": "0x765de816845861e75a25fca122bb6898b8b1282a",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_cUSD.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cUSD.png",
     "isCoreToken": true,
     "name": "Celo Dollar",
     "symbol": "cUSD"
@@ -225,35 +225,35 @@
   {
     "address": "0x7c2bf103daac9c082a0e53ad40bb9f3f7f799af7",
     "decimals": 10,
-    "imageUrl": "https://diquecito.com.ar/wp-content/uploads/2018/08/test.jpeg",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/TT.png",
     "name": "Test Token",
     "symbol": "TT"
   },
   {
     "address": "0x7d00cd74ff385c955ea3d79e47bf06bd7386387d",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_mCELO.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mCELO.png",
     "name": "Moola interest bearing CELO",
     "symbol": "mCELO"
   },
   {
     "address": "0x8427bd503dd3169ccc9aff7326c15258bc305478",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_SYMM.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SYMM.png",
     "name": "Symmetric",
     "symbol": "SYMM"
   },
   {
     "address": "0x8e3670fd7b0935d3fe832711debfe13bb689b690",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_AVAX.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/AVAX.png",
     "name": "AVAX",
     "symbol": "AVAX"
   },
   {
     "address": "0x918146359264c492bd6934071c6bd31c854edbc3",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_mcUSD.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcUSD.png",
     "name": "Moola interest bearing CUSD",
     "symbol": "mCUSD",
     "pegTo": "0x765de816845861e75a25fca122bb6898b8b1282a"
@@ -261,14 +261,14 @@
   {
     "address": "0x94140c2ea9d208d8476ca4e3045254169791c59e",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_PREMIO.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PREMIO.png",
     "name": "PREMIO",
     "symbol": "PREMIO"
   },
   {
     "address": "0xa649325aa7c5093d12d6f98eb4378deae68ce23f",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_BNB.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/BNB.png",
     "name": "Binance",
     "symbol": "BNB"
   },
@@ -281,21 +281,21 @@
   {
     "address": "0xa81d9a2d29373777e4082d588958678a6df5645c",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_KNX.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/KNX.png",
     "name": "KNX",
     "symbol": "KNX"
   },
   {
     "address": "0xa8d0e6799ff3fd19c6459bf02689ae09c4d78ba7",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_mcEURxOLD.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcEURxOLD.png",
     "name": "Moola cEUR MToken",
     "symbol": "mCEUR"
   },
   {
     "address": "0xbaab46e28388d2779e6e31fd00cf0e5ad95e327b",
     "decimals": 8,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_WBTC.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WBTC.png",
     "name": "Wrapped BTC",
     "symbol": "WBTC"
   },
@@ -320,14 +320,14 @@
   {
     "address": "0xd629eb00deced2a080b7ec630ef6ac117e614f1b",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_cBTC.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cBTC.png",
     "name": "Wrapped Bitcoin",
     "symbol": "BTC"
   },
   {
     "address": "0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_cEUR.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cEUR.png",
     "isCoreToken": true,
     "name": "Celo Euro",
     "symbol": "cEUR"
@@ -341,7 +341,7 @@
   {
     "address": "0xe273ad7ee11dcfaa87383ad5977ee1504ac07568",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_mcEUR.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcEUR.png",
     "name": "Moola interest bearing CEUR",
     "symbol": "mCEUR",
     "pegTo": "0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73"
@@ -349,21 +349,21 @@
   {
     "address": "0xe685d21b7b0fc7a248a6a8e03b8db22d013aa2ee",
     "decimals": 9,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_IMMO.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/IMMO.png",
     "name": "Immortal",
     "symbol": "IMMO"
   },
   {
     "address": "0xe74abf23e1fdf7acbec2f3a30a772ef77f1601e1",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_pCELO.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/pCELO.png",
     "name": "Poof CELO",
     "symbol": "pCELO"
   },
   {
     "address": "0xe8537a3d056da446677b9e9d6c5db704eaab4787",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_cREAL.png",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cREAL.png",
     "isCoreToken": true,
     "name": "Celo Brazilian Real",
     "symbol": "cREAL"
