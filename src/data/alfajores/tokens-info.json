@@ -130,13 +130,6 @@
     "symbol": "tCORN"
   },
   {
-    "address": "0x9b8118001677e47368c8d08032a40fb64a956938",
-    "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/valora-token/main/assets/puppy_coin_icon.png?token=AB44BT5L3BUR2KB6GG4UMYDBXPJJU",
-    "name": "Puppy-themed Valora token",
-    "symbol": "PUP"
-  },
-  {
     "address": "0x9f74871d69448674b4cf620b07e57360f949c018",
     "decimals": 18,
     "name": "mCle",
@@ -159,13 +152,6 @@
     "decimals": 18,
     "name": "ELTToken",
     "symbol": "ELT"
-  },
-  {
-    "address": "0xc6363c8ae41b2d32fd48739a7fc35f4d0278fe4f",
-    "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/valora-token/main/assets/kitty_coin_icon.png?token=AB44BT7UD2C56IAGAGWP453BXPJHO",
-    "name": "Kitty-themed Valora token",
-    "symbol": "KITTY"
   },
   {
     "address": "0xc63c3243601e038286a82c0f97f47bf20f2f1b82",
@@ -194,12 +180,5 @@
     "isCoreToken": true,
     "name": "Celo native asset",
     "symbol": "CELO"
-  },
-  {
-    "address": "0xfe63c2141258ad2a10968d808751aa605ba394fc",
-    "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/valora-token/main/assets/boring_coin_icon.png?token=AB44BTZV3DFF5X2MTT2PSVTBXPJCS",
-    "name": "Boring Valora token",
-    "symbol": "BORING"
   }
 ]
