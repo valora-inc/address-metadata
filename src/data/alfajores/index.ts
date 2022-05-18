@@ -3,6 +3,7 @@ import TokensInfoData from './tokens-info.json'
 import AddressesExtraInfoSchema from '../../schemas/addresses-extra-info'
 import TokensInfoSchema from '../../schemas/tokens-info'
 import { OverrideType, RTDBMetadata } from '../../types'
+import { transformRawTokensInfo } from '../../utils/transforms'
 
 const alfajoresRTDBMetadata: RTDBMetadata[] = [
   {
@@ -12,7 +13,7 @@ const alfajoresRTDBMetadata: RTDBMetadata[] = [
     overrideType: OverrideType.OverrideAll,
   },
   {
-    data: TokensInfoData,
+    data: transformRawTokensInfo(TokensInfoData),
     schema: TokensInfoSchema,
     rtdbLocation: 'tokensInfo',
     overrideType: OverrideType.DeleteMissingKeysAndUpdate,
