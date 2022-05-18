@@ -11,13 +11,13 @@ To add a new ERC20 token you need to follow these steps:
 
 ### ERC20 token info
 
-| Property   | Description                                                                                 |
-| ---------- | ------------------------------------------------------------------------------------------- |
-| `address`  | The address of the ERC20 token contract. This should match the key used in the root object. |
-| `decimals` | The number of decimals used by the ERC20 token.                                             |
-| `imageUrl` | The logo to display for the ERC20 token. This should be a `https` URL.                      |
-| `name`     | The name to display for the ERC20 token.                                                    |
-| `symbol`   | The short symbol to display for the ERC20 token.                                            |
+| Property   | Description                                                                                                                                                                                                                                                           |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `address`  | The address of the ERC20 token contract. This should match the key used in the root object.                                                                                                                                                                           |
+| `decimals` | The number of decimals used by the ERC20 token.                                                                                                                                                                                                                       |
+| `imageUrl` | The logo to display for the ERC20 token. The image must be a 256 x 256 PNG. Add the image to the [assets/tokens](./assets/tokens) folder and use the following format: `https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/{image}.png` |
+| `name`     | The name to display for the ERC20 token.                                                                                                                                                                                                                              |
+| `symbol`   | The short symbol to display for the ERC20 token.                                                                                                                                                                                                                      |
 
 ## Use
 
