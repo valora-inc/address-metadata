@@ -6,18 +6,19 @@ This repository contains utilities and automation for updating static data (supp
 
 To add a new ERC20 token you need to follow these steps:
 
-- Open [`src/data/mainnet/tokens-info.json`](src/data/mainnet/tokens-info.json) and/or [`src/data/alfajores/tokens-info.json`](src/data/alfajores/tokens-info.json). You will see that it has a root object, keyed by ERC20 token contract addresses. Add a new object. The fields are described below.
+- Open [`src/data/mainnet/tokens-info.json`](src/data/mainnet/tokens-info.json) and/or [`src/data/alfajores/tokens-info.json`](src/data/alfajores/tokens-info.json). You will see that it's an array of token info. Add a new object. The fields are described below.
+- Add the logo to [assets/tokens](./assets/tokens)
 - After doing this you should open a PR and ask someone on the Valora team to review it so it can be merged. Once it's merged, the new ERC20 token will be visible in the Valora Wallet for users holding it.
 
 ### ERC20 token info
 
-| Property   | Description                                                                                                                                                                                                                                                           |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `address`  | The address of the ERC20 token contract. This should match the key used in the root object.                                                                                                                                                                           |
-| `decimals` | The number of decimals used by the ERC20 token.                                                                                                                                                                                                                       |
-| `imageUrl` | The logo to display for the ERC20 token. The image must be a 256 x 256 PNG. Add the image to the [assets/tokens](./assets/tokens) folder and use the following format: `https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/{image}.png` |
-| `name`     | The name to display for the ERC20 token.                                                                                                                                                                                                                              |
-| `symbol`   | The short symbol to display for the ERC20 token.                                                                                                                                                                                                                      |
+| Property   | Description                                                                                                                                                                                                                                                         |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `address`  | The address of the ERC20 token contract. This should match the key used in the root object.                                                                                                                                                                         |
+| `decimals` | The number of decimals used by the ERC20 token.                                                                                                                                                                                                                     |
+| `imageUrl` | The logo to display for the ERC20 token. The image must be a 256 x 256 PNG. Add the image to the [assets/tokens](assets/tokens) folder and use the following format: `https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/{image}.png` |
+| `name`     | The name to display for the ERC20 token.                                                                                                                                                                                                                            |
+| `symbol`   | The short symbol to display for the ERC20 token.                                                                                                                                                                                                                    |
 
 ## Use
 
