@@ -2,6 +2,12 @@
 
 This repository contains utilities and automation for updating static data (supported ERC20 tokens, etc) in Firebase's RTDB.
 
+## Disclaimer
+
+Note: filing an issue does not guarantee addition to the supported token list.
+We do not review token addition requests in any particular order, and we do not
+guarantee that we will review your request to add the token to the supported list.
+
 ## Adding new ERC20 tokens
 
 To add a new ERC20 token you need to follow these steps:
@@ -20,7 +26,7 @@ To add a new ERC20 token you need to follow these steps:
 | `name`     | The name to display for the ERC20 token.                                                                                                                                                                                                                       |
 | `symbol`   | The short symbol to display for the ERC20 token.                                                                                                                                                                                                               |
 
-## Use
+## Generic Use
 
 When adding a new node of data to this repository, first write a `Joi` schema for the data in `src/schemas`.
 Then, add the raw data as a JSON blob to e.g., `src/data/mainnet/{some-rtdb-node}.json` or `src/data/alfajores/{some-rtdb-node}.json`. Finally, import the appropriate files and fill in the required metadata
