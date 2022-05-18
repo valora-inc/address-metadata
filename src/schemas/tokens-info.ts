@@ -10,7 +10,7 @@ const TokensInfoSchema = Joi.object().pattern(
     decimals: Joi.number().required(),
     symbol: Joi.string().required(),
     isCoreToken: Joi.boolean(),
-    pegTo: Joi.string(),
+    pegTo: Joi.valid(Joi.ref('/', { in: true })),
   }),
 )
 
