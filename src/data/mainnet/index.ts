@@ -3,6 +3,7 @@ import TokensInfoData from './tokens-info.json'
 import AddressesExtraInfoSchema from '../../schemas/addresses-extra-info'
 import { OverrideType, RTDBMetadata } from '../../types'
 import TokensInfoSchema from '../../schemas/tokens-info'
+import { transformRawTokensInfo } from '../../utils/transforms'
 
 const mainnetRTDBMetadata: RTDBMetadata[] = [
   {
@@ -12,7 +13,7 @@ const mainnetRTDBMetadata: RTDBMetadata[] = [
     overrideType: OverrideType.OverrideAll,
   },
   {
-    data: TokensInfoData,
+    data: transformRawTokensInfo(TokensInfoData),
     schema: TokensInfoSchema,
     rtdbLocation: 'tokensInfo',
     overrideType: OverrideType.DeleteMissingKeysAndUpdate,

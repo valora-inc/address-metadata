@@ -23,3 +23,15 @@ export interface Config {
   project: string
   databaseUrl: string
 }
+
+export interface RawTokenInfo {
+  address: string
+  decimals: number
+  name: string
+  symbol: string
+  imageUrl?: string
+  isCoreToken?: boolean
+  pegTo?: string
+}
+
+export type RawTokensInfo = RawTokenInfo[]

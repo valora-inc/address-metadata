@@ -1,13 +1,13 @@
 {
   "0x20d5ca2a263e0c0d11e7a668ccf30b38f148225b": {
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/celo-mobile-alfajores.appspot.com/o/images%2Fcelo.jpg?alt=media",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/celo.jpg",
     "name": "Gonza Test Address"
   },
   "0x22579ca45ee22e2e16ddf72d955d6cf4c767b0ef": {
     "name": "Funds Granted by Faucet"
   },
   "0x4b371df8d05abd2954564b54faf10b8c8f1bc3a2": {
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/celo-mobile-alfajores.appspot.com/o/images%2Fcelo.jpg?alt=media",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/celo.jpg",
     "name": "Hello!"
   },
   "0x4f34051b728c93dd39531ed44a52c7f5f6fa7d81": {
@@ -17,11 +17,11 @@
     "name": "qwe"
   },
   "0xb04390478a57e3c2147599d5380434f25fa5234d": {
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/celo-mobile-alfajores.appspot.com/o/images%2Fcelo.jpg?alt=media&token=fff87029-c779-46d1-b8f5-765cd91ebe0f",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/celo.jpg",
     "name": "CELO Network"
   },
   "0xb251f93b5ec2e932249c39d713c49945b1f4515b": {
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/celo-mobile-alfajores.appspot.com/o/images%2Fcelo.jpg?alt=media&token=fff87029-c779-46d1-b8f5-765cd91ebe0f",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/celo.jpg",
     "isCeloRewardSender": true,
     "name": "CELO Network"
   },
@@ -29,11 +29,11 @@
     "name": "Diego Test Wallet 3"
   },
   "0xe3e32f52f35e883458479631ae7fed7498d6553f": {
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/celo-mobile-alfajores.appspot.com/o/images%2Fcelo.jpg?alt=media",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/celo.jpg",
     "name": "CELO Network"
   },
   "0xeefd851e7f742b805311501706c1192959754b11": {
-    "imageUrl": "https://source.unsplash.com/user/c_v_r/150x150",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/diego-test.jpg",
     "name": "Diego Test Wallet 1"
   }
 }

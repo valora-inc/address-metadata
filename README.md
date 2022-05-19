@@ -1,8 +1,32 @@
 # address-metadata
 
-This repository contains utilities and automation for updating static data in Firebase's RTDB.
+This repository contains utilities and automation for updating static data (supported ERC20 tokens, etc) in Firebase's RTDB.
 
-## Use
+## Disclaimer
+
+Note: filing an issue does not guarantee addition to the supported token list.
+We do not review token addition requests in any particular order, and we do not
+guarantee that we will review your request to add the token to the supported list.
+
+## Adding new ERC20 tokens
+
+To add a new ERC20 token you need to follow these steps:
+
+- Open [`src/data/mainnet/tokens-info.json`](src/data/mainnet/tokens-info.json) and/or [`src/data/alfajores/tokens-info.json`](src/data/alfajores/tokens-info.json). You will see that it's an array of token info. Add a new object. The fields are described below.
+- Add the logo to [assets/tokens](./assets/tokens)
+- After doing this you should open a PR and ask someone on the Valora team to review it so it can be merged. Once it's merged, the new ERC20 token will be visible in the Valora Wallet for users holding it.
+
+### ERC20 token info
+
+| Property   | Description                                                                                                                                                                                                                                                    |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `address`  | The address of the ERC20 token contract.                                                                                                                                                                                                                       |
+| `decimals` | The number of decimals used by the ERC20 token.                                                                                                                                                                                                                |
+| `imageUrl` | The logo to display for the ERC20 token. It should be a 256 x 256 PNG. Add the image to the [assets/tokens](assets/tokens) folder and use the following format: `https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/{image}.png` |
+| `name`     | The name to display for the ERC20 token.                                                                                                                                                                                                                       |
+| `symbol`   | The short symbol to display for the ERC20 token.                                                                                                                                                                                                               |
+
+## Generic Use
 
 When adding a new node of data to this repository, first write a `Joi` schema for the data in `src/schemas`.
 Then, add the raw data as a JSON blob to e.g., `src/data/mainnet/{some-rtdb-node}.json` or `src/data/alfajores/{some-rtdb-node}.json`. Finally, import the appropriate files and fill in the required metadata
