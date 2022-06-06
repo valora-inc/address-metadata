@@ -373,5 +373,12 @@
     "decimals": 18,
     "name": "Wrapped Ether",
     "symbol": "WETH"
+  },
+  {
+    "address": "0x34C11A932853Ae24E845Ad4B633E3cEf91afE583",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cRecy.png",
+    "name": "cRecy",
+    "symbol": "cRecy"
   }
 ]
