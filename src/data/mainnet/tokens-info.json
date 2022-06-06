@@ -375,7 +375,7 @@
     "symbol": "WETH"
   },
   {
-    "address": "0x34C11A932853Ae24E845Ad4B633E3cEf91afE583",
+    "address": "0x34c11a932853ae24e845ad4b633e3cef91afe583",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cRecy.png",
     "name": "cRecy",
