@@ -65,6 +65,7 @@
   {
     "address": "0x1bfc26ce035c368503fae319cc2596716428ca44",
     "decimals": 6,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/celo-mobile-mainnet.appspot.com/o/images%2Fusdc-logo.png?alt=media",
     "name": "Polygon USDC",
     "symbol": "pUSDC"
   },
