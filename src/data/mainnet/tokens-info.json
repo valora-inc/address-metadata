@@ -63,6 +63,13 @@
     "symbol": "rCELO"
   },
   {
+    "address": "0x1bfc26ce035c368503fae319cc2596716428ca44",
+    "decimals": 6,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/pUSDC.png",
+    "name": "Polygon USDC",
+    "symbol": "pUSDC"
+  },
+  {
     "address": "0x20677d4f3d0f08e735ab512393524a3cfceb250c",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARI.png",
