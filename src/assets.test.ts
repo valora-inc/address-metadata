@@ -20,7 +20,6 @@ describe('assets', () => {
       'NTMX.png',
       'PACT.png',
       'UBE.png',
-      'WBTC.png',
       'cEUR.png',
       'cREAL.png',
       'cRecy.png',
@@ -39,10 +38,13 @@ describe('assets', () => {
       .map((assetFilename) => path.join(ASSETS_DIRECTORY, assetFilename))
 
     it.each(assetPaths)('%s is the required size', async (assetPath) => {
+      const { height, width } = await sizeOfImage(assetPath)
       if (ASSETS_SIZE_EXCEPTIONS.has(path.basename(assetPath))) {
+        // Just check it's a square
+        expect(height).toBeGreaterThan(0)
+        expect(height).toBe(width)
         return
       }
-      const { height, width } = await sizeOfImage(assetPath)
       expect(height).toBe(REQUIRED_ASSET_HEIGHT)
       expect(width).toBe(REQUIRED_ASSET_WIDTH)
     })
