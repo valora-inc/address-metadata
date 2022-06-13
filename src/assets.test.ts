@@ -10,13 +10,41 @@ describe('assets', () => {
     const REQUIRED_ASSET_WIDTH = 256
     const REQUIRED_ASSET_TYPE = 'png'
 
+    // TODO: update assets so we can remove the need for this exception list
+    const ASSETS_SIZE_EXCEPTIONS = new Set([
+      'ABR.png',
+      'ARI.png',
+      'CELO.png',
+      'FTM.png',
+      'IMMO.png',
+      'NTMX.png',
+      'PACT.png',
+      'UBE.png',
+      'cEUR.png',
+      'cREAL.png',
+      'cRecy.png',
+      'cUSD.png',
+      'mCELO.png',
+      'mCELOxOLD.png',
+      'mcEUR.png',
+      'mcEURxOLD.png',
+      'mcUSD.png',
+      'mcUSDxOLD.png',
+      'stabilUSD.png',
+    ])
+
     const assetPaths = fs
       .readdirSync(ASSETS_DIRECTORY)
       .map((assetFilename) => path.join(ASSETS_DIRECTORY, assetFilename))
 
-    // TODO: update assets so they can pass these requirements
-    xit.each(assetPaths)('%s is the required size', async (assetPath) => {
+    it.each(assetPaths)('%s is the required size', async (assetPath) => {
       const { height, width } = await sizeOfImage(assetPath)
+      if (ASSETS_SIZE_EXCEPTIONS.has(path.basename(assetPath))) {
+        // Just check it's a square
+        expect(height).toBeGreaterThan(0)
+        expect(height).toBe(width)
+        return
+      }
       expect(height).toBe(REQUIRED_ASSET_HEIGHT)
       expect(width).toBe(REQUIRED_ASSET_WIDTH)
     })
