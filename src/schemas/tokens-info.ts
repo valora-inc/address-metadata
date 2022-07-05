@@ -30,6 +30,7 @@ const TokensInfoSchema = Joi.object().pattern(
     decimals: Joi.number().required(),
     symbol: Joi.string().required(),
     isCoreToken: Joi.boolean(),
+    isSupercharged: Joi.boolean(),
     // This checks it's referencing a token address that exists in the root object
     pegTo: Joi.valid(Joi.ref('/', { in: true })),
   }),
