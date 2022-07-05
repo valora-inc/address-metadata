@@ -185,11 +185,27 @@
     "symbol": "CELO"
   },
   {
-    "address": "0x86de0398785ba25462dcbc01517c0488cd5834ea",
+    "address": "0x3a0ea4e0806805527c750ab9b34382642448468d",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcUSD.png",
+    "name": "Moola interest bearing CUSD",
+    "symbol": "mCUSD",
+    "isSupercharged": true
+  },
+  {
+    "address": "0x0d9b4311657003251d1efa085e74f761185f271c",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcEUR.png",
+    "name": "Moola interest bearing CEUR",
+    "symbol": "mCEUR",
+    "isSupercharged": true
+  },
+  {
+    "address": "0x3d0eda535ca4b15c739d46761d24e42e37664ad7",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcREAL.png",
-    "name": "mcREAL",
-    "symbol": "mcREAL",
+    "name": "Moola interest bearing CREAL",
+    "symbol": "mCREAL",
     "isSupercharged": true
   }
 ]
