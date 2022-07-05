@@ -392,7 +392,7 @@
     "address": "0x9802d866fde4563d088a6619f7cef82c0b991a55",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcREAL.png",
-    "name": "mcREAL",
-    "symbol": "mcREAL"
+    "name": "Moola interest bearing CREAL",
+    "symbol": "mCREAL"
   }
 ]
