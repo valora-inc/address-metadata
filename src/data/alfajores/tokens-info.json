@@ -180,5 +180,12 @@
     "isCoreToken": true,
     "name": "Celo native asset",
     "symbol": "CELO"
+  },
+  {
+    "address": "0x86de0398785ba25462dcbc01517c0488cd5834ea",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcREAL.png",
+    "name": "mcREAL",
+    "symbol": "mcREAL"
   }
 ]
