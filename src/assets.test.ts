@@ -30,6 +30,7 @@ describe('assets', () => {
       'mcEURxOLD.png',
       'mcUSD.png',
       'mcUSDxOLD.png',
+      'mcREAL.png',
       'stabilUSD.png',
     ])
 

@@ -19,7 +19,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cEUR.png",
     "isCoreToken": true,
     "name": "Celo Euro",
-    "symbol": "cEUR"
+    "symbol": "cEUR",
+    "isSupercharged": true
   },
   {
     "address": "0x123ed050805e0998ebef43671327139224218e50",
@@ -109,7 +110,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cUSD.png",
     "isCoreToken": true,
     "name": "Celo Dollar",
-    "symbol": "cUSD"
+    "symbol": "cUSD",
+    "isSupercharged": true
   },
   {
     "address": "0x8d0b8633c6c3d5c1eafb767b3eaf0723e49c9c98",
@@ -171,7 +173,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cREAL.png",
     "isCoreToken": true,
     "name": "Celo Real",
-    "symbol": "cREAL"
+    "symbol": "cREAL",
+    "isSupercharged": true
   },
   {
     "address": "0xf194afdf50b03e69bd7d057c1aa9e10c9954e4c9",
@@ -180,5 +183,29 @@
     "isCoreToken": true,
     "name": "Celo native asset",
     "symbol": "CELO"
+  },
+  {
+    "address": "0x3a0ea4e0806805527c750ab9b34382642448468d",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcUSD.png",
+    "name": "Moola interest bearing CUSD",
+    "symbol": "mCUSD",
+    "isSupercharged": true
+  },
+  {
+    "address": "0x0d9b4311657003251d1efa085e74f761185f271c",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcEUR.png",
+    "name": "Moola interest bearing CEUR",
+    "symbol": "mCEUR",
+    "isSupercharged": true
+  },
+  {
+    "address": "0x3d0eda535ca4b15c739d46761d24e42e37664ad7",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcREAL.png",
+    "name": "Moola interest bearing CREAL",
+    "symbol": "mCREAL",
+    "isSupercharged": true
   }
 ]
