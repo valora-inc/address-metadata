@@ -31,7 +31,7 @@ function isNonEmptyObject(json: any): boolean {
 }
 
 export function deleteMissingKeysUpdateRequest(expected: any, current: any) {
-  if (current == null) return
+  if (!isNonEmptyObject(current)) return {}
   const expectedKeys = new Set(Object.keys(expected))
   const currentKeys = Object.keys(current)
 
