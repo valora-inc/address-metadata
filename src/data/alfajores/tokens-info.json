@@ -207,5 +207,12 @@
     "name": "Moola interest bearing CREAL",
     "symbol": "mCREAL",
     "isSupercharged": true
+  },
+  {
+    "address": "0x4620D7a5F58f77eeE69A38AfdAa8f2FfB10b42b6",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETHIX.png",
+    "name": "Ethix",
+    "symbol": "ETHIX"
   }
 ]
