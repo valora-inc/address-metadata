@@ -112,4 +112,17 @@ describe('Delete Missing Keys UpdateRequest', () => {
 
     expect(updateObject).toMatchObject({})
   })
+
+  it('creates all keys if the RTDB instance is clean', () => {
+    const expected = {
+      key1: 1,
+      key2: 'value',
+    }
+
+    const current = null
+
+    const updateObject = deleteMissingKeysUpdateRequest(expected, current)
+
+    expect(updateObject).toMatchObject({})
+  })
 })
