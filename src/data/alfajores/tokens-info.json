@@ -214,5 +214,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETHIX.png",
     "name": "Ethix",
     "symbol": "ETHIX"
+  },
+  {
+    "address": "0x55067df868997BaD76e831F4bad5B48fbbf4c8D1",
+    "decimals": 9,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PLASTIK.png",
+    "name": "Plastik",
+    "symbol": "PKS"
   }
 ]
