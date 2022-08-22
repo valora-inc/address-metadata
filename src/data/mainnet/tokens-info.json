@@ -7,6 +7,13 @@
     "symbol": "POOF"
   },
   {
+    "address": "0xC668583dcbDc9ae6FA3CE46462758188adfdfC24",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/stcelo.png",
+    "name": "Staked Celo",
+    "symbol": "stCELO"
+  },
+  {
     "address": "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UBE.png",
