@@ -421,5 +421,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PLASTIK.png",
     "name": "Plastik",
     "symbol": "PLASTIK"
+  },
+  {
+    "address": "0x1da12e0bb9cf5de3e6cbdde427ffd9fe6d4df970",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/GUIDE.png",
+    "name": "Guide",
+    "symbol": "GUIDE"
   }
 ]
