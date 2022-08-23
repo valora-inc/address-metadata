@@ -423,9 +423,10 @@
     "symbol": "PLASTIK"
   }
 {
-    "address": "0x1Da12E0bB9cf5DE3E6cbdde427FFD9fe6D4df970",
+    "{
+    "address": "0x1da12e0bb9cf5de3e6cbdde427ffd9fe6d4df970",
     "decimals": 18,
-    "imageUrl": "https://we.tl/t-Xax53onje8",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/GUIDE.png)",
     "name": "GUIDE",
     "symbol": "GUIDE"
   }
