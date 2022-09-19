@@ -976,10 +976,10 @@
     jest-matcher-utils "^27.0.0"
     pretty-format "^27.0.0"
 
-"@types/json-diff@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@types/json-diff/-/json-diff-0.7.0.tgz#4ad45c305ec62515408bf8df070cab5aabac2485"
-  integrity sha512-20IJqupGHywtIaE6fS30iygh3dVqVdzmsnrYn/VFuRaQKxLx/RGH5K9hhCfctVxgN7KzJlnD7gYFAOrNwiCgtA==
+"@types/json-diff@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@types/json-diff/-/json-diff-0.9.0.tgz#29067a3a4ac0155c52a0f09c6bbd95d55b3a1bd5"
+  integrity sha512-JDmF3WIoa9LFK0vmTYoHhCNa09X77NWZNI2/nRbgCGasoTneH/mUR7lbBtsYXNKYznEPR76rLjNVG8TY9IcvFQ==
 
 "@types/json-schema@^7.0.9":
   version "7.0.9"
