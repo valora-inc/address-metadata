@@ -421,5 +421,19 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PLASTIK.png",
     "name": "Plastik",
     "symbol": "PLASTIK"
+  },
+  {
+    "address": "0x8a1639098644a229d08f441ea45a63ae050ee018",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/gCELO.png",
+    "name": "Green Celo",
+    "symbol": "gCELO"
+  },
+  {
+    "address": "0xfb42e2e90fc79cfa6a6b4eba4877d5faf4e29287",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/gcUSD.png",
+    "name": "Green Celo Dollar",
+    "symbol": "gcUSD"
   }
 ]
