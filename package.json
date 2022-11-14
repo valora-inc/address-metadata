@@ -34,10 +34,10 @@
   "devDependencies": {
     "@types/jest": "^27.5.2",
     "@types/json-diff": "^0.9.0",
-    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@valora/eslint-config-typescript": "^0.0.1",
     "@valora/prettier-config": "^0.0.1",
-    "eslint": "^8.26.0",
+    "eslint": "^8.27.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
