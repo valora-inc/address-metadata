@@ -3401,10 +3401,10 @@ json-bigint@^1.0.0:
   dependencies:
     bignumber.js "^9.0.0"
 
-json-diff@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/json-diff/-/json-diff-0.9.1.tgz#86c0893f7c30a60bc44b98bd54762e101e2e5c6b"
-  integrity sha512-Z3eMg6kbVTBr3g/IpmF6z28yL2sqi4kkIlJWDQSt0auQW2y0QFu3RmSKizvj880E/EUyNanvWY3oi/T5Z7ZA1g==
+json-diff@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/json-diff/-/json-diff-0.10.0.tgz#9ded0aea47bccad7900eabce441d03a82cbd19af"
+  integrity sha512-jOkbyMEdbIhROk4s9qWyD+YZ1jSHX8mHlUqWz71jwnRB/rDhWZBLdhv84j5pu4Ri8fFAnFOZANHKIlExcf2+KQ==
   dependencies:
     cli-color "^2.0.0"
     difflib "~0.2.1"
