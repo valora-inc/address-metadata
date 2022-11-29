@@ -435,5 +435,19 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/gcUSD.png",
     "name": "Green Celo Dollar",
     "symbol": "gcUSD"
+  },
+  {
+    "address": "0x37f750b7cc259a2f741af45294f6a16572cf5cad",
+    "decimals": 6,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
+    "name": "USD Coin",
+    "symbol": "USDC"
+  },
+  {
+    "address": "0x617f3112bf5397d0467d315cc709ef968d9ba546",
+    "decimals": 6,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
+    "name": "Tether USD",
+    "symbol": "USDT"
   }
 ]
