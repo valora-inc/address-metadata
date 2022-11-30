@@ -35,5 +35,9 @@
   "0xeefd851e7f742b805311501706c1192959754b11": {
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/diego-test.jpg",
     "name": "Diego Test Wallet 1"
+  },
+  "0x1707a1959b823116d0023235fbbc9de481ddbfed": {
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/rewards-dapp.png",
+    "name": "Valora Rewards - Cryptohunt"
   }
 }

@@ -235,5 +235,9 @@
   "0x8a37f0290ae85d08522d2a605617e76128fd0712": {
     "name": "Ramp",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/ramp.png"
+  },
+  "0x992c62819d51cbf1d98ff11c56c849ba6a95fae7": {
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/rewards-dapp.png",
+    "name": "Valora Rewards - Cryptohunt"
   }
 }
