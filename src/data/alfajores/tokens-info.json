@@ -221,5 +221,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PLASTIK.png",
     "name": "Plastik",
     "symbol": "PKS"
+  },
+  {
+    "address": "0xc668583dcbdc9ae6fa3ce46462758188adfdfc24",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/stCELO.png",
+    "name": "Staked Celo",
+    "symbol": "stCELO"
   }
 ]
