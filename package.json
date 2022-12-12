@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^17.0.0",
+    "@types/node": "^18.11.12",
     "dotenv": "^16.0.3",
     "firebase-admin": "^10.3.0",
     "joi": "^17.6.3",
