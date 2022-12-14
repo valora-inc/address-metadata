@@ -319,6 +319,13 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@ewoudenberg/difflib@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@ewoudenberg/difflib/-/difflib-0.1.0.tgz#a2ae5d3321ffa7c1b47691cf0db189d1264aaaa4"
+  integrity sha512-OU5P5mJyD3OoWYMWY+yIgwvgNS9cFAU10f+DDuvtogcWQOoJIsQ4Hy2McSfUfhKjq8L0FuWVb4Rt7kgA+XK86A==
+  dependencies:
+    heap ">= 0.2.0"
+
 "@fastify/busboy@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-1.1.0.tgz#4472f856e2bb5a9ee34ad64b93891b73b73537ca"
@@ -1740,13 +1747,6 @@ diff@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
-
-difflib@~0.2.1:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/difflib/-/difflib-0.2.4.tgz#b5e30361a6db023176d562892db85940a718f47e"
-  integrity sha1-teMDYabbAjF21WKJLbhZQKcY9H4=
-  dependencies:
-    heap ">= 0.2.0"
 
 dir-glob@^3.0.1:
   version "3.0.1"
@@ -3288,13 +3288,13 @@ json-bigint@^1.0.0:
   dependencies:
     bignumber.js "^9.0.0"
 
-json-diff@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/json-diff/-/json-diff-0.10.0.tgz#9ded0aea47bccad7900eabce441d03a82cbd19af"
-  integrity sha512-jOkbyMEdbIhROk4s9qWyD+YZ1jSHX8mHlUqWz71jwnRB/rDhWZBLdhv84j5pu4Ri8fFAnFOZANHKIlExcf2+KQ==
+json-diff@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/json-diff/-/json-diff-1.0.0.tgz#73fe9642778cbe5a99eec515ff0de065cf22de6a"
+  integrity sha512-9M6M60W4GUxmha6eoFhRVKF+tDw70jdqrxo3u6aqQ6/cwW6RhkSTPI0gvfCRcBwbWiUWvJo9jR6e9TZxcQdhnA==
   dependencies:
+    "@ewoudenberg/difflib" "0.1.0"
     cli-color "^2.0.0"
-    difflib "~0.2.1"
     dreamopt "~0.8.0"
 
 json-parse-even-better-errors@^2.3.0:
