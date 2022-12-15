@@ -228,5 +228,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/stCELO.png",
     "name": "Staked Celo",
     "symbol": "stCELO"
-  }
+  },
+  {
+    "address": "0xc16b81af351ba9e64c1a069e3ab18c244a1e3049",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/agEUR.png",
+    "name": "Angle EUR",
+    "symbol": "agEUR"
+  }  
 ]
