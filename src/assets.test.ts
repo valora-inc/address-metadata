@@ -42,8 +42,10 @@ describe('assets', () => {
       const { height, width } = await sizeOfImage(assetPath)
       if (ASSETS_SIZE_EXCEPTIONS.has(path.basename(assetPath))) {
         // Just check it's a square
+        /* eslint-disable jest/no-conditional-expect */
         expect(height).toBeGreaterThan(0)
         expect(height).toBe(width)
+        /* eslint-enable jest/no-conditional-expect */
         return
       }
       expect(height).toBe(REQUIRED_ASSET_HEIGHT)
@@ -67,7 +69,8 @@ describe('assets', () => {
       .map((assetFilename) => path.join(ASSETS_DIRECTORY, assetFilename))
 
     // TODO: update assets so they can pass these requirements
-    xit.each(assetPaths)('%s is the required size', async (assetPath) => {
+    // eslint-disable-next-line jest/no-disabled-tests
+    it.skip.each(assetPaths)('%s is the required size', async (assetPath) => {
       const { height, width } = await sizeOfImage(assetPath)
       expect(height).toBe(REQUIRED_ASSET_HEIGHT)
       expect(width).toBe(REQUIRED_ASSET_WIDTH)
