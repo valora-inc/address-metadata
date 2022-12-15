@@ -2,6 +2,7 @@ import allMetadata from './data/'
 
 describe('Schema validation', () => {
   Object.entries(allMetadata).forEach(([project, projectMetadata]) => {
+    // eslint-disable-next-line jest/valid-title
     describe(project, () => {
       it.each(projectMetadata)('$rtdbLocation', ({ data, schema }) => {
         const validationResult = schema.validate(data, {
