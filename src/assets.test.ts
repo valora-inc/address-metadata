@@ -32,6 +32,7 @@ describe('assets', () => {
       'mcUSDxOLD.png',
       'mcREAL.png',
       'stabilUSD.png',
+      'agEUR.png',
     ])
 
     const assetPaths = fs
