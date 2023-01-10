@@ -28,7 +28,7 @@ const AddressesExtraInfoSchema = Joi.object().pattern(
     name: Joi.string().required(),
     isProviderAddress: Joi.boolean(),
     isCeloRewardSender: Joi.boolean(),
-    isFiatConnectProvider: Joi.boolean()
+    isFiatConnectProvider: Joi.boolean(),
   }),
 )
 
