@@ -239,5 +239,10 @@
   "0x992c62819d51cbf1d98ff11c56c849ba6a95fae7": {
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/rewards-dapp.png",
     "name": "Valora Rewards - Cryptohunt"
+  },
+  "0x64b6399dca42582c17f579206e6405924dbf60eb": {
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/alphafortress.png",
+    "name": "Alpha Fortress",
+    "isFiatConnectProvider": true
   }
 }
