@@ -43,6 +43,7 @@ jobs:
     name: Update Alfajores RTDB
     if: github.ref == 'refs/heads/main'
     needs:
+      - lint
       - test
     runs-on: ubuntu-latest
     steps:
