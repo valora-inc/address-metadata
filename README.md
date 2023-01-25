@@ -55,7 +55,7 @@ yarn
 ### Validate
 
 ```
-yarn validate
+yarn test
 ```
 
 ### Diff
