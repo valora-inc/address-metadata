@@ -8,12 +8,19 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "lint": "eslint --ext=.tsx,.ts --fix src/",
+    "build": "tsc",
+    "build:scripts": "tsc --project scripts/tsconfig.json",
+    "typecheck": "yarn build && yarn build:scripts",
+    "lint": "eslint --ext=.tsx,.ts,.json src/ scripts/",
+    "lint:fix": "yarn lint --fix",
     "format": "prettier --loglevel error --write .",
-    "validate": "jest",
+    "format:check": "prettier --check .",
+    "test": "jest",
+    "test:watch": "yarn test --watch",
+    "test:ci": "yarn test --ci --coverage",
+    "supercheck": "yarn format && yarn lint:fix && yarn typecheck && yarn test",
     "diff": "ts-node scripts/diff.ts",
-    "update": "ts-node scripts/update.ts",
-    "test": "yarn jest && yarn prettier --check . && yarn eslint --ext=.ts src/"
+    "update": "ts-node scripts/update.ts"
   },
   "prettier": "@valora/prettier-config",
   "repository": "git@github.com:valora-inc/rtdb-data.git",

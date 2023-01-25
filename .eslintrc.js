@@ -1,7 +1,7 @@
 module.exports = {
   extends: ['@valora/eslint-config-typescript'],
   parserOptions: {
-    project: './tsconfig.eslint.json',
+    project: './tsconfig.test.json',
   },
   rules: {
     'no-console': ['error', { allow: ['none'] }],
