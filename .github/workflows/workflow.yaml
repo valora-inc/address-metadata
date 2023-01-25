@@ -41,7 +41,7 @@ jobs:
       - run: yarn test:ci
   update-alfajores:
     name: Update Alfajores RTDB
-    # if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs:
       - lint
       - test
