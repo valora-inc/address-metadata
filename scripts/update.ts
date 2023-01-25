@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { diffString } from 'json-diff'
 import { loadConfig } from '../src/config'
 import { FirebaseClient } from '../src/clients/firebase-client'

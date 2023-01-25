@@ -8,12 +8,15 @@ on:
   # ..and any pull request.
   pull_request:
 
+# Cancel any in progress run of the workflow for a given PR
+# This avoids building outdated code
 concurrency:
-  group: env-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  test:
-    name: test
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,7 +25,20 @@ jobs:
           node-version: '16'
           check-latest: true
       - run: yarn
-      - run: yarn test
+      - run: yarn typecheck
+      - run: yarn format:check
+      - run: yarn lint
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          check-latest: true
+      - run: yarn
+      - run: yarn test:ci
   update-alfajores:
     name: Update Alfajores RTDB
     if: github.ref == 'refs/heads/main'

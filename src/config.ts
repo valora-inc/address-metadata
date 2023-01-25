@@ -18,7 +18,8 @@ export function loadConfig(): Config {
       description: 'URL to database to update',
       type: 'string',
       demandOption: true,
-    }).argv
+    })
+    .parseSync()
 
   return {
     project: argv.project,
