@@ -14,7 +14,6 @@ describe('assets', () => {
     const ASSETS_SIZE_EXCEPTIONS = new Set([
       'ABR.png',
       'ARI.png',
-      'CELO.png',
       'FTM.png',
       'IMMO.png',
       'NTMX.png',
