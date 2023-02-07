@@ -463,5 +463,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "Axelar Wrapped USDC",
     "symbol": "axlUSDC"
+  },
+  {
+    "address": "0x62b8b11039fcfe5ab0c56e502b1c372a3d2a9c7a",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/GoodDollar.png",
+    "name": "GoodDollar",
+    "symbol": "G$"
   }
 ]
