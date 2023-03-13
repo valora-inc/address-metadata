@@ -244,5 +244,9 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/alphafortress.png",
     "name": "Alpha Fortress",
     "isFiatConnectProvider": true
+  },
+  "0xcab6f40d807a52980d2bfaf8591b8c59205b2450": {
+    "name": "#YourValora Rewards",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/valora.png"
   }
 }
