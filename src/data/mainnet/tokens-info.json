@@ -170,7 +170,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png",
     "isCoreToken": true,
     "name": "Celo native asset",
-    "symbol": "CELO"
+    "symbol": "CELO",
+    "isSwappable": true
   },
   {
     "address": "0x47264ae1fc0c8e6418ebe78630718e11a07346a8",
@@ -235,7 +236,8 @@
     "isCoreToken": true,
     "name": "Celo Dollar",
     "symbol": "cUSD",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "isSwappable": true
   },
   {
     "address": "0x7c2bf103daac9c082a0e53ad40bb9f3f7f799af7",
@@ -347,7 +349,8 @@
     "isCoreToken": true,
     "name": "Celo Euro",
     "symbol": "cEUR",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "isSwappable": true
   },
   {
     "address": "0xd90bbdf5904cb7d275c41f897495109b9a5ada58",
@@ -385,7 +388,8 @@
     "isCoreToken": true,
     "name": "Celo Brazilian Real",
     "symbol": "cREAL",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "isSwappable": true
   },
   {
     "address": "0xe919f65739c26a42616b7b8eedc6b5524d1e3ac4",
