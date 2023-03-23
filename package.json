@@ -33,7 +33,7 @@
     "@types/node": "^17.0.0",
     "dotenv": "^16.0.3",
     "firebase-admin": "^11.5.0",
-    "joi": "^17.8.4",
+    "joi": "^17.9.0",
     "json-diff": "^1.0.3",
     "typescript": "~5.0.2",
     "yargs": "^17.7.1"
