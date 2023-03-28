@@ -472,10 +472,10 @@
     "symbol": "G$"
   },
   {
-    "address": "0xef4229c8c3250C675F21BCefa42f58EfbfF6002a",
+    "address": "0xef4229c8c3250c675f21bcefa42f58efbff6002a",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "Optics v2 USDC",
-    "symbol": "USDC",
+    "symbol": "USDC"
   }
 ]
