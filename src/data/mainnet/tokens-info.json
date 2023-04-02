@@ -11,14 +11,16 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/stCELO.png",
     "name": "Staked Celo",
-    "symbol": "stCELO"
+    "symbol": "stCELO",
+    "isSwappable": true
   },
   {
     "address": "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UBE.png",
     "name": "Ubeswap",
-    "symbol": "UBE"
+    "symbol": "UBE",
+    "isSwappable": true
   },
   {
     "address": "0x035ee610693a29cb77fd6efbeb9d9d278703e145",
@@ -46,21 +48,24 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png",
     "name": "Wrapped Ether",
-    "symbol": "WETH"
+    "symbol": "WETH",
+    "isSwappable": true
   },
   {
     "address": "0x173234922eb27d5138c5e481be9df5261faed450",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SOL.png",
     "name": "SOL",
-    "symbol": "SOL"
+    "symbol": "SOL",
+    "isSwappable": true
   },
   {
     "address": "0x17700282592d6917f6a73d0bf8accf4d578c131e",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MOO.png",
     "name": "Moola",
-    "symbol": "MOO"
+    "symbol": "MOO",
+    "isSwappable": true
   },
   {
     "address": "0x1a8dbe5958c597a744ba51763abebd3355996c3e",
@@ -120,7 +125,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cETH.png",
     "name": "Wrapped Ethereum",
-    "symbol": "cETH"
+    "symbol": "cETH",
+    "isSwappable": true
   },
   {
     "address": "0x2e3487f967df2ebc2f236e16f8fcaeac7091324d",
@@ -315,7 +321,8 @@
     "decimals": 8,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WBTC.png",
     "name": "Wrapped BTC",
-    "symbol": "WBTC"
+    "symbol": "WBTC",
+    "isSwappable": true
   },
   {
     "address": "0xbe50a3013a1c94768a1abb78c3cb79ab28fc1ace",
@@ -410,7 +417,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcREAL.png",
     "name": "Moola interest bearing CREAL",
     "symbol": "mCREAL",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "pegTo": "0xe8537a3d056da446677b9e9d6c5db704eaab4787"
   },
   {
     "address": "0x9995cc8f20db5896943afc8ee0ba463259c931ed",
