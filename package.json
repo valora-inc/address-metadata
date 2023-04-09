@@ -32,7 +32,7 @@
   "dependencies": {
     "@types/node": "^17.0.0",
     "dotenv": "^16.0.3",
-    "firebase-admin": "^11.5.0",
+    "firebase-admin": "^11.6.0",
     "joi": "^17.9.1",
     "json-diff": "^1.0.3",
     "typescript": "~5.0.3",
