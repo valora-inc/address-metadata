@@ -35,7 +35,7 @@
     "firebase-admin": "^11.6.0",
     "joi": "^17.9.1",
     "json-diff": "^1.0.3",
-    "typescript": "~5.0.3",
+    "typescript": "~5.0.4",
     "yargs": "^17.7.1"
   },
   "devDependencies": {
