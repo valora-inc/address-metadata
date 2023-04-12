@@ -33,6 +33,7 @@ const TokensInfoSchema = Joi.object().pattern(
     isSupercharged: Joi.boolean(),
     // This checks it's referencing a token address that exists in the root object
     pegTo: Joi.valid(Joi.ref('/', { in: true })),
+    isSwappable: Joi.boolean(),
   }),
 )
 
