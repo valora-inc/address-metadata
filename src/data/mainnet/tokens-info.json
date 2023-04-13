@@ -322,7 +322,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WBTC.png",
     "name": "Wrapped BTC",
     "symbol": "WBTC",
-    "isSwappable": true
+    "isSwappable": false
   },
   {
     "address": "0xbe50a3013a1c94768a1abb78c3cb79ab28fc1ace",
