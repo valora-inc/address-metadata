@@ -1,5 +1,12 @@
 [
   {
+    "address": "0x6986629D1F504f1c85E272b3D2451117e5068f62",
+    "decimals": 2,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ACCT.png",
+    "name": "Astruhl",
+    "symbol": "ACCT"
+  },
+  {
     "address": "0x00400fcbf0816bebb94654259de7273f4a05c762",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/POOF.png",
