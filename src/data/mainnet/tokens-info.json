@@ -489,5 +489,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "Optics v2 USDC",
     "symbol": "USDC"
+  },
+  {
+    "address": "0x0e21b5bdfb6edba7d903a610d4de2f8c72586017",
+    "decimals": 6,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
+    "name": "USD Coin (PoS)",
+    "symbol": "USDC"
   }
 ]
