@@ -39,7 +39,7 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.0",
+    "@types/jest": "^29.5.1",
     "@types/json-diff": "^0.9.1",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@valora/eslint-config-typescript": "^1.0.1",
