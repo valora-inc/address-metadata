@@ -496,5 +496,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "USD Coin (PoS)",
     "symbol": "USDC"
+  },
+  {
+    "address": "0x1d18d0386f51ab03e7e84e71bda1681eba865f1f",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
+    "name": "JumpToken",
+    "symbol": "JMPT"
   }
 ]
