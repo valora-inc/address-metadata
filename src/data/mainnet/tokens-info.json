@@ -503,5 +503,13 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/JMPT.png",
     "name": "JumpToken",
     "symbol": "JMPT"
+  },
+  {
+    "address": "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/portal_ETH.png",
+    "name": "Portal Ether",
+    "symbol": "WETH",
+    "isSwappable": true
   }
 ]
