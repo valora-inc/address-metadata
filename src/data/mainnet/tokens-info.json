@@ -49,7 +49,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png",
     "name": "Wrapped Ether",
     "symbol": "WETH",
-    "isSwappable": true
+    "isSwappable": false
   },
   {
     "address": "0x173234922eb27d5138c5e481be9df5261faed450",
@@ -126,7 +126,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cETH.png",
     "name": "Wrapped Ethereum",
     "symbol": "cETH",
-    "isSwappable": true
+    "isSwappable": false
   },
   {
     "address": "0x2e3487f967df2ebc2f236e16f8fcaeac7091324d",
@@ -503,5 +503,13 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/JMPT.png",
     "name": "JumpToken",
     "symbol": "JMPT"
+  },
+  {
+    "address": "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/portalETH.png",
+    "name": "Portal Ether",
+    "symbol": "WETH",
+    "isSwappable": true
   }
 ]
