@@ -33,7 +33,12 @@ const TokensInfoSchema = Joi.object().pattern(
     isSupercharged: Joi.boolean(),
     // This checks it's referencing a token address that exists in the root object
     pegTo: Joi.valid(Joi.ref('/', { in: true })),
-    isSwappable: Joi.boolean(),
+    // Forcing flag to be false if decimals is not 18
+    isSwappable: Joi.when('decimals', {
+      is: 18,
+      then: Joi.boolean(),
+      otherwise: Joi.valid(false)
+    })
   }),
 )
 
