@@ -37,8 +37,8 @@ const TokensInfoSchema = Joi.object().pattern(
     isSwappable: Joi.when('decimals', {
       is: 18,
       then: Joi.boolean(),
-      otherwise: Joi.valid(false)
-    })
+      otherwise: Joi.valid(false),
+    }),
   }),
 )
 
