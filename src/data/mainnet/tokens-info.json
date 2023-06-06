@@ -433,7 +433,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PLASTIK.png",
     "name": "Plastik",
     "symbol": "PLASTIK",
-    "isSwappable": true
+    "isSwappable": false
   },
   {
     "address": "0x8a1639098644a229d08f441ea45a63ae050ee018",
