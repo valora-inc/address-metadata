@@ -322,7 +322,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WBTC.png",
     "name": "Wrapped BTC",
     "symbol": "WBTC",
-    "isSwappable": false
+    "isSwappable": false,
+    "isSwappableWithAnyDecimals": true
   },
   {
     "address": "0xbe50a3013a1c94768a1abb78c3cb79ab28fc1ace",
@@ -433,7 +434,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PLASTIK.png",
     "name": "Plastik",
     "symbol": "PLASTIK",
-    "isSwappable": false
+    "isSwappable": false,
+    "isSwappableWithAnyDecimals": true
   },
   {
     "address": "0x8a1639098644a229d08f441ea45a63ae050ee018",
