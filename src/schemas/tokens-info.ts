@@ -39,6 +39,7 @@ const TokensInfoSchema = Joi.object().pattern(
       then: Joi.boolean(),
       otherwise: Joi.valid(false),
     }),
+    isSwappableWithAnyDecimals: Joi.boolean(),
   }),
 )
 
