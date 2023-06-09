@@ -514,5 +514,12 @@
     "name": "Portal Ether",
     "symbol": "WETH",
     "isSwappable": true
+  },
+  {
+    "address": "0x84084b3a9ff2cb1f617355d0773eb37722ba1d49",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/IMTX.png",
+    "name": "ImmortalX",
+    "symbol": "IMTX"
   }
 ]
