@@ -1022,10 +1022,10 @@
     expect "^29.0.0"
     pretty-format "^29.0.0"
 
-"@types/json-diff@^0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@types/json-diff/-/json-diff-0.9.1.tgz#0b60b9f8b43ee5017175dbb29150b6cecbd22025"
-  integrity sha512-SrwOKMaKa9rmYayzG6N1T2PsqybHJ9dSOzhzZFlI5XORDWwaltgjVz7UIa3OeE5zVkHw65niV2son7PdaZrElQ==
+"@types/json-diff@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/json-diff/-/json-diff-1.0.0.tgz#c6812deaaed499e2f5a24caf45aad13c6c2a1ade"
+  integrity sha512-dCXC1F73Sqriz2d8Wt/sP/DztE+rlfIRPxW9WSYheHp/l3gvkeSvM6l4vhm7t4Dgn8AJAxNKajx/eobbPdP6Wg==
 
 "@types/json-schema@^7.0.9":
   version "7.0.9"
