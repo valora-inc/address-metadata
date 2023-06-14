@@ -19,8 +19,10 @@ const checkMatchingAsset: CustomValidator = (value) => {
 const MIN_SWAP_VERSION = '1.60.0'
 
 const checkMinVersion: CustomValidator = (value) => {
-  if(!semver.gte(value, MIN_SWAP_VERSION)) {
-    throw new Error(`Minimum version for swappable token is ${MIN_SWAP_VERSION}`)
+  if (!semver.gte(value, MIN_SWAP_VERSION)) {
+    throw new Error(
+      `Minimum version for swappable token is ${MIN_SWAP_VERSION}`,
+    )
   }
 }
 
@@ -48,7 +50,9 @@ const TokensInfoSchema = Joi.object().pattern(
       then: Joi.boolean(),
       otherwise: Joi.valid(false),
     }),
-    isSwappableFromVersion: Joi.string().pattern(/^\d+\.\d+\.\d+$/).custom(checkMinVersion, 'has a valid version'),
+    isSwappableFromVersion: Joi.string()
+      .pattern(/^\d+\.\d+\.\d+$/)
+      .custom(checkMinVersion, 'has a valid version'),
   }),
 )
 
