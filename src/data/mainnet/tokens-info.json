@@ -323,7 +323,7 @@
     "name": "Wrapped BTC",
     "symbol": "WBTC",
     "isSwappable": false,
-    "isSwappableWithAnyDecimals": true
+    "isSwappableFromVersion": "1.60.0"
   },
   {
     "address": "0xbe50a3013a1c94768a1abb78c3cb79ab28fc1ace",
@@ -435,7 +435,7 @@
     "name": "Plastik",
     "symbol": "PLASTIK",
     "isSwappable": false,
-    "isSwappableWithAnyDecimals": true
+    "isSwappableFromVersion": "1.60.0"
   },
   {
     "address": "0x8a1639098644a229d08f441ea45a63ae050ee018",
