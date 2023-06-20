@@ -50,7 +50,7 @@ const TokensInfoSchema = Joi.object().pattern(
       then: Joi.boolean(),
       otherwise: Joi.valid(false),
     }),
-    isSwappableFromVersion: Joi.string()
+    minimumAppVersionToSwap: Joi.string()
       .pattern(/^\d+\.\d+\.\d+$/)
       .custom(checkMinVersion, 'has a valid version'),
   }),
