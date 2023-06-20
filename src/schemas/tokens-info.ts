@@ -3,6 +3,7 @@ import fs from 'fs'
 import { URL } from 'url'
 import path from 'path'
 import AddressSchema from './address-schema'
+import semver from 'semver'
 
 const checkMatchingAsset: CustomValidator = (value) => {
   const url = new URL(value)
@@ -13,6 +14,16 @@ const checkMatchingAsset: CustomValidator = (value) => {
   }
 
   return value
+}
+
+const MIN_SWAP_VERSION = '1.60.0'
+
+const checkMinVersion: CustomValidator = (value) => {
+  if (!semver.gte(value, MIN_SWAP_VERSION)) {
+    throw new Error(
+      `Minimum version for swappable token is ${MIN_SWAP_VERSION}`,
+    )
+  }
 }
 
 const TokensInfoSchema = Joi.object().pattern(
@@ -39,7 +50,9 @@ const TokensInfoSchema = Joi.object().pattern(
       then: Joi.boolean(),
       otherwise: Joi.valid(false),
     }),
-    isSwappableWithAnyDecimals: Joi.boolean(),
+    minimumAppVersionToSwap: Joi.string()
+      .pattern(/^\d+\.\d+\.\d+$/)
+      .custom(checkMinVersion, 'has a valid version'),
   }),
 )
 
