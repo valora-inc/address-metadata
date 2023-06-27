@@ -280,7 +280,8 @@
     "name": "Moola interest bearing CUSD",
     "symbol": "mCUSD",
     "pegTo": "0x765de816845861e75a25fca122bb6898b8b1282a",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "isSwappable": true
   },
   {
     "address": "0x94140c2ea9d208d8476ca4e3045254169791c59e",
@@ -314,7 +315,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcEURxOLD.png",
     "name": "Moola cEUR MToken",
-    "symbol": "mCEUR"
+    "symbol": "mCEUR",
+    "isSwappable": true
   },
   {
     "address": "0xbaab46e28388d2779e6e31fd00cf0e5ad95e327b",
@@ -419,7 +421,8 @@
     "name": "Moola interest bearing CREAL",
     "symbol": "mCREAL",
     "isSupercharged": true,
-    "pegTo": "0xe8537a3d056da446677b9e9d6c5db704eaab4787"
+    "pegTo": "0xe8537a3d056da446677b9e9d6c5db704eaab4787",
+    "isSwappable": true
   },
   {
     "address": "0x9995cc8f20db5896943afc8ee0ba463259c931ed",
