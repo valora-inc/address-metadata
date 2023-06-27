@@ -315,8 +315,7 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcEURxOLD.png",
     "name": "Moola cEUR MToken",
-    "symbol": "mCEUR",
-    "isSwappable": true
+    "symbol": "mCEUR"
   },
   {
     "address": "0xbaab46e28388d2779e6e31fd00cf0e5ad95e327b",
@@ -375,7 +374,8 @@
     "name": "Moola interest bearing CEUR",
     "symbol": "mCEUR",
     "pegTo": "0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "isSwappable": true
   },
   {
     "address": "0xe685d21b7b0fc7a248a6a8e03b8db22d013aa2ee",
