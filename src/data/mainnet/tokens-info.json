@@ -27,7 +27,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/TFBX.png",
     "name": "Truefeedback",
-    "symbol": "TFBX"
+    "symbol": "TFBX",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x0a60c25ef6021fc3b479914e6bca7c03c18a97f1",
@@ -86,7 +87,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARI.png",
     "name": "Ari Swap",
-    "symbol": "ARI"
+    "symbol": "ARI",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x218c3c3d49d0e7b37aff0d8bb079de36ae61a4c0",
@@ -112,7 +114,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/sCELO.png",
     "name": "Savings CELO",
-    "symbol": "sCELO"
+    "symbol": "sCELO",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x2a3684e9dc20b857375ea04235f2f7edbe818fa7",
@@ -147,7 +150,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cMCO2.png",
     "name": "cMCO2",
-    "symbol": "cMCO2"
+    "symbol": "cMCO2",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x3af556b48469d2398ab7be1563a0cfd80ea4ac84",
@@ -161,14 +165,16 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cStar.png",
     "name": "CeloStarter",
-    "symbol": "cStar"
+    "symbol": "cStar",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x46c9757c5497c5b1f2eb73ae79b6b67d119b0b58",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PACT.png",
     "name": "impactMarket",
-    "symbol": "PACT"
+    "symbol": "PACT",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x471ece3750da237f93b8e339c536989b8978a438",
@@ -211,7 +217,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ABR.png",
     "name": "Allbridge",
-    "symbol": "ABR"
+    "symbol": "ABR",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x7037f7296b2fc7908de7b57a89efaa8319f0c500",
@@ -226,14 +233,16 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MOBI.png",
     "name": "Mobius DAO Token",
-    "symbol": "MOBI"
+    "symbol": "MOBI",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x74c0c58b99b68cf16a717279ac2d056a34ba2bfe",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SOURCE.png",
     "name": "Source",
-    "symbol": "SOURCE"
+    "symbol": "SOURCE",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x765de816845861e75a25fca122bb6898b8b1282a",
@@ -257,21 +266,24 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mCELO.png",
     "name": "Moola interest bearing CELO",
-    "symbol": "mCELO"
+    "symbol": "mCELO",
+    "isSwappable": true
   },
   {
     "address": "0x8427bd503dd3169ccc9aff7326c15258bc305478",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SYMM.png",
     "name": "Symmetric",
-    "symbol": "SYMM"
+    "symbol": "SYMM",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x8e3670fd7b0935d3fe832711debfe13bb689b690",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/AVAX.png",
     "name": "AVAX",
-    "symbol": "AVAX"
+    "symbol": "AVAX",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x918146359264c492bd6934071c6bd31c854edbc3",
@@ -288,7 +300,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PREMIO.png",
     "name": "PREMIO",
-    "symbol": "PREMIO"
+    "symbol": "PREMIO",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0xa649325aa7c5093d12d6f98eb4378deae68ce23f",
@@ -308,7 +321,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/KNX.png",
     "name": "KNX",
-    "symbol": "KNX"
+    "symbol": "KNX",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0xa8d0e6799ff3fd19c6459bf02689ae09c4d78ba7",
@@ -336,7 +350,8 @@
     "address": "0xd15ec721c2a896512ad29c671997dd68f9593226",
     "decimals": 18,
     "name": "SushiToken",
-    "symbol": "SUSHI"
+    "symbol": "SUSHI",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0xd1e05db88db611f17a25478f3e6c3209460f17af",
@@ -382,7 +397,8 @@
     "decimals": 9,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/IMMO.png",
     "name": "Immortal",
-    "symbol": "IMMO"
+    "symbol": "IMMO",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0xe74abf23e1fdf7acbec2f3a30a772ef77f1601e1",
@@ -429,7 +445,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETHIX.png",
     "name": "Ethix",
-    "symbol": "ETHIX"
+    "symbol": "ETHIX",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0x27cd006548df7c8c8e9fdc4a67fa05c2e3ca5cf9",
