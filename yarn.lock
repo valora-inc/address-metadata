@@ -2262,7 +2262,7 @@ find-up@^5.0.0:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
 
-firebase-admin@^11.10.0:
+firebase-admin@^11.10.1:
   version "11.10.1"
   resolved "https://registry.yarnpkg.com/firebase-admin/-/firebase-admin-11.10.1.tgz#5f0f83a44627e89938d350c5e4bbac76596c963e"
   integrity sha512-atv1E6GbuvcvWaD3eHwrjeP5dAVs+EaHEJhu9CThMzPY6In8QYDiUR6tq5SwGl4SdA/GcAU0nhwWc/FSJsAzfQ==
