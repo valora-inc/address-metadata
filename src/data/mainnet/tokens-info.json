@@ -541,5 +541,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/IMTX.png",
     "name": "ImmortalX",
     "symbol": "IMTX"
+  },
+  {
+    "address": "0xDE093684c796204224BC081f937aa059D903c52a",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SBC.png",
+    "name": "Stable Coin",
+    "symbol": "SBC"
   }
 ]
