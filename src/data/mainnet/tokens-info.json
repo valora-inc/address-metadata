@@ -321,8 +321,7 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/KNX.png",
     "name": "KNX",
-    "symbol": "KNX",
-    "minimumAppVersionToSwap": "1.60.0"
+    "symbol": "KNX"
   },
   {
     "address": "0xa8d0e6799ff3fd19c6459bf02689ae09c4d78ba7",
