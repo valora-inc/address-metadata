@@ -541,5 +541,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/IMTX.png",
     "name": "ImmortalX",
     "symbol": "IMTX"
+  },
+  {
+    "address": "0x97926a82930bb7b33178e3c2f4ed1bfdc91a9fbf",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
+    "name": "Dai",
+    "symbol": "DAI"
   }
 ]
