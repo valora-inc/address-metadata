@@ -321,8 +321,7 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/KNX.png",
     "name": "KNX",
-    "symbol": "KNX",
-    "minimumAppVersionToSwap": "1.60.0"
+    "symbol": "KNX"
   },
   {
     "address": "0xa8d0e6799ff3fd19c6459bf02689ae09c4d78ba7",
@@ -337,8 +336,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WBTC.png",
     "name": "Wrapped BTC",
     "symbol": "WBTC",
-    "isSwappable": false,
-    "minimumAppVersionToSwap": "1.60.0"
+    "isSwappable": false
   },
   {
     "address": "0xbe50a3013a1c94768a1abb78c3cb79ab28fc1ace",
@@ -364,7 +362,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cBTC.png",
     "name": "Wrapped Bitcoin",
-    "symbol": "BTC"
+    "symbol": "BTC",
+    "isSwappable": true
   },
   {
     "address": "0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73",
@@ -541,5 +540,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/IMTX.png",
     "name": "ImmortalX",
     "symbol": "IMTX"
+  },
+  {
+    "address": "0x97926a82930bb7b33178e3c2f4ed1bfdc91a9fbf",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
+    "name": "Dai",
+    "symbol": "DAI"
   }
 ]
