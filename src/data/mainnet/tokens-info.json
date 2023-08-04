@@ -57,7 +57,7 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SOL.png",
     "name": "Allbridge Wrapped SOL",
-    "symbol": "WSOL",
+    "symbol": "SOL",
     "isSwappable": true
   },
   {
