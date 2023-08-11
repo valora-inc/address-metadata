@@ -547,5 +547,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
     "name": "Dai",
     "symbol": "DAI"
+  },
+  {
+    "address": "0xd71ffd0940c920786ec4dbb5a12306669b5b81ef",
+    "decimals": 8,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/portalBTC.png",
+    "name": "Wrapped BTC",
+    "symbol": "WBTC"
   }
 ]
