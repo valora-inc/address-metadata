@@ -5,7 +5,7 @@ import path from 'path'
 import AddressSchema from './address-schema'
 import semver from 'semver'
 
-const checkMatchingAsset: CustomValidator = (value) => {
+export const checkMatchingAsset = (value: string) => {
   const url = new URL(value)
   const filename = path.basename(url.pathname)
   const assetPath = path.join(__dirname, '../../assets/tokens', filename)
