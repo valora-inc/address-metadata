@@ -1,5 +1,5 @@
 import AddressesExtraInfoData from './addresses-extra-info.json'
-import TokensInfoData from './tokens-info.json'
+import TokensInfoData from './celo-tokens-info.json'
 import AddressesExtraInfoSchema from '../../schemas/addresses-extra-info'
 import { OverrideType, RTDBMetadata } from '../../types'
 import TokensInfoSchema from '../../schemas/tokens-info'
