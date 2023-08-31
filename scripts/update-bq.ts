@@ -10,19 +10,14 @@ const datasetId = 'address_metadata'
 const tableId = 'tokens_info'
 const fieldsToKeep = ['address', 'decimals', 'name', 'symbol'] as const
 
-// Prepare the rows for insertion
 const rows = jsonData.map((entry) => {
   const row: Record<string, string | number> = {}
   fieldsToKeep.forEach((field) => {
-    const value = entry[field]
-    if (value !== undefined) {
-      row[field] = value
-    }
+    row[field] = entry[field]
   })
   return row
 })
 
-// Overwrite rows in BigQuery table
 async function overwriteTable() {
   const dataset = bigquery.dataset(datasetId, { projectId })
   const table = dataset.table(tableId)
