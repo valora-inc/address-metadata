@@ -5,7 +5,7 @@ import TokensInfoSchema from '../../schemas/tokens-info'
 import { OverrideType, RTDBMetadata } from '../../types'
 import { transformRawTokensInfo } from '../../utils/transforms'
 
-const alfajoresRTDBMetadata: RTDBMetadata[] = [
+const testnetRTDBMetadata: RTDBMetadata[] = [
   {
     data: AddressesExtraInfoData,
     schema: AddressesExtraInfoSchema,
@@ -20,4 +20,4 @@ const alfajoresRTDBMetadata: RTDBMetadata[] = [
   },
 ]
 
-export default alfajoresRTDBMetadata
+export default testnetRTDBMetadata

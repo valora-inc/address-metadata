@@ -1,10 +1,10 @@
 import mainnetRTDBMetadata from './mainnet/'
-import alfajoresRTDBMetadata from './alfajores'
+import testnetRTDBMetadata from './testnet'
 import { RTDBMetadata } from '../types'
 
-const allMetadata: Record<string, RTDBMetadata[]> = {
+const allMetadata: Record<'testnet' | 'mainnet', RTDBMetadata[]> = {
   mainnet: mainnetRTDBMetadata,
-  alfajores: alfajoresRTDBMetadata,
+  testnet: testnetRTDBMetadata,
 }
 
 export default allMetadata

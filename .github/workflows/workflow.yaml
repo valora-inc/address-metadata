@@ -39,8 +39,8 @@ jobs:
           check-latest: true
       - run: yarn
       - run: yarn test:ci
-  update-alfajores:
-    name: Update Alfajores RTDB
+  update-testnet:
+    name: Update Testnet (celo-mobile-alfajores) RTDB
     if: github.ref == 'refs/heads/main'
     needs:
       - lint
@@ -58,12 +58,12 @@ jobs:
           node-version: '16'
           check-latest: true
       - run: yarn
-      - run: yarn update:rtdb --project=alfajores --database-url=https://celo-mobile-alfajores.firebaseio.com/
+      - run: yarn update:rtdb --project=testnet --database-url=https://celo-mobile-alfajores.firebaseio.com/
   update-mainnet:
     name: Update Mainnet RTDB
     if: github.ref == 'refs/heads/main'
     needs:
-      - update-alfajores
+      - update-testnet
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

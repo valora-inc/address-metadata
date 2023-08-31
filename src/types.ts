@@ -20,7 +20,7 @@ export interface RTDBMetadata {
 }
 
 export interface Config {
-  project: string
+  project: 'testnet' | 'mainnet'
   databaseUrl: string
 }
 
