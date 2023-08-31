@@ -2,13 +2,13 @@
 import { diffString } from 'json-diff'
 import { loadConfig } from '../src/config'
 import { FirebaseClient } from '../src/clients/firebase-client'
-import allMetadata from '../src/data/'
+import celoMetadata from '../src/data/'
 
 async function main() {
   const config = loadConfig()
   const firebaseClient = new FirebaseClient(config)
 
-  const projectMetadata = allMetadata[config.project]
+  const projectMetadata = celoMetadata[config.project]
 
   console.log(`Calculating diffs for the ${config.project} GCP project...`)
   let hasDiff = false

@@ -24,18 +24,12 @@ export interface Config {
   databaseUrl: string
 }
 
-export type TokenInfo = {
+export interface TokenInfo {
+  address?: string
   name: string
   symbol: string
   decimals: number
   imageUrl?: string
-} & (
-  | { address: string; isNative: false | undefined }
-  | { address: undefined; isNative: true }
-) // typically native tokens like ETH do not have an address
-
-export type CeloTokenInfo = Omit<TokenInfo, 'address' | 'isNative'> & {
-  address: string // all Celo tokens have an address, even native CELO
   isNative?: boolean
   isCoreToken?: boolean
   pegTo?: string

@@ -2,10 +2,10 @@ import AddressesExtraInfoData from './addresses-extra-info.json'
 import TokensInfoData from './celo-tokens-info.json'
 import AddressesExtraInfoSchema from '../../schemas/addresses-extra-info'
 import { OverrideType, RTDBMetadata } from '../../types'
-import TokensInfoSchema from '../../schemas/tokens-info'
+import CeloTokensInfoSchema from '../../schemas/tokens-info'
 import { transformRawTokensInfo } from '../../utils/transforms'
 
-const mainnetRTDBMetadata: RTDBMetadata[] = [
+const celoMainnetRTDBMetadata: RTDBMetadata[] = [
   {
     data: AddressesExtraInfoData,
     schema: AddressesExtraInfoSchema,
@@ -14,10 +14,10 @@ const mainnetRTDBMetadata: RTDBMetadata[] = [
   },
   {
     data: transformRawTokensInfo(TokensInfoData),
-    schema: TokensInfoSchema,
+    schema: CeloTokensInfoSchema,
     rtdbLocation: 'tokensInfo',
     overrideType: OverrideType.DeleteMissingKeysAndUpdate,
   },
 ]
 
-export default mainnetRTDBMetadata
+export default celoMainnetRTDBMetadata

@@ -1,7 +1,7 @@
-import allMetadata from './data/'
+import celoMetadata from './data/'
 
 describe('Schema validation', () => {
-  Object.entries(allMetadata).forEach(([project, projectMetadata]) => {
+  Object.entries(celoMetadata).forEach(([project, projectMetadata]) => {
     // eslint-disable-next-line jest/valid-title
     describe(project, () => {
       it.each(projectMetadata)('$rtdbLocation', ({ data, schema }) => {

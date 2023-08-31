@@ -2,14 +2,14 @@
 import { diffString } from 'json-diff'
 import { loadConfig } from '../src/config'
 import { FirebaseClient } from '../src/clients/firebase-client'
-import allMetadata from '../src/data/'
+import celoMetadata from '../src/data/'
 import { deleteMissingKeysUpdateRequest } from '../src/utils/utils'
 
 async function main() {
   const config = loadConfig()
   const firebaseClient = new FirebaseClient(config)
 
-  const projectMetadata = allMetadata[config.project]
+  const projectMetadata = celoMetadata[config.project]
 
   console.log(`Updating RTDB data for the ${config.project} GCP project...`)
   for (const { data, schema, rtdbLocation, overrideType } of projectMetadata) {

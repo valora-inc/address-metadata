@@ -26,7 +26,7 @@ const checkMinVersion: CustomValidator = (value) => {
   }
 }
 
-const TokensInfoSchema = Joi.object().pattern(
+const CeloTokensInfoSchema = Joi.object().pattern(
   AddressSchema,
   Joi.object({
     address: AddressSchema.required(),
@@ -56,4 +56,4 @@ const TokensInfoSchema = Joi.object().pattern(
   }),
 )
 
-export default TokensInfoSchema
+export default CeloTokensInfoSchema
