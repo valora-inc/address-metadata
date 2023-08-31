@@ -3,7 +3,7 @@ import TokensInfoData from './celo-alfajores-tokens-info.json'
 import AddressesExtraInfoSchema from '../../schemas/addresses-extra-info'
 import CeloTokensInfoSchema from '../../schemas/tokens-info'
 import { OverrideType, RTDBMetadata } from '../../types'
-import { transformCeloTokensInfo } from '../../utils/transforms'
+import { transformCeloTokensForRTDB } from '../../utils/transforms'
 
 const celoTestnetRTDBMetadata: RTDBMetadata[] = [
   {
@@ -13,7 +13,7 @@ const celoTestnetRTDBMetadata: RTDBMetadata[] = [
     overrideType: OverrideType.OverrideAll,
   },
   {
-    data: transformCeloTokensInfo(TokensInfoData),
+    data: transformCeloTokensForRTDB(TokensInfoData),
     schema: CeloTokensInfoSchema,
     rtdbLocation: 'tokensInfo',
     overrideType: OverrideType.DeleteMissingKeysAndUpdate,
