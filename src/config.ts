@@ -9,9 +9,7 @@ export function loadConfig(): Config {
     .env('')
     .option('project', {
       description: 'Project to update RTDB',
-      example: 'alfajores',
-      type: 'string',
-      choices: ['mainnet', 'alfajores'],
+      choices: ['mainnet', 'testnet'] as const,
       demandOption: true,
     })
     .option('database-url', {
