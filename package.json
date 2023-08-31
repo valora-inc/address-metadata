@@ -20,7 +20,7 @@
     "test:ci": "yarn test --ci --coverage",
     "supercheck": "yarn format && yarn lint:fix && yarn typecheck && yarn test",
     "diff": "ts-node scripts/diff.ts",
-    "update": "ts-node scripts/update.ts"
+    "update:rtdb": "ts-node scripts/update-rtdb.ts"
   },
   "prettier": "@valora/prettier-config",
   "repository": "git@github.com:valora-inc/rtdb-data.git",
@@ -40,6 +40,7 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "@google-cloud/bigquery": "^7.2.0",
     "@types/jest": "^29.5.4",
     "@types/json-diff": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^6.4.1",

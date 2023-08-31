@@ -42,7 +42,7 @@ their corresponding schemas, and will fail if any of the JSON blobs are poorly f
 `yarn diff --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}` will display a
 diff between the local JSON contents and the state within RTDB, much like `git diff`.
 
-`yarn update --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}` will actually perform
+`yarn update:rtdb --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}` will actually perform
 RTDB updates based off the local state. If some local JSON blob fails to validate, it will not be updated.
 Similarly, if the local state is already consistent with that in RTDB, we will not perform any write.
 
@@ -73,5 +73,5 @@ When updating nodes without overrides, there is no check to avoid sending the up
 This is done automatically during CICD; you should _not_ need to run this locally.
 
 ```
-yarn update --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}
+yarn update:rtdb --project={mainnet|alfajores} --database-url={URL to Firebase RTDB location}
 ```
