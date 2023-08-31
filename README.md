@@ -12,7 +12,7 @@ guarantee that we will review your request to add the token to the supported lis
 
 To add a new ERC20 token you need to follow these steps:
 
-- Open [`src/data/mainnet/tokens-info.json`](src/data/mainnet/tokens-info.json) and/or [`src/data/testnet/tokens-info.json`](src/data/testnet/tokens-info.json). You will see that it's an array of token info. Add a new object. The fields are described below.
+- Add your token info to the relevant tokens info JSON. For example, to add a token on Celo Mainnet, update [`src/data/mainnet/celo-tokens-info.json`](src/data/mainnet/tokens-info.json). The fields are described below.
 - Add the logo to [assets/tokens](./assets/tokens)
 - After doing this you should open a PR and ask someone on the Valora team to review it so it can be merged. Once it's merged, the new ERC20 token will be visible in the Valora Wallet for users holding it.
 
@@ -64,7 +64,7 @@ yarn test
 yarn diff --project={mainnet|testnet} --database-url={URL to Firebase RTDB location}
 ```
 
-#### Knonw issues
+#### Known issues
 
 When updating nodes without overrides, there is no check to avoid sending the update request even if there is no update (i.e. info in firebase is already ok).
 
