@@ -30,7 +30,7 @@ To add a new ERC20 token you need to follow these steps:
 
 When adding a new node of data to this repository, first write a `Joi` schema for the data in `src/schemas`.
 Then, add the raw data as a JSON blob to e.g., `src/data/mainnet/{some-rtdb-node}.json` or `src/data/testnet/{some-rtdb-node}.json`. Finally, import the appropriate files and fill in the required metadata
-in `src/data/mainnet/index.ts` or `src/data/testnet/index.ts`. The `rtdbLocation` field in the metadata list
+in `src/index.ts`. The `rtdbLocation` field in the metadata list
 should be the path where this data is located within RTDB.
 
 Once these steps are done, any changes you make to the raw JSON files will be committed to the correct RTDB
