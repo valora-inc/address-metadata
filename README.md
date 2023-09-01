@@ -46,7 +46,7 @@ diff between the local JSON contents and the state within RTDB, much like `git d
 RTDB updates based off the local state. If some local JSON blob fails to validate, it will not be updated.
 Similarly, if the local state is already consistent with that in RTDB, we will not perform any write.
 
-## Install
+### Install
 
 ```
 yarn
@@ -75,3 +75,16 @@ This is done automatically during CICD; you should _not_ need to run this locall
 ```
 yarn update:rtdb --project={mainnet|testnet} --database-url={URL to Firebase RTDB location}
 ```
+
+## Adding blockchains
+
+To add support for tokens on a new blockchain, you need to follow these steps:
+
+1) Add a json with information on the tokens you wish to be recognized to `src/data/mainnet/YOUR_NEW_CHAIN-tokens-info.json`
+and any tokens on the blockchain's main testnet to `src/data/mainnet/YOUR_NEW_CHAIN-TESTNET_NAME-tokens-info.json`
+2) Add schema validation test coverage to `src/schemas.test.ts`. If there are no special validation rules to apply for 
+your blockchain (for instance, on Celo all tokens have addresses, even the native token), you can probably just add to 
+the list of test cases used for ethereum mainnet and testnet. 
+
+
+TODO extend the above list of steps when https://linear.app/valora/issue/ACT-908/createupdate-cloud-function-to-return-new-tokens-info is done
