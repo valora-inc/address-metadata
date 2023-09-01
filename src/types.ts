@@ -33,4 +33,5 @@ export interface TokenInfo {
   isNative?: boolean
   isCoreToken?: boolean
   pegTo?: string
+  isSupercharged?: boolean
 }
