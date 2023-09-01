@@ -1,4 +1,10 @@
-import { Chain, Environment, Network, TokenInfo, TokenInfoDTO } from '../types'
+import {
+  Network,
+  Environment,
+  NetworkId,
+  TokenInfo,
+  TokenInfoDTO,
+} from '../types'
 
 // Transforms the Celo tokens info data in this repo into the format used in the RTDB collection
 export function transformCeloTokensForRTDB(
@@ -12,20 +18,23 @@ export function transformCeloTokensForRTDB(
   )
 }
 
-const ChainToNetwork: Record<Environment, Record<Chain, Network>> = {
+const EnvironmentToNetworkIds: Record<
+  Environment,
+  Record<Network, NetworkId>
+> = {
   mainnet: {
-    [Chain.ethereum]: Network['ethereum-mainnet'],
-    [Chain.celo]: Network['celo-mainnet'],
+    [Network.ethereum]: NetworkId['ethereum-mainnet'],
+    [Network.celo]: NetworkId['celo-mainnet'],
   },
   testnet: {
-    [Chain.ethereum]: Network['ethereum-sepolia'],
-    [Chain.celo]: Network['celo-alfajores'],
+    [Network.ethereum]: NetworkId['ethereum-sepolia'],
+    [Network.celo]: NetworkId['celo-alfajores'],
   },
 }
 
 export function getTokenInfoDTO(
   tokenInfo: TokenInfo,
-  network: Network,
+  network: NetworkId,
 ): TokenInfoDTO {
   return {
     ...tokenInfo,
@@ -33,18 +42,18 @@ export function getTokenInfoDTO(
   }
 }
 
-export function getChainToTokensInfoDTO(
-  chainToTokensInfo: Record<Chain, TokenInfo[]>,
+export function getNetworkToTokensInfoDTO(
+  networkToTokensInfo: Record<Network, TokenInfo[]>,
   environment: Environment,
-): Record<Chain, TokenInfoDTO[]> {
-  const chainToNetwork = ChainToNetwork[environment]
-  const output = {} as Record<Chain, TokenInfoDTO[]>
-  for (const [chain, tokensInfo] of Object.entries(chainToTokensInfo) as [
-    Chain,
+): Record<Network, TokenInfoDTO[]> {
+  const networkToId = EnvironmentToNetworkIds[environment]
+  const output = {} as Record<Network, TokenInfoDTO[]>
+  for (const [network, tokensInfo] of Object.entries(networkToTokensInfo) as [
+    Network,
     TokenInfo[],
   ][]) {
-    output[chain] = tokensInfo.map((tokenInfo) =>
-      getTokenInfoDTO(tokenInfo, chainToNetwork[chain]),
+    output[network] = tokensInfo.map((tokenInfo) =>
+      getTokenInfoDTO(tokenInfo, networkToId[network]),
     )
   }
   return output

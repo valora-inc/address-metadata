@@ -1,5 +1,5 @@
 import {
-  Chain,
+  Network,
   Environment,
   OverrideType,
   RTDBMetadata,
@@ -14,7 +14,7 @@ import MainnetAddressesExtraInfo from './data/mainnet/addresses-extra-info.json'
 import TestnetAddressesExtraInfo from './data/testnet/addresses-extra-info.json'
 import AddressesExtraInfoSchema from './schemas/addresses-extra-info'
 import {
-  getChainToTokensInfoDTO,
+  getNetworkToTokensInfoDTO,
   transformCeloTokensForRTDB,
 } from './utils/transforms'
 import { RTDBAddressToTokenInfoSchema } from './schemas/tokens-info'
@@ -42,23 +42,23 @@ export function getCeloRTDBMetadata(environment: Environment): RTDBMetadata[] {
 
 export function getTokensInfo(
   environment: Environment,
-): Record<Chain, TokenInfo[]> {
+): Record<Network, TokenInfo[]> {
   // just exported for testing
   return environment === 'mainnet'
     ? {
-        [Chain.ethereum]: EthereumMainnetTokensInfo,
-        [Chain.celo]: CeloMainnetTokensInfo,
+        [Network.ethereum]: EthereumMainnetTokensInfo,
+        [Network.celo]: CeloMainnetTokensInfo,
       }
     : {
-        [Chain.ethereum]: EthereumTestnetTokensInfo,
-        [Chain.celo]: CeloTestnetTokensInfo,
+        [Network.ethereum]: EthereumTestnetTokensInfo,
+        [Network.celo]: CeloTestnetTokensInfo,
       }
 }
 
 // TODO(ACT-908): serve this data with a cloud function https://linear.app/valora/issue/ACT-908/createupdate-cloud-function-to-return-new-tokens-info
 export function getTokenInfoDTOs(
   environment: Environment,
-): Record<Chain, TokenInfoDTO[]> {
-  const chainToTokensInfo = getTokensInfo(environment)
-  return getChainToTokensInfoDTO(chainToTokensInfo, environment)
+): Record<Network, TokenInfoDTO[]> {
+  const networkToTokensInfo = getTokensInfo(environment)
+  return getNetworkToTokensInfoDTO(networkToTokensInfo, environment)
 }

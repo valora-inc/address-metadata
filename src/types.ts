@@ -40,12 +40,12 @@ export type TokenInfoDTO = TokenInfo & {
   tokenId: string
 }
 
-export enum Chain {
+export enum Network { // environment-agnostic network name
   celo = 'celo',
   ethereum = 'ethereum',
 }
 
-export enum Network {
+export enum NetworkId { // environment-specific network id's
   ['celo-mainnet'] = 'celo-mainnet',
   ['celo-alfajores'] = 'celo-alfajores',
   ['ethereum-mainnet'] = 'ethereum-mainnet',
