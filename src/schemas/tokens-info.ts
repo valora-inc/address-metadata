@@ -56,18 +56,20 @@ const BaseTokenInfoSchema = Joi.object({
 export const TokenInfoSchema = Joi.alternatives().try(
   Joi.object({
     // native tokens don't have an address except CELO
-    isNative: Joi.valid(true),
+    isNative: Joi.valid(true).required(),
     symbol: Joi.string().invalid('CELO').required(),
-    address: Joi.any().forbidden(),
+    address: Joi.forbidden(),
   }).concat(BaseTokenInfoSchema),
   Joi.object({
-    // CELO and all non-native tokens have an address
-    isNative: Joi.when('symbol', {
-      is: 'CELO',
-      then: Joi.valid(true),
-      otherwise: Joi.boolean().invalid(true),
-    }),
-    symbol: Joi.string().required(),
+    // CELO is native and has an address
+    isNative: Joi.valid(true).required(),
+    symbol: Joi.valid('CELO').required(),
+    address: AddressSchema.required(),
+  }).concat(BaseTokenInfoSchema),
+  Joi.object({
+    // all non-native tokens require address
+    isNative: Joi.boolean().invalid(true),
+    symbol: Joi.string().invalid('CELO').required(),
     address: AddressSchema.required(),
   }).concat(BaseTokenInfoSchema),
 )

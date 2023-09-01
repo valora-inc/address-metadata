@@ -15,74 +15,89 @@ function validateWithSchema(value: any, schema: Joi.Schema) {
 
 describe('Schema validation', () => {
   describe('Joi sanity checks', () => {
-    it('forbids CELO to not have an address', () => {
-      const validationResult = validateWithSchema(
-        {
-          name: 'Celo',
-          symbol: 'CELO',
-          decimals: 18,
-        },
-        TokenInfoSchema,
-      )
-      expect(validationResult.error).not.toBe(undefined)
-    })
-    it('forbids non-CELO native tokens to have an address', () => {
-      const validationResult = validateWithSchema(
-        {
-          name: 'New native token',
-          symbol: 'XYZ',
-          decimals: 18,
-          isNative: true,
-          address: '0x471ece3750da237f93b8e339c536989b8978a438',
-        },
-        TokenInfoSchema,
-      )
-      expect(validationResult.error).not.toBe(undefined)
-    })
-    it('forbids pegging to phantom address', () => {
-      const validationResult = validateWithSchema(
-        {
-          '0x7037f7296b2fc7908de7b57a89efaa8319f0c500': {
-            address: '0x7037f7296b2fc7908de7b57a89efaa8319f0c500',
-            decimals: 18,
-            imageUrl:
-              'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mCELOxOLD.png',
-            name: 'Moola CELO AToken',
-            symbol: 'mCELO',
-            pegTo: '0x471ece3750da237f93b8e339c536989b8978a438',
-          },
-        },
-        RTDBAddressToTokenInfoSchema,
-      )
-      expect(validationResult.error).not.toBe(undefined)
-    })
-    it('allows pegging to included address', () => {
-      const validationResult = validateWithSchema(
-        {
-          '0x7037f7296b2fc7908de7b57a89efaa8319f0c500': {
-            address: '0x7037f7296b2fc7908de7b57a89efaa8319f0c500',
-            decimals: 18,
-            imageUrl:
-              'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mCELOxOLD.png',
-            name: 'Moola CELO AToken',
-            symbol: 'mCELO',
-            pegTo: '0x471ece3750da237f93b8e339c536989b8978a438',
-          },
-          '0x471ece3750da237f93b8e339c536989b8978a438': {
-            address: '0x471ece3750da237f93b8e339c536989b8978a438',
-            decimals: 18,
-            imageUrl:
-              'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
-            isCoreToken: true,
-            name: 'Celo native asset',
+    describe('TokenInfoSchema', () => {
+      it('forbids CELO to not have an address', () => {
+        const validationResult = validateWithSchema(
+          {
+            name: 'Celo',
             symbol: 'CELO',
-            isSwappable: true,
-            isNative: true,
+            decimals: 18,
           },
-        },
-        RTDBAddressToTokenInfoSchema,
-      )
-      expect(validationResult.error).toBeUndefined()
+          TokenInfoSchema,
+        )
+        expect(validationResult.error).toBeDefined()
+      })
+      it('forbids non-CELO native tokens to have an address', () => {
+        const validationResult = validateWithSchema(
+          {
+            name: 'New native token',
+            symbol: 'XYZ',
+            decimals: 18,
+            isNative: true,
+            address: '0x471ece3750da237f93b8e339c536989b8978a438',
+          },
+          TokenInfoSchema,
+        )
+        expect(validationResult.error).toBeDefined()
+      })
+      it('requires non-native tokens to have an address', () => {
+        const validationResult = validateWithSchema(
+          {
+            name: 'New normal token',
+            symbol: 'XYZ',
+            decimals: 18,
+          },
+          TokenInfoSchema,
+        )
+        expect(validationResult.error).toBeDefined()
+      })
+    })
+    describe('RTDBAddressToTokenInfoSchema', () => {
+      it('forbids pegging to phantom address', () => {
+        const validationResult = validateWithSchema(
+          {
+            '0x7037f7296b2fc7908de7b57a89efaa8319f0c500': {
+              address: '0x7037f7296b2fc7908de7b57a89efaa8319f0c500',
+              decimals: 18,
+              imageUrl:
+                'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mCELOxOLD.png',
+              name: 'Moola CELO AToken',
+              symbol: 'mCELO',
+              pegTo: '0x471ece3750da237f93b8e339c536989b8978a438',
+            },
+          },
+          RTDBAddressToTokenInfoSchema,
+        )
+        expect(validationResult.error).toBeDefined()
+      })
+      it('allows pegging to included address', () => {
+        const validationResult = validateWithSchema(
+          {
+            '0x7037f7296b2fc7908de7b57a89efaa8319f0c500': {
+              address: '0x7037f7296b2fc7908de7b57a89efaa8319f0c500',
+              decimals: 18,
+              imageUrl:
+                'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mCELOxOLD.png',
+              name: 'Moola CELO AToken',
+              symbol: 'mCELO',
+              pegTo: '0x471ece3750da237f93b8e339c536989b8978a438',
+            },
+            '0x471ece3750da237f93b8e339c536989b8978a438': {
+              address: '0x471ece3750da237f93b8e339c536989b8978a438',
+              decimals: 18,
+              imageUrl:
+                'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
+              isCoreToken: true,
+              name: 'Celo native asset',
+              symbol: 'CELO',
+              isSwappable: true,
+              isNative: true,
+            },
+          },
+          RTDBAddressToTokenInfoSchema,
+        )
+        expect(validationResult.error).toBeUndefined()
+      })
     })
   })
 
