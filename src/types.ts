@@ -35,3 +35,19 @@ export interface TokenInfo {
   pegTo?: string
   isSupercharged?: boolean
 }
+
+export type TokenInfoDTO = TokenInfo & {
+  tokenId: string
+}
+
+export enum Chain {
+  celo = 'celo',
+  ethereum = 'ethereum',
+}
+
+export enum Network {
+  ['celo-mainnet'] = 'celo-mainnet',
+  ['celo-alfajores'] = 'celo-alfajores',
+  ['ethereum-mainnet'] = 'ethereum-mainnet',
+  ['ethereum-sepolia'] = 'ethereum-sepolia',
+}
