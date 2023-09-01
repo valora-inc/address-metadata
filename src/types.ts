@@ -20,7 +20,7 @@ export interface RTDBMetadata {
 }
 
 export interface Config {
-  project: 'testnet' | 'mainnet'
+  project: Environment
   databaseUrl: string
 }
 
@@ -51,3 +51,5 @@ export enum Network {
   ['ethereum-mainnet'] = 'ethereum-mainnet',
   ['ethereum-sepolia'] = 'ethereum-sepolia',
 }
+
+export type Environment = 'mainnet' | 'testnet'

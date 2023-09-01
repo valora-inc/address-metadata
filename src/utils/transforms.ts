@@ -1,4 +1,4 @@
-import { Chain, Network, TokenInfo, TokenInfoDTO } from '../types'
+import { Chain, Environment, Network, TokenInfo, TokenInfoDTO } from '../types'
 
 // Transforms the Celo tokens info data in this repo into the format used in the RTDB collection
 export function transformCeloTokensForRTDB(
@@ -12,7 +12,7 @@ export function transformCeloTokensForRTDB(
   )
 }
 
-const ChainToNetwork: Record<'mainnet' | 'testnet', Record<Chain, Network>> = {
+const ChainToNetwork: Record<Environment, Record<Chain, Network>> = {
   mainnet: {
     [Chain.ethereum]: Network['ethereum-mainnet'],
     [Chain.celo]: Network['celo-mainnet'],
@@ -35,7 +35,7 @@ export function getTokenInfoDTO(
 
 export function getChainToTokensInfoDTO(
   chainToTokensInfo: Record<Chain, TokenInfo[]>,
-  environment: 'mainnet' | 'testnet',
+  environment: Environment,
 ): Record<Chain, TokenInfoDTO[]> {
   const chainToNetwork = ChainToNetwork[environment]
   const output = {} as Record<Chain, TokenInfoDTO[]>

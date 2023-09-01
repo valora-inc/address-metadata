@@ -1,5 +1,6 @@
 import {
   Chain,
+  Environment,
   OverrideType,
   RTDBMetadata,
   TokenInfo,
@@ -18,9 +19,7 @@ import {
 } from './utils/transforms'
 import { RTDBAddressToTokenInfoSchema } from './schemas/tokens-info'
 
-export function getCeloRTDBMetadata(
-  environment: 'mainnet' | 'testnet',
-): RTDBMetadata[] {
+export function getCeloRTDBMetadata(environment: Environment): RTDBMetadata[] {
   const [tokensInfo, addressesExtraInfo] =
     environment === 'mainnet'
       ? [CeloMainnetTokensInfo, MainnetAddressesExtraInfo]
@@ -42,7 +41,7 @@ export function getCeloRTDBMetadata(
 }
 
 export function getTokensInfo(
-  environment: 'mainnet' | 'testnet',
+  environment: Environment,
 ): Record<Chain, TokenInfo[]> {
   // just exported for testing
   return environment === 'mainnet'
@@ -58,7 +57,7 @@ export function getTokensInfo(
 
 // TODO(ACT-908): serve this data with a cloud function https://linear.app/valora/issue/ACT-908/createupdate-cloud-function-to-return-new-tokens-info
 export function getTokenInfoDTOs(
-  environment: 'mainnet' | 'testnet',
+  environment: Environment,
 ): Record<Chain, TokenInfoDTO[]> {
   const chainToTokensInfo = getTokensInfo(environment)
   return getChainToTokensInfoDTO(chainToTokensInfo, environment)
