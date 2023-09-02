@@ -84,5 +84,6 @@ To add support for tokens on a new blockchain, you need to follow these steps:
    and any tokens on the blockchain's main testnet to `src/data/mainnet/YOUR_NEW_CHAIN-TESTNET_NAME-tokens-info.json`
 2. Add the new blockchain and to "Network" and "NetworkId" enums in `src/types.ts`
 3. Try compiling with `yarn build` and see where it breaks. At time of writing, the places to update are:
-  - `src/transforms.ts` - add mapping from environment and network to network ID
-  - `src/index.ts` - add mapping from network to token info from jsons added in step 1
+
+- `src/transforms.ts` - add mapping from environment and network to network ID
+- `src/index.ts` - add mapping from network to token info from jsons added in step 1
