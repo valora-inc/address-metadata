@@ -40,7 +40,6 @@ export function getCeloRTDBMetadata(environment: Environment): RTDBMetadata[] {
 export function getTokensInfo(
   environment: Environment,
 ): Record<Network, TokenInfo[]> {
-  // just exported for testing
   return environment === 'mainnet'
     ? {
         [Network.ethereum]: EthereumMainnetTokensInfo,
