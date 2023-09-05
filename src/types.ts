@@ -36,20 +36,9 @@ export interface TokenInfo {
   isSupercharged?: boolean
 }
 
-export type TokenInfoDTO = TokenInfo & {
-  tokenId: string
-}
-
 export enum Network { // environment-agnostic network name
   celo = 'celo',
   ethereum = 'ethereum',
-}
-
-export enum NetworkId { // environment-specific network id's
-  ['celo-mainnet'] = 'celo-mainnet',
-  ['celo-alfajores'] = 'celo-alfajores',
-  ['ethereum-mainnet'] = 'ethereum-mainnet',
-  ['ethereum-sepolia'] = 'ethereum-sepolia',
 }
 
 export type Environment = 'mainnet' | 'testnet'
