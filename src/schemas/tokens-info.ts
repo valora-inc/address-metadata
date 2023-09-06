@@ -4,7 +4,6 @@ import { URL } from 'url'
 import path from 'path'
 import AddressSchema from './address-schema'
 import semver from 'semver'
-import { NetworkId } from '../types'
 
 export const checkMatchingAsset = (value: string) => {
   const url = new URL(value)
@@ -52,7 +51,6 @@ const BaseTokenInfoSchema = Joi.object({
     .pattern(/^\d+\.\d+\.\d+$/)
     .custom(checkMinVersion, 'has a valid version'),
   isNative: Joi.boolean(),
-  networkId: Joi.valid(...Object.values(NetworkId)),
   tokenId: Joi.string(),
 })
 
