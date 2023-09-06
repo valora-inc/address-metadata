@@ -69,7 +69,7 @@ export const TokenInfoSchema = Joi.alternatives().try(
   Joi.object({
     // all non-native tokens require address
     isNative: Joi.boolean().invalid(true),
-    symbol: Joi.string().invalid('CELO').required(),
+    symbol: Joi.string().required(),
     address: AddressSchema.required(),
   }).concat(BaseTokenInfoSchema),
 )
