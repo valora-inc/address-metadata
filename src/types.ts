@@ -25,10 +25,11 @@ export interface Config {
 }
 
 export interface TokenInfo {
-  address?: string
   name: string
   symbol: string
   decimals: number
+  networkId: NetworkId
+  address?: string
   imageUrl?: string
   isNative?: boolean
   isCoreToken?: boolean
@@ -39,6 +40,13 @@ export interface TokenInfo {
 export enum Network { // environment-agnostic network name
   celo = 'celo',
   ethereum = 'ethereum',
+}
+
+export enum NetworkId { // environment-specific
+  ['celo-mainnet'] = 'celo-mainnet',
+  ['celo-alfajores'] = 'celo-alfajores',
+  ['ethereum-mainnet'] = 'ethereum-mainnet',
+  ['ethereum-sepolia'] = 'ethereum-sepolia',
 }
 
 export type Environment = 'mainnet' | 'testnet'
