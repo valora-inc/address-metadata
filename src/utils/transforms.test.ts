@@ -1,10 +1,10 @@
-import { addNetworkIdAndTokenIds } from './transforms'
+import { addTokenIds } from './transforms'
 import { NetworkId } from '../types'
 
 describe('transforms', () => {
-  it('addNetworkIdAndTokenIds', () => {
+  it('addTokenIds', () => {
     expect(
-      addNetworkIdAndTokenIds(
+      addTokenIds(
         [
           {
             name: 'New erc20 token',
@@ -19,7 +19,7 @@ describe('transforms', () => {
             isNative: true,
           },
         ],
-        NetworkId['celo-alfajores'],
+        'test-network-id' as NetworkId,
       ),
     ).toEqual([
       {
@@ -27,16 +27,14 @@ describe('transforms', () => {
         symbol: 'NET',
         decimals: 18,
         address: '0x123',
-        networkId: NetworkId['celo-alfajores'],
-        tokenId: `${NetworkId['celo-alfajores']}:0x123`,
+        tokenId: `test-network-id:0x123`,
       },
       {
         name: 'New native token',
         symbol: 'NNT',
         decimals: 18,
         isNative: true,
-        networkId: NetworkId['celo-alfajores'],
-        tokenId: `${NetworkId['celo-alfajores']}:native`,
+        tokenId: `test-network-id:native`,
       },
     ])
   })

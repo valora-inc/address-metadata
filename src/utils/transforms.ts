@@ -1,6 +1,6 @@
 import { NetworkId, TokenInfo } from '../types'
 
-type PreIdTokenInfo = Omit<TokenInfo, 'networkId' | 'tokenId'> // token info from JSON files. the JSON file's name implies the network id, which is used along with isNative and address to compute a token id
+type PreIdTokenInfo = Omit<TokenInfo, 'tokenId'> // token info from JSON files. the JSON file's name implies the network id, which is used along with isNative and address to compute a token id
 
 type CeloRTDBTokenInfo = Omit<PreIdTokenInfo, 'isNative'>
 
@@ -16,13 +16,12 @@ export function transformCeloTokensForRTDB(
   )
 }
 
-export function addNetworkIdAndTokenIds(
+export function addTokenIds(
   partialTokenInfo: PreIdTokenInfo[],
   networkId: NetworkId,
 ): TokenInfo[] {
   return partialTokenInfo.map((token) => ({
     ...token,
-    networkId,
     tokenId: `${networkId}:${token.isNative ? 'native' : token.address}`,
   }))
 }

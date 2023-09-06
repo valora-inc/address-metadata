@@ -28,7 +28,6 @@ export interface TokenInfo {
   name: string
   symbol: string
   decimals: number
-  networkId: NetworkId
   tokenId: string
   address?: string
   imageUrl?: string
