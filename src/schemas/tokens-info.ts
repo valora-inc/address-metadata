@@ -53,6 +53,7 @@ const BaseTokenInfoSchema = Joi.object({
     .custom(checkMinVersion, 'has a valid version'),
   isNative: Joi.boolean(),
   networkId: Joi.valid(...Object.values(NetworkId)),
+  tokenId: Joi.string(),
 })
 
 export const TokenInfoSchema = Joi.alternatives().try(

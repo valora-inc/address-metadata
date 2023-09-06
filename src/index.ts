@@ -13,7 +13,10 @@ import EthereumTestnetTokensInfo from './data/testnet/ethereum-sepolia-tokens-in
 import MainnetAddressesExtraInfo from './data/mainnet/addresses-extra-info.json'
 import TestnetAddressesExtraInfo from './data/testnet/addresses-extra-info.json'
 import AddressesExtraInfoSchema from './schemas/addresses-extra-info'
-import { addNetworkId, transformCeloTokensForRTDB } from './utils/transforms'
+import {
+  addNetworkIdAndTokenIds,
+  transformCeloTokensForRTDB,
+} from './utils/transforms'
 import { RTDBAddressToTokenInfoSchema } from './schemas/tokens-info'
 
 export function getCeloRTDBMetadata(environment: Environment): RTDBMetadata[] {
@@ -43,21 +46,21 @@ export function getTokensInfo(
 ): Record<Network, TokenInfo[]> {
   return environment === 'mainnet'
     ? {
-        [Network.ethereum]: addNetworkId(
+        [Network.ethereum]: addNetworkIdAndTokenIds(
           EthereumMainnetTokensInfo,
           NetworkId['ethereum-mainnet'],
         ),
-        [Network.celo]: addNetworkId(
+        [Network.celo]: addNetworkIdAndTokenIds(
           CeloMainnetTokensInfo,
           NetworkId['celo-mainnet'],
         ),
       }
     : {
-        [Network.ethereum]: addNetworkId(
+        [Network.ethereum]: addNetworkIdAndTokenIds(
           EthereumTestnetTokensInfo,
           NetworkId['ethereum-sepolia'],
         ),
-        [Network.celo]: addNetworkId(
+        [Network.celo]: addNetworkIdAndTokenIds(
           CeloTestnetTokensInfo,
           NetworkId['celo-alfajores'],
         ),
