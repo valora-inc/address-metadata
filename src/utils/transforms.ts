@@ -2,7 +2,7 @@ import { NetworkId, TokenInfo } from '../types'
 
 type CeloRTDBTokenInfo = Omit<TokenInfo, 'isNative' | 'networkId'>
 
-type PreIdTokenInfo = Omit<TokenInfo, 'networkId' | 'tokenId'>
+type PreIdTokenInfo = Omit<TokenInfo, 'networkId' | 'tokenId'> // token info from JSON files. the JSON file's name implies the network id, which is used along with isNative and address to compute a token id
 
 // Transforms the Celo tokens info data in this repo into the format used in the RTDB collection
 export function transformCeloTokensForRTDB(
