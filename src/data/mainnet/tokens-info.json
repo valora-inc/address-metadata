@@ -1,5 +1,12 @@
 [
   {
+    "address": "0x95d19a8d9f82046ae76217aefc64067fd31aeb90",
+    "decimals": 18,
+    "imageUrl": " https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/{image}.png",
+    "name": "Maketai Coin",
+    "symbol": "MKTAI"
+  },
+  {
     "address": "0x00400fcbf0816bebb94654259de7273f4a05c762",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/POOF.png",
