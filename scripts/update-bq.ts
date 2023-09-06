@@ -19,7 +19,7 @@ const rows = jsonData.map((entry) => {
 })
 
 async function overwriteTable() {
-  const dataset = bigquery.dataset(datasetId, { projectId })
+  const dataset = bigquery.dataset(datasetId, { projectId, location: 'US' })
   const table = dataset.table(tableId)
 
   const writeStream = table.createWriteStream({
