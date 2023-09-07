@@ -1,2 +1,2 @@
-PROJECT: 'testnet'
+ENVIRONMENT: 'testnet'
 GCLOUD_PROJECT: 'celo-mobile-alfajores'
