@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Package for storing and updating static RTDB data",
   "private": true,
+  "main": "dist/index.js",
   "engines": {
     "node": "^20"
   },
