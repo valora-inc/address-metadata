@@ -22,6 +22,7 @@ export interface RTDBMetadata {
 export interface Config {
   project: Environment
   databaseUrl: string
+  gcloudProject: ValoraGcloudProject
 }
 
 export interface TokenInfo {
@@ -50,3 +51,7 @@ export enum NetworkId { // environment-specific
 }
 
 export type Environment = 'mainnet' | 'testnet'
+
+export type ValoraGcloudProject =
+  | 'celo-mobile-alfajores'
+  | 'celo-mobile-mainnet'

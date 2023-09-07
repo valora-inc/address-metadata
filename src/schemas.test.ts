@@ -1,4 +1,4 @@
-import { getCeloRTDBMetadata, getTokensInfo } from './index'
+import { getCeloRTDBMetadata, _getTokensInfo } from './index'
 import { Environment, Network, TokenInfo } from './types'
 import {
   RTDBAddressToTokenInfoSchema,
@@ -112,7 +112,7 @@ describe('Schema validation', () => {
 
   describe('Tokens info data', () => {
     const tokensInfo: TokenInfo[] = (['mainnet', 'testnet'] as const)
-      .map(getTokensInfo)
+      .map(_getTokensInfo)
       .flatMap(Object.values)
       .flat()
     it.each(tokensInfo)('tokenInfo %o', (tokenInfo) => {
@@ -131,7 +131,7 @@ describe('Schema validation', () => {
       for (const environment of ['mainnet', 'testnet'] as const) {
         for (const network of [Network.celo, Network.ethereum] as const) {
           for (const tokenInfo of Object.values(
-            getTokensInfo(environment)[network],
+            _getTokensInfo(environment)[network],
           )) {
             if (tokenInfo.address) {
               addresses[environment][network].push(tokenInfo.address)

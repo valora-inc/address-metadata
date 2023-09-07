@@ -17,10 +17,16 @@ export function loadConfig(): Config {
       type: 'string',
       demandOption: true,
     })
+    .option('gcloud-project', {
+      description: 'Valora google cloud project',
+      choices: ['celo-mobile-alfajores', 'celo-mobile-mainnet'] as const,
+      demandOption: true,
+    })
     .parseSync()
 
   return {
     project: argv.project,
     databaseUrl: argv['database-url'],
+    gcloudProject: argv['gcloud-project'],
   }
 }
