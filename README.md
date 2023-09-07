@@ -12,7 +12,7 @@ guarantee that we will review your request to add the token to the supported lis
 
 To add a new ERC20 token you need to follow these steps:
 
-- Open [`src/data/mainnet/tokens-info.json`](src/data/mainnet/tokens-info.json) and/or [`src/data/testnet/tokens-info.json`](src/data/testnet/tokens-info.json). You will see that it's an array of token info. Add a new object. The fields are described below.
+- Add your token info to the relevant tokens info JSON. For example, to add a token on Celo Mainnet, update [`src/data/mainnet/celo-tokens-info.json`](src/data/mainnet/tokens-info.json). The fields are described below.
 - Add the logo to [assets/tokens](./assets/tokens)
 - After doing this you should open a PR and ask someone on the Valora team to review it so it can be merged. Once it's merged, the new ERC20 token will be visible in the Valora Wallet for users holding it.
 
@@ -30,7 +30,7 @@ To add a new ERC20 token you need to follow these steps:
 
 When adding a new node of data to this repository, first write a `Joi` schema for the data in `src/schemas`.
 Then, add the raw data as a JSON blob to e.g., `src/data/mainnet/{some-rtdb-node}.json` or `src/data/testnet/{some-rtdb-node}.json`. Finally, import the appropriate files and fill in the required metadata
-in `src/data/mainnet/index.ts` or `src/data/testnet/index.ts`. The `rtdbLocation` field in the metadata list
+in `src/index.ts`. The `rtdbLocation` field in the metadata list
 should be the path where this data is located within RTDB.
 
 Once these steps are done, any changes you make to the raw JSON files will be committed to the correct RTDB
@@ -46,7 +46,7 @@ diff between the local JSON contents and the state within RTDB, much like `git d
 RTDB updates based off the local state. If some local JSON blob fails to validate, it will not be updated.
 Similarly, if the local state is already consistent with that in RTDB, we will not perform any write.
 
-## Install
+### Install
 
 ```
 yarn
@@ -64,7 +64,7 @@ yarn test
 yarn diff --project={mainnet|testnet} --database-url={URL to Firebase RTDB location}
 ```
 
-#### Knonw issues
+#### Known issues
 
 When updating nodes without overrides, there is no check to avoid sending the update request even if there is no update (i.e. info in firebase is already ok).
 
@@ -75,3 +75,15 @@ This is done automatically during CICD; you should _not_ need to run this locall
 ```
 yarn update:rtdb --project={mainnet|testnet} --database-url={URL to Firebase RTDB location}
 ```
+
+## Adding blockchains
+
+To add support for tokens on a new blockchain, you need to follow these steps:
+
+1. Add a json with information on the tokens you wish to be recognized to `src/data/mainnet/YOUR_NEW_CHAIN-tokens-info.json`
+   and any tokens on the blockchain's main testnet to `src/data/mainnet/YOUR_NEW_CHAIN-TESTNET_NAME-tokens-info.json`
+2. Add the new blockchain and to "Network" and "NetworkId" enums in `src/types.ts`
+3. Try compiling with `yarn build` and see where it breaks. At time of writing, the places to update are:
+
+- `src/transforms.ts` - add mapping from environment and network to network ID
+- `src/index.ts` - add mapping from network to token info from jsons added in step 1

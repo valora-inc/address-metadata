@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 import { BigQuery } from '@google-cloud/bigquery'
-import jsonData from '../src/data/mainnet/tokens-info.json'
+import jsonData from '../src/data/mainnet/celo-tokens-info.json'
 
 const bigquery = new BigQuery()
 

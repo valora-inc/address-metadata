@@ -20,18 +20,33 @@ export interface RTDBMetadata {
 }
 
 export interface Config {
-  project: 'testnet' | 'mainnet'
+  project: Environment
   databaseUrl: string
 }
 
-export interface RawTokenInfo {
-  address: string
-  decimals: number
+export interface TokenInfo {
   name: string
   symbol: string
+  decimals: number
+  tokenId: string
+  address?: string
   imageUrl?: string
+  isNative?: boolean
   isCoreToken?: boolean
   pegTo?: string
+  isSupercharged?: boolean
 }
 
-export type RawTokensInfo = RawTokenInfo[]
+export enum Network { // environment-agnostic network name
+  celo = 'celo',
+  ethereum = 'ethereum',
+}
+
+export enum NetworkId { // environment-specific
+  ['celo-mainnet'] = 'celo-mainnet',
+  ['celo-alfajores'] = 'celo-alfajores',
+  ['ethereum-mainnet'] = 'ethereum-mainnet',
+  ['ethereum-sepolia'] = 'ethereum-sepolia',
+}
+
+export type Environment = 'mainnet' | 'testnet'

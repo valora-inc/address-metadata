@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Ether",
+    "symbol": "ETH",
+    "decimals": 18,
+    "isNative": true,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png"
+  },
+  {
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "decimals": 6,
+    "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png"
+  }
+]
