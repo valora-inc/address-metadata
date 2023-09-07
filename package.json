@@ -4,7 +4,7 @@
   "description": "Package for storing and updating static RTDB data",
   "private": true,
   "engines": {
-    "node": "^16"
+    "node": "^20"
   },
   "scripts": {
     "prepare": "husky install",

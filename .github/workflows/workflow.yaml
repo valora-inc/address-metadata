@@ -55,7 +55,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v1
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
           check-latest: true
       - run: yarn
       - run: yarn update:rtdb --project=testnet --database-url=https://celo-mobile-alfajores.firebaseio.com/
@@ -74,7 +74,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v1
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
           check-latest: true
       - run: yarn
       - run: yarn update:rtdb --project=mainnet --database-url=https://celo-mobile-mainnet.firebaseio.com/
