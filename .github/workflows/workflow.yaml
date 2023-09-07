@@ -107,3 +107,33 @@ jobs:
       - run: yarn
       - run: yarn build
       - run: yarn deploy:dev getTokensInfoCF
+  deploy-prod:
+    name: Deploy prod cloud function
+    if: github.ref == 'refs/heads/main'
+    needs:
+      - lint
+      - test
+      - deploy-dev
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: google-github-actions/auth@v1
+        with:
+          project_id: celo-mobile-mainnet
+          credentials_json: ${{ secrets.ALFAJORES_SERVICE_ACCOUNT_KEY }}
+      - uses: google-github-actions/setup-gcloud@v1
+        with:
+          install_components: 'beta'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          check-latest: true
+      - uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+      - run: yarn
+      - run: yarn build
+      - run: yarn deploy:prod getTokensInfoCF
