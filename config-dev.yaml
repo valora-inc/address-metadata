@@ -1,3 +1,2 @@
 PROJECT: 'testnet'
 GCLOUD_PROJECT: 'celo-mobile-alfajores'
-DATABASE_URL: 'https://celo-mobile-alfajores.firebaseio.com/'
