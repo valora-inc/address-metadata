@@ -1,13 +1,13 @@
 import * as admin from 'firebase-admin'
 import { mapNestedJsonIntoPlain } from '../utils/utils'
-import { Config } from '../types'
+import { UpdateRTDBConfig } from '../types'
 
 export class FirebaseClient {
-  config: Config
+  config: UpdateRTDBConfig
   firebaseApp: admin.app.App
   firebaseDb: admin.database.Database
 
-  constructor(config: Config) {
+  constructor(config: UpdateRTDBConfig) {
     this.config = config
     this.firebaseApp = admin.initializeApp({
       credential: admin.credential.applicationDefault(),

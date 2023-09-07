@@ -17,7 +17,7 @@ import { addTokenIds, transformCeloTokensForRTDB } from './utils/transforms'
 import { RTDBAddressToTokenInfoSchema } from './schemas/tokens-info'
 import { HttpFunction } from '@google-cloud/functions-framework'
 import { wrap } from './wrap'
-import { loadConfig } from './config'
+import { loadCloudFunctionConfig } from './config'
 
 export function getCeloRTDBMetadata(environment: Environment): RTDBMetadata[] {
   const [tokensInfo, addressesExtraInfo] =
@@ -67,14 +67,14 @@ export function _getTokensInfo(
 }
 
 export const _getTokensInfoHttpFunction: HttpFunction = async (_req, res) => {
-  const { project } = loadConfig()
-  const tokensInfo = _getTokensInfo(project)
+  const { environment } = loadCloudFunctionConfig()
+  const tokensInfo = _getTokensInfo(environment)
   res.status(200).send({ ...tokensInfo })
 }
 
 // named this way to avoid collision with cloud function getTokensInfo from valora-rest-api.
 //  TODO deprecate getTokensInfo cloud function from valora-rest-api
 export const getTokensInfoCF: HttpFunction = wrap({
-  loadConfig,
+  loadConfig: loadCloudFunctionConfig,
   httpFunction: _getTokensInfoHttpFunction,
 })

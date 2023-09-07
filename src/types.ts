@@ -19,10 +19,14 @@ export interface RTDBMetadata {
   overrideType: OverrideType
 }
 
-export interface Config {
+export interface UpdateRTDBConfig {
   project: Environment
   databaseUrl: string
+}
+
+export interface TokensInfoCFConfig {
   gcloudProject: ValoraGcloudProject
+  environment: Environment
 }
 
 export interface TokenInfo {
