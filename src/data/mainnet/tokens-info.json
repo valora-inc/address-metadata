@@ -56,7 +56,7 @@
     "address": "0x173234922eb27d5138c5e481be9df5261faed450",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SOL.png",
-    "name": "Allbridge Wrapped SOL",
+    "name": "SOL (Allbridge)",
     "symbol": "SOL",
     "isSwappable": true
   },
@@ -341,13 +341,13 @@
   {
     "address": "0xbe50a3013a1c94768a1abb78c3cb79ab28fc1ace",
     "decimals": 8,
-    "name": "Wrapped BTC",
+    "name": "Wrapped BTC (Truefeedback)",
     "symbol": "WBTC"
   },
   {
     "address": "0xd15ec721c2a896512ad29c671997dd68f9593226",
     "decimals": 18,
-    "name": "SushiToken",
+    "name": "SushiToken (Truefeedback)",
     "symbol": "SUSHI",
     "minimumAppVersionToSwap": "1.60.0"
   },
@@ -419,7 +419,7 @@
   {
     "address": "0xe919f65739c26a42616b7b8eedc6b5524d1e3ac4",
     "decimals": 18,
-    "name": "Wrapped Ether",
+    "name": "Wrapped Ether (Truefeedback)",
     "symbol": "WETH"
   },
   {
@@ -552,7 +552,7 @@
     "address": "0xd71ffd0940c920786ec4dbb5a12306669b5b81ef",
     "decimals": 8,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/portalBTC.png",
-    "name": "Wrapped BTC",
+    "name": "Wrapped BTC (Wormhole)",
     "symbol": "WBTC"
   },
   {
