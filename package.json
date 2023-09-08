@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Package for storing and updating static RTDB data",
   "private": true,
+  "main": "dist/index.js",
   "engines": {
     "node": "^20"
   },
@@ -20,7 +21,9 @@
     "test:ci": "yarn test --ci --coverage",
     "supercheck": "yarn format && yarn lint:fix && yarn typecheck && yarn test",
     "diff": "ts-node scripts/diff.ts",
-    "update:rtdb": "ts-node scripts/update-rtdb.ts"
+    "update:rtdb": "ts-node scripts/update-rtdb.ts",
+    "deploy:dev": "gcloud functions deploy --project=celo-mobile-alfajores --runtime=nodejs20 --trigger-http --allow-unauthenticated --security-level=secure-always --ingress-settings=internal-and-gclb --env-vars-file=config-dev.yaml",
+    "deploy:prod": "gcloud functions deploy --project=celo-mobile-mainnet --runtime=nodejs20 --trigger-http --allow-unauthenticated --security-level=secure-always --ingress-settings=internal-and-gclb --env-vars-file=config-prod.yaml"
   },
   "prettier": "@valora/prettier-config",
   "repository": "git@github.com:valora-inc/rtdb-data.git",
@@ -31,6 +34,8 @@
   "license": "MIT",
   "dependencies": {
     "@types/node": "^17.0.45",
+    "@valora/http-handler": "^0.0.1",
+    "@valora/logging": "^1.3.5",
     "dotenv": "^16.3.1",
     "firebase-admin": "^11.10.1",
     "joi": "^17.10.1",
@@ -41,6 +46,7 @@
   },
   "devDependencies": {
     "@google-cloud/bigquery": "^7.2.0",
+    "@google-cloud/functions-framework": "^3.3.0",
     "@types/jest": "^29.5.4",
     "@types/json-diff": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^6.5.0",

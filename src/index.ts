@@ -15,6 +15,9 @@ import TestnetAddressesExtraInfo from './data/testnet/addresses-extra-info.json'
 import AddressesExtraInfoSchema from './schemas/addresses-extra-info'
 import { addTokenIds, transformCeloTokensForRTDB } from './utils/transforms'
 import { RTDBAddressToTokenInfoSchema } from './schemas/tokens-info'
+import { HttpFunction } from '@google-cloud/functions-framework'
+import { wrap } from './wrap'
+import { loadCloudFunctionConfig } from './config'
 
 export function getCeloRTDBMetadata(environment: Environment): RTDBMetadata[] {
   const [tokensInfo, addressesExtraInfo] =
@@ -37,8 +40,7 @@ export function getCeloRTDBMetadata(environment: Environment): RTDBMetadata[] {
   ]
 }
 
-// TODO(ACT-908): serve this data with a cloud function https://linear.app/valora/issue/ACT-908/createupdate-cloud-function-to-return-new-tokens-info
-export function getTokensInfo(
+export function _getTokensInfo(
   environment: Environment,
 ): Record<Network, TokenInfo[]> {
   return environment === 'mainnet'
@@ -63,3 +65,16 @@ export function getTokensInfo(
         ),
       }
 }
+
+export const _getTokensInfoHttpFunction: HttpFunction = async (_req, res) => {
+  const { environment } = loadCloudFunctionConfig()
+  const tokensInfo = _getTokensInfo(environment)
+  res.status(200).send({ ...tokensInfo })
+}
+
+// named this way to avoid collision with cloud function getTokensInfo from valora-rest-api.
+//  TODO deprecate getTokensInfo cloud function from valora-rest-api
+export const getTokensInfoCF: HttpFunction = wrap({
+  loadConfig: loadCloudFunctionConfig,
+  httpFunction: _getTokensInfoHttpFunction,
+})
