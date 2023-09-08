@@ -1,6 +1,7 @@
 import { _getTokensInfoHttpFunction } from './index'
-import mocked = jest.mocked
 import { loadCloudFunctionConfig } from './config'
+import { NetworkId } from './types'
+import mocked = jest.mocked
 
 jest.mock('./config')
 
@@ -9,7 +10,7 @@ describe('index', () => {
     const req = {} as any
     const res = { status: jest.fn().mockReturnThis(), send: jest.fn() } as any
     mocked(loadCloudFunctionConfig).mockReturnValue({
-      environment: 'mainnet',
+      networkIds: [NetworkId['ethereum-mainnet'], NetworkId['celo-mainnet']],
       gcloudProject: 'celo-mobile-mainnet',
     })
     await _getTokensInfoHttpFunction(req, res)
