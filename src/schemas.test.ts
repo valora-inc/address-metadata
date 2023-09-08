@@ -1,4 +1,5 @@
-import { getCeloRTDBMetadata, _getTokensInfo } from './index'
+import { getCeloRTDBMetadata } from './index'
+import { getTokensInfo } from './tokens-info'
 import { NetworkId, TokenInfo } from './types'
 import {
   RTDBAddressToTokenInfoSchema,
@@ -112,7 +113,7 @@ describe('Schema validation', () => {
 
   describe('Tokens info data', () => {
     const tokensInfo: TokenInfo[] = Object.values(
-      _getTokensInfo(Object.values(NetworkId)),
+      getTokensInfo(Object.values(NetworkId)),
     )
     it.each(tokensInfo)('tokenInfo %o', (tokenInfo) => {
       const validationResult = validateWithSchema(tokenInfo, TokenInfoSchema)
@@ -122,7 +123,7 @@ describe('Schema validation', () => {
       for (const networkId of Object.values(NetworkId)) {
         const addresses = []
         const pegToAddresses = []
-        for (const tokenInfo of Object.values(_getTokensInfo([networkId]))) {
+        for (const tokenInfo of Object.values(getTokensInfo([networkId]))) {
           if (tokenInfo.address) {
             addresses.push(tokenInfo.address)
           }
