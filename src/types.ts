@@ -40,6 +40,7 @@ export interface TokenInfo {
   isCoreToken?: boolean
   pegTo?: string
   isSupercharged?: boolean
+  isSwappable?: boolean
 }
 
 export enum Network { // environment-agnostic network name
