@@ -1,5 +1,5 @@
 import { getCeloRTDBMetadata, _getTokensInfo } from './index'
-import { Environment, Network, TokenInfo } from './types'
+import { NetworkId, TokenInfo } from './types'
 import {
   RTDBAddressToTokenInfoSchema,
   TokenInfoSchema,
@@ -111,42 +111,27 @@ describe('Schema validation', () => {
   })
 
   describe('Tokens info data', () => {
-    const tokensInfo: TokenInfo[] = (['mainnet', 'testnet'] as const)
-      .map(_getTokensInfo)
-      .flatMap(Object.values)
-      .flat()
+    const tokensInfo: TokenInfo[] = Object.values(
+      _getTokensInfo(Object.values(NetworkId)),
+    )
     it.each(tokensInfo)('tokenInfo %o', (tokenInfo) => {
       const validationResult = validateWithSchema(tokenInfo, TokenInfoSchema)
       expect(validationResult.error).toBe(undefined)
     })
     it('pegTo fields are addresses for valid tokens', () => {
-      const addresses: Record<Environment, Record<Network, string[]>> = {
-        mainnet: { celo: [], ethereum: [] },
-        testnet: { celo: [], ethereum: [] },
-      }
-      const pegToAddresses: Record<Environment, Record<Network, string[]>> = {
-        mainnet: { celo: [], ethereum: [] },
-        testnet: { celo: [], ethereum: [] },
-      }
-      for (const environment of ['mainnet', 'testnet'] as const) {
-        for (const network of [Network.celo, Network.ethereum] as const) {
-          for (const tokenInfo of Object.values(
-            _getTokensInfo(environment)[network],
-          )) {
-            if (tokenInfo.address) {
-              addresses[environment][network].push(tokenInfo.address)
-            }
-            if (tokenInfo.pegTo) {
-              pegToAddresses[environment][network].push(tokenInfo.pegTo)
-            }
+      for (const networkId of Object.values(NetworkId)) {
+        const addresses = []
+        const pegToAddresses = []
+        for (const tokenInfo of Object.values(_getTokensInfo([networkId]))) {
+          if (tokenInfo.address) {
+            addresses.push(tokenInfo.address)
+          }
+          if (tokenInfo.pegTo) {
+            pegToAddresses.push(tokenInfo.pegTo)
           }
         }
-      }
-      for (const environment of ['mainnet', 'testnet'] as const) {
-        for (const network of [Network.celo, Network.ethereum] as const) {
-          for (const pegToAddress of pegToAddresses[environment][network]) {
-            expect(addresses[environment][network]).toContain(pegToAddress)
-          }
+        for (const pegToAddress of pegToAddresses) {
+          expect(addresses.includes(pegToAddress)).toEqual(true)
         }
       }
     })
