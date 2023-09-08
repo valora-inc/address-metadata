@@ -1,6 +1,6 @@
 import yargs from 'yargs'
 import * as dotenv from 'dotenv'
-import { TokensInfoCFConfig, UpdateRTDBConfig } from './types'
+import { NetworkId, TokensInfoCFConfig, UpdateRTDBConfig } from './types'
 
 export function loadUpdateRTDBConfig(): UpdateRTDBConfig {
   dotenv.config()
@@ -26,17 +26,32 @@ export function loadUpdateRTDBConfig(): UpdateRTDBConfig {
 }
 
 export function loadCloudFunctionConfig(): TokensInfoCFConfig {
-  return yargs
+  const argv = yargs
     .env('')
-    .option('environment', {
-      description: 'Blockchain environment to use',
-      choices: ['mainnet', 'testnet'] as const,
+    .option('network-ids', {
+      description: 'Comma-separated list of network ids to use',
+      type: 'string',
+      example: 'celo-mainnet,ethereum-mainnet',
       demandOption: true,
+      coerce: (value) => value?.split(',') as NetworkId[],
     })
     .option('gcloud-project', {
       description: 'Valora Google Cloud project to deploy to',
       choices: ['celo-mobile-mainnet', 'celo-mobile-alfajores'] as const,
       demandOption: true,
     })
+    .check((argv) => {
+      if (!argv['network-ids']?.every((id: string) => id in NetworkId)) {
+        throw new Error(
+          'network-ids invalid. Must be comma-separated list of NetworkIds.',
+        )
+      }
+      return true
+    })
     .parseSync()
+
+  return {
+    gcloudProject: argv['gcloud-project'],
+    networkIds: argv['network-ids'],
+  }
 }
