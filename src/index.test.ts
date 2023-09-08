@@ -33,7 +33,6 @@ describe('index', () => {
         isCoreToken: true,
         name: 'Celo native asset',
         symbol: 'CELO',
-        isSwappable: true,
         isNative: true,
         network: Network.celo,
       },
