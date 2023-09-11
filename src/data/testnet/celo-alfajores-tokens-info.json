@@ -182,7 +182,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png",
     "isCoreToken": true,
     "name": "Celo native asset",
-    "symbol": "CELO"
+    "symbol": "CELO",
+    "isNative": true
   },
   {
     "address": "0x3a0ea4e0806805527c750ab9b34382642448468d",

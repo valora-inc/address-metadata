@@ -1,14 +1,14 @@
 /* eslint-disable no-console */
 import { diffString } from 'json-diff'
-import { loadConfig } from '../src/config'
+import { loadUpdateRTDBConfig } from '../src/config'
 import { FirebaseClient } from '../src/clients/firebase-client'
-import allMetadata from '../src/data/'
+import { getCeloRTDBMetadata } from '../src'
 
 async function main() {
-  const config = loadConfig()
+  const config = loadUpdateRTDBConfig()
   const firebaseClient = new FirebaseClient(config)
 
-  const projectMetadata = allMetadata[config.project]
+  const projectMetadata = getCeloRTDBMetadata(config.project)
 
   console.log(`Calculating diffs for the ${config.project} GCP project...`)
   let hasDiff = false

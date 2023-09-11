@@ -183,7 +183,8 @@
     "isCoreToken": true,
     "name": "Celo native asset",
     "symbol": "CELO",
-    "isSwappable": true
+    "isSwappable": true,
+    "isNative": true
   },
   {
     "address": "0x47264ae1fc0c8e6418ebe78630718e11a07346a8",

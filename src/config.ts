@@ -1,8 +1,8 @@
 import yargs from 'yargs'
 import * as dotenv from 'dotenv'
-import { Config } from './types'
+import { TokensInfoCFConfig, UpdateRTDBConfig } from './types'
 
-export function loadConfig(): Config {
+export function loadUpdateRTDBConfig(): UpdateRTDBConfig {
   dotenv.config()
 
   const argv = yargs
@@ -23,4 +23,20 @@ export function loadConfig(): Config {
     project: argv.project,
     databaseUrl: argv['database-url'],
   }
+}
+
+export function loadCloudFunctionConfig(): TokensInfoCFConfig {
+  return yargs
+    .env('')
+    .option('environment', {
+      description: 'Blockchain environment to use',
+      choices: ['mainnet', 'testnet'] as const,
+      demandOption: true,
+    })
+    .option('gcloud-project', {
+      description: 'Valora Google Cloud project to deploy to',
+      choices: ['celo-mobile-mainnet', 'celo-mobile-alfajores'] as const,
+      demandOption: true,
+    })
+    .parseSync()
 }
