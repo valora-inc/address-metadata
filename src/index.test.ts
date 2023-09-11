@@ -1,22 +1,45 @@
 import { _getTokensInfoHttpFunction } from './index'
-import mocked = jest.mocked
 import { loadCloudFunctionConfig } from './config'
+import { Network, NetworkId } from './types'
+import { getTokensInfo } from './tokens-info'
+import mocked = jest.mocked
 
 jest.mock('./config')
+jest.mock('./tokens-info')
 
 describe('index', () => {
   it('_getTokensInfoHttpFunction', async () => {
     const req = {} as any
     const res = { status: jest.fn().mockReturnThis(), send: jest.fn() } as any
     mocked(loadCloudFunctionConfig).mockReturnValue({
-      environment: 'mainnet',
+      networkIds: [NetworkId['ethereum-mainnet'], NetworkId['celo-mainnet']],
       gcloudProject: 'celo-mobile-mainnet',
     })
+    const mockTokensInfo = {
+      'ethereum-mainnet:native': {
+        network: Network.ethereum,
+        name: 'Ether',
+        symbol: 'ETH',
+        decimals: 18,
+        isNative: true,
+        imageUrl:
+          'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png',
+      },
+      'celo-mainnet:native': {
+        address: '0x471ece3750da237f93b8e339c536989b8978a438',
+        decimals: 18,
+        imageUrl:
+          'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
+        isCoreToken: true,
+        name: 'Celo native asset',
+        symbol: 'CELO',
+        isNative: true,
+        network: Network.celo,
+      },
+    }
+    mocked(getTokensInfo).mockReturnValue(mockTokensInfo)
     await _getTokensInfoHttpFunction(req, res)
     expect(res.status).toHaveBeenCalledWith(200)
-    expect(res.send).toHaveBeenCalledWith({
-      celo: expect.any(Array),
-      ethereum: expect.any(Array),
-    })
+    expect(res.send).toHaveBeenCalledWith(mockTokensInfo)
   })
 })

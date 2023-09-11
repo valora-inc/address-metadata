@@ -26,14 +26,14 @@ export interface UpdateRTDBConfig {
 
 export interface TokensInfoCFConfig {
   gcloudProject: ValoraGcloudProject
-  environment: Environment
+  networkIds: NetworkId[]
 }
 
 export interface TokenInfo {
   name: string
   symbol: string
   decimals: number
-  tokenId: string
+  network: Network
   address?: string
   imageUrl?: string
   isNative?: boolean
