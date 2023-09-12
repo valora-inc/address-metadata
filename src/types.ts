@@ -26,14 +26,14 @@ export interface UpdateRTDBConfig {
 
 export interface TokensInfoCFConfig {
   gcloudProject: ValoraGcloudProject
-  environment: Environment
+  networkIds: NetworkId[]
 }
 
 export interface TokenInfo {
   name: string
   symbol: string
   decimals: number
-  tokenId: string
+  networkId: NetworkId
   address?: string
   imageUrl?: string
   isNative?: boolean
@@ -42,12 +42,7 @@ export interface TokenInfo {
   isSupercharged?: boolean
 }
 
-export enum Network { // environment-agnostic network name
-  celo = 'celo',
-  ethereum = 'ethereum',
-}
-
-export enum NetworkId { // environment-specific
+export enum NetworkId {
   ['celo-mainnet'] = 'celo-mainnet',
   ['celo-alfajores'] = 'celo-alfajores',
   ['ethereum-mainnet'] = 'ethereum-mainnet',

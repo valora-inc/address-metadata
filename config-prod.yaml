@@ -1,2 +1,2 @@
-ENVIRONMENT: 'mainnet'
+NETWORK_IDS: 'celo-mainnet,ethereum-mainnet'
 GCLOUD_PROJECT: 'celo-mobile-mainnet'

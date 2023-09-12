@@ -1,2 +1,2 @@
-ENVIRONMENT: 'testnet'
+NETWORK_IDS: 'celo-alfajores,ethereum-sepolia'
 GCLOUD_PROJECT: 'celo-mobile-alfajores'
