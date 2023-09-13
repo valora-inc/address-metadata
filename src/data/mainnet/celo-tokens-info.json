@@ -120,14 +120,14 @@
   {
     "address": "0x2a3684e9dc20b857375ea04235f2f7edbe818fa7",
     "decimals": 6,
-    "name": "USD Coin (Truefeedback)",
+    "name": "USD Coin (Optics v1)",
     "symbol": "USDC"
   },
   {
     "address": "0x2def4285787d58a2f811af24755a8150622f4361",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cETH.png",
-    "name": "Wrapped Ethereum (Compound Finance)",
+    "name": "Wrapped Ethereum",
     "symbol": "cETH",
     "isSwappable": false
   },
@@ -342,13 +342,13 @@
   {
     "address": "0xbe50a3013a1c94768a1abb78c3cb79ab28fc1ace",
     "decimals": 8,
-    "name": "Wrapped BTC (Truefeedback)",
+    "name": "Wrapped BTC (Optics v1)",
     "symbol": "WBTC"
   },
   {
     "address": "0xd15ec721c2a896512ad29c671997dd68f9593226",
     "decimals": 18,
-    "name": "SushiToken (Truefeedback)",
+    "name": "SushiToken (Optics v1)",
     "symbol": "SUSHI",
     "minimumAppVersionToSwap": "1.60.0"
   },
@@ -420,7 +420,7 @@
   {
     "address": "0xe919f65739c26a42616b7b8eedc6b5524d1e3ac4",
     "decimals": 18,
-    "name": "Wrapped Ether (Truefeedback)",
+    "name": "Wrapped Ether (Optics v1)",
     "symbol": "WETH"
   },
   {
