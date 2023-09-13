@@ -127,7 +127,7 @@
     "address": "0x2def4285787d58a2f811af24755a8150622f4361",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cETH.png",
-    "name": "Wrapped Ethereum",
+    "name": "Wrapped Ethereum (Wrapped.com)",
     "symbol": "cETH",
     "isSwappable": false
   },
@@ -362,7 +362,7 @@
     "address": "0xd629eb00deced2a080b7ec630ef6ac117e614f1b",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cBTC.png",
-    "name": "Wrapped Bitcoin",
+    "name": "Wrapped Bitcoin (Wrapped.com)",
     "symbol": "BTC",
     "isSwappable": true
   },
