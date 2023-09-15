@@ -362,7 +362,7 @@
     "address": "0xd629eb00deced2a080b7ec630ef6ac117e614f1b",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cBTC.png",
-    "name": "Wrapped Bitcoin (Wrapped.com)",
+    "name": "Wrapped Bitcoin (wrapped.com)",
     "symbol": "BTC",
     "isSwappable": true
   },
