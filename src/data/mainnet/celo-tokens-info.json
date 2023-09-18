@@ -569,5 +569,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
     "name": "Dai Stablecoin (Optics v2)",
     "symbol": "DAI"
+  },
+  {
+    "address": "0x4f604735c1cf31399c6e711d5962b2b3e0225ad3",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/GloDollar.png",
+    "name": "Glo Dollar",
+    "symbol": "USDGLO"
   }
 ]
