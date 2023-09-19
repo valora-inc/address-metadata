@@ -89,7 +89,7 @@ describe('Schema validation', () => {
               imageUrl:
                 'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
               isCoreToken: true,
-              name: 'Celo native asset',
+              name: 'Celo',
               symbol: 'CELO',
               isSwappable: true,
               isNative: true,
