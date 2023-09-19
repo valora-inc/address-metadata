@@ -31,7 +31,7 @@ describe('index', () => {
         imageUrl:
           'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
         isCoreToken: true,
-        name: 'Celo native asset',
+        name: 'Celo',
         symbol: 'CELO',
         isNative: true,
         networkId: NetworkId['celo-mainnet'],
