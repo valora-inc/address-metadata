@@ -9,7 +9,7 @@ import { RTDBAddressToTokenInfoSchema } from './schemas/tokens-info'
 import { HttpFunction } from '@google-cloud/functions-framework'
 import { wrap } from './wrap'
 import { loadCloudFunctionConfig } from './config'
-import { getTokensInfo } from './tokens-info'
+import { getTokensInfoByNetworkIds } from './tokens-info'
 
 export function getCeloRTDBMetadata(environment: Environment): RTDBMetadata[] {
   const [tokensInfo, addressesExtraInfo] =
@@ -34,13 +34,11 @@ export function getCeloRTDBMetadata(environment: Environment): RTDBMetadata[] {
 
 export const _getTokensInfoHttpFunction: HttpFunction = async (_req, res) => {
   const { networkIds } = loadCloudFunctionConfig() // in the future we could use this as a default set of network id's to include in the response, and accept a list of network id's as a query param to override it
-  const tokensInfo = getTokensInfo(networkIds)
+  const tokensInfo = getTokensInfoByNetworkIds(networkIds)
   res.status(200).send({ ...tokensInfo })
 }
 
-// named this way to avoid collision with cloud function getTokensInfo from valora-rest-api.
-//  TODO deprecate getTokensInfo cloud function from valora-rest-api
-export const getTokensInfoCF: HttpFunction = wrap({
+export const getTokensInfo: HttpFunction = wrap({
   loadConfig: loadCloudFunctionConfig,
   httpFunction: _getTokensInfoHttpFunction,
 })

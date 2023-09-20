@@ -1,7 +1,7 @@
 import { _getTokensInfoHttpFunction } from './index'
 import { loadCloudFunctionConfig } from './config'
 import { NetworkId } from './types'
-import { getTokensInfo } from './tokens-info'
+import { getTokensInfoByNetworkIds } from './tokens-info'
 import mocked = jest.mocked
 
 jest.mock('./config')
@@ -37,7 +37,7 @@ describe('index', () => {
         networkId: NetworkId['celo-mainnet'],
       },
     }
-    mocked(getTokensInfo).mockReturnValue(mockTokensInfo)
+    mocked(getTokensInfoByNetworkIds).mockReturnValue(mockTokensInfo)
     await _getTokensInfoHttpFunction(req, res)
     expect(res.status).toHaveBeenCalledWith(200)
     expect(res.send).toHaveBeenCalledWith(mockTokensInfo)
