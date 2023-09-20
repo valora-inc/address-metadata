@@ -22,8 +22,8 @@
     "supercheck": "yarn format && yarn lint:fix && yarn typecheck && yarn test",
     "diff": "ts-node scripts/diff.ts",
     "update:rtdb": "ts-node scripts/update-rtdb.ts",
-    "deploy:dev": "gcloud functions deploy --project=celo-mobile-alfajores --runtime=nodejs20 --trigger-http --allow-unauthenticated --security-level=secure-always --ingress-settings=internal-and-gclb --env-vars-file=config-dev.yaml",
-    "deploy:prod": "gcloud functions deploy --project=celo-mobile-mainnet --runtime=nodejs20 --trigger-http --allow-unauthenticated --security-level=secure-always --ingress-settings=internal-and-gclb --env-vars-file=config-prod.yaml"
+    "deploy:dev": "gcloud beta functions deploy --gen2 --region=us-central1 --concurrency=80 --cpu=1 --memory=256MB --project=celo-mobile-alfajores --runtime=nodejs20 --trigger-http --allow-unauthenticated --env-vars-file=config-dev.yaml",
+    "deploy:prod": "gcloud beta functions deploy --gen2 --region=us-central1 --concurrency=80 --cpu=1 --memory=256MB --project=celo-mobile-mainnet --runtime=nodejs20 --trigger-http --allow-unauthenticated --env-vars-file=config-prod.yaml"
   },
   "prettier": "@valora/prettier-config",
   "repository": "git@github.com:valora-inc/rtdb-data.git",

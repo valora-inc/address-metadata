@@ -106,7 +106,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - run: yarn
       - run: yarn build
-      - run: yarn deploy:dev getTokensInfoCF
+      - run: yarn deploy:dev --entry-point=getTokensInfoCF get-tokens-info
   deploy-prod:
     name: Deploy prod cloud function
     if: github.ref == 'refs/heads/main'
@@ -136,4 +136,4 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - run: yarn
       - run: yarn build
-      - run: yarn deploy:prod getTokensInfoCF
+      - run: yarn deploy:prod --entry-point=getTokensInfoCF get-tokens-info
