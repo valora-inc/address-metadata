@@ -40,6 +40,7 @@ export interface TokenInfo {
   isCoreToken?: boolean
   pegTo?: string
   isSupercharged?: boolean
+  bridge?: string
 }
 
 export enum NetworkId {

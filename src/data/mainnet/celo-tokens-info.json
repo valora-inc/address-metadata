@@ -48,16 +48,18 @@
     "address": "0x122013fd7df1c6f636a5bb8f03108e876548b455",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png",
-    "name": "Wrapped Ether (Optics v2)",
+    "name": "Wrapped Ether",
     "symbol": "WETH",
+    "bridge": "Optics v2",
     "isSwappable": false
   },
   {
     "address": "0x173234922eb27d5138c5e481be9df5261faed450",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SOL.png",
-    "name": "SOL (Allbridge)",
+    "name": "SOL",
     "symbol": "SOL",
+    "bridge": "Allbridge",
     "isSwappable": true
   },
   {
@@ -79,8 +81,9 @@
     "address": "0x1bfc26ce035c368503fae319cc2596716428ca44",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/pUSDC.png",
-    "name": "USD Coin (Pos) (Optics v2)",
-    "symbol": "USDC"
+    "name": "USD Coin (Pos)",
+    "symbol": "USDC",
+    "bridge": "Optics v2"
   },
   {
     "address": "0x20677d4f3d0f08e735ab512393524a3cfceb250c",
@@ -120,23 +123,26 @@
   {
     "address": "0x2a3684e9dc20b857375ea04235f2f7edbe818fa7",
     "decimals": 6,
-    "name": "USD Coin (Optics v1)",
-    "symbol": "USDC"
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "bridge": "Optics v1"
   },
   {
     "address": "0x2def4285787d58a2f811af24755a8150622f4361",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cETH.png",
-    "name": "Wrapped Ethereum (wrapped.com)",
+    "name": "Wrapped Ethereum",
     "symbol": "cETH",
+    "bridge": "wrapped.com",
     "isSwappable": false
   },
   {
     "address": "0x2e3487f967df2ebc2f236e16f8fcaeac7091324d",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WMATIC.png",
-    "name": "Wrapped Matic (Optics v2)",
-    "symbol": "WMATIC"
+    "name": "Wrapped Matic",
+    "symbol": "WMATIC",
+    "bridge": "Optics v2"
   },
   {
     "address": "0x301a61d01a63c8d670c2b8a43f37d12ef181f997",
@@ -335,21 +341,24 @@
     "address": "0xbaab46e28388d2779e6e31fd00cf0e5ad95e327b",
     "decimals": 8,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WBTC.png",
-    "name": "Wrapped BTC (Optics v2)",
+    "name": "Wrapped BTC",
     "symbol": "WBTC",
+    "bridge": "Optics v2",
     "isSwappable": false
   },
   {
     "address": "0xbe50a3013a1c94768a1abb78c3cb79ab28fc1ace",
     "decimals": 8,
-    "name": "Wrapped BTC (Optics v1)",
-    "symbol": "WBTC"
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "bridge": "Optics v1"
   },
   {
     "address": "0xd15ec721c2a896512ad29c671997dd68f9593226",
     "decimals": 18,
-    "name": "SushiToken (Optics v1)",
+    "name": "SushiToken",
     "symbol": "SUSHI",
+    "bridge": "Optics v1",
     "minimumAppVersionToSwap": "1.60.0"
   },
   {
@@ -362,8 +371,9 @@
     "address": "0xd629eb00deced2a080b7ec630ef6ac117e614f1b",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cBTC.png",
-    "name": "Wrapped Bitcoin (wrapped.com)",
+    "name": "Wrapped Bitcoin",
     "symbol": "BTC",
+    "bridge": "wrapped.com",
     "isSwappable": true
   },
   {
@@ -510,8 +520,9 @@
     "address": "0xef4229c8c3250c675f21bcefa42f58efbff6002a",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
-    "name": "USD Coin (Optics v2)",
-    "symbol": "USDC"
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "bridge": "Optics v2"
   },
   {
     "address": "0x0e21b5bdfb6edba7d903a610d4de2f8c72586017",
@@ -531,8 +542,9 @@
     "address": "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/portalETH.png",
-    "name": "Wrapped Ether (Wormhole)",
+    "name": "Wrapped Ether",
     "symbol": "WETH",
+    "bridge": "Wormhole",
     "isSwappable": true
   },
   {
@@ -546,29 +558,33 @@
     "address": "0x97926a82930bb7b33178e3c2f4ed1bfdc91a9fbf",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
-    "name": "Dai Stablecoin (Wormhole)",
-    "symbol": "DAI"
+    "name": "Dai Stablecoin",
+    "symbol": "DAI",
+    "bridge": "Wormhole"
   },
   {
     "address": "0xd71ffd0940c920786ec4dbb5a12306669b5b81ef",
     "decimals": 8,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/portalBTC.png",
-    "name": "Wrapped BTC (Wormhole)",
-    "symbol": "WBTC"
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "bridge": "Wormhole"
   },
   {
     "address": "0x88eec49252c8cbc039dcdb394c0c2ba2f1637ea0",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
-    "name": "Tether USD (Optics v2)",
-    "symbol": "USDT"
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "bridge": "Optics v2"
   },
   {
     "address": "0x90ca507a5d4458a4c6c6249d186b6dcb02a5bccd",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
-    "name": "Dai Stablecoin (Optics v2)",
-    "symbol": "DAI"
+    "name": "Dai Stablecoin",
+    "symbol": "DAI",
+    "bridge": "Optics v2"
   },
   {
     "address": "0x4f604735c1cf31399c6e711d5962b2b3e0225ad3",
