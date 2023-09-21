@@ -73,6 +73,7 @@ export const TokenInfoSchema = Joi.alternatives().try(
     isNative: Joi.boolean().invalid(true),
     symbol: Joi.string().required(),
     address: AddressSchema.required(),
+    bridge: Joi.string().optional(),
   }).concat(BaseTokenInfoSchema),
 )
 
