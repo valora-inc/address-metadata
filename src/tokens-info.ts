@@ -19,7 +19,7 @@ export function getTokenId(
   return `${networkId}:${isNative ? 'native' : address}`
 }
 
-export function getTokensInfo(networkIds: NetworkId[]): {
+export function getTokensInfoByNetworkIds(networkIds: NetworkId[]): {
   [tokenId: string]: TokenInfo
 } {
   const output: { [tokenId: string]: TokenInfo } = {}
