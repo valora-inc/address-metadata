@@ -477,8 +477,7 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/gcUSD.png",
     "name": "Green Celo Dollar",
-    "symbol": "gcUSD",
-    "minimumAppVersionToSwap": "1.66.0"
+    "symbol": "gcUSD"
   },
   {
     "address": "0x37f750b7cc259a2f741af45294f6a16572cf5cad",
@@ -587,6 +586,7 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDGLO.png",
     "name": "Glo Dollar",
-    "symbol": "USDGLO"
+    "symbol": "USDGLO",
+    "minimumAppVersionToSwap": "1.66.0"
   }
 ]
