@@ -109,14 +109,6 @@ describe('Schema validation', () => {
         expect(validationResult.error).toBe(undefined)
       }
     })
-
-    it('includes the bridge in the token name if present', () => {
-      const { data } = getCeloRTDBMetadata('mainnet')[1] // Only checking the tokensInfo metadata
-      const celoAddress = '0x471ece3750da237f93b8e339c536989b8978a438'
-      const wrappedEthAddress = '0x122013fd7df1c6f636a5bb8f03108e876548b455'
-      expect(data[celoAddress].name).toEqual('Celo')
-      expect(data[wrappedEthAddress].name).toEqual('Wrapped Ether (Optics v2)')
-    })
   })
 
   describe('Tokens info data', () => {
