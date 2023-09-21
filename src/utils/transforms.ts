@@ -8,9 +8,9 @@ export function transformCeloTokensForRTDB(
 ): Record<string, CeloRTDBTokenInfo> {
   return Object.fromEntries(
     celoTokensInfo.map((rawTokenInfo) => {
-      const { address, isNative, bridge, ...rest } = rawTokenInfo
-      const name = bridge ? `${rest.name} (${bridge})` : rest.name
-      return [address, { address, ...rest, name }]
+      const { address, isNative, bridge, name: rawName, ...rest } = rawTokenInfo
+      const name = bridge ? `${rawName} (${bridge})` : rawName
+      return [address, { address, name, ...rest }]
     }),
   )
 }
