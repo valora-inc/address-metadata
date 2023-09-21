@@ -35,14 +35,16 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/stabilUSD.png",
     "name": "Stabilite USD",
-    "symbol": "stabilUSD"
+    "symbol": "stabilUSD",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x0a7432cf27f1ae3825c313f3c81e7d3efd7639ab",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png",
     "name": "Curve DAO Token",
-    "symbol": "CRV"
+    "symbol": "CRV",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x122013fd7df1c6f636a5bb8f03108e876548b455",
@@ -73,7 +75,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/rCELO.png",
     "name": "RewardsCELO",
-    "symbol": "rCELO"
+    "symbol": "rCELO",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x1bfc26ce035c368503fae319cc2596716428ca44",
@@ -95,13 +98,15 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/FTM.png",
     "name": "Fantom",
-    "symbol": "FTM"
+    "symbol": "FTM",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x22401536505dd5d85f7d57f8b37172feda8f499d",
     "decimals": 9,
     "name": "CeloShiba",
-    "symbol": "CSHIBA"
+    "symbol": "CSHIBA",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x22c4c47e7d5810273a44e00339769c3b868478fc",
@@ -158,7 +163,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WMATIC.png",
     "name": "Wrapped Matic",
-    "symbol": "WMATIC"
+    "symbol": "WMATIC",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x452ef5a4bd00796e62e5e5758548e0da6e8ccdf3",
@@ -166,7 +172,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cStar.png",
     "name": "CeloStarter",
     "symbol": "cStar",
-    "minimumAppVersionToSwap": "1.60.0"
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x46c9757c5497c5b1f2eb73ae79b6b67d119b0b58",
@@ -174,7 +180,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PACT.png",
     "name": "impactMarket",
     "symbol": "PACT",
-    "minimumAppVersionToSwap": "1.60.0"
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x471ece3750da237f93b8e339c536989b8978a438",
@@ -191,7 +197,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SBR.png",
     "name": "SBR",
-    "symbol": "SBR"
+    "symbol": "SBR",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x48bdc1b37edc9a6b0a0b0b2fbae38e4310a51923",
@@ -204,7 +211,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/AAVE.png",
     "name": "Aave Token",
-    "symbol": "AAVE"
+    "symbol": "AAVE",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x64defa3544c695db8c535d289d843a189aa26b98",
@@ -309,7 +317,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/BNB.png",
     "name": "Binance",
-    "symbol": "BNB"
+    "symbol": "BNB",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0xa753eee62ab06c3ae481776d7b006c6872a9ec2e",
@@ -349,8 +358,7 @@
     "address": "0xd15ec721c2a896512ad29c671997dd68f9593226",
     "decimals": 18,
     "name": "SushiToken (Optics v1)",
-    "symbol": "SUSHI",
-    "minimumAppVersionToSwap": "1.60.0"
+    "symbol": "SUSHI"
   },
   {
     "address": "0xd1e05db88db611f17a25478f3e6c3209460f17af",
@@ -380,7 +388,8 @@
     "address": "0xd90bbdf5904cb7d275c41f897495109b9a5ada58",
     "decimals": 9,
     "name": "CeloDoge",
-    "symbol": "CDOGE"
+    "symbol": "CDOGE",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0xe273ad7ee11dcfaa87383ad5977ee1504ac07568",
@@ -428,7 +437,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cRecy.png",
     "name": "cRecy",
-    "symbol": "cRecy"
+    "symbol": "cRecy",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x9802d866fde4563d088a6619f7cef82c0b991a55",
@@ -490,7 +500,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/agEUR.png",
     "name": "Angle EUR",
-    "symbol": "agEUR"
+    "symbol": "agEUR",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0xeb466342c4d449bc9f53a865d5cb90586f405215",
@@ -504,7 +515,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/GoodDollar.png",
     "name": "GoodDollar",
-    "symbol": "G$"
+    "symbol": "G$",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0xef4229c8c3250c675f21bcefa42f58efbff6002a",
@@ -547,7 +559,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
     "name": "Dai",
-    "symbol": "DAI"
+    "symbol": "DAI",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0xd71ffd0940c920786ec4dbb5a12306669b5b81ef",
@@ -575,6 +588,7 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDGLO.png",
     "name": "Glo Dollar",
-    "symbol": "USDGLO"
+    "symbol": "USDGLO",
+    "minimumAppVersionToSwap": "1.68.0"
   }
 ]
