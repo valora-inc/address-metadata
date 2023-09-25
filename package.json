@@ -47,7 +47,7 @@
   "devDependencies": {
     "@google-cloud/bigquery": "^7.2.0",
     "@google-cloud/functions-framework": "^3.3.0",
-    "@types/jest": "^29.5.4",
+    "@types/jest": "^29.5.5",
     "@types/json-diff": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@valora/eslint-config-typescript": "^1.0.2",
