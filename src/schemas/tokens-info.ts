@@ -56,7 +56,7 @@ const BaseTokenInfoSchema = Joi.object({
 
 const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(
   Joi.object({
-    networkId: Joi.valid(...Object.values(NetworkId)),
+    networkId: Joi.valid(...Object.values(NetworkId)).required(),
     tokenId: Joi.string().required(),
   }),
 )
