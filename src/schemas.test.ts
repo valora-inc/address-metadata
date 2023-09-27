@@ -117,7 +117,10 @@ describe('Schema validation', () => {
       getTokensInfoByNetworkIds(Object.values(NetworkId)),
     )
     it.each(tokensInfo)('tokenInfo %o', (tokenInfo) => {
-      const validationResult = validateWithSchema(tokenInfo, TokenInfoSchemaProcessed)
+      const validationResult = validateWithSchema(
+        tokenInfo,
+        TokenInfoSchemaProcessed,
+      )
       expect(validationResult.error).toBe(undefined)
     })
     it('pegTo fields are addresses for valid tokens', () => {

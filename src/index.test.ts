@@ -36,7 +36,7 @@ describe('index', () => {
         symbol: 'CELO',
         isNative: true,
         networkId: NetworkId['celo-mainnet'],
-        tokenId: 'celo-mainnet:native'
+        tokenId: 'celo-mainnet:native',
       },
     }
     mocked(getTokensInfoByNetworkIds).mockReturnValue(mockTokensInfo)
