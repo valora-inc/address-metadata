@@ -4,7 +4,6 @@ import { URL } from 'url'
 import path from 'path'
 import AddressSchema from './address-schema'
 import semver from 'semver'
-import { NetworkId } from '../types'
 
 export const checkMatchingAsset = (value: string) => {
   const url = new URL(value)
@@ -52,30 +51,37 @@ const BaseTokenInfoSchema = Joi.object({
     .pattern(/^\d+\.\d+\.\d+$/)
     .custom(checkMinVersion, 'has a valid version'),
   isNative: Joi.boolean(),
-  networkId: Joi.valid(...Object.values(NetworkId)),
 })
 
-export const TokenInfoSchema = Joi.alternatives().try(
+const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(Joi.object({
+  networkId: Joi.string().required(),
+  tokenId: Joi.string().required(),
+}))
+
+const getTokenInfoSchema = (base: Joi.ObjectSchema<any>) => Joi.alternatives().try(
   Joi.object({
     // native tokens don't have an address except CELO
     isNative: Joi.valid(true).required(),
     symbol: Joi.string().invalid('CELO').required(),
     address: Joi.forbidden(),
-  }).concat(BaseTokenInfoSchema),
+  }).concat(base),
   Joi.object({
     // CELO is native and has an address
     isNative: Joi.valid(true).required(),
     symbol: Joi.valid('CELO').required(),
     address: AddressSchema.required(),
-  }).concat(BaseTokenInfoSchema),
+  }).concat(base),
   Joi.object({
     // all non-native tokens require address
     isNative: Joi.boolean().invalid(true),
     symbol: Joi.string().required(),
     address: AddressSchema.required(),
     bridge: Joi.string().optional(),
-  }).concat(BaseTokenInfoSchema),
+  }).concat(base),
 )
+
+export const TokenInfoSchemaJSON = getTokenInfoSchema(BaseTokenInfoSchema)
+export const TokenInfoSchemaProcessed = getTokenInfoSchema(ProcessedTokenInfoSchema)
 
 export const RTDBAddressToTokenInfoSchema = Joi.object().pattern(
   AddressSchema,

@@ -29,11 +29,11 @@ export interface TokensInfoCFConfig {
   networkIds: NetworkId[]
 }
 
-export interface TokenInfo {
+// The token info type for the static data stored in the JSON files
+export interface TokenInfoJSON {
   name: string
   symbol: string
   decimals: number
-  networkId: NetworkId
   address?: string
   imageUrl?: string
   isNative?: boolean
@@ -41,6 +41,12 @@ export interface TokenInfo {
   pegTo?: string
   isSupercharged?: boolean
   bridge?: string
+}
+
+// The token info type after a small amount of processing which is used in the cloud function
+export interface TokenInfoProcessed extends TokenInfoJSON {
+  networkId: NetworkId
+  tokenId: string
 }
 
 export enum NetworkId {
