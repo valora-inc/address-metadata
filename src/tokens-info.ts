@@ -24,10 +24,11 @@ export function getTokensInfoByNetworkIds(networkIds: NetworkId[]): {
   const output: { [tokenId: string]: TokenInfoProcessed } = {}
   for (const networkId of networkIds) {
     for (const tokenInfo of networkIdToTokensInfo[networkId]) {
-      output[getTokenId(tokenInfo, networkId)] = {
+      const tokenId = getTokenId(tokenInfo, networkId)
+      output[tokenId] = {
         ...tokenInfo,
         networkId,
-        tokenId: getTokenId(tokenInfo, networkId),
+        tokenId,
       }
     }
   }
