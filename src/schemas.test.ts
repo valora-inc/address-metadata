@@ -1,6 +1,6 @@
 import { getCeloRTDBMetadata } from './index'
 import { getTokensInfoByNetworkIds } from './tokens-info'
-import { NetworkId, TokenInfoProcessed } from './types'
+import { NetworkId, TokenInfo } from './types'
 import {
   TokenInfoSchemaProcessed,
   RTDBAddressToTokenInfoSchema,
@@ -113,7 +113,7 @@ describe('Schema validation', () => {
   })
 
   describe('Tokens info data', () => {
-    const tokensInfo: TokenInfoProcessed[] = Object.values(
+    const tokensInfo: TokenInfo[] = Object.values(
       getTokensInfoByNetworkIds(Object.values(NetworkId)),
     )
     it.each(tokensInfo)('tokenInfo %o', (tokenInfo) => {

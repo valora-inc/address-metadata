@@ -44,7 +44,7 @@ export interface TokenInfoJSON {
 }
 
 // The token info type after a small amount of processing which is used in the cloud function
-export interface TokenInfoProcessed extends TokenInfoJSON {
+export interface TokenInfo extends TokenInfoJSON {
   networkId: NetworkId
   tokenId: string
 }
