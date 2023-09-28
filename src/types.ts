@@ -30,6 +30,7 @@ export interface TokensInfoCFConfig {
 }
 
 export interface TokenInfo {
+  tokenId: string
   name: string
   symbol: string
   decimals: number

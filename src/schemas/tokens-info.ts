@@ -52,8 +52,14 @@ const BaseTokenInfoSchema = Joi.object({
     .pattern(/^\d+\.\d+\.\d+$/)
     .custom(checkMinVersion, 'has a valid version'),
   isNative: Joi.boolean(),
-  networkId: Joi.valid(...Object.values(NetworkId)),
 })
+
+const TokenInfoWithNetworkSchema = BaseTokenInfoSchema.concat(
+  Joi.object({
+    networkId: Joi.valid(...Object.values(NetworkId)).required(),
+    tokenId: Joi.string().required(),
+  }),
+)
 
 export const TokenInfoSchema = Joi.alternatives().try(
   Joi.object({
@@ -61,20 +67,20 @@ export const TokenInfoSchema = Joi.alternatives().try(
     isNative: Joi.valid(true).required(),
     symbol: Joi.string().invalid('CELO').required(),
     address: Joi.forbidden(),
-  }).concat(BaseTokenInfoSchema),
+  }).concat(TokenInfoWithNetworkSchema),
   Joi.object({
     // CELO is native and has an address
     isNative: Joi.valid(true).required(),
     symbol: Joi.valid('CELO').required(),
     address: AddressSchema.required(),
-  }).concat(BaseTokenInfoSchema),
+  }).concat(TokenInfoWithNetworkSchema),
   Joi.object({
     // all non-native tokens require address
     isNative: Joi.boolean().invalid(true),
     symbol: Joi.string().required(),
     address: AddressSchema.required(),
     bridge: Joi.string().optional(),
-  }).concat(BaseTokenInfoSchema),
+  }).concat(TokenInfoWithNetworkSchema),
 )
 
 export const RTDBAddressToTokenInfoSchema = Joi.object().pattern(

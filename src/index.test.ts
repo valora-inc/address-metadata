@@ -17,6 +17,7 @@ describe('index', () => {
     })
     const mockTokensInfo = {
       'ethereum-mainnet:native': {
+        tokenId: 'ethereum-mainnet:native',
         networkId: NetworkId['ethereum-mainnet'],
         name: 'Ether',
         symbol: 'ETH',
@@ -26,6 +27,7 @@ describe('index', () => {
           'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png',
       },
       'celo-mainnet:native': {
+        tokenId: 'celo-mainnet:native',
         address: '0x471ece3750da237f93b8e339c536989b8978a438',
         decimals: 18,
         imageUrl:
