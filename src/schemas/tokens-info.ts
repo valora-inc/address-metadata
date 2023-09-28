@@ -52,29 +52,41 @@ const BaseTokenInfoSchema = Joi.object({
     .pattern(/^\d+\.\d+\.\d+$/)
     .custom(checkMinVersion, 'has a valid version'),
   isNative: Joi.boolean(),
-  networkId: Joi.valid(...Object.values(NetworkId)),
 })
 
-export const TokenInfoSchema = Joi.alternatives().try(
+const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(
   Joi.object({
-    // native tokens don't have an address except CELO
-    isNative: Joi.valid(true).required(),
-    symbol: Joi.string().invalid('CELO').required(),
-    address: Joi.forbidden(),
-  }).concat(BaseTokenInfoSchema),
-  Joi.object({
-    // CELO is native and has an address
-    isNative: Joi.valid(true).required(),
-    symbol: Joi.valid('CELO').required(),
-    address: AddressSchema.required(),
-  }).concat(BaseTokenInfoSchema),
-  Joi.object({
-    // all non-native tokens require address
-    isNative: Joi.boolean().invalid(true),
-    symbol: Joi.string().required(),
-    address: AddressSchema.required(),
-    bridge: Joi.string().optional(),
-  }).concat(BaseTokenInfoSchema),
+    networkId: Joi.valid(...Object.values(NetworkId)).required(),
+    tokenId: Joi.string().required(),
+  }),
+)
+
+const getTokenInfoSchema = (base: Joi.ObjectSchema<any>) =>
+  Joi.alternatives().try(
+    Joi.object({
+      // native tokens don't have an address except CELO
+      isNative: Joi.valid(true).required(),
+      symbol: Joi.string().invalid('CELO').required(),
+      address: Joi.forbidden(),
+    }).concat(base),
+    Joi.object({
+      // CELO is native and has an address
+      isNative: Joi.valid(true).required(),
+      symbol: Joi.valid('CELO').required(),
+      address: AddressSchema.required(),
+    }).concat(base),
+    Joi.object({
+      // all non-native tokens require address
+      isNative: Joi.boolean().invalid(true),
+      symbol: Joi.string().required(),
+      address: AddressSchema.required(),
+      bridge: Joi.string().optional(),
+    }).concat(base),
+  )
+
+export const TokenInfoSchemaJSON = getTokenInfoSchema(BaseTokenInfoSchema)
+export const TokenInfoSchemaProcessed = getTokenInfoSchema(
+  ProcessedTokenInfoSchema,
 )
 
 export const RTDBAddressToTokenInfoSchema = Joi.object().pattern(
