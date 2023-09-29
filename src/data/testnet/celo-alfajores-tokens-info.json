@@ -22,7 +22,9 @@
     "name": "Celo Euro",
     "symbol": "cEUR",
     "isSupercharged": true,
-    "hidePriceDelta": true,
+    "isStableCoin": true,
+    "isCashInEligible": true,
+    "isCashOutEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/celo-euro"
   },
   {
@@ -116,7 +118,9 @@
     "symbol": "cUSD",
     "isSupercharged": true,
     "isZeroState": true,
-    "hidePriceDelta": true,
+    "isStableCoin": true,
+    "isCashInEligible": true,
+    "isCashOutEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/celo-dollar"
   },
   {
@@ -181,7 +185,8 @@
     "name": "Celo Real",
     "symbol": "cREAL",
     "isSupercharged": true,
-    "hidePriceDelta": true,
+    "isStableCoin": true,
+    "isCashInEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/celo-real-creal"
   },
   {
@@ -193,6 +198,8 @@
     "symbol": "CELO",
     "isNative": true,
     "isZeroState": true,
+    "isCashInEligible": true,
+    "isCashOutEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/celo"
   },
   {

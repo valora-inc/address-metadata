@@ -1,4 +1,4 @@
-import { NetworkId, NetworkName, TokenInfo, TokenInfoJSON } from './types'
+import { NetworkId, TokenInfo, TokenInfoJSON } from './types'
 import CeloMainnetTokensInfo from './data/mainnet/celo-tokens-info.json'
 import CeloAlfajoresTokensInfo from './data/testnet/celo-alfajores-tokens-info.json'
 import EthereumMainnetTokensInfo from './data/mainnet/ethereum-tokens-info.json'
@@ -9,13 +9,6 @@ const networkIdToTokensInfo: Record<NetworkId, TokenInfoJSON[]> = {
   [NetworkId['celo-alfajores']]: CeloAlfajoresTokensInfo,
   [NetworkId['ethereum-mainnet']]: EthereumMainnetTokensInfo,
   [NetworkId['ethereum-sepolia']]: EthereumSepoliaTokensInfo,
-}
-
-const networkIdToNetworkName: Record<NetworkId, NetworkName> = {
-  [NetworkId['celo-mainnet']]: NetworkName.Celo,
-  [NetworkId['celo-alfajores']]: NetworkName.Celo,
-  [NetworkId['ethereum-mainnet']]: NetworkName.Ethereum,
-  [NetworkId['ethereum-sepolia']]: NetworkName.Ethereum,
 }
 
 export function getTokenId(
@@ -39,7 +32,6 @@ export function getTokensInfoByNetworkIds(networkIds: NetworkId[]): {
         ...tokenInfo,
         networkId,
         tokenId,
-        networkName: networkIdToNetworkName[networkId],
         networkIconUrl: tokenInfo.isNative ? undefined : nativeImageUrl,
       }
     }

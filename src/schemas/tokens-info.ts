@@ -4,7 +4,7 @@ import { URL } from 'url'
 import path from 'path'
 import AddressSchema from './address-schema'
 import semver from 'semver'
-import { NetworkId, NetworkName } from '../types'
+import { NetworkId } from '../types'
 
 export const checkMatchingAsset = (value: string) => {
   const url = new URL(value)
@@ -58,14 +58,15 @@ const BaseTokenInfoSchema = Joi.object({
     .uri()
     .pattern(/^https:\/\/www.coingecko.com\/en\/coins/),
   isZeroState: Joi.boolean(),
-  hidePriceDelta: Joi.boolean(),
+  isStableCoin: Joi.boolean(),
+  isCashInEligible: Joi.boolean(),
+  isCashOutEligible: Joi.boolean(),
 })
 
 const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(
   Joi.object({
     networkId: Joi.valid(...Object.values(NetworkId)).required(),
     tokenId: Joi.string().required(),
-    networkName: Joi.valid(...Object.values(NetworkName)).required(),
     networkIconUrl: Joi.alternatives().conditional('isNative', {
       is: true,
       then: Joi.forbidden(),

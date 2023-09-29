@@ -1,6 +1,6 @@
 import { getCeloRTDBMetadata } from './index'
 import { getTokensInfoByNetworkIds } from './tokens-info'
-import { NetworkId, NetworkName, TokenInfo } from './types'
+import { NetworkId, TokenInfo } from './types'
 import {
   TokenInfoSchemaProcessed,
   RTDBAddressToTokenInfoSchema,
@@ -63,7 +63,6 @@ describe('Schema validation', () => {
             decimals: 18,
             isNative: true,
             networkId: NetworkId['celo-alfajores'],
-            networkName: NetworkName.Celo,
             tokenId: 'some-token',
             networkIconUrl: 'https://some-icon',
           },
@@ -78,7 +77,6 @@ describe('Schema validation', () => {
             symbol: 'XYZ',
             decimals: 18,
             networkId: NetworkId['celo-alfajores'],
-            networkName: NetworkName.Celo,
             tokenId: 'some-token',
             address: '0x471ece3750da237f93b8e339c536989b8978a438',
           },

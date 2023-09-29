@@ -14,7 +14,7 @@
     "decimals": 6,
     "address": "0x8267cf9254734c6eb452a7bb9aaf97b392258b21",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
-    "hidePriceDelta": true,
+    "isStableCoin": true,
     "infoUrl": "https://www.coingecko.com/en/coins/usdc"
   }
 ]

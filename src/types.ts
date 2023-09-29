@@ -41,7 +41,7 @@ export interface TokenInfoJSON {
   pegTo?: string
   isSupercharged?: boolean
   bridge?: string
-  hidePriceDelta?: boolean
+  isStableCoin?: boolean
   isZeroState?: boolean
   infoUrl?: string
 }
@@ -50,7 +50,6 @@ export interface TokenInfoJSON {
 export interface TokenInfo extends TokenInfoJSON {
   networkId: NetworkId
   tokenId: string
-  networkName: NetworkName
   networkIconUrl?: string
 }
 
@@ -66,8 +65,3 @@ export type Environment = 'mainnet' | 'testnet'
 export type ValoraGcloudProject =
   | 'celo-mobile-alfajores'
   | 'celo-mobile-mainnet'
-
-export enum NetworkName {
-  Celo = 'Celo',
-  Ethereum = 'Ethereum',
-}
