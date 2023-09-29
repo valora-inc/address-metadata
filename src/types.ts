@@ -43,6 +43,8 @@ export interface TokenInfoJSON {
   bridge?: string
   isStableCoin?: boolean
   isZeroState?: boolean
+  isCashInEligible?: boolean
+  isCashOutEligible?: boolean
   infoUrl?: string
 }
 
