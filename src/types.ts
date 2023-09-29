@@ -41,12 +41,17 @@ export interface TokenInfoJSON {
   pegTo?: string
   isSupercharged?: boolean
   bridge?: string
+  hidePriceDelta?: boolean
+  isZeroState?: boolean
+  infoUrl?: string
 }
 
 // The token info type after a small amount of processing which is used in the cloud function
 export interface TokenInfo extends TokenInfoJSON {
   networkId: NetworkId
   tokenId: string
+  networkName: NetworkName
+  networkIconUrl?: string
 }
 
 export enum NetworkId {
@@ -61,3 +66,8 @@ export type Environment = 'mainnet' | 'testnet'
 export type ValoraGcloudProject =
   | 'celo-mobile-alfajores'
   | 'celo-mobile-mainnet'
+
+export enum NetworkName {
+  Celo = 'Celo',
+  Ethereum = 'Ethereum',
+}

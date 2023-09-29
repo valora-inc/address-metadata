@@ -4,7 +4,7 @@ import { URL } from 'url'
 import path from 'path'
 import AddressSchema from './address-schema'
 import semver from 'semver'
-import { NetworkId } from '../types'
+import { NetworkId, NetworkName } from '../types'
 
 export const checkMatchingAsset = (value: string) => {
   const url = new URL(value)
@@ -27,15 +27,17 @@ const checkMinVersion: CustomValidator = (value) => {
   }
 }
 
+const imageUrlSchema = Joi.string()
+  // For now only allow assets within this repo
+  .pattern(
+    /^https:\/\/raw.githubusercontent.com\/valora-inc\/address-metadata\/main\/assets\/tokens\/[^/]+\.png$/,
+  )
+  .uri()
+  .custom(checkMatchingAsset, 'has a matching asset')
+
 const BaseTokenInfoSchema = Joi.object({
   address: AddressSchema,
-  imageUrl: Joi.string()
-    // For now only allow assets within this repo
-    .pattern(
-      /^https:\/\/raw.githubusercontent.com\/valora-inc\/address-metadata\/main\/assets\/tokens\/[^/]+\.png$/,
-    )
-    .uri()
-    .custom(checkMatchingAsset, 'has a matching asset'),
+  imageUrl: imageUrlSchema,
   name: Joi.string().required(),
   decimals: Joi.number().required(),
   symbol: Joi.string().required(),
@@ -52,12 +54,23 @@ const BaseTokenInfoSchema = Joi.object({
     .pattern(/^\d+\.\d+\.\d+$/)
     .custom(checkMinVersion, 'has a valid version'),
   isNative: Joi.boolean(),
+  infoUrl: Joi.string()
+    .uri()
+    .pattern(/^https:\/\/www.coingecko.com\/en\/coins/),
+  isZeroState: Joi.boolean(),
+  hidePriceDelta: Joi.boolean(),
 })
 
 const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(
   Joi.object({
     networkId: Joi.valid(...Object.values(NetworkId)).required(),
     tokenId: Joi.string().required(),
+    networkName: Joi.valid(...Object.values(NetworkName)).required(),
+    networkIconUrl: Joi.alternatives().conditional('isNative', {
+      is: true,
+      then: Joi.forbidden(),
+      otherwise: imageUrlSchema.required(),
+    }),
   }),
 )
 

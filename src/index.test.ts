@@ -1,6 +1,6 @@
 import { _getTokensInfoHttpFunction } from './index'
 import { loadCloudFunctionConfig } from './config'
-import { NetworkId } from './types'
+import { NetworkId, NetworkName } from './types'
 import { getTokensInfoByNetworkIds } from './tokens-info'
 import mocked = jest.mocked
 
@@ -25,6 +25,7 @@ describe('index', () => {
         imageUrl:
           'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png',
         tokenId: 'ethereum-mainnet:native',
+        networkName: NetworkName.Ethereum,
       },
       'celo-mainnet:native': {
         address: '0x471ece3750da237f93b8e339c536989b8978a438',
@@ -37,6 +38,7 @@ describe('index', () => {
         isNative: true,
         networkId: NetworkId['celo-mainnet'],
         tokenId: 'celo-mainnet:native',
+        networkName: NetworkName.Celo,
       },
     }
     mocked(getTokensInfoByNetworkIds).mockReturnValue(mockTokensInfo)
