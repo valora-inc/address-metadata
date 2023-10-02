@@ -57,7 +57,7 @@ const BaseTokenInfoSchema = Joi.object({
   infoUrl: Joi.string()
     .uri()
     .pattern(/^https:\/\/www.coingecko.com\/en\/coins/),
-  isZeroState: Joi.boolean(),
+  showZeroBalance: Joi.boolean(),
   isStableCoin: Joi.boolean(),
   isCashInEligible: Joi.boolean(),
   isCashOutEligible: Joi.boolean(),

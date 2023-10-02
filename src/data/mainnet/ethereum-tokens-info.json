@@ -5,7 +5,7 @@
     "decimals": 18,
     "isNative": true,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png",
-    "isZeroState": true,
+    "showZeroBalance": true,
     "infoUrl": "https://www.coingecko.com/en/coins/ethereum"
   },
   {

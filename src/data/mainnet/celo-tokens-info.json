@@ -196,7 +196,7 @@
     "symbol": "CELO",
     "isSwappable": true,
     "isNative": true,
-    "isZeroState": true,
+    "showZeroBalance": true,
     "isCashInEligible": true,
     "isCashOutEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/celo"
@@ -272,7 +272,7 @@
     "isSupercharged": true,
     "isSwappable": true,
     "isStableCoin": true,
-    "isZeroState": true,
+    "showZeroBalance": true,
     "isCashInEligible": true,
     "isCashOutEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/celo-dollar"

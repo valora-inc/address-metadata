@@ -117,7 +117,7 @@
     "name": "Celo Dollar",
     "symbol": "cUSD",
     "isSupercharged": true,
-    "isZeroState": true,
+    "showZeroBalance": true,
     "isStableCoin": true,
     "isCashInEligible": true,
     "isCashOutEligible": true,
@@ -197,7 +197,7 @@
     "name": "Celo",
     "symbol": "CELO",
     "isNative": true,
-    "isZeroState": true,
+    "showZeroBalance": true,
     "isCashInEligible": true,
     "isCashOutEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/celo"
