@@ -23,12 +23,16 @@ export function getTokensInfoByNetworkIds(networkIds: NetworkId[]): {
 } {
   const output: { [tokenId: string]: TokenInfo } = {}
   for (const networkId of networkIds) {
+    const nativeImageUrl = networkIdToTokensInfo[networkId].find(
+      (tokenInfo) => tokenInfo.isNative,
+    )?.imageUrl
     for (const tokenInfo of networkIdToTokensInfo[networkId]) {
       const tokenId = getTokenId(tokenInfo, networkId)
       output[tokenId] = {
         ...tokenInfo,
         networkId,
         tokenId,
+        networkIconUrl: tokenInfo.isNative ? undefined : nativeImageUrl,
       }
     }
   }

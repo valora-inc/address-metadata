@@ -27,15 +27,17 @@ const checkMinVersion: CustomValidator = (value) => {
   }
 }
 
+const imageUrlSchema = Joi.string()
+  // For now only allow assets within this repo
+  .pattern(
+    /^https:\/\/raw.githubusercontent.com\/valora-inc\/address-metadata\/main\/assets\/tokens\/[^/]+\.png$/,
+  )
+  .uri()
+  .custom(checkMatchingAsset, 'has a matching asset')
+
 const BaseTokenInfoSchema = Joi.object({
   address: AddressSchema,
-  imageUrl: Joi.string()
-    // For now only allow assets within this repo
-    .pattern(
-      /^https:\/\/raw.githubusercontent.com\/valora-inc\/address-metadata\/main\/assets\/tokens\/[^/]+\.png$/,
-    )
-    .uri()
-    .custom(checkMatchingAsset, 'has a matching asset'),
+  imageUrl: imageUrlSchema,
   name: Joi.string().required(),
   decimals: Joi.number().required(),
   symbol: Joi.string().required(),
@@ -52,12 +54,24 @@ const BaseTokenInfoSchema = Joi.object({
     .pattern(/^\d+\.\d+\.\d+$/)
     .custom(checkMinVersion, 'has a valid version'),
   isNative: Joi.boolean(),
+  infoUrl: Joi.string()
+    .uri()
+    .pattern(/^https:\/\/www.coingecko.com\/en\/coins/),
+  showZeroBalance: Joi.boolean(),
+  isStableCoin: Joi.boolean(),
+  isCashInEligible: Joi.boolean(),
+  isCashOutEligible: Joi.boolean(),
 })
 
 const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(
   Joi.object({
     networkId: Joi.valid(...Object.values(NetworkId)).required(),
     tokenId: Joi.string().required(),
+    networkIconUrl: Joi.alternatives().conditional('isNative', {
+      is: true,
+      then: Joi.forbidden(),
+      otherwise: imageUrlSchema.required(),
+    }),
   }),
 )
 

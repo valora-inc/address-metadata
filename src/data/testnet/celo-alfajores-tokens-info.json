@@ -4,7 +4,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UBE.png",
     "name": "Ubeswap",
-    "symbol": "UBE"
+    "symbol": "UBE",
+    "infoUrl": "https://www.coingecko.com/en/coins/ubeswap"
   },
   {
     "address": "0x048f47d358ec521a6cf384461d674750a3cb58c8",
@@ -20,7 +21,11 @@
     "isCoreToken": true,
     "name": "Celo Euro",
     "symbol": "cEUR",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "isStableCoin": true,
+    "isCashInEligible": true,
+    "isCashOutEligible": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-euro"
   },
   {
     "address": "0x123ed050805e0998ebef43671327139224218e50",
@@ -111,7 +116,12 @@
     "isCoreToken": true,
     "name": "Celo Dollar",
     "symbol": "cUSD",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "showZeroBalance": true,
+    "isStableCoin": true,
+    "isCashInEligible": true,
+    "isCashOutEligible": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-dollar"
   },
   {
     "address": "0x8d0b8633c6c3d5c1eafb767b3eaf0723e49c9c98",
@@ -174,7 +184,10 @@
     "isCoreToken": true,
     "name": "Celo Real",
     "symbol": "cREAL",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "isStableCoin": true,
+    "isCashInEligible": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-real-creal"
   },
   {
     "address": "0xf194afdf50b03e69bd7d057c1aa9e10c9954e4c9",
@@ -183,7 +196,11 @@
     "isCoreToken": true,
     "name": "Celo",
     "symbol": "CELO",
-    "isNative": true
+    "isNative": true,
+    "showZeroBalance": true,
+    "isCashInEligible": true,
+    "isCashOutEligible": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/celo"
   },
   {
     "address": "0x3a0ea4e0806805527c750ab9b34382642448468d",
@@ -191,7 +208,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcUSD.png",
     "name": "Moola interest bearing CUSD",
     "symbol": "mCUSD",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/moola-celo-dollars"
   },
   {
     "address": "0x0d9b4311657003251d1efa085e74f761185f271c",
@@ -199,7 +217,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcEUR.png",
     "name": "Moola interest bearing CEUR",
     "symbol": "mCEUR",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/mceur"
   },
   {
     "address": "0x3d0eda535ca4b15c739d46761d24e42e37664ad7",
@@ -207,7 +226,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mcREAL.png",
     "name": "Moola interest bearing CREAL",
     "symbol": "mCREAL",
-    "isSupercharged": true
+    "isSupercharged": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/moola-interest-bearing-creal"
   },
   {
     "address": "0x4620d7a5f58f77eee69a38afdaa8f2ffb10b42b6",
