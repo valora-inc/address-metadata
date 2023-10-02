@@ -41,11 +41,11 @@ export interface TokenInfoJSON {
   pegTo?: string
   isSupercharged?: boolean
   bridge?: string
-  isStableCoin?: boolean // Whether the token is a stable coin and the price is not expected to change
-  showZeroBalance?: boolean // Whether the token is displayed even if the balance is zero
-  isCashInEligible?: boolean // Whether the token can be cashed in
-  isCashOutEligible?: boolean // Whether the token can be cashed in
-  infoUrl?: string // The coingecko url for the token
+  isStableCoin?: boolean // used to show / hide price delta on token details
+  showZeroBalance?: boolean
+  isCashInEligible?: boolean
+  isCashOutEligible?: boolean
+  infoUrl?: string // The coingecko url
 }
 
 // The token info type after a small amount of processing which is used in the cloud function
