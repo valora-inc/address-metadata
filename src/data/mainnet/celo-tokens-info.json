@@ -479,21 +479,24 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/gcUSD.png",
     "name": "Green Celo Dollar",
-    "symbol": "gcUSD"
+    "symbol": "gcUSD",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x37f750b7cc259a2f741af45294f6a16572cf5cad",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "USD Coin (Wormhole)",
-    "symbol": "USDC"
+    "symbol": "USDC",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x617f3112bf5397d0467d315cc709ef968d9ba546",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
     "name": "Tether USD (Wormhole)",
-    "symbol": "USDT"
+    "symbol": "USDT",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0xc16b81af351ba9e64c1a069e3ab18c244a1e3049",
@@ -508,7 +511,8 @@
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "Axelar Wrapped USDC",
-    "symbol": "axlUSDC"
+    "symbol": "axlUSDC",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x62b8b11039fcfe5ab0c56e502b1c372a3d2a9c7a",
@@ -537,7 +541,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/JMPT.png",
     "name": "JumpToken",
-    "symbol": "JMPT"
+    "symbol": "JMPT",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207",
@@ -552,7 +557,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/IMTX.png",
     "name": "ImmortalX",
-    "symbol": "IMTX"
+    "symbol": "IMTX",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x97926a82930bb7b33178e3c2f4ed1bfdc91a9fbf",
@@ -566,7 +572,8 @@
     "decimals": 8,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/portalBTC.png",
     "name": "Wrapped BTC (Wormhole)",
-    "symbol": "WBTC"
+    "symbol": "WBTC",
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x88eec49252c8cbc039dcdb394c0c2ba2f1637ea0",
