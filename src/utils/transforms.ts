@@ -1,15 +1,16 @@
-import { TokenInfo } from '../types'
+import { TokenInfoJSON } from '../types'
 
-type CeloRTDBTokenInfo = Omit<TokenInfo, 'networkId' | 'isNative'>
+type CeloRTDBTokenInfo = Omit<TokenInfoJSON, 'isNative' | 'bridge'>
 
 // Transforms the Celo tokens info data in this repo into the format used in the RTDB collection
 export function transformCeloTokensForRTDB(
-  celoTokensInfo: Omit<TokenInfo, 'networkId'>[],
+  celoTokensInfo: TokenInfoJSON[],
 ): Record<string, CeloRTDBTokenInfo> {
   return Object.fromEntries(
     celoTokensInfo.map((rawTokenInfo) => {
-      const { address, isNative, ...rest } = rawTokenInfo
-      return [address, { address, ...rest }]
+      const { address, isNative, bridge, name: rawName, ...rest } = rawTokenInfo
+      const name = bridge ? `${rawName} (${bridge})` : rawName
+      return [address, { address, name, ...rest }]
     }),
   )
 }

@@ -2,8 +2,9 @@ import { getCeloRTDBMetadata } from './index'
 import { getTokensInfoByNetworkIds } from './tokens-info'
 import { NetworkId, TokenInfo } from './types'
 import {
+  TokenInfoSchemaProcessed,
   RTDBAddressToTokenInfoSchema,
-  TokenInfoSchema,
+  TokenInfoSchemaJSON,
 } from './schemas/tokens-info'
 import Joi from 'joi'
 
@@ -16,7 +17,7 @@ function validateWithSchema(value: any, schema: Joi.Schema) {
 
 describe('Schema validation', () => {
   describe('Joi sanity checks', () => {
-    describe('TokenInfoSchema', () => {
+    describe('TokenInfoSchemaJSON', () => {
       it('forbids CELO to not have an address', () => {
         const validationResult = validateWithSchema(
           {
@@ -24,7 +25,7 @@ describe('Schema validation', () => {
             symbol: 'CELO',
             decimals: 18,
           },
-          TokenInfoSchema,
+          TokenInfoSchemaJSON,
         )
         expect(validationResult.error).toBeDefined()
       })
@@ -37,7 +38,7 @@ describe('Schema validation', () => {
             isNative: true,
             address: '0x471ece3750da237f93b8e339c536989b8978a438',
           },
-          TokenInfoSchema,
+          TokenInfoSchemaJSON,
         )
         expect(validationResult.error).toBeDefined()
       })
@@ -48,7 +49,38 @@ describe('Schema validation', () => {
             symbol: 'XYZ',
             decimals: 18,
           },
-          TokenInfoSchema,
+          TokenInfoSchemaJSON,
+        )
+        expect(validationResult.error).toBeDefined()
+      })
+    })
+    describe('TokenInfoSchemaProcessed', () => {
+      it('forbids native tokens to have networkIconUrl', () => {
+        const validationResult = validateWithSchema(
+          {
+            name: 'New native token',
+            symbol: 'XYZ',
+            decimals: 18,
+            isNative: true,
+            networkId: NetworkId['celo-alfajores'],
+            tokenId: 'some-token',
+            networkIconUrl: 'https://some-icon',
+          },
+          TokenInfoSchemaProcessed,
+        )
+        expect(validationResult.error).toBeDefined()
+      })
+      it('requires non-native tokens to have networkIconUrl', () => {
+        const validationResult = validateWithSchema(
+          {
+            name: 'New native token',
+            symbol: 'XYZ',
+            decimals: 18,
+            networkId: NetworkId['celo-alfajores'],
+            tokenId: 'some-token',
+            address: '0x471ece3750da237f93b8e339c536989b8978a438',
+          },
+          TokenInfoSchemaProcessed,
         )
         expect(validationResult.error).toBeDefined()
       })
@@ -116,7 +148,10 @@ describe('Schema validation', () => {
       getTokensInfoByNetworkIds(Object.values(NetworkId)),
     )
     it.each(tokensInfo)('tokenInfo %o', (tokenInfo) => {
-      const validationResult = validateWithSchema(tokenInfo, TokenInfoSchema)
+      const validationResult = validateWithSchema(
+        tokenInfo,
+        TokenInfoSchemaProcessed,
+      )
       expect(validationResult.error).toBe(undefined)
     })
     it('pegTo fields are addresses for valid tokens', () => {

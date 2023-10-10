@@ -4,7 +4,8 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/POOF.png",
     "name": "PoofCash",
-    "symbol": "POOF"
+    "symbol": "POOF",
+    "infoUrl": "https://www.coingecko.com/en/coins/poofcash"
   },
   {
     "address": "0xc668583dcbdc9ae6fa3ce46462758188adfdfc24",
@@ -20,7 +21,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UBE.png",
     "name": "Ubeswap",
     "symbol": "UBE",
-    "isSwappable": true
+    "isSwappable": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/ubeswap"
   },
   {
     "address": "0x035ee610693a29cb77fd6efbeb9d9d278703e145",
@@ -50,16 +52,18 @@
     "address": "0x122013fd7df1c6f636a5bb8f03108e876548b455",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png",
-    "name": "Wrapped Ether (Optics v2)",
+    "name": "Wrapped Ether",
     "symbol": "WETH",
+    "bridge": "Optics v2",
     "isSwappable": false
   },
   {
     "address": "0x173234922eb27d5138c5e481be9df5261faed450",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SOL.png",
-    "name": "SOL (Allbridge)",
+    "name": "SOL",
     "symbol": "SOL",
+    "bridge": "Allbridge",
     "isSwappable": true
   },
   {
@@ -68,7 +72,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MOO.png",
     "name": "Moola",
     "symbol": "MOO",
-    "isSwappable": true
+    "isSwappable": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/moola-market"
   },
   {
     "address": "0x1a8dbe5958c597a744ba51763abebd3355996c3e",
@@ -82,8 +87,9 @@
     "address": "0x1bfc26ce035c368503fae319cc2596716428ca44",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/pUSDC.png",
-    "name": "USD Coin (Pos) (Optics v2)",
-    "symbol": "USDC"
+    "name": "USD Coin (Pos)",
+    "symbol": "USDC",
+    "bridge": "Optics v2"
   },
   {
     "address": "0x20677d4f3d0f08e735ab512393524a3cfceb250c",
@@ -91,7 +97,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARI.png",
     "name": "Ari Swap",
     "symbol": "ARI",
-    "minimumAppVersionToSwap": "1.60.0"
+    "minimumAppVersionToSwap": "1.60.0",
+    "infoUrl": "https://www.coingecko.com/en/coins/ari-swap"
   },
   {
     "address": "0x218c3c3d49d0e7b37aff0d8bb079de36ae61a4c0",
@@ -125,23 +132,26 @@
   {
     "address": "0x2a3684e9dc20b857375ea04235f2f7edbe818fa7",
     "decimals": 6,
-    "name": "USD Coin (Optics v1)",
-    "symbol": "USDC"
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "bridge": "Optics v1"
   },
   {
     "address": "0x2def4285787d58a2f811af24755a8150622f4361",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cETH.png",
-    "name": "Wrapped Ethereum (wrapped.com)",
+    "name": "Wrapped Ethereum",
     "symbol": "cETH",
+    "bridge": "wrapped.com",
     "isSwappable": false
   },
   {
     "address": "0x2e3487f967df2ebc2f236e16f8fcaeac7091324d",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WMATIC.png",
-    "name": "Wrapped Matic (Optics v2)",
-    "symbol": "WMATIC"
+    "name": "Wrapped Matic",
+    "symbol": "WMATIC",
+    "bridge": "Optics v2"
   },
   {
     "address": "0x301a61d01a63c8d670c2b8a43f37d12ef181f997",
@@ -180,7 +190,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PACT.png",
     "name": "impactMarket",
     "symbol": "PACT",
-    "minimumAppVersionToSwap": "1.60.0"
+    "minimumAppVersionToSwap": "1.60.0",
+    "infoUrl": "https://www.coingecko.com/en/coins/impactmarket"
   },
   {
     "address": "0x471ece3750da237f93b8e339c536989b8978a438",
@@ -190,7 +201,11 @@
     "name": "Celo",
     "symbol": "CELO",
     "isSwappable": true,
-    "isNative": true
+    "isNative": true,
+    "showZeroBalance": true,
+    "isCashInEligible": true,
+    "isCashOutEligible": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/celo"
   },
   {
     "address": "0x47264ae1fc0c8e6418ebe78630718e11a07346a8",
@@ -235,7 +250,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mCELOxOLD.png",
     "name": "Moola CELO AToken",
     "symbol": "mCELO",
-    "pegTo": "0x471ece3750da237f93b8e339c536989b8978a438"
+    "pegTo": "0x471ece3750da237f93b8e339c536989b8978a438",
+    "infoUrl": "https://www.coingecko.com/en/coins/moola-celo-atoken"
   },
   {
     "address": "0x73a210637f6f6b7005512677ba6b3c96bb4aa44b",
@@ -251,7 +267,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SOURCE.png",
     "name": "Source",
     "symbol": "SOURCE",
-    "minimumAppVersionToSwap": "1.60.0"
+    "minimumAppVersionToSwap": "1.60.0",
+    "infoUrl": "https://www.coingecko.com/en/coins/resource-protocol"
   },
   {
     "address": "0x765de816845861e75a25fca122bb6898b8b1282a",
@@ -261,7 +278,12 @@
     "name": "Celo Dollar",
     "symbol": "cUSD",
     "isSupercharged": true,
-    "isSwappable": true
+    "isSwappable": true,
+    "isStableCoin": true,
+    "showZeroBalance": true,
+    "isCashInEligible": true,
+    "isCashOutEligible": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-dollar"
   },
   {
     "address": "0x7c2bf103daac9c082a0e53ad40bb9f3f7f799af7",
@@ -276,7 +298,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/mCELO.png",
     "name": "Moola interest bearing CELO",
     "symbol": "mCELO",
-    "isSwappable": true
+    "isSwappable": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/mcelo"
   },
   {
     "address": "0x8427bd503dd3169ccc9aff7326c15258bc305478",
@@ -302,7 +325,8 @@
     "symbol": "mCUSD",
     "pegTo": "0x765de816845861e75a25fca122bb6898b8b1282a",
     "isSupercharged": true,
-    "isSwappable": true
+    "isSwappable": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/moola-celo-dollars"
   },
   {
     "address": "0x94140c2ea9d208d8476ca4e3045254169791c59e",
@@ -310,7 +334,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PREMIO.png",
     "name": "PREMIO",
     "symbol": "PREMIO",
-    "minimumAppVersionToSwap": "1.60.0"
+    "minimumAppVersionToSwap": "1.60.0",
+    "infoUrl": "https://www.coingecko.com/en/coins/premio"
   },
   {
     "address": "0xa649325aa7c5093d12d6f98eb4378deae68ce23f",
@@ -344,21 +369,25 @@
     "address": "0xbaab46e28388d2779e6e31fd00cf0e5ad95e327b",
     "decimals": 8,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WBTC.png",
-    "name": "Wrapped BTC (Optics v2)",
+    "name": "Wrapped BTC",
     "symbol": "WBTC",
+    "bridge": "Optics v2",
     "isSwappable": false
   },
   {
     "address": "0xbe50a3013a1c94768a1abb78c3cb79ab28fc1ace",
     "decimals": 8,
-    "name": "Wrapped BTC (Optics v1)",
-    "symbol": "WBTC"
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "bridge": "Optics v1"
   },
   {
     "address": "0xd15ec721c2a896512ad29c671997dd68f9593226",
     "decimals": 18,
-    "name": "SushiToken (Optics v1)",
-    "symbol": "SUSHI"
+    "name": "SushiToken",
+    "symbol": "SUSHI",
+    "bridge": "Optics v1",
+    "minimumAppVersionToSwap": "1.60.0"
   },
   {
     "address": "0xd1e05db88db611f17a25478f3e6c3209460f17af",
@@ -370,8 +399,9 @@
     "address": "0xd629eb00deced2a080b7ec630ef6ac117e614f1b",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cBTC.png",
-    "name": "Wrapped Bitcoin (wrapped.com)",
+    "name": "Wrapped Bitcoin",
     "symbol": "BTC",
+    "bridge": "wrapped.com",
     "isSwappable": true
   },
   {
@@ -382,7 +412,11 @@
     "name": "Celo Euro",
     "symbol": "cEUR",
     "isSupercharged": true,
-    "isSwappable": true
+    "isSwappable": true,
+    "isStableCoin": true,
+    "isCashInEligible": true,
+    "isCashOutEligible": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-euro"
   },
   {
     "address": "0xd90bbdf5904cb7d275c41f897495109b9a5ada58",
@@ -399,7 +433,8 @@
     "symbol": "mCEUR",
     "pegTo": "0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73",
     "isSupercharged": true,
-    "isSwappable": true
+    "isSwappable": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/mceur"
   },
   {
     "address": "0xe685d21b7b0fc7a248a6a8e03b8db22d013aa2ee",
@@ -407,7 +442,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/IMMO.png",
     "name": "Immortal",
     "symbol": "IMMO",
-    "minimumAppVersionToSwap": "1.60.0"
+    "minimumAppVersionToSwap": "1.60.0",
+    "infoUrl": "https://www.coingecko.com/en/coins/immortaldao"
   },
   {
     "address": "0xe74abf23e1fdf7acbec2f3a30a772ef77f1601e1",
@@ -424,7 +460,10 @@
     "name": "Celo Brazilian Real",
     "symbol": "cREAL",
     "isSupercharged": true,
-    "isSwappable": true
+    "isSwappable": true,
+    "isStableCoin": true,
+    "isCashInEligible": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-real-creal"
   },
   {
     "address": "0xe919f65739c26a42616b7b8eedc6b5524d1e3ac4",
@@ -448,7 +487,8 @@
     "symbol": "mCREAL",
     "isSupercharged": true,
     "pegTo": "0xe8537a3d056da446677b9e9d6c5db704eaab4787",
-    "isSwappable": true
+    "isSwappable": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/moola-interest-bearing-creal"
   },
   {
     "address": "0x9995cc8f20db5896943afc8ee0ba463259c931ed",
@@ -465,7 +505,8 @@
     "name": "Plastik",
     "symbol": "PLASTIK",
     "isSwappable": false,
-    "minimumAppVersionToSwap": "1.60.0"
+    "minimumAppVersionToSwap": "1.60.0",
+    "infoUrl": "https://www.coingecko.com/en/coins/plastiks"
   },
   {
     "address": "0x8a1639098644a229d08f441ea45a63ae050ee018",
@@ -526,8 +567,9 @@
     "address": "0xef4229c8c3250c675f21bcefa42f58efbff6002a",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
-    "name": "USD Coin (Optics v2)",
-    "symbol": "USDC"
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "bridge": "Optics v2"
   },
   {
     "address": "0x0e21b5bdfb6edba7d903a610d4de2f8c72586017",
@@ -548,8 +590,9 @@
     "address": "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/portalETH.png",
-    "name": "Wrapped Ether (Wormhole)",
+    "name": "Wrapped Ether",
     "symbol": "WETH",
+    "bridge": "Wormhole",
     "isSwappable": true
   },
   {
@@ -564,30 +607,34 @@
     "address": "0x97926a82930bb7b33178e3c2f4ed1bfdc91a9fbf",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
-    "name": "Dai",
-    "symbol": "DAI"
+    "name": "Dai Stablecoin",
+    "symbol": "DAI",
+    "bridge": "Wormhole"
   },
   {
     "address": "0xd71ffd0940c920786ec4dbb5a12306669b5b81ef",
     "decimals": 8,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/portalBTC.png",
-    "name": "Wrapped BTC (Wormhole)",
+    "name": "Wrapped BTC",
     "symbol": "WBTC",
+    "bridge": "Wormhole",
     "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x88eec49252c8cbc039dcdb394c0c2ba2f1637ea0",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
-    "name": "Tether USD (Optics v2)",
-    "symbol": "USDT"
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "bridge": "Optics v2"
   },
   {
     "address": "0x90ca507a5d4458a4c6c6249d186b6dcb02a5bccd",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
-    "name": "Dai Stablecoin (Optics v2)",
-    "symbol": "DAI"
+    "name": "Dai Stablecoin",
+    "symbol": "DAI",
+    "bridge": "Optics v2"
   },
   {
     "address": "0x4f604735c1cf31399c6e711d5962b2b3e0225ad3",

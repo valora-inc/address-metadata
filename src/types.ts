@@ -29,17 +29,30 @@ export interface TokensInfoCFConfig {
   networkIds: NetworkId[]
 }
 
-export interface TokenInfo {
+// The token info type for the static data stored in the JSON files
+export interface TokenInfoJSON {
   name: string
   symbol: string
   decimals: number
-  networkId: NetworkId
   address?: string
   imageUrl?: string
   isNative?: boolean
   isCoreToken?: boolean
   pegTo?: string
   isSupercharged?: boolean
+  bridge?: string
+  isStableCoin?: boolean // used to show / hide price delta on token details
+  showZeroBalance?: boolean
+  isCashInEligible?: boolean
+  isCashOutEligible?: boolean
+  infoUrl?: string // The coingecko url
+}
+
+// The token info type after a small amount of processing which is used in the cloud function
+export interface TokenInfo extends TokenInfoJSON {
+  networkId: NetworkId
+  tokenId: string
+  networkIconUrl?: string
 }
 
 export enum NetworkId {
