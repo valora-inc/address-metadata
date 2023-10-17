@@ -249,5 +249,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/stCELO.png",
     "name": "Staked Celo",
     "symbol": "stCELO"
+  },
+  {
+    "address": "0xb0fa15e002516d0301884059c0aac0f0c72b019d",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/eXOF.png",
+    "name": "ECO CFA",
+    "symbol": "eXOF"
   }
 ]
