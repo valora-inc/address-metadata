@@ -659,6 +659,7 @@
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/EUROC.png",
     "name": "Axelar Wrapped EUROC",
-    "symbol": "axlEUROC"
+    "symbol": "axlEUROC",
+    "bridge": "Axelar"
   }
 ]
