@@ -653,5 +653,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/eXOF.png",
     "name": "ECO CFA",
     "symbol": "eXOF"
+  },
+  {
+    "address": "0x061cc5a2c863e0c1cb404006d559db18a34c762d",
+    "decimals": 6,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/EUROC.png",
+    "name": "Axelar Wrapped EUROC",
+    "symbol": "axlEUROC"
   }
 ]
