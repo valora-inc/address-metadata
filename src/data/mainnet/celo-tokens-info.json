@@ -651,6 +651,7 @@
     "address": "0x73f93dcc49cb8a239e2032663e9475dd5ef29a08",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/eXOF.png",
+    "isCoreToken": true,
     "name": "ECO CFA",
     "symbol": "eXOF"
   }
