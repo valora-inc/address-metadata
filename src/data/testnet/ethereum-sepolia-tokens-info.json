@@ -12,7 +12,7 @@
     "name": "USD Coin",
     "symbol": "USDC",
     "decimals": 6,
-    "address": "0x8267cf9254734c6eb452a7bb9aaf97b392258b21",
+    "address": "0x94a9d9ac8a22534e3faca9f4e7f2e2cf85d5e4c8",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "isStableCoin": true,
     "infoUrl": "https://www.coingecko.com/en/coins/usdc"
