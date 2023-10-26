@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           check-latest: true
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           check-latest: true
@@ -53,7 +53,7 @@ jobs:
           project_id: celo-mobile-alfajores
           credentials_json: ${{ secrets.ALFAJORES_SERVICE_ACCOUNT_KEY }}
       - uses: google-github-actions/setup-gcloud@v1
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           check-latest: true
@@ -72,7 +72,7 @@ jobs:
           project_id: celo-mobile-alfajores
           credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
       - uses: google-github-actions/setup-gcloud@v1
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           check-latest: true
@@ -94,7 +94,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v1
         with:
           install_components: 'beta'
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           check-latest: true
@@ -124,7 +124,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v1
         with:
           install_components: 'beta'
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           check-latest: true
