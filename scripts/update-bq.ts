@@ -44,4 +44,7 @@ async function overwriteTable() {
 
 overwriteTable()
   .then(() => process.exit(0))
-  .catch(console.error)
+  .catch((error) => {
+    console.error(error)
+    process.exit(1)
+  })
