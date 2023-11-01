@@ -46,7 +46,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png",
     "name": "Curve DAO Token",
     "symbol": "CRV",
-    "minimumAppVersionToSwap": "1.68.0"
+    "isSwappable": false
   },
   {
     "address": "0x122013fd7df1c6f636a5bb8f03108e876548b455",
