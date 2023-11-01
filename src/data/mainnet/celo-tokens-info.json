@@ -13,7 +13,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/stCELO.png",
     "name": "Staked Celo",
     "symbol": "stCELO",
-    "isSwappable": false
+    "minimumAppVersionToSwap": "1.68.0"
   },
   {
     "address": "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec",
