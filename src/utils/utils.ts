@@ -1,41 +1,23 @@
-export function mapNestedJsonIntoPlain(json: any): any {
-  if (!isNonEmptyObject(json)) {
-    return json
-  }
+export function keepInternalKeys(
+  expected: any,
+  current: any,
+  keptInternalKeys: string[],
+) {
+  return Object.keys(expected).reduce((expectedResult, key) => {
+    const objectWithInternalKeys = keptInternalKeys.reduce(
+      (result, internalKey) => {
+        if (current[key] && current[key][internalKey]) {
+          result[internalKey] = current[key][internalKey]
+        }
 
-  return Object.keys(json).reduce(
-    (result, current) => ({
-      ...result,
-      ...prependKey(current, mapNestedJsonIntoPlain(json[current])),
-    }),
-    {},
-  )
-}
+        return result
+      },
+      expected[key],
+    )
 
-function prependKey(key: string, json: any) {
-  if (!isNonEmptyObject(json)) {
-    return { [key]: json }
-  }
-
-  return Object.keys(json).reduce(
-    (result, current) => ({
-      ...result,
-      [`${key}/${current}`]: json[current],
-    }),
-    {},
-  )
-}
-
-function isNonEmptyObject(json: any): boolean {
-  return typeof json === 'object' && json !== null
-}
-
-export function deleteMissingKeysUpdateRequest(expected: any, current: any) {
-  if (!isNonEmptyObject(current)) return {}
-  const expectedKeys = new Set(Object.keys(expected))
-  const currentKeys = Object.keys(current)
-
-  return currentKeys
-    .filter((key) => !expectedKeys.has(key))
-    .reduce((result, key) => ({ ...result, [key]: null }), {})
+    return {
+      ...expectedResult,
+      [key]: objectWithInternalKeys,
+    }
+  }, expected)
 }

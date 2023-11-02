@@ -2,7 +2,7 @@
 import { diffString } from 'json-diff'
 import { loadUpdateRTDBConfig } from '../src/config'
 import { FirebaseClient } from '../src/clients/firebase-client'
-import { deleteMissingKeysUpdateRequest } from '../src/utils/utils'
+import { keepInternalKeys } from '../src/utils/utils'
 import { getCeloRTDBMetadata } from '../src'
 
 async function main() {
@@ -28,17 +28,20 @@ async function main() {
           await firebaseClient.writeToPath(rtdbLocation, data)
           console.log(`Wrote data to ${rtdbLocation}.`)
         } else {
-          let updateRequest = data
-          if (overrideType.deleteMissingKeys) {
-            const deleteMissingKeys = deleteMissingKeysUpdateRequest(
-              data,
-              rtdbData,
+          const updateRequest = keepInternalKeys(
+            data,
+            rtdbData,
+            overrideType.keptInternalKeys,
+          )
+          const updateDiff = diffString(rtdbData, data)
+          if (!updateDiff) {
+            console.log(
+              `Diff is empty for data at ${rtdbLocation}, skipping...`,
             )
-            updateRequest = { ...updateRequest, ...deleteMissingKeys }
+          } else {
+            await firebaseClient.writeToPath(rtdbLocation, updateRequest)
+            console.log(`Updated data at ${rtdbLocation}.`)
           }
-          // TODO: Avoid updating the node if we already know there aren't changes
-          await firebaseClient.updateToPath(rtdbLocation, updateRequest)
-          console.log(`Updated data at ${rtdbLocation}.`)
         }
       }
     }
