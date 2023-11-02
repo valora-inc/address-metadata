@@ -78,6 +78,23 @@ jobs:
           check-latest: true
       - run: yarn
       - run: yarn update:rtdb --project=mainnet --database-url=https://celo-mobile-mainnet.firebaseio.com/
+  update-mainnet-bq:
+    name: Update Mainnet BQ
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: google-github-actions/auth@v1
+        with:
+          project_id: celo-mobile-mainnet
+          credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
+      - uses: google-github-actions/setup-gcloud@v1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          check-latest: true
+      - run: yarn
+      - run: yarn update:bq
   deploy-dev:
     name: Deploy dev cloud function
     if: github.ref == 'refs/heads/main'
