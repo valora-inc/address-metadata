@@ -50,7 +50,7 @@
     "@google-cloud/functions-framework": "^3.3.0",
     "@types/jest": "^29.5.7",
     "@types/json-diff": "^1.0.1",
-    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@valora/eslint-config-typescript": "^1.0.2",
     "@valora/prettier-config": "^0.0.1",
     "eslint": "^8.52.0",
