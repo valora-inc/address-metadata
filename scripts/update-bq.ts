@@ -25,7 +25,7 @@ const tokensInfo = getTokensInfoByNetworkIds([
 
 const rows = Object.entries(tokensInfo).map(([_, tokenInfo]) => {
   const row: Record<string, string | number | boolean | null> = {}
-  fieldsToKeep.forEach((field) => (row[field] = tokenInfo[field] || null))
+  fieldsToKeep.forEach((field) => (row[field] = tokenInfo[field] ?? null))
   return row
 })
 
