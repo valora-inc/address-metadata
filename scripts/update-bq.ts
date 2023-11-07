@@ -1,20 +1,31 @@
 /* eslint-disable no-console */
 
 import { BigQuery } from '@google-cloud/bigquery'
-import jsonData from '../src/data/mainnet/celo-tokens-info.json'
+import { NetworkId } from '../src/types'
+import { getTokensInfoByNetworkIds } from '../src/tokens-info'
 
 const bigquery = new BigQuery()
 
 const projectId = 'celo-mobile-mainnet' // we don't index testnet data
 const datasetId = 'address_metadata'
 const tableId = 'tokens_info'
-const fieldsToKeep = ['address', 'decimals', 'name', 'symbol'] as const
+const fieldsToKeep = [
+  'address',
+  'decimals',
+  'name',
+  'symbol',
+  'tokenId',
+  'networkId',
+] as const
 
-const rows = jsonData.map((entry) => {
-  const row: Record<string, string | number> = {}
-  fieldsToKeep.forEach((field) => {
-    row[field] = entry[field]
-  })
+const tokensInfo = getTokensInfoByNetworkIds([
+  NetworkId['celo-mainnet'],
+  NetworkId['ethereum-mainnet'],
+])
+
+const rows = Object.entries(tokensInfo).map(([_, tokenInfo]) => {
+  const row: Record<string, string | number | boolean | null> = {}
+  fieldsToKeep.forEach((field) => (row[field] = tokenInfo[field] ?? null))
   return row
 })
 
