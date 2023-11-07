@@ -14,7 +14,6 @@ const fieldsToKeep = [
   'decimals',
   'name',
   'symbol',
-  'isNative',
   'tokenId',
   'networkId',
 ] as const
