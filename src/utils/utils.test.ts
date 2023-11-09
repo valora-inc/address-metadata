@@ -1,7 +1,7 @@
 import { keepInternalKeys } from './utils'
 
 describe('Keep Internal Keys', () => {
-  const toUpdateValues = {
+  const valuesToUpdate = {
     '0x1234': {
       address: '0x1234',
       decimal: 18,
@@ -45,13 +45,13 @@ describe('Keep Internal Keys', () => {
   }
 
   it("returns the expected object when there aren't keys to keep", () => {
-    const updateObject = keepInternalKeys(toUpdateValues, currentValues, [])
+    const updateObject = keepInternalKeys(valuesToUpdate, currentValues, [])
 
-    expect(updateObject).toMatchObject(toUpdateValues)
+    expect(updateObject).toMatchObject(valuesToUpdate)
   })
 
   it('returns the expected object when there are internal keys to keep', () => {
-    const updateObject = keepInternalKeys(toUpdateValues, currentValues, [
+    const updateObject = keepInternalKeys(valuesToUpdate, currentValues, [
       'usdPrice',
       'historicalUsdPrices',
     ])
