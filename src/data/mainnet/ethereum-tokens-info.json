@@ -6,7 +6,8 @@
     "isNative": true,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png",
     "showZeroBalance": true,
-    "infoUrl": "https://www.coingecko.com/en/coins/ethereum"
+    "infoUrl": "https://www.coingecko.com/en/coins/ethereum",
+    "minimumAppVersionToSwap": "1.72.0"
   },
   {
     "name": "USD Coin",
@@ -15,6 +16,7 @@
     "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "isStableCoin": true,
-    "infoUrl": "https://www.coingecko.com/en/coins/usdc"
+    "infoUrl": "https://www.coingecko.com/en/coins/usdc",
+    "minimumAppVersionToSwap": "1.72.0"
   }
 ]
