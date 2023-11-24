@@ -16,6 +16,14 @@
     "isSwappable": false
   },
   {
+    "address": "0x73F93dcc49cB8A239e2032663e9475dd5ef29A08",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/stCELO.png",
+    "name": "ECO CFA",
+    "symbol": "eXOF",
+    "isSwappable": false
+  },
+  {
     "address": "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UBE.png",
