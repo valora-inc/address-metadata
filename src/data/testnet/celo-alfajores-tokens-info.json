@@ -27,16 +27,7 @@
     "isCashOutEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/celo-euro"
   },
-   {
-    "address": "0xB0FA15e002516d0301884059c0aaC0F0C72b019D",
-    "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/eXOF.png",
-    "name": "ECO CFA",
-    "symbol": "eXOF",
-    "isStableCoin": true,
-    "isCashOutEligible": true,
-    "infoUrl": "https://www.dunia.africa"
-  },
+  
   {
     "address": "0x123ed050805e0998ebef43671327139224218e50",
     "decimals": 18,
@@ -266,6 +257,10 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/eXOF.png",
     "isCoreToken": true,
     "name": "ECO CFA",
-    "symbol": "eXOF"
+    "symbol": "eXOF",
+    "isStableCoin": true,
+    "isCashOutEligible": true,
+    "infoUrl": "https://www.dunia.africa"
+  },
   }
 ]
