@@ -655,9 +655,7 @@
     "isCoreToken": true,
     "name": "ECO CFA",
     "symbol": "eXOF",
-    "isStableCoin": true,
-    "isCashOutEligible": true,
-    "infoUrl": "https://www.dunia.africa"
+    "isStableCoin": true
   },
   {
     "address": "0x061cc5a2c863e0c1cb404006d559db18a34c762d",
