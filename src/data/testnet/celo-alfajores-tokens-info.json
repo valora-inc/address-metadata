@@ -259,8 +259,6 @@
     "name": "ECO CFA",
     "symbol": "eXOF",
     "isStableCoin": true,
-    "isCashOutEligible": true,
     "infoUrl": "https://www.dunia.africa"
-  },
   }
 ]
