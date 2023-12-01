@@ -10,7 +10,6 @@ function toCsv(path: string) {
   return parser.parse(json)
 }
 
-
 type MixpanelLookupTableId = string
 
 // You can find IDs for Mixpanel Lookup Tables in the Mixpanel Lexicon.
