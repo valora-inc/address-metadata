@@ -39,6 +39,8 @@ jobs:
           check-latest: true
       - run: yarn
       - run: yarn test:ci
+      # update:mixpanel does a dry run by default
+      - run: yarn update:mixpanel
   update-testnet:
     name: Update Testnet (celo-mobile-alfajores) RTDB
     if: github.ref == 'refs/heads/main'

@@ -23,6 +23,7 @@
     "diff": "ts-node scripts/diff.ts",
     "update:rtdb": "ts-node scripts/update-rtdb.ts",
     "update:bq": "ts-node scripts/update-bq.ts",
+    "update:mixpanel": "ts-node scripts/update-mixpanel.ts",
     "deploy:dev": "gcloud beta functions deploy --gen2 --region=us-central1 --concurrency=80 --cpu=1 --memory=256MB --project=celo-mobile-alfajores --runtime=nodejs20 --trigger-http --allow-unauthenticated --env-vars-file=config-dev.yaml",
     "deploy:prod": "gcloud beta functions deploy --gen2 --region=us-central1 --concurrency=80 --cpu=1 --memory=256MB --project=celo-mobile-mainnet --runtime=nodejs20 --trigger-http --allow-unauthenticated --env-vars-file=config-prod.yaml"
   },
@@ -48,11 +49,13 @@
   "devDependencies": {
     "@google-cloud/bigquery": "^7.3.0",
     "@google-cloud/functions-framework": "^3.3.0",
+    "@json2csv/plainjs": "^7.0.4",
     "@types/jest": "^29.5.10",
     "@types/json-diff": "^1.0.2",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
     "@valora/eslint-config-typescript": "^1.0.2",
     "@valora/prettier-config": "^0.0.1",
+    "axios": "^1.6.2",
     "eslint": "^8.54.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jest": "^27.6.0",
