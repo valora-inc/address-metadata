@@ -10,7 +10,11 @@ function toCsv(path: string) {
   return parser.parse(json)
 }
 
-const lookupTables: Record<string, string> = {
+
+type MixpanelLookupTableId = string
+
+// You can find IDs for Mixpanel Lookup Tables in the Mixpanel Lexicon.
+const lookupTables: Record<MixpanelLookupTableId, string> = {
   'c1881b36-7300-421d-9934-73e11d3b39d8': toCsv(
     '../src/data/mainnet/celo-tokens-info.json',
   ),
