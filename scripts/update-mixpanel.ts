@@ -18,6 +18,11 @@ const lookupTables: Record<string, string> = {
 const mixpanelProjectId = '2786968'
 
 async function main(args: ReturnType<typeof parseArgs>) {
+  if (!args.updateTables) {
+    console.log('Dry run (--update-tables not set)')
+    return
+  }
+
   const params = {
     project_id: mixpanelProjectId,
   }
@@ -36,10 +41,14 @@ async function main(args: ReturnType<typeof parseArgs>) {
 function parseArgs() {
   return yargs
     .env('MIXPANEL')
+    .option('update-tables', {
+      description: 'Update Mixpanel lookup tables',
+      boolean: true,
+      implies: ['credentials'],
+    })
     .option('credentials', {
       description: 'Base64 encoded username:password',
       type: 'string',
-      demandOption: true,
     })
     .parseSync()
 }

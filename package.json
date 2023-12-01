@@ -23,6 +23,7 @@
     "diff": "ts-node scripts/diff.ts",
     "update:rtdb": "ts-node scripts/update-rtdb.ts",
     "update:bq": "ts-node scripts/update-bq.ts",
+    "update:mixpanel": "ts-node scripts/update-mixpanel.ts",
     "deploy:dev": "gcloud beta functions deploy --gen2 --region=us-central1 --concurrency=80 --cpu=1 --memory=256MB --project=celo-mobile-alfajores --runtime=nodejs20 --trigger-http --allow-unauthenticated --env-vars-file=config-dev.yaml",
     "deploy:prod": "gcloud beta functions deploy --gen2 --region=us-central1 --concurrency=80 --cpu=1 --memory=256MB --project=celo-mobile-mainnet --runtime=nodejs20 --trigger-http --allow-unauthenticated --env-vars-file=config-prod.yaml"
   },
