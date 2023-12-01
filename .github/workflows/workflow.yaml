@@ -120,7 +120,7 @@ jobs:
         with:
           secrets: |-
             mixpanel_credentials:projects/1027349420744/secrets/mixpanel-address-metadata-service-account
-      - run: yarn update:mixpanel
+      - run: yarn update:mixpanel --update-tables
         env:
           MIXPANEL_CREDENTIALS: '${{ steps.secrets.outputs.mixpanel_credentials }}'
   deploy-dev:
