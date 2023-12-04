@@ -38,6 +38,8 @@ export interface TokenInfoJSON {
   imageUrl?: string
   isNative?: boolean
   isCoreToken?: boolean
+  isFeeCurrency?: boolean
+  canTransferWithComment?: boolean
   pegTo?: string
   isSupercharged?: boolean
   bridge?: string
