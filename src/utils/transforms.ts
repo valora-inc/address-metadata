@@ -10,7 +10,8 @@ export function transformCeloTokensForRTDB(
     celoTokensInfo.map((rawTokenInfo) => {
       const { address, isNative, bridge, name: rawName, ...rest } = rawTokenInfo
       const name = bridge ? `${rawName} (${bridge})` : rawName
-      return [address, { address, name, ...rest }]
+      const isCoreToken = rawTokenInfo.isFeeCurrency // for backwards compatibility. `isCoreToken` is deprecated
+      return [address, { address, name, ...rest, isCoreToken }]
     }),
   )
 }

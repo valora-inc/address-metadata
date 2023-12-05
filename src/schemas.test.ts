@@ -187,5 +187,10 @@ describe('Schema validation', () => {
         }
       }
     })
+    it('sets deprecated property `isCoreToken` equal to `isFeeCurrency`', () => {
+      for (const tokenInfo of tokensInfo) {
+        expect(tokenInfo.isCoreToken).toEqual(tokenInfo.isFeeCurrency)
+      }
+    })
   })
 })
