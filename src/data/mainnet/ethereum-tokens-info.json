@@ -7,7 +7,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png",
     "showZeroBalance": true,
     "infoUrl": "https://www.coingecko.com/en/coins/ethereum",
-    "minimumAppVersionToSwap": "1.72.0"
+    "minimumAppVersionToSwap": "1.72.0",
+    "isCashInEligible": true
   },
   {
     "name": "USD Coin",
