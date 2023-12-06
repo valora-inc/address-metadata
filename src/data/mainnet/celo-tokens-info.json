@@ -404,7 +404,7 @@
     "name": "Wrapped Bitcoin",
     "symbol": "BTC",
     "bridge": "wrapped.com",
-    "isSwappable": true
+    "isSwappable": false
   },
   {
     "address": "0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73",
