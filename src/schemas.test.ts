@@ -53,6 +53,19 @@ describe('Schema validation', () => {
         )
         expect(validationResult.error).toBeDefined()
       })
+      it('requires tokens having `isCoreToken` property to have the `isFeeCurrency` property', () => {
+        const validationResult = validateWithSchema(
+          {
+            address: '0x471ece3750da237f93b8e339c536989b8978a438',
+            name: 'Fee currency token',
+            symbol: 'XYZ',
+            decimals: 18,
+            isCoreToken: true,
+          },
+          TokenInfoSchemaJSON,
+        )
+        expect(validationResult.error).toBeDefined()
+      })
     })
     describe('TokenInfoSchemaProcessed', () => {
       it('forbids native tokens to have networkIconUrl', () => {
@@ -120,7 +133,8 @@ describe('Schema validation', () => {
               decimals: 18,
               imageUrl:
                 'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
-              isCoreToken: true,
+              isFeeCurrency: true,
+              canTransferWithComment: true,
               name: 'Celo',
               symbol: 'CELO',
               isSwappable: true,
@@ -171,6 +185,11 @@ describe('Schema validation', () => {
         for (const pegToAddress of pegToAddresses) {
           expect(addresses.includes(pegToAddress)).toEqual(true)
         }
+      }
+    })
+    it('sets deprecated property `isCoreToken` equal to `isFeeCurrency`', () => {
+      for (const tokenInfo of tokensInfo) {
+        expect(tokenInfo.isCoreToken).toEqual(tokenInfo.isFeeCurrency)
       }
     })
   })

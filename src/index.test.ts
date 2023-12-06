@@ -31,7 +31,8 @@ describe('index', () => {
         decimals: 18,
         imageUrl:
           'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
-        isCoreToken: true,
+        isFeeCurrency: true,
+        canTransferWithComment: true,
         name: 'Celo',
         symbol: 'CELO',
         isNative: true,

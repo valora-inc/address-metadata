@@ -42,6 +42,8 @@ const BaseTokenInfoSchema = Joi.object({
   decimals: Joi.number().required(),
   symbol: Joi.string().required(),
   isCoreToken: Joi.boolean(),
+  isFeeCurrency: Joi.boolean(),
+  canTransferWithComment: Joi.boolean(),
   isSupercharged: Joi.boolean(),
   pegTo: AddressSchema,
   // Forcing flag to be false if decimals is not 18
@@ -62,6 +64,8 @@ const BaseTokenInfoSchema = Joi.object({
   isCashInEligible: Joi.boolean(),
   isCashOutEligible: Joi.boolean(),
 })
+  // Ensure `isFeeCurrency` is present when `isCoreToken` (deprecated) is present.
+  .with('isCoreToken', 'isFeeCurrency')
 
 const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(
   Joi.object({

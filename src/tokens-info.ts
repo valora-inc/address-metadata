@@ -33,6 +33,7 @@ export function getTokensInfoByNetworkIds(networkIds: NetworkId[]): {
         networkId,
         tokenId,
         networkIconUrl: tokenInfo.isNative ? undefined : nativeImageUrl,
+        isCoreToken: tokenInfo.isFeeCurrency, // for backwards compatibility. `isCoreToken` is deprecated
       }
     }
   }
