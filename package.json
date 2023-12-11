@@ -50,7 +50,7 @@
     "@google-cloud/bigquery": "^7.3.0",
     "@google-cloud/functions-framework": "^3.3.0",
     "@json2csv/plainjs": "^7.0.4",
-    "@types/jest": "^29.5.10",
+    "@types/jest": "^29.5.11",
     "@types/json-diff": "^1.0.2",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@valora/eslint-config-typescript": "^1.0.2",
