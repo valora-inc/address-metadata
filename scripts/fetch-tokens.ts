@@ -59,6 +59,11 @@ declare global {
   }
 }
 
+const MINIMUM_APP_VERSION_TO_SWAP =
+  (process.env.MIN_APP_SWAP_VERSION as Version) || '1.72.0'
+
+const METADATA_PATH = process.env.METADATA_PATH || './src/data/mainnet/ethereum-tokens-info.json'
+
 async function fetchMarketList({
   category = 'ethereum-ecosystem',
   page = 1,
@@ -131,7 +136,7 @@ async function fetchTokenSymbol(address: string): Promise<TokenSymbol> {
       method: 'eth_call',
       params: [
         {
-          to: '0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84',
+          to: address,
           data: '0x95d89b41', // function signature for "symbol()"
         },
         'latest',
@@ -157,7 +162,7 @@ async function fetchTokenDecimals(address: string): Promise<number> {
       method: 'eth_call',
       params: [
         {
-          to: '0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84',
+          to: address,
           data: '0x313ce567', // function signature for "decimals()"
         },
         'latest',
@@ -177,8 +182,6 @@ async function saveTokenIcon(imageUrl: string, symbol: TokenSymbol) {
   await fs.writeFile(filePath, response.data, 'binary')
 }
 
-const MINIMUM_APP_VERSION_TO_SWAP =
-  (process.env.MIN_APP_SWAP_VERSION as Version) || '1.72.0'
 async function getTopMetadata() {
   const fetchedCoins: MarketCoin[] = await fetchMarketList({})
   const tokens = [fetchedCoins[4], fetchedCoins[5]]
@@ -209,8 +212,26 @@ async function getTopMetadata() {
   return metadataFiltered
 }
 
+async function loadExistingMetadata() {
+  const data = await fs.readFile(METADATA_PATH, 'utf8')
+  const metadata = JSON.parse(data) as AddressMetadata[]
+  return metadata
+}
+
+async function writeMetadata(metadata: AddressMetadata[]) {
+  await fs.writeFile(METADATA_PATH, JSON.stringify(metadata, null, 2), 'utf8')
+}
+
 async function updateMetadata() {
+  const existingMetadata = await loadExistingMetadata()
   const metadata = await getTopMetadata()
+  const mergedMetadata = existingMetadata.concat(
+    metadata.filter(
+      (existing) =>
+        !existingMetadata.find((oldMetadata) => oldMetadata.address === existing.address),
+    ),
+  )
+  await writeMetadata(mergedMetadata)
 }
 
 updateMetadata().catch(() => undefined)
