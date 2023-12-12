@@ -5,12 +5,13 @@
 
 import axios from 'axios'
 import { promises as fs } from 'fs'
+import * as path from 'path'
 
 type CoingeckoCoinId = string
 type TokenSymbol = string
 type CoingeckoSymbol = Lowercase<string>
 type ImageUrl =
-  `https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/${TokenSymbol}.png`
+  `https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/${TokenSymbol}.${string}`
 type InfoUrl = `https://www.coingecko.com/en/coins/${CoingeckoCoinId}`
 type Version = `${number}.${number}.${number}`
 
@@ -129,13 +130,17 @@ function mergeTokenDetails(
   details: TokenDetailsParsed,
   symbol: string,
   decimals: number,
+  imagePath: string,
 ): AddressMetadata {
+  const baseUrl =
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main'
+  const imageUrl = path.join(baseUrl, imagePath) as ImageUrl
   return {
     name: token.name,
     symbol,
     decimals: decimals,
     address: details.address,
-    imageUrl: `https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/${token.symbol.toUpperCase()}.png`,
+    imageUrl,
     isStableCoin: details.isStableCoin,
     infoUrl: `https://www.coingecko.com/en/coins/${token.id}`,
     minimumAppVersionToSwap: MINIMUM_APP_VERSION_TO_SWAP,
@@ -146,7 +151,11 @@ interface RPCResponse {
   result: `0x${string}`
 }
 
-async function fetchTokenSymbol(address: string): Promise<TokenSymbol> {
+async function fetchTokenSymbol(
+  address: string,
+  fallbackSymbol: string,
+): Promise<TokenSymbol> {
+  // Coingecko symbol is lowercase but the contract should have correct case, e.g. stETH
   const response = await axios.post<RPCResponse>(
     `https://ethereum.publicnode.com`,
     {
@@ -162,14 +171,22 @@ async function fetchTokenSymbol(address: string): Promise<TokenSymbol> {
       id: 1,
     },
   )
-  return response.data.result
-    .substring(2 + 64 + 64)
-    .match(/.{1,2}/g)!
-    .map((byte) => parseInt(byte, 16))
-    .filter((charCode) => charCode > 0)
-    .map((charCode) => String.fromCharCode(charCode))
-    .join('')
-    .trim()
+  try {
+    return response.data.result
+      .substring(2 + 64 + 64)
+      .match(/.{1,2}/g)!
+      .map((byte) => parseInt(byte, 16))
+      .filter((charCode) => charCode > 0)
+      .map((charCode) => String.fromCharCode(charCode))
+      .join('')
+      .trim()
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.debug(
+      `Failed to parse symbol for address ${address}: ${response.data.result}`,
+    )
+    return fallbackSymbol
+  }
 }
 
 async function fetchTokenDecimals(address: string): Promise<number> {
@@ -196,8 +213,11 @@ async function saveTokenIcon(imageUrl: string, symbol: TokenSymbol) {
     responseType: 'arraybuffer',
     responseEncoding: 'binary',
   })
-  const filePath = `./assets/tokens/${symbol}.png`
+  const contentType = response.headers['content-type']
+  const extension = contentType.split('/')[1]
+  const filePath = `./assets/tokens/${symbol}.${extension}`
   await fs.writeFile(filePath, response.data, 'binary')
+  return filePath
 }
 
 async function getTopMetadata() {
@@ -211,17 +231,20 @@ async function getTopMetadata() {
       continue
     }
     const [symbol, decimals] = await Promise.all([
-      fetchTokenSymbol(details.address),
+      fetchTokenSymbol(details.address, token.symbol.toUpperCase()),
       fetchTokenDecimals(details.address),
     ])
+
+    await delay(2500) // Delay of 2+ seconds between each request
+    const imagePath = await saveTokenIcon(token.image, symbol)
+
     const metadata: AddressMetadata = mergeTokenDetails(
       token,
       details,
       symbol,
       decimals,
+      imagePath,
     )
-    await delay(2500) // Delay of 2+ seconds between each request
-    await saveTokenIcon(token.image, symbol)
     metadataList.push(metadata)
   }
 
@@ -255,4 +278,7 @@ async function updateMetadata() {
   await writeMetadata(mergedMetadata)
 }
 
-updateMetadata().catch(() => undefined)
+updateMetadata().catch((error) => {
+  // eslint-disable-next-line no-console
+  console.error(error)
+})
