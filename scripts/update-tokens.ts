@@ -65,6 +65,23 @@ const MINIMUM_APP_VERSION_TO_SWAP =
 const METADATA_PATH =
   process.env.METADATA_PATH || './src/data/mainnet/ethereum-tokens-info.json'
 
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+axios.interceptors.response.use(
+  (response) => {
+    return response
+  },
+  (error) => {
+    if (error.response.status === 429) {
+      // If the error has status code 429, retry the request
+      return delay(2500).then(() => axios.request(error.config))
+    }
+    return Promise.reject(error)
+  },
+)
+
 async function fetchMarketList({
   category = 'ethereum-ecosystem',
   page = 1,
@@ -185,26 +202,27 @@ async function saveTokenIcon(imageUrl: string, symbol: TokenSymbol) {
 
 async function getTopMetadata() {
   const marketCoins: MarketCoin[] = await fetchMarketList({})
-  const metadataList = await Promise.all(
-    marketCoins.map(async (token) => {
-      const details = await fetchTokenDetails(token.id)
-      if (!details) {
-        return
-      }
-      const [symbol, decimals] = await Promise.all([
-        fetchTokenSymbol(details.address),
-        fetchTokenDecimals(details.address),
-      ])
-      const metadata: AddressMetadata = mergeTokenDetails(
-        token,
-        details,
-        symbol,
-        decimals,
-      )
-      await saveTokenIcon(token.image, symbol)
-      return metadata
-    }),
-  )
+  const metadataList = []
+
+  for (const token of marketCoins) {
+    await delay(4000) // Delay of 2+ seconds between each request
+    const details = await fetchTokenDetails(token.id)
+    if (!details) {
+      continue
+    }
+    const [symbol, decimals] = await Promise.all([
+      fetchTokenSymbol(details.address),
+      fetchTokenDecimals(details.address),
+    ])
+    const metadata: AddressMetadata = mergeTokenDetails(
+      token,
+      details,
+      symbol,
+      decimals,
+    )
+    await saveTokenIcon(token.image, symbol)
+    metadataList.push(metadata)
+  }
 
   const metadataFiltered = metadataList.filter(
     (metadata): metadata is NonNullable<AddressMetadata> => !!metadata,
