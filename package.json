@@ -21,6 +21,7 @@
     "test:ci": "yarn test --ci --coverage",
     "supercheck": "yarn format && yarn lint:fix && yarn typecheck && yarn test",
     "diff": "ts-node scripts/diff.ts",
+    "fetch:tokens": "ts-node scripts/fetch-tokens.ts",
     "update:rtdb": "ts-node scripts/update-rtdb.ts",
     "update:bq": "ts-node scripts/update-bq.ts",
     "update:mixpanel": "ts-node scripts/update-mixpanel.ts",
