@@ -62,7 +62,8 @@ declare global {
 const MINIMUM_APP_VERSION_TO_SWAP =
   (process.env.MIN_APP_SWAP_VERSION as Version) || '1.72.0'
 
-const METADATA_PATH = process.env.METADATA_PATH || './src/data/mainnet/ethereum-tokens-info.json'
+const METADATA_PATH =
+  process.env.METADATA_PATH || './src/data/mainnet/ethereum-tokens-info.json'
 
 async function fetchMarketList({
   category = 'ethereum-ecosystem',
@@ -228,7 +229,9 @@ async function updateMetadata() {
   const mergedMetadata = existingMetadata.concat(
     metadata.filter(
       (existing) =>
-        !existingMetadata.find((oldMetadata) => oldMetadata.address === existing.address),
+        !existingMetadata.find(
+          (oldMetadata) => oldMetadata.address === existing.address,
+        ),
     ),
   )
   await writeMetadata(mergedMetadata)
