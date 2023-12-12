@@ -184,10 +184,9 @@ async function saveTokenIcon(imageUrl: string, symbol: TokenSymbol) {
 }
 
 async function getTopMetadata() {
-  const fetchedCoins: MarketCoin[] = await fetchMarketList({})
-  const tokens = [fetchedCoins[4], fetchedCoins[5]]
+  const marketCoins: MarketCoin[] = await fetchMarketList({})
   const metadataList = await Promise.all(
-    tokens.map(async (token) => {
+    marketCoins.map(async (token) => {
       const details = await fetchTokenDetails(token.id)
       if (!details) {
         return
