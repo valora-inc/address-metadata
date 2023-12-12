@@ -205,7 +205,7 @@ async function getTopMetadata() {
   const metadataList = []
 
   for (const token of marketCoins) {
-    await delay(4000) // Delay of 2+ seconds between each request
+    await delay(2500) // Delay of 2+ seconds between each request
     const details = await fetchTokenDetails(token.id)
     if (!details) {
       continue
@@ -220,6 +220,7 @@ async function getTopMetadata() {
       symbol,
       decimals,
     )
+    await delay(2500) // Delay of 2+ seconds between each request
     await saveTokenIcon(token.image, symbol)
     metadataList.push(metadata)
   }
