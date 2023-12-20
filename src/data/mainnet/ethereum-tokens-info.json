@@ -153,7 +153,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MANA.png",
     "infoUrl": "https://www.coingecko.com/en/coins/decentraland",
     "minimumAppVersionToSwap": "1.72.0"
-  }, {
+  },
+  {
     "name": "First Digital USD",
     "symbol": "FDUSD",
     "decimals": 18,
@@ -161,7 +162,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/FDUSD.png",
     "infoUrl": "https://www.coingecko.com/en/coins/first-digital-usd",
     "minimumAppVersionToSwap": "1.72.0"
-  }, {
+  },
+  {
     "name": "Mantle",
     "symbol": "MNT",
     "decimals": 18,
@@ -169,7 +171,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MNT.png",
     "infoUrl": "https://www.coingecko.com/en/coins/mantle",
     "minimumAppVersionToSwap": "1.72.0"
-  }, {
+  },
+  {
     "name": "TrueUSD",
     "symbol": "TUSD",
     "decimals": 18,
@@ -177,7 +180,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/TUSD.png",
     "infoUrl": "https://www.coingecko.com/en/coins/true-usd",
     "minimumAppVersionToSwap": "1.72.0"
-  }, {
+  },
+  {
     "name": "Shiba Inu",
     "symbol": "SHIB",
     "decimals": 18,
@@ -185,7 +189,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SHIB.png",
     "infoUrl": "https://www.coingecko.com/en/coins/shiba-inu",
     "minimumAppVersionToSwap": "1.72.0"
-  }, {
+  },
+  {
     "name": "Toncoin",
     "symbol": "TON",
     "decimals": 9,
@@ -193,7 +198,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/TON.png",
     "infoUrl": "https://www.coingecko.com/en/coins/toncoin",
     "minimumAppVersionToSwap": "1.72.0"
-  }, {
+  },
+  {
     "name": "Injective",
     "symbol": "INJ",
     "decimals": 18,
