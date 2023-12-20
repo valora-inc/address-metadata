@@ -153,5 +153,59 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MANA.png",
     "infoUrl": "https://www.coingecko.com/en/coins/decentraland",
     "minimumAppVersionToSwap": "1.72.0"
+  },
+  {
+    "name": "First Digital USD",
+    "symbol": "FDUSD",
+    "decimals": 18,
+    "address": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/FDUSD.png",
+    "infoUrl": "https://www.coingecko.com/en/coins/first-digital-usd",
+    "minimumAppVersionToSwap": "1.72.0"
+  },
+  {
+    "name": "Mantle",
+    "symbol": "MNT",
+    "decimals": 18,
+    "address": "0x3c3a81e81dc49a522a592e7622a7e711c06bf354",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MNT.png",
+    "infoUrl": "https://www.coingecko.com/en/coins/mantle",
+    "minimumAppVersionToSwap": "1.72.0"
+  },
+  {
+    "name": "TrueUSD",
+    "symbol": "TUSD",
+    "decimals": 18,
+    "address": "0x0000000000085d4780b73119b644ae5ecd22b376",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/TUSD.png",
+    "infoUrl": "https://www.coingecko.com/en/coins/true-usd",
+    "minimumAppVersionToSwap": "1.72.0"
+  },
+  {
+    "name": "Shiba Inu",
+    "symbol": "SHIB",
+    "decimals": 18,
+    "address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SHIB.png",
+    "infoUrl": "https://www.coingecko.com/en/coins/shiba-inu",
+    "minimumAppVersionToSwap": "1.72.0"
+  },
+  {
+    "name": "Toncoin",
+    "symbol": "TON",
+    "decimals": 9,
+    "address": "0x582d872a1b094fc48f5de31d3b73f2d9be47def1",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/TON.png",
+    "infoUrl": "https://www.coingecko.com/en/coins/toncoin",
+    "minimumAppVersionToSwap": "1.72.0"
+  },
+  {
+    "name": "Injective",
+    "symbol": "INJ",
+    "decimals": 18,
+    "address": "0xe28b3b32b6c345a34ff64674606124dd5aceca30",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/INJ.png",
+    "infoUrl": "https://www.coingecko.com/en/coins/injective",
+    "minimumAppVersionToSwap": "1.72.0"
   }
 ]
