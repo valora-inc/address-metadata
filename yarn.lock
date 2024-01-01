@@ -1656,10 +1656,10 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axios@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.2.tgz#de67d42c755b571d3e698df1b6504cde9b0ee9f2"
-  integrity sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==
+axios@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.3.tgz#7f50f23b3aa246eff43c54834272346c396613f4"
+  integrity sha512-fWyNdeawGam70jXSVlKl+SUNVcL6j6W79CuSIPfi6HnDUmSCH6gyUys/HrqHeA/wU0Az41rRgean494d0Jb+ww==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
@@ -3139,10 +3139,10 @@ ignore@^5.2.0, ignore@^5.2.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.4.tgz#a291c0c6178ff1b960befe47fcdec301674a6324"
   integrity sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==
 
-image-size@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/image-size/-/image-size-1.0.2.tgz#d778b6d0ab75b2737c1556dd631652eb963bc486"
-  integrity sha512-xfOoWjceHntRb3qFCrh5ZFORYH8XCdYpASltMhZ/Q0KZiOwjdE/Yl2QCiWdwD+lygV5bMCvauzgu5PxBX/Yerg==
+image-size@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-1.1.0.tgz#e0458a7957b1230ec3916ae2cac7273345a93a86"
+  integrity sha512-asnTHw2K8OlqT5kVnQwX+AGKQqpvLo95LbNzQ/C0ln3yzentZmAdd0ygoD004VC4Kkd4PV7J2iaPQkqwp9yuTw==
   dependencies:
     queue "6.0.2"
 
