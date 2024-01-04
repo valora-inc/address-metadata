@@ -1119,5 +1119,41 @@
     "infoUrl": "https://www.coingecko.com/en/coins/band-protocol",
     "minimumAppVersionToSwap": "1.72.0",
     "isCashInEligible": false
+  },
+  {
+    "name": "dYdX",
+    "symbol": "DYDX",
+    "decimals": 18,
+    "address": "0x92d6c1e31e14520e676a687f0a93788b716beff5",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DYDX.png",
+    "isNative": false,
+    "showZeroBalance": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/dydx",
+    "minimumAppVersionToSwap": "1.72.0",
+    "isCashInEligible": false
+  },
+  {
+    "name": "Frax Share",
+    "symbol": "FXS",
+    "decimals": 18,
+    "address": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/FXS.png",
+    "isNative": false,
+    "showZeroBalance": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/frax-share",
+    "minimumAppVersionToSwap": "1.72.0",
+    "isCashInEligible": false
+  },
+  {
+    "name": "Ocean Token",
+    "symbol": "OCEAN",
+    "decimals": 18,
+    "address": "0x967da4048cd07ab37855c090aaf366e4ce1b9f48",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OCEAN.png",
+    "isNative": false,
+    "showZeroBalance": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/ocean-protocol",
+    "minimumAppVersionToSwap": "1.72.0",
+    "isCashInEligible": false
   }
 ]
