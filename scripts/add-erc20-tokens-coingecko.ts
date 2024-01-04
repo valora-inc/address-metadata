@@ -130,11 +130,13 @@ async function main(args: ReturnType<typeof parseArgs>) {
       minimumAppVersionToSwap: '1.72.0',
       isCashInEligible: false,
     })
-  }
 
-  console.log('Updating tokens info file with new tokens...')
-  const newTokensInfoString = JSON.stringify(newTokensInfo, null, 2)
-  fs.writeFileSync(tokensInfoFilePath, newTokensInfoString)
+    // update the file after every token is fetched because the coingecko rate
+    // limit can be unpredictable and we don't want to lose progress
+    console.log('Updating tokens info file with new token...')
+    const newTokensInfoString = JSON.stringify(newTokensInfo, null, 2)
+    fs.writeFileSync(tokensInfoFilePath, newTokensInfoString)
+  }
 
   console.log('✨ Success ✨')
 }
