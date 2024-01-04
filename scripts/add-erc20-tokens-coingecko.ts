@@ -20,8 +20,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
     transport: http(),
   })
 
-  // get tokens by market cap
-  console.log('Fetching tokens list from Coingecko')
+  console.log('Fetching tokens list by market cap from Coingecko')
   const coingeckoResponse = await axios.get(
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=${categoryId}&order=market_cap_desc&per_page=${numberOfResults}&page=1&sparkline=false&locale=en`,
   )
@@ -33,8 +32,6 @@ async function main(args: ReturnType<typeof parseArgs>) {
   for (const token of coingeckoResponse.data) {
     console.log(`Processing token ${token.symbol}...`)
 
-    // the coingecko token symbols are not cased correctly and do not match the
-    // token contract
     if (existingLowerCaseTokenSymbols.has(token.symbol.toLowerCase())) {
       console.log(`Token already exists ${token.symbol}`)
       continue
@@ -109,7 +106,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
       const filePath = `./assets/tokens/${symbol}.png`
       fs.writeFileSync(filePath, resizedImage, 'binary')
     } catch (error) {
-      console.warn(`Encountered error fetching image: ${error}`)
+      console.warn(`Encountered error fetching image, skipping ${id}. ${error}`)
       continue
     }
 
@@ -130,6 +127,8 @@ async function main(args: ReturnType<typeof parseArgs>) {
   console.log('Updating tokens info file with new tokens...')
   const newTokensInfoString = JSON.stringify(newTokensInfo, null, 2)
   fs.writeFileSync(tokensInfoFilePath, newTokensInfoString)
+
+  console.log('✨ Success ✨')
 }
 
 function parseArgs() {
