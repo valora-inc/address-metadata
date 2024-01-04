@@ -29,11 +29,17 @@ async function main(args: ReturnType<typeof parseArgs>) {
   }
 
   const newTokensInfo = [...existingTokensInfo]
-  for (const token of coingeckoResponse.data) {
-    console.log(`Processing token ${token.symbol}...`)
+  for (let i = 0; i < coingeckoResponse.data.length; i++) {
+    const token = coingeckoResponse.data[i]
+
+    console.log(
+      `(${i + 1}/${coingeckoResponse.data.length}) Processing token ${
+        token.symbol
+      }...`,
+    )
 
     if (existingLowerCaseTokenSymbols.has(token.symbol.toLowerCase())) {
-      console.log(`Token already exists ${token.symbol}`)
+      console.log(`Token ${token.symbol} already exists`)
       continue
     }
 
@@ -42,7 +48,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
 
     const { id, image } = token
     if (!id || !image) {
-      console.warn(`No id or image found for token ${token}`)
+      console.warn(`⚠️ No id or image found for token ${token}`)
       continue
     }
 
@@ -64,7 +70,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
       }
     } catch (error) {
       console.warn(
-        `Encountered error fetching token address from Coingecko: ${error}`,
+        `⚠️ Encountered error fetching token address from Coingecko: ${error}`,
       )
       continue
     }
@@ -106,7 +112,9 @@ async function main(args: ReturnType<typeof parseArgs>) {
       const filePath = `./assets/tokens/${symbol}.png`
       fs.writeFileSync(filePath, resizedImage, 'binary')
     } catch (error) {
-      console.warn(`Encountered error fetching image, skipping ${id}. ${error}`)
+      console.warn(
+        `⚠️ Encountered error fetching image, skipping ${id}. ${error}`,
+      )
       continue
     }
 
@@ -148,7 +156,7 @@ function parseArgs() {
     .option('number-of-results', {
       description: 'Number of tokens requested',
       type: 'number',
-      default: 2,
+      default: 20,
     })
     .option('tokens-info-file-path', {
       description: 'Path of the tokens info file relative to the root folder',
