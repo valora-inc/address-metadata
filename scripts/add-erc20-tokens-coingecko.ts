@@ -54,7 +54,8 @@ async function main(args: ReturnType<typeof parseArgs>) {
       continue
     }
 
-    // avoid rate limit 10 requests / minute
+    // avoid rate limit 10-30 requests / minute
+    // https://apiguide.coingecko.com/getting-started/error-and-rate-limit#rate-limit
     await new Promise((resolve) => setTimeout(resolve, 10000))
 
     const { id, image } = token
