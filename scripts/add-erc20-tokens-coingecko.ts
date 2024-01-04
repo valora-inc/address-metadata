@@ -22,7 +22,18 @@ async function main(args: ReturnType<typeof parseArgs>) {
 
   console.log('Fetching tokens list by market cap from Coingecko')
   const coingeckoResponse = await axios.get(
-    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=${categoryId}&order=market_cap_desc&per_page=${numberOfResults}&page=1&sparkline=false&locale=en`,
+    'https://api.coingecko.com/api/v3/coins/markets',
+    {
+      params: {
+        vs_currency: 'usd',
+        category: categoryId,
+        order: 'market_cap_desc',
+        per_page: numberOfResults,
+        page: 1,
+        sparkline: false,
+        locale: 'en',
+      },
+    },
   )
   if (coingeckoResponse.status !== 200 || !coingeckoResponse.data) {
     throw new Error(`Encountered error fetching tokens list from Coingecko`)
@@ -59,7 +70,17 @@ async function main(args: ReturnType<typeof parseArgs>) {
     try {
       console.log('Fetching token details from CoinGecko...')
       const coinDetailResponse = await axios.get(
-        `https://api.coingecko.com/api/v3/coins/${id}?tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false`,
+        `https://api.coingecko.com/api/v3/coins/${id}`,
+        {
+          params: {
+            localization: false,
+            tickers: false,
+            market_data: false,
+            community_data: false,
+            developer_data: false,
+            sparkline: false,
+          },
+        },
       )
       decimals =
         coinDetailResponse.data.detail_platforms[platformId]?.decimal_place
@@ -70,7 +91,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
       }
     } catch (error) {
       console.warn(
-        `⚠️ Encountered error fetching token address from Coingecko: ${error}`,
+        `⚠️ Encountered error fetching token address for ${id} from Coingecko: ${error}`,
       )
       continue
     }
@@ -158,7 +179,7 @@ function parseArgs() {
     .option('number-of-results', {
       description: 'Number of tokens requested',
       type: 'number',
-      default: 20,
+      default: 100,
     })
     .option('tokens-info-file-path', {
       description: 'Path of the tokens info file relative to the root folder',
