@@ -14,10 +14,10 @@ async function main(args: ReturnType<typeof parseArgs>) {
     transport: http(),
   })
 
+  // get tokens by market cap
   const coingeckoResponse = await axios.get(
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=${categoryId}&order=market_cap_desc&per_page=${numberOfResults}&page=1&sparkline=false&locale=en`,
   )
-
   if (coingeckoResponse.status !== 200 || !coingeckoResponse.data) {
     throw new Error(`Encountered error fetching tokens list from Coingecko`)
   }
@@ -33,12 +33,16 @@ async function main(args: ReturnType<typeof parseArgs>) {
       continue
     }
 
+    // get token address from coingecko /coins/{id} endpoint, annoyingly this is
+    // not returned in the /coins/markets response
     let tokenAddress = undefined
+    let decimals = undefined
     try {
-      // fetch the token contract address using the token id from coingecko coins/id
       const coinDetailResponse = await axios.get(
         `https://api.coingecko.com/api/v3/coins/${id}?tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false`,
       )
+      decimals =
+        coinDetailResponse.data.detail_platforms[platformId]?.decimal_place
       tokenAddress =
         coinDetailResponse.data.detail_platforms[platformId]?.contract_address
       if (!tokenAddress) {
@@ -51,7 +55,10 @@ async function main(args: ReturnType<typeof parseArgs>) {
       continue
     }
 
-    const [symbol, decimals, name] = await Promise.all([
+    // get token metadata from token contract directly. Coingecko manually adds
+    // some info to their token list and the token symbol in particular is
+    // always (incorrectly) lowercased.
+    const [symbol, name] = await Promise.all([
       client.readContract({
         address: tokenAddress,
         abi: erc20Abi,
@@ -60,15 +67,12 @@ async function main(args: ReturnType<typeof parseArgs>) {
       client.readContract({
         address: tokenAddress,
         abi: erc20Abi,
-        functionName: 'decimals',
-      }),
-      client.readContract({
-        address: tokenAddress,
-        abi: erc20Abi,
         functionName: 'name',
       }),
     ])
 
+    // read the token image from coingecko and resize before saving. continue if
+    // the image cannot be saved successfully, we don't want imageless tokens.
     try {
       const response = await axios.get(image, {
         responseType: 'arraybuffer',
