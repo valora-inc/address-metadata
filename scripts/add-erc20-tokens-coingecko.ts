@@ -40,17 +40,21 @@ async function main(args: ReturnType<typeof parseArgs>) {
   }
 
   const newTokensInfo = [...existingTokensInfo]
+  const fetchFailedTokenIds = []
   for (let i = 0; i < coingeckoResponse.data.length; i++) {
     const token = coingeckoResponse.data[i]
+    const { id, image } = token
+    if (!id) {
+      console.warn(`⚠️ No id found for token ${token}`)
+      continue
+    }
 
     console.log(
-      `(${i + 1}/${coingeckoResponse.data.length}) Processing token ${
-        token.symbol
-      }...`,
+      `(${i + 1}/${coingeckoResponse.data.length}) Processing token ${id}...`,
     )
 
     if (existingLowerCaseTokenSymbols.has(token.symbol.toLowerCase())) {
-      console.log(`Token ${token.symbol} already exists`)
+      console.log(`Token ${id} already exists`)
       continue
     }
 
@@ -58,9 +62,9 @@ async function main(args: ReturnType<typeof parseArgs>) {
     // https://apiguide.coingecko.com/getting-started/error-and-rate-limit#rate-limit
     await new Promise((resolve) => setTimeout(resolve, 10000))
 
-    const { id, image } = token
-    if (!id || !image) {
+    if (!image) {
       console.warn(`⚠️ No id or image found for token ${token}`)
+      fetchFailedTokenIds.push(id)
       continue
     }
 
@@ -94,6 +98,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
       console.warn(
         `⚠️ Encountered error fetching token address for ${id} from Coingecko: ${error}`,
       )
+      fetchFailedTokenIds.push(id)
       continue
     }
 
@@ -137,6 +142,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
       console.warn(
         `⚠️ Encountered error fetching image, skipping ${id}. ${error}`,
       )
+      fetchFailedTokenIds.push(id)
       continue
     }
 
@@ -161,6 +167,11 @@ async function main(args: ReturnType<typeof parseArgs>) {
   }
 
   console.log('✨ Success ✨')
+  console.log(
+    `The following token ids failed to be added: ${fetchFailedTokenIds.join(
+      ', ',
+    )}`,
+  )
 }
 
 function parseArgs() {
