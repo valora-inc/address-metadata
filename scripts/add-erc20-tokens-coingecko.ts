@@ -163,7 +163,8 @@ async function main(args: ReturnType<typeof parseArgs>) {
     // limit can be unpredictable and we don't want to lose progress
     console.log('Updating tokens info file with new token...')
     const newTokensInfoString = JSON.stringify(newTokensInfo, null, 2)
-    fs.writeFileSync(tokensInfoFilePath, newTokensInfoString)
+    // our lint rules require a newline at the end of the file
+    fs.writeFileSync(tokensInfoFilePath, `${newTokensInfoString}\n`)
   }
 
   console.log('✨ Success ✨')
