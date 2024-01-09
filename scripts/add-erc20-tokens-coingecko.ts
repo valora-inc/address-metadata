@@ -6,27 +6,38 @@ import { createPublicClient, erc20Abi, http } from 'viem'
 import { mainnet } from 'viem/chains'
 import yargs from 'yargs'
 
+// This function is used to log a warning if resizing an original token image
+// that is too far from a square shape (since we expect a 256x256 square).
+function isSquareEnough(width: number, height: number) {
+  const tolerance = 0.1
+  const difference = Math.abs(width - height)
+  const maxDifference = Math.max(width, height) * tolerance
+
+  return difference <= maxDifference
+}
+
+// This function fetches an image from imageUrl, resizes it to 256x256, and
+// saves it to filePath. It adds warnings to imageWarnings if the processed
+// image may require manual intervention.
 async function fetchAndSaveTokenImage(
-  image: string,
-  symbol: string,
+  imageUrl: string,
+  filePath: string,
   imageWarnings: string[],
 ) {
-  console.log('Fetching token image from Coingecko...')
-  const response = await axios.get(image, {
+  const response = await axios.get(imageUrl, {
     responseType: 'arraybuffer',
     responseEncoding: 'binary',
   })
-  const filePath = `./assets/tokens/${symbol}.png`
   const imageFile = await Jimp.read(response.data)
 
-  const width = imageFile.getWidth()
-  const height = imageFile.getHeight()
-  if (width !== height) {
+  const imageWidth = imageFile.getWidth()
+  const imageHeight = imageFile.getHeight()
+  if (!isSquareEnough(imageWidth, imageHeight)) {
     imageWarnings.push(
       `${filePath}: Original image is not square, please inspect the resized image.`,
     )
   }
-  if (width < 231 || height < 231) {
+  if (imageWidth < 231 || imageHeight < 231) {
     imageWarnings.push(
       `${filePath}: Original image was upscaled by > 10%, please inspect the quality of the image.`,
     )
@@ -55,6 +66,12 @@ async function fetchAndSaveTokenImage(
   }
 }
 
+// This function is useful for bulk adding new supported tokens to the app. It
+// queries the top coins from CoinGecko for a given chain, and adds the token
+// metadata to the relevant data file. It also fetches, resizes, and saves the
+// token image. This function will print a summary log for all the tokens that
+// failed to be added automatically and any token images that may require manual
+// intervention.
 async function main(args: ReturnType<typeof parseArgs>) {
   const { categoryId, platformId, numberOfResults, tokensInfoFilePath } = args
 
@@ -78,7 +95,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
         category: categoryId,
         order: 'market_cap_desc',
         per_page: numberOfResults,
-        page: 1,
+        page: 2,
         sparkline: false,
         locale: 'en',
       },
@@ -111,7 +128,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
 
     // avoid rate limit 10-30 requests / minute
     // https://apiguide.coingecko.com/getting-started/error-and-rate-limit#rate-limit
-    await new Promise((resolve) => setTimeout(resolve, 10000))
+    await new Promise((resolve) => setTimeout(resolve, 15000))
 
     if (!image) {
       console.warn(`⚠️ No id or image found for token ${token}`)
@@ -176,7 +193,8 @@ async function main(args: ReturnType<typeof parseArgs>) {
     // read the token image from coingecko and resize before saving. continue if
     // the image cannot be saved successfully, we don't want imageless tokens.
     try {
-      await fetchAndSaveTokenImage(image, symbol, imageWarnings)
+      const filePath = `./assets/tokens/${symbol}.png`
+      await fetchAndSaveTokenImage(image, filePath, imageWarnings)
     } catch (error) {
       console.warn(
         `⚠️ Encountered error fetching/resizing/writing image, skipping ${id}. ${error}`,
@@ -233,7 +251,7 @@ function parseArgs() {
     .option('number-of-results', {
       description: 'Number of tokens requested',
       type: 'number',
-      default: 20,
+      default: 100,
     })
     .option('tokens-info-file-path', {
       description: 'Path of the tokens info file relative to the root folder',
