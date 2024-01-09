@@ -207,5 +207,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/INJ.png",
     "infoUrl": "https://www.coingecko.com/en/coins/injective",
     "minimumAppVersionToSwap": "1.72.0"
+  },
+  {
+    "name": "Artizen",
+    "symbol": "ART",
+    "decimals": 18,
+    "address": "0x59fbbc7d9c579547b47f3669aab2aec5b58d63de",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ART.png",
   }
 ]
