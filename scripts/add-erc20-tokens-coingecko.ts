@@ -6,6 +6,55 @@ import { createPublicClient, erc20Abi, http } from 'viem'
 import { mainnet } from 'viem/chains'
 import yargs from 'yargs'
 
+async function fetchAndSaveTokenImage(
+  image: string,
+  symbol: string,
+  imageWarnings: string[],
+) {
+  console.log('Fetching token image from Coingecko...')
+  const response = await axios.get(image, {
+    responseType: 'arraybuffer',
+    responseEncoding: 'binary',
+  })
+  const filePath = `./assets/tokens/${symbol}.png`
+  const imageFile = await Jimp.read(response.data)
+
+  const width = imageFile.getWidth()
+  const height = imageFile.getHeight()
+  if (width !== height) {
+    imageWarnings.push(
+      `${filePath}: Original image is not square, please inspect the resized image.`,
+    )
+  }
+  if (width < 231 || height < 231) {
+    imageWarnings.push(
+      `${filePath}: Original image was upscaled by > 10%, please inspect the quality of the image.`,
+    )
+  }
+
+  console.log('Resizing image...')
+  const resizedImage = await imageFile
+    .resize(256, 256)
+    .quality(80)
+    .getBufferAsync(Jimp.MIME_PNG)
+
+  console.log('Saving image...')
+  if (fs.existsSync(filePath)) {
+    imageWarnings.push(
+      `${filePath}: A token image already exists and was overwritten, please check the git diff.`,
+    )
+  }
+  fs.writeFileSync(filePath, resizedImage, 'binary')
+
+  const maxFileSizeInBytes = 50 * 1024 // 50 KB
+  const fileSizeInBytes = fs.statSync(filePath).size
+  if (fileSizeInBytes > maxFileSizeInBytes) {
+    imageWarnings.push(
+      `${filePath}: Image file size exceeds 50 KB, please resize manually.`,
+    )
+  }
+}
+
 async function main(args: ReturnType<typeof parseArgs>) {
   const { categoryId, platformId, numberOfResults, tokensInfoFilePath } = args
 
@@ -41,9 +90,11 @@ async function main(args: ReturnType<typeof parseArgs>) {
 
   const newTokensInfo = [...existingTokensInfo]
   const fetchFailedTokenIds = []
+  const imageWarnings: string[] = []
+
   for (let i = 0; i < coingeckoResponse.data.length; i++) {
     const token = coingeckoResponse.data[i]
-    const { id, image } = token
+    const { id, image, market_cap } = token
     if (!id) {
       console.warn(`⚠️ No id found for token ${token}`)
       continue
@@ -106,41 +157,29 @@ async function main(args: ReturnType<typeof parseArgs>) {
     // some info to their token list and the token symbol in particular is
     // always (incorrectly) lowercased.
     console.log(`Fetching token details from the contract ${address}...`)
-    const [symbol, name] = await Promise.all([
-      client.readContract({
-        address,
-        abi: erc20Abi,
-        functionName: 'symbol',
-      }),
-      client.readContract({
-        address,
-        abi: erc20Abi,
-        functionName: 'name',
-      }),
-    ])
+    const [symbol, name] = await client.multicall({
+      contracts: [
+        {
+          address,
+          abi: erc20Abi,
+          functionName: 'symbol',
+        },
+        {
+          address,
+          abi: erc20Abi,
+          functionName: 'name',
+        },
+      ],
+      allowFailure: false,
+    })
 
     // read the token image from coingecko and resize before saving. continue if
     // the image cannot be saved successfully, we don't want imageless tokens.
     try {
-      console.log('Fetching token image from Coingecko...')
-      const response = await axios.get(image, {
-        responseType: 'arraybuffer',
-        responseEncoding: 'binary',
-      })
-
-      console.log('Resizing image...')
-      const imageFile = await Jimp.read(response.data)
-      const resizedImage = await imageFile
-        .resize(256, 256)
-        .quality(100)
-        .getBufferAsync(Jimp.MIME_PNG)
-
-      console.log('Saving image...')
-      const filePath = `./assets/tokens/${symbol}.png`
-      fs.writeFileSync(filePath, resizedImage, 'binary')
+      await fetchAndSaveTokenImage(image, symbol, imageWarnings)
     } catch (error) {
       console.warn(
-        `⚠️ Encountered error fetching image, skipping ${id}. ${error}`,
+        `⚠️ Encountered error fetching/resizing/writing image, skipping ${id}. ${error}`,
       )
       fetchFailedTokenIds.push(id)
       continue
@@ -155,7 +194,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
       isNative: false,
       showZeroBalance: false,
       infoUrl: `https://www.coingecko.com/en/coins/${id}`,
-      minimumAppVersionToSwap: '1.72.0',
+      minimumAppVersionToSwap: market_cap < 8000 ? null : '1.72.0',
       isCashInEligible: false,
     })
 
@@ -173,10 +212,12 @@ async function main(args: ReturnType<typeof parseArgs>) {
       ', ',
     )}`,
   )
+  console.log('The following image warnings were encountered:', imageWarnings)
 }
 
 function parseArgs() {
   return yargs
+    .usage('Usage: $0\n\nAdd new tokens using CoinGecko as a data source.')
     .option('category-id', {
       description:
         'The category id of the chain can be found from https://api.coingecko.com/api/v3/coins/categories/list',
@@ -192,7 +233,7 @@ function parseArgs() {
     .option('number-of-results', {
       description: 'Number of tokens requested',
       type: 'number',
-      default: 100,
+      default: 20,
     })
     .option('tokens-info-file-path', {
       description: 'Path of the tokens info file relative to the root folder',
