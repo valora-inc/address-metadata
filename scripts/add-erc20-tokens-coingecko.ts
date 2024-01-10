@@ -3,7 +3,7 @@ import axios from 'axios'
 import fs from 'fs'
 import Jimp from 'jimp'
 import { createPublicClient, erc20Abi, http } from 'viem'
-import { mainnet } from 'viem/chains'
+import * as viemChains from 'viem/chains'
 import yargs from 'yargs'
 
 // This function is used to log a warning if resizing an original token image
@@ -17,13 +17,13 @@ function isSquareEnough(width: number, height: number) {
 }
 
 // This function fetches an image from imageUrl, resizes it to 256x256, and
-// saves it to filePath. It adds warnings to imageWarnings if the processed
-// image may require manual intervention.
-async function fetchAndSaveTokenImage(
-  imageUrl: string,
-  filePath: string,
-  imageWarnings: string[],
-) {
+// saves it to filePath. It logs warnings if the processed image may require
+// manual intervention.
+async function fetchAndSaveTokenImage(imageUrl: string, filePath: string) {
+  function logImageWarning(warning: string) {
+    console.warn(`⚠️ ${filePath}: ${warning}. Image url: ${imageUrl}`)
+  }
+
   const response = await axios.get(imageUrl, {
     responseType: 'arraybuffer',
     responseEncoding: 'binary',
@@ -33,13 +33,13 @@ async function fetchAndSaveTokenImage(
   const imageWidth = imageFile.getWidth()
   const imageHeight = imageFile.getHeight()
   if (!isSquareEnough(imageWidth, imageHeight)) {
-    imageWarnings.push(
-      `${filePath}: Original image is not square, please inspect the resized image.`,
+    logImageWarning(
+      'Original image is not square, please inspect the resized image',
     )
   }
   if (imageWidth < 231 || imageHeight < 231) {
-    imageWarnings.push(
-      `${filePath}: Original image was upscaled by > 10%, please inspect the quality of the image.`,
+    logImageWarning(
+      'Original image was upscaled by > 10%, please inspect the quality of the image',
     )
   }
 
@@ -51,42 +51,24 @@ async function fetchAndSaveTokenImage(
 
   console.log('Saving image...')
   if (fs.existsSync(filePath)) {
-    imageWarnings.push(
-      `${filePath}: A token image already exists and was overwritten, please check the git diff.`,
+    logImageWarning(
+      'A token image already exists and was overwritten, please check the git diff',
     )
   }
   fs.writeFileSync(filePath, resizedImage, 'binary')
 
-  const maxFileSizeInBytes = 50 * 1024 // 50 KB
+  const maxFileSizeInBytes = 60 * 1024 // 50 KB
   const fileSizeInBytes = fs.statSync(filePath).size
   if (fileSizeInBytes > maxFileSizeInBytes) {
-    imageWarnings.push(
-      `${filePath}: Image file size exceeds 50 KB, please resize manually.`,
-    )
+    logImageWarning('Image file size exceeds 60 KB, please resize manually')
   }
 }
 
-// This function is useful for bulk adding new supported tokens to the app. It
-// queries the top coins from CoinGecko for a given chain, and adds the token
-// metadata to the relevant data file. It also fetches, resizes, and saves the
-// token image. This function will print a summary log for all the tokens that
-// failed to be added automatically and any token images that may require manual
-// intervention.
-async function main(args: ReturnType<typeof parseArgs>) {
-  const { categoryId, platformId, numberOfResults, tokensInfoFilePath } = args
-
-  console.log('Reading existing tokens info from ', tokensInfoFilePath)
-  const existingTokensInfo = require(`../${tokensInfoFilePath}`)
-  const existingLowerCaseTokenSymbols = new Set(
-    existingTokensInfo.map((token: any) => token.symbol.toLowerCase()),
-  )
-
-  const client = createPublicClient({
-    chain: mainnet, // TODO this needs to be updated manually
-    transport: http(),
-  })
-
-  console.log('Fetching tokens list by market cap from Coingecko')
+async function getTokensByMarketCap(
+  categoryId: string,
+  numberOfResults: number,
+  pageNumber: number,
+) {
   const coingeckoResponse = await axios.get(
     'https://api.coingecko.com/api/v3/coins/markets',
     {
@@ -95,7 +77,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
         category: categoryId,
         order: 'market_cap_desc',
         per_page: numberOfResults,
-        page: 2,
+        page: pageNumber,
         sparkline: false,
         locale: 'en',
       },
@@ -105,62 +87,102 @@ async function main(args: ReturnType<typeof parseArgs>) {
     throw new Error(`Encountered error fetching tokens list from Coingecko`)
   }
 
+  return coingeckoResponse.data
+}
+
+async function getTokenDetails(id: string, platformId: string) {
+  const coingeckoResponse = await axios.get(
+    `https://api.coingecko.com/api/v3/coins/${id}`,
+    {
+      params: {
+        localization: false,
+        tickers: false,
+        market_data: false,
+        community_data: false,
+        developer_data: false,
+        sparkline: false,
+      },
+    },
+  )
+  if (
+    coingeckoResponse.status !== 200 ||
+    !coingeckoResponse.data?.detail_platforms?.[platformId]
+  ) {
+    throw new Error(`Encountered error fetching token details for token ${id}`)
+  }
+
+  return coingeckoResponse.data.detail_platforms[platformId]
+}
+
+// This function adds new supported tokens to the app by querying the top coins
+// by market cap from Coingecko for a given chain, and adds the token metadata
+// to the relevant data file. It also fetches, resizes, and saves the token
+// image. This function will print a summary log for all the tokens that failed
+// to be added automatically.
+async function main(args: ReturnType<typeof parseArgs>) {
+  const {
+    categoryId,
+    platformId,
+    numberOfResults,
+    tokensInfoFilePath,
+    viemChainId,
+    pageNumber,
+  } = args
+
+  console.log('Reading existing tokens info from ', tokensInfoFilePath)
+  const existingTokensInfo = require(`../${tokensInfoFilePath}`)
+  const existingLowerCaseTokenSymbols = new Set(
+    existingTokensInfo.map((token: any) => token.symbol.toLowerCase()),
+  )
   const newTokensInfo = [...existingTokensInfo]
   const fetchFailedTokenIds = []
-  const imageWarnings: string[] = []
 
-  for (let i = 0; i < coingeckoResponse.data.length; i++) {
-    const token = coingeckoResponse.data[i]
-    const { id, image, market_cap } = token
+  console.log('Fetching tokens list by market cap from Coingecko')
+  const tokensByMarketCap = await getTokensByMarketCap(
+    categoryId,
+    numberOfResults,
+    pageNumber,
+  )
+
+  for (let i = 0; i < tokensByMarketCap.length; i++) {
+    const token = tokensByMarketCap[i]
+    const { id, image } = token
     if (!id) {
       console.warn(`⚠️ No id found for token ${token}`)
       continue
     }
 
     console.log(
-      `(${i + 1}/${coingeckoResponse.data.length}) Processing token ${id}...`,
+      `(${i + 1}/${tokensByMarketCap.length}) Processing token ${id}...`,
     )
-
     if (existingLowerCaseTokenSymbols.has(token.symbol.toLowerCase())) {
       console.log(`Token ${id} already exists`)
       continue
     }
-
-    // avoid rate limit 10-30 requests / minute
-    // https://apiguide.coingecko.com/getting-started/error-and-rate-limit#rate-limit
-    await new Promise((resolve) => setTimeout(resolve, 15000))
-
     if (!image) {
       console.warn(`⚠️ No id or image found for token ${token}`)
       fetchFailedTokenIds.push(id)
       continue
     }
 
+    // avoid rate limit 10-30 requests / minute
+    // https://apiguide.coingecko.com/getting-started/error-and-rate-limit#rate-limit
+    await new Promise((resolve) => setTimeout(resolve, 15_000))
+
     // get token address from coingecko /coins/{id} endpoint, annoyingly this is
     // not returned in the /coins/markets response
     let address = undefined
     let decimals = undefined
     try {
-      console.log('Fetching token details from CoinGecko...')
-      const coinDetailResponse = await axios.get(
-        `https://api.coingecko.com/api/v3/coins/${id}`,
-        {
-          params: {
-            localization: false,
-            tickers: false,
-            market_data: false,
-            community_data: false,
-            developer_data: false,
-            sparkline: false,
-          },
-        },
-      )
-      decimals =
-        coinDetailResponse.data.detail_platforms[platformId]?.decimal_place
-      address =
-        coinDetailResponse.data.detail_platforms[platformId]?.contract_address
-      if (!address) {
-        throw new Error(`No token address found for token ${id}`)
+      console.log('Fetching token details from Coingecko...')
+      const tokenDetails = await getTokenDetails(id, platformId)
+      decimals = tokenDetails.decimal_place
+      address = tokenDetails.contract_address
+
+      if (!address || !decimals) {
+        throw new Error(
+          `No address or decimals returned from Coingecko for token ${id}`,
+        )
       }
     } catch (error) {
       console.warn(
@@ -173,7 +195,10 @@ async function main(args: ReturnType<typeof parseArgs>) {
     // get token metadata from token contract directly. Coingecko manually adds
     // some info to their token list and the token symbol in particular is
     // always (incorrectly) lowercased.
-    console.log(`Fetching token details from the contract ${address}...`)
+    const client = createPublicClient({
+      chain: (viemChains as any)[viemChainId],
+      transport: http(),
+    })
     const [symbol, name] = await client.multicall({
       contracts: [
         {
@@ -194,7 +219,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
     // the image cannot be saved successfully, we don't want imageless tokens.
     try {
       const filePath = `./assets/tokens/${symbol}.png`
-      await fetchAndSaveTokenImage(image, filePath, imageWarnings)
+      await fetchAndSaveTokenImage(image, filePath)
     } catch (error) {
       console.warn(
         `⚠️ Encountered error fetching/resizing/writing image, skipping ${id}. ${error}`,
@@ -210,10 +235,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
       address,
       imageUrl: `https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/${symbol}.png`,
       isNative: false,
-      showZeroBalance: false,
       infoUrl: `https://www.coingecko.com/en/coins/${id}`,
-      minimumAppVersionToSwap: market_cap < 8000 ? null : '1.72.0',
-      isCashInEligible: false,
     })
 
     // update the file after every token is fetched because the coingecko rate
@@ -230,33 +252,44 @@ async function main(args: ReturnType<typeof parseArgs>) {
       ', ',
     )}`,
   )
-  console.log('The following image warnings were encountered:', imageWarnings)
 }
 
 function parseArgs() {
   return yargs
-    .usage('Usage: $0\n\nAdd new tokens using CoinGecko as a data source.')
+    .usage('Usage: $0\n\nAdd new tokens using Coingecko as a data source.')
     .option('category-id', {
       description:
-        'The category id of the chain can be found from https://api.coingecko.com/api/v3/coins/categories/list',
+        'e.g. ethereum-ecosystem. The category id of the chain can be found from https://api.coingecko.com/api/v3/coins/categories/list.',
       type: 'string',
-      default: 'ethereum-ecosystem',
+      demandOption: true,
     })
     .option('platform-id', {
       description:
-        'The platform id of the chain can be found from https://api.coingecko.com/api/v3/asset_platforms',
+        'e.g. ethereum. The platform id of the chain can be found from https://api.coingecko.com/api/v3/asset_platforms',
       type: 'string',
-      default: 'ethereum',
+      demandOption: true,
+    })
+    .option('viem-chain-id', {
+      description:
+        'e.g. mainnet. The viem chain id of the chain can be found from https://github.com/wevm/viem/blob/main/src/chains/index.ts',
+      type: 'string',
+      demandOption: true,
     })
     .option('number-of-results', {
-      description: 'Number of tokens requested',
+      description: 'Number of tokens requested per page.',
       type: 'number',
-      default: 100,
+      default: 20,
+    })
+    .option('page-number', {
+      description: 'Page number of the tokens requested.',
+      type: 'number',
+      default: 2,
     })
     .option('tokens-info-file-path', {
-      description: 'Path of the tokens info file relative to the root folder',
+      description:
+        'e.g. src/data/mainnet/ethereum-tokens-info.json. Path of the tokens info file relative to the root folder.',
       type: 'string',
-      default: 'src/data/mainnet/ethereum-tokens-info.json',
+      demandOption: true,
     })
     .parseSync()
 }
