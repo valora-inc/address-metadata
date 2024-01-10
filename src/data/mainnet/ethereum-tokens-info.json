@@ -1155,5 +1155,12 @@
     "infoUrl": "https://www.coingecko.com/en/coins/ocean-protocol",
     "minimumAppVersionToSwap": "1.72.0",
     "isCashInEligible": false
+  },
+  {
+    "name": "Artizen",
+    "symbol": "ART",
+    "decimals": 18,
+    "address": "0x59fbbc7d9c579547b47f3669aab2aec5b58d63de",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ART.png"
   }
 ]
