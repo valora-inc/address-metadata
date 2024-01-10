@@ -57,10 +57,10 @@ async function fetchAndSaveTokenImage(imageUrl: string, filePath: string) {
   }
   fs.writeFileSync(filePath, resizedImage, 'binary')
 
-  const maxFileSizeInBytes = 60 * 1024 // 50 KB
+  const maxFileSizeInBytes = 50 * 1024 // 50 KB
   const fileSizeInBytes = fs.statSync(filePath).size
   if (fileSizeInBytes > maxFileSizeInBytes) {
-    logImageWarning('Image file size exceeds 60 KB, please resize manually')
+    logImageWarning('Image file size exceeds 50 KB, please resize manually')
   }
 }
 
