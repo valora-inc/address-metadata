@@ -1436,10 +1436,10 @@
     expect "^29.0.0"
     pretty-format "^29.0.0"
 
-"@types/json-diff@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@types/json-diff/-/json-diff-1.0.2.tgz#ea290943786fa741c2850b47069dc5ff80e4fdc3"
-  integrity sha512-XsYtsD5ih3imV3W+e2/ick1rMqs1ERG2uW3EJPPgF6PndPmf+sci2PtR3wOd7u4Di2wn3gU/EPql/2AYdKqqDw==
+"@types/json-diff@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@types/json-diff/-/json-diff-1.0.3.tgz#2d387d5a69560bc9b6cde52a5b9026fe54ea39d6"
+  integrity sha512-Qvxm8fpRMv/1zZR3sQWImeRK2mBYJji20xF51Fq9Gt//Ed18u0x6/FNLogLS1xhfUWTEmDyqveJqn95ltB6Kvw==
 
 "@types/json-schema@^7.0.12", "@types/json-schema@^7.0.9":
   version "7.0.12"
@@ -1973,7 +1973,7 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axios@^1.6.4:
+axios@^1.6.5:
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.5.tgz#2c090da14aeeab3770ad30c3a1461bc970fb0cd8"
   integrity sha512-Ii012v05KEVuUoFWmMW/UQv9aRIc3ZwkWDcM+h5Il8izZCtRVpDUfwpoFf7eOtajT3QiGR4yDUx7lPqHJULgbg==
