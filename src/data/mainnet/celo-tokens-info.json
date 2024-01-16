@@ -126,8 +126,7 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/sCELO.png",
     "name": "Savings CELO",
-    "symbol": "sCELO",
-    "minimumAppVersionToSwap": "1.60.0"
+    "symbol": "sCELO"
   },
   {
     "address": "0x2a3684e9dc20b857375ea04235f2f7edbe818fa7",
