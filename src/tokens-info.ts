@@ -15,7 +15,7 @@ const networkIdToTokensInfo: Record<NetworkId, TokenInfoJSON[]> = {
   [NetworkId['arbitrum-sepolia']]: ArbitrumSepoliaTokensInfo,
 }
 
-export const networkIdToNetworkIconUrl: Record<NetworkId, string> = {
+const networkIdToNetworkIconUrl: Record<NetworkId, string> = {
   [NetworkId['ethereum-mainnet']]:
     'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png',
   [NetworkId['ethereum-sepolia']]:

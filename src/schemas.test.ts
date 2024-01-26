@@ -1,8 +1,5 @@
 import { getCeloRTDBMetadata } from './index'
-import {
-  getTokensInfoByNetworkIds,
-  networkIdToNetworkIconUrl,
-} from './tokens-info'
+import { getTokensInfoByNetworkIds } from './tokens-info'
 import { NetworkId, TokenInfo } from './types'
 import {
   TokenInfoSchemaProcessed,
@@ -16,6 +13,15 @@ function validateWithSchema(value: any, schema: Joi.Schema) {
     convert: false, // prevents casting values to the required types (e.g. a string to a number)
     abortEarly: false, // returns all errors at once
   })
+}
+
+const networkIdToIsL2: Record<NetworkId, boolean> = {
+  [NetworkId['celo-mainnet']]: false,
+  [NetworkId['celo-alfajores']]: false,
+  [NetworkId['ethereum-mainnet']]: false,
+  [NetworkId['ethereum-sepolia']]: false,
+  [NetworkId['arbitrum-one']]: true,
+  [NetworkId['arbitrum-sepolia']]: true,
 }
 
 describe('Schema validation', () => {
@@ -190,15 +196,14 @@ describe('Schema validation', () => {
         }
       }
     })
-    it('shows correct network icon if native token is L2', () => {
-      for (const tokenInfo of tokensInfo.filter(
-        ({ isL2Native }) => isL2Native,
-      )) {
-        expect(tokenInfo.networkIconUrl).toEqual(
-          networkIdToNetworkIconUrl[tokenInfo.networkId],
+    it('L2 networks have all native tokens marked as L2', () => {
+      for (const { networkId, isL2Native, isNative } of tokensInfo) {
+        expect(!!isL2Native).toEqual(
+          !!(isNative && networkIdToIsL2[networkId as NetworkId]),
         )
       }
     })
+
     it('sets deprecated property `isCoreToken` equal to `isFeeCurrency`', () => {
       for (const tokenInfo of tokensInfo) {
         expect(tokenInfo.isCoreToken).toEqual(tokenInfo.isFeeCurrency)
