@@ -15,6 +15,21 @@ const networkIdToTokensInfo: Record<NetworkId, TokenInfoJSON[]> = {
   [NetworkId['arbitrum-sepolia']]: ArbitrumSepoliaTokensInfo,
 }
 
+export const networkIdToNetworkIconUrl: Record<NetworkId, string> = {
+  [NetworkId['ethereum-mainnet']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png',
+  [NetworkId['ethereum-sepolia']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png',
+  [NetworkId['celo-mainnet']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
+  [NetworkId['celo-alfajores']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
+  [NetworkId['arbitrum-one']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARB.png',
+  [NetworkId['arbitrum-sepolia']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARB.png',
+}
+
 export function getTokenId(
   { isNative, address }: Partial<TokenInfo>,
   networkId: NetworkId,
@@ -27,9 +42,7 @@ export function getTokensInfoByNetworkIds(networkIds: NetworkId[]): {
 } {
   const output: { [tokenId: string]: TokenInfo } = {}
   for (const networkId of networkIds) {
-    const nativeImageUrl = networkIdToTokensInfo[networkId].find(
-      (tokenInfo) => tokenInfo.isNative,
-    )?.imageUrl
+    const networkIconUrl = networkIdToNetworkIconUrl[networkId]
     for (const tokenInfo of networkIdToTokensInfo[networkId]) {
       const tokenId = getTokenId(tokenInfo, networkId)
       output[tokenId] = {
@@ -39,7 +52,7 @@ export function getTokensInfoByNetworkIds(networkIds: NetworkId[]): {
         networkIconUrl:
           tokenInfo.isNative && !tokenInfo.isL2Native
             ? undefined
-            : nativeImageUrl,
+            : networkIconUrl,
         isCoreToken: tokenInfo.isFeeCurrency, // for backwards compatibility. `isCoreToken` is deprecated
       }
     }

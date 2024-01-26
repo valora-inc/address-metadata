@@ -1,5 +1,8 @@
 import { getCeloRTDBMetadata } from './index'
-import { getTokensInfoByNetworkIds } from './tokens-info'
+import {
+  getTokensInfoByNetworkIds,
+  networkIdToNetworkIconUrl,
+} from './tokens-info'
 import { NetworkId, TokenInfo } from './types'
 import {
   TokenInfoSchemaProcessed,
@@ -187,11 +190,13 @@ describe('Schema validation', () => {
         }
       }
     })
-    it('still shows network icon if native token is L2', () => {
-      for (const tokenInfo of tokensInfo) {
-        expect(
-          tokenInfo.isL2Native ? tokenInfo.networkIconUrl : 'not L2 native',
-        ).toBeDefined()
+    it('shows correct network icon if native token is L2', () => {
+      for (const tokenInfo of tokensInfo.filter(
+        ({ isL2Native }) => isL2Native,
+      )) {
+        expect(tokenInfo.networkIconUrl).toEqual(
+          networkIdToNetworkIconUrl[tokenInfo.networkId],
+        )
       }
     })
     it('sets deprecated property `isCoreToken` equal to `isFeeCurrency`', () => {
