@@ -3,12 +3,16 @@ import CeloMainnetTokensInfo from './data/mainnet/celo-tokens-info.json'
 import CeloAlfajoresTokensInfo from './data/testnet/celo-alfajores-tokens-info.json'
 import EthereumMainnetTokensInfo from './data/mainnet/ethereum-tokens-info.json'
 import EthereumSepoliaTokensInfo from './data/testnet/ethereum-sepolia-tokens-info.json'
+import ArbitrumOneTokensInfo from './data/mainnet/arbitrum-one-tokens-info.json'
+import ArbitrumSepoliaTokensInfo from './data/testnet/arbitrum-sepolia-tokens-info.json'
 
 const networkIdToTokensInfo: Record<NetworkId, TokenInfoJSON[]> = {
   [NetworkId['celo-mainnet']]: CeloMainnetTokensInfo,
   [NetworkId['celo-alfajores']]: CeloAlfajoresTokensInfo,
   [NetworkId['ethereum-mainnet']]: EthereumMainnetTokensInfo,
   [NetworkId['ethereum-sepolia']]: EthereumSepoliaTokensInfo,
+  [NetworkId['arbitrum-one']]: ArbitrumOneTokensInfo,
+  [NetworkId['arbitrum-sepolia']]: ArbitrumSepoliaTokensInfo,
 }
 
 export function getTokenId(
@@ -32,7 +36,10 @@ export function getTokensInfoByNetworkIds(networkIds: NetworkId[]): {
         ...tokenInfo,
         networkId,
         tokenId,
-        networkIconUrl: tokenInfo.isNative ? undefined : nativeImageUrl,
+        networkIconUrl:
+          tokenInfo.isNative && !tokenInfo.isL2Native
+            ? undefined
+            : nativeImageUrl,
         isCoreToken: tokenInfo.isFeeCurrency, // for backwards compatibility. `isCoreToken` is deprecated
       }
     }
