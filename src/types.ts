@@ -65,6 +65,8 @@ export enum NetworkId {
   ['ethereum-sepolia'] = 'ethereum-sepolia',
   ['arbitrum-one'] = 'arbitrum-one',
   ['arbitrum-sepolia'] = 'arbitrum-sepolia',
+  ['op-mainnet'] = 'op-mainnet',
+  ['op-sepolia'] = 'op-sepolia',
 }
 
 export type Environment = 'mainnet' | 'testnet'

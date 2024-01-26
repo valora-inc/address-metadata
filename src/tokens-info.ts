@@ -5,6 +5,8 @@ import EthereumMainnetTokensInfo from './data/mainnet/ethereum-tokens-info.json'
 import EthereumSepoliaTokensInfo from './data/testnet/ethereum-sepolia-tokens-info.json'
 import ArbitrumOneTokensInfo from './data/mainnet/arbitrum-one-tokens-info.json'
 import ArbitrumSepoliaTokensInfo from './data/testnet/arbitrum-sepolia-tokens-info.json'
+import OptimismMainnetTokensInfo from './data/mainnet/optimism-tokens-info.json'
+import OptimismSepoliaTokensInfo from './data/testnet/optimism-sepolia-tokens-info.json'
 
 const networkIdToTokensInfo: Record<NetworkId, TokenInfoJSON[]> = {
   [NetworkId['celo-mainnet']]: CeloMainnetTokensInfo,
@@ -13,6 +15,8 @@ const networkIdToTokensInfo: Record<NetworkId, TokenInfoJSON[]> = {
   [NetworkId['ethereum-sepolia']]: EthereumSepoliaTokensInfo,
   [NetworkId['arbitrum-one']]: ArbitrumOneTokensInfo,
   [NetworkId['arbitrum-sepolia']]: ArbitrumSepoliaTokensInfo,
+  [NetworkId['op-mainnet']]: OptimismMainnetTokensInfo,
+  [NetworkId['op-sepolia']]: OptimismSepoliaTokensInfo,
 }
 
 const networkIdToNetworkIconUrl: Record<NetworkId, string> = {
@@ -28,6 +32,10 @@ const networkIdToNetworkIconUrl: Record<NetworkId, string> = {
     'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARB.png',
   [NetworkId['arbitrum-sepolia']]:
     'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARB.png',
+  [NetworkId['op-mainnet']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OP.png',
+  [NetworkId['op-sepolia']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OP.png',
 }
 
 export function getTokenId(
