@@ -15,6 +15,15 @@ function validateWithSchema(value: any, schema: Joi.Schema) {
   })
 }
 
+const networkIdToIsL2: Record<NetworkId, boolean> = {
+  [NetworkId['celo-mainnet']]: false,
+  [NetworkId['celo-alfajores']]: false,
+  [NetworkId['ethereum-mainnet']]: false,
+  [NetworkId['ethereum-sepolia']]: false,
+  [NetworkId['arbitrum-one']]: true,
+  [NetworkId['arbitrum-sepolia']]: true,
+}
+
 describe('Schema validation', () => {
   describe('Joi sanity checks', () => {
     describe('TokenInfoSchemaJSON', () => {
@@ -187,6 +196,14 @@ describe('Schema validation', () => {
         }
       }
     })
+    it('L2 networks have all native tokens marked as L2', () => {
+      for (const { networkId, isL2Native, isNative } of tokensInfo) {
+        expect(!!isL2Native).toEqual(
+          !!(isNative && networkIdToIsL2[networkId as NetworkId]),
+        )
+      }
+    })
+
     it('sets deprecated property `isCoreToken` equal to `isFeeCurrency`', () => {
       for (const tokenInfo of tokensInfo) {
         expect(tokenInfo.isCoreToken).toEqual(tokenInfo.isFeeCurrency)

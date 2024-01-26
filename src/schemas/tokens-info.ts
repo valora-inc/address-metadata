@@ -56,6 +56,7 @@ const BaseTokenInfoSchema = Joi.object({
     .pattern(/^\d+\.\d+\.\d+$/)
     .custom(checkMinVersion, 'has a valid version'),
   isNative: Joi.boolean(),
+  isL2Native: Joi.boolean(),
   infoUrl: Joi.string()
     .uri()
     .pattern(/^https:\/\/www.coingecko.com\/en\/coins/),
@@ -73,7 +74,11 @@ const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(
     tokenId: Joi.string().required(),
     networkIconUrl: Joi.alternatives().conditional('isNative', {
       is: true,
-      then: Joi.forbidden(),
+      then: Joi.alternatives().conditional('isL2Native', {
+        is: true,
+        then: imageUrlSchema.required(),
+        otherwise: Joi.forbidden(),
+      }),
       otherwise: imageUrlSchema.required(),
     }),
   }),
