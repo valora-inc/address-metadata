@@ -1125,18 +1125,18 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@json2csv/formatters@^7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@json2csv/formatters/-/formatters-7.0.4.tgz#1ea539d86d895814f334965591f0178db0964230"
-  integrity sha512-qdlLx0Pk/+BQnu6zreLgGrdLyUzLNVdsyCUU/+2aduHg4zemVo/e0iWjPk1sy/QZXXh+1RXBe+IiP9eDyj95qg==
+"@json2csv/formatters@^7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@json2csv/formatters/-/formatters-7.0.5.tgz#530193d4a584f9f6b410fd0a95a7f8185d15d759"
+  integrity sha512-ihONIB8S1ZG0ji5nDFpfCUPphVLnEKlLxDmDqRMjmPhzw8WCvyLX2trIrNHCf1t2IV8rx+1tNYaDb1dh87jHgA==
 
-"@json2csv/plainjs@^7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@json2csv/plainjs/-/plainjs-7.0.4.tgz#d6e952c49f1427fd84a592de00ca13b6458ba561"
-  integrity sha512-IHLyosebSdXMtVKusHHGqvp8mCpEkVk0Qvc0lAGcdAYdvO8lBvry8o665+CX78uPj/QZBhu+s0cOWyxanxlrQw==
+"@json2csv/plainjs@^7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@json2csv/plainjs/-/plainjs-7.0.5.tgz#03ae99af741153ccc4422424a9d67d859f2dc9cc"
+  integrity sha512-iJsYEzgRZUhRb8LltCeuBQyexQVUbovRZFF73Lo0iIvi5SUWsfXGTtbriIROsOKgfZPtYxmkZV+FYlsnBu9ybQ==
   dependencies:
-    "@json2csv/formatters" "^7.0.4"
-    "@streamparser/json" "^0.0.17"
+    "@json2csv/formatters" "^7.0.5"
+    "@streamparser/json" "^0.0.19"
 
 "@noble/curves@1.2.0", "@noble/curves@~1.2.0":
   version "1.2.0"
@@ -1282,10 +1282,10 @@
   dependencies:
     "@sinonjs/commons" "^2.0.0"
 
-"@streamparser/json@^0.0.17":
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/@streamparser/json/-/json-0.0.17.tgz#b68742ebb49eec9c1fcc76cfa730dd74a5131382"
-  integrity sha512-mW54K6CTVJVLwXRB6kSS1xGWPmtTuXAStWnlvtesmcySgtop+eFPWOywBFPpJO4UD173epYsPSP6HSW8kuqN8w==
+"@streamparser/json@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@streamparser/json/-/json-0.0.19.tgz#d9c264b54e366186ea4459bbb16c10238dc9e2a4"
+  integrity sha512-VTxtZGME6ZSWNCSjZ0Zd2LNNodx62XvmARb/liHIwGlInuuvoDzioLuRP8ajV8iLBknsTrsqpRDGlvzKSzpNEw==
 
 "@tokenizer/token@^0.3.0":
   version "0.3.0"
@@ -1973,10 +1973,10 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axios@^1.6.5:
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.5.tgz#2c090da14aeeab3770ad30c3a1461bc970fb0cd8"
-  integrity sha512-Ii012v05KEVuUoFWmMW/UQv9aRIc3ZwkWDcM+h5Il8izZCtRVpDUfwpoFf7eOtajT3QiGR4yDUx7lPqHJULgbg==
+axios@^1.6.7:
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.7.tgz#7b48c2e27c96f9c68a2f8f31e2ab19f59b06b0a7"
+  integrity sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==
   dependencies:
     follow-redirects "^1.15.4"
     form-data "^4.0.0"
