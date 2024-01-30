@@ -6,7 +6,6 @@
     "isNative": true,
     "isL2Native": true,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png",
-    "showZeroBalance": true,
     "infoUrl": "https://www.coingecko.com/en/coins/ethereum"
   }
 ]
