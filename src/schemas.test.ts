@@ -22,6 +22,8 @@ const networkIdToIsL2: Record<NetworkId, boolean> = {
   [NetworkId['ethereum-sepolia']]: false,
   [NetworkId['arbitrum-one']]: true,
   [NetworkId['arbitrum-sepolia']]: true,
+  [NetworkId['op-mainnet']]: true,
+  [NetworkId['op-sepolia']]: true,
 }
 
 describe('Schema validation', () => {
