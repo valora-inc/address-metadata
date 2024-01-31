@@ -1,2 +1,2 @@
-NETWORK_IDS: 'celo-alfajores,ethereum-sepolia'
+NETWORK_IDS: 'celo-alfajores,ethereum-sepolia,arbitrum-sepolia,op-sepolia'
 GCLOUD_PROJECT: 'celo-mobile-alfajores'
