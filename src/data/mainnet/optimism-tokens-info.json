@@ -6,27 +6,31 @@
     "isNative": true,
     "isL2Native": true,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png",
-    "infoUrl": "https://www.coingecko.com/en/coins/ethereum"
+    "infoUrl": "https://www.coingecko.com/en/coins/ethereum",
+    "minimumAppVersionToSwap": "1.77.0"    
   },
   {
     "name": "Optimism",
     "symbol": "OP",
     "address": "0x4200000000000000000000000000000000000042",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OP.png"
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OP.png",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "USD Coin",
     "symbol": "USDC",
     "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
     "decimals": 6,
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png"
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
+    "minimumAppVersionToSwap": "1.77.0"    
   },
   {
     "name": "Tether USD",
     "symbol": "USDT",
     "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
     "decimals": 6,
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png"
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
+    "minimumAppVersionToSwap": "1.77.0"    
   }
 ]
