@@ -42,10 +42,7 @@ const BaseTokenInfoSchema = Joi.object({
   decimals: Joi.number().required(),
   symbol: Joi.string().required(),
   isCoreToken: Joi.boolean(),
-  isFeeCurrency: Joi.boolean() /*.when('feeCurrencyAdapterAddress', {
-    is: Joi.exist(),
-    then: Joi.valid(true),
-  })*/,
+  isFeeCurrency: Joi.boolean(),
   feeCurrencyAdapterAddress: AddressSchema,
   feeCurrencyAdapterDecimals: Joi.number(),
   canTransferWithComment: Joi.boolean(),
