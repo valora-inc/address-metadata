@@ -42,7 +42,12 @@ const BaseTokenInfoSchema = Joi.object({
   decimals: Joi.number().required(),
   symbol: Joi.string().required(),
   isCoreToken: Joi.boolean(),
-  isFeeCurrency: Joi.boolean(),
+  isFeeCurrency: Joi.boolean() /*.when('feeCurrencyAdapterAddress', {
+    is: Joi.exist(),
+    then: Joi.valid(true),
+  })*/,
+  feeCurrencyAdapterAddress: AddressSchema,
+  feeCurrencyAdapterDecimals: Joi.number(),
   canTransferWithComment: Joi.boolean(),
   isSupercharged: Joi.boolean(),
   pegTo: AddressSchema,
@@ -67,6 +72,13 @@ const BaseTokenInfoSchema = Joi.object({
 })
   // Ensure `isFeeCurrency` is present when `isCoreToken` (deprecated) is present.
   .with('isCoreToken', 'isFeeCurrency')
+  // Ensure `isFeeCurrency` is true and `feeCurrencyAdapterDecimals` is present when `feeCurrencyAdapterAddress` is set.
+  .when(Joi.object({ feeCurrencyAdapterAddress: Joi.exist() }).unknown(), {
+    then: Joi.object({
+      isFeeCurrency: Joi.valid(true),
+      feeCurrencyAdapterDecimals: Joi.required(),
+    }),
+  })
 
 const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(
   Joi.object({
