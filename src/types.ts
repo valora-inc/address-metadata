@@ -40,6 +40,8 @@ export interface TokenInfoJSON {
   isL2Native?: boolean
   isCoreToken?: boolean
   isFeeCurrency?: boolean
+  feeCurrencyAdapterAddress?: string
+  feeCurrencyAdapterDecimals?: number
   canTransferWithComment?: boolean
   pegTo?: string
   isSupercharged?: boolean
