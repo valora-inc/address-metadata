@@ -69,10 +69,10 @@ const BaseTokenInfoSchema = Joi.object({
 })
   // Ensure `isFeeCurrency` is present when `isCoreToken` (deprecated) is present.
   .with('isCoreToken', 'isFeeCurrency')
-  // Ensure `isFeeCurrency` is true and `feeCurrencyAdapterDecimals` is present when `feeCurrencyAdapterAddress` is set.
+  // Ensure `isFeeCurrency` is false (or not set) and `feeCurrencyAdapterDecimals` is present when `feeCurrencyAdapterAddress` is set.
   .when(Joi.object({ feeCurrencyAdapterAddress: Joi.exist() }).unknown(), {
     then: Joi.object({
-      isFeeCurrency: Joi.valid(true),
+      isFeeCurrency: Joi.valid(false),
       feeCurrencyAdapterDecimals: Joi.required(),
     }),
   })
