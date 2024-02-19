@@ -432,10 +432,10 @@
   dependencies:
     tslib "^2.1.0"
 
-"@google-cloud/bigquery@^7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@google-cloud/bigquery/-/bigquery-7.3.0.tgz#39dcb6ad7b0beaa71577686d1714d16fc678084e"
-  integrity sha512-a/qQBOMlSRIVm262Kp3+Zg2+Et2fl+AwQv8mpVtvrpyk+wYQaY3dTK3U+RE6aWCiq/R1xo1vIXIYCRAQAoBsfw==
+"@google-cloud/bigquery@^7.4.0":
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@google-cloud/bigquery/-/bigquery-7.4.0.tgz#91100f91f2940fca7ffaa584d742289e6f0d7775"
+  integrity sha512-Vfow55GOUC/eeCKB72gDk/fV/D/qa7zuk3w5aXWrNMLV240XNno/JLKtMr/X9t4OFPRtmpMh2byPKsqxERD9YA==
   dependencies:
     "@google-cloud/common" "^5.0.0"
     "@google-cloud/paginator" "^5.0.0"
@@ -1125,18 +1125,18 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@json2csv/formatters@^7.0.5":
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/@json2csv/formatters/-/formatters-7.0.5.tgz#530193d4a584f9f6b410fd0a95a7f8185d15d759"
-  integrity sha512-ihONIB8S1ZG0ji5nDFpfCUPphVLnEKlLxDmDqRMjmPhzw8WCvyLX2trIrNHCf1t2IV8rx+1tNYaDb1dh87jHgA==
+"@json2csv/formatters@^7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@json2csv/formatters/-/formatters-7.0.6.tgz#a4f21daa9d64d6da9a297f7d7b97ba517870f780"
+  integrity sha512-hjIk1H1TR4ydU5ntIENEPgoMGW+Q7mJ+537sDFDbsk+Y3EPl2i4NfFVjw0NJRgT+ihm8X30M67mA8AS6jPidSA==
 
-"@json2csv/plainjs@^7.0.5":
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/@json2csv/plainjs/-/plainjs-7.0.5.tgz#03ae99af741153ccc4422424a9d67d859f2dc9cc"
-  integrity sha512-iJsYEzgRZUhRb8LltCeuBQyexQVUbovRZFF73Lo0iIvi5SUWsfXGTtbriIROsOKgfZPtYxmkZV+FYlsnBu9ybQ==
+"@json2csv/plainjs@^7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@json2csv/plainjs/-/plainjs-7.0.6.tgz#e4149b26ec6f1c59a27c72534a91e971be397098"
+  integrity sha512-4Md7RPDCSYpmW1HWIpWBOqCd4vWfIqm53S3e/uzQ62iGi7L3r34fK/8nhOMEe+/eVfCx8+gdSCt1d74SlacQHw==
   dependencies:
-    "@json2csv/formatters" "^7.0.5"
-    "@streamparser/json" "^0.0.19"
+    "@json2csv/formatters" "^7.0.6"
+    "@streamparser/json" "^0.0.20"
 
 "@noble/curves@1.2.0", "@noble/curves@~1.2.0":
   version "1.2.0"
@@ -1282,10 +1282,10 @@
   dependencies:
     "@sinonjs/commons" "^2.0.0"
 
-"@streamparser/json@^0.0.19":
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@streamparser/json/-/json-0.0.19.tgz#d9c264b54e366186ea4459bbb16c10238dc9e2a4"
-  integrity sha512-VTxtZGME6ZSWNCSjZ0Zd2LNNodx62XvmARb/liHIwGlInuuvoDzioLuRP8ajV8iLBknsTrsqpRDGlvzKSzpNEw==
+"@streamparser/json@^0.0.20":
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/@streamparser/json/-/json-0.0.20.tgz#28c0255dea8d37f5d679d72c361f01edf70a770a"
+  integrity sha512-VqAAkydywPpkw63WQhPVKCD3SdwXuihCUVZbbiY3SfSTGQyHmwRoq27y4dmJdZuJwd5JIlQoMPyGvMbUPY0RKQ==
 
 "@tokenizer/token@^0.3.0":
   version "0.3.0"
