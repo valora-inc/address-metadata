@@ -279,8 +279,6 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "USDC",
     "symbol": "USDC",
-    "showZeroBalance": true,
-    "isCashInEligible": true,
-    "isCashOutEligible": true
+    "showZeroBalance": true
   }
 ]

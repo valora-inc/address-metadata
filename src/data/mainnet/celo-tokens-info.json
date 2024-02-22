@@ -676,8 +676,6 @@
     "symbol": "USDC",
     "minimumAppVersionToSwap": "1.68.0",
     "showZeroBalance": true,
-    "isCashInEligible": true,
-    "isCashOutEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/usdc"
   }
 ]
