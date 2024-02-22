@@ -272,5 +272,15 @@
     "canTransferWithComment": false,
     "name": "Stable Test",
     "symbol": "STBLTEST"
+  },
+  {
+    "address": "0x2f25deb3848c207fc8e0c34035b3ba7fc157602b",
+    "decimals": 6,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
+    "name": "USDC",
+    "symbol": "USDC",
+    "showZeroBalance": true,
+    "isCashInEligible": true,
+    "isCashOutEligible": true
   }
 ]
