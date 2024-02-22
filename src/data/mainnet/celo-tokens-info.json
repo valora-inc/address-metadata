@@ -675,6 +675,7 @@
     "name": "USDC",
     "symbol": "USDC",
     "showZeroBalance": true,
+    "isCashInEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/usdc"
   }
 ]
