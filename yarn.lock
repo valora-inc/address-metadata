@@ -5992,7 +5992,7 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
-viem@^2.7.11:
+viem@^2.7.12:
   version "2.7.13"
   resolved "https://registry.yarnpkg.com/viem/-/viem-2.7.13.tgz#bf3f8e973f532f9f9c86c97b645ac8add740e1bd"
   integrity sha512-NGWLEocRp2UTqGidzI9bnL9u6WHlG2ik7IwqXNe6/QC2dL6jE3Z1mUnUUVcSx71h81nx74EflD9ahtleK3RQdA==
