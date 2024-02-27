@@ -267,7 +267,7 @@
     "address": "0x780c1551c2be3ea3b1f8b1e4cedc9c3ce40da24e",
     "decimals": 6,
     "isFeeCurrency": false,
-    "feeCurrencyAdapterAddress": "0xc9cce1e51f1393ce39eb722e3e59ede6fabf89fd",
+    "feeCurrencyAdapterAddress": "0xdb93874fe111f5a87acc11ff09ee9450ac6509ae",
     "feeCurrencyAdapterDecimals": 18,
     "canTransferWithComment": false,
     "name": "Stable Test",
