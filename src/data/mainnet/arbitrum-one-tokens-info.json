@@ -7,7 +7,8 @@
     "isL2Native": true,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png",
     "infoUrl": "https://www.coingecko.com/en/coins/ethereum",
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "isCashInEligible": true
   },
   {
     "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
@@ -15,7 +16,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "USD Coin",
     "symbol": "USDC",
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "isCashInEligible": true
   },
   {
     "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
@@ -23,7 +25,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
     "name": "Tether USD",
     "symbol": "USDT",
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "isCashInEligible": true
   },
   {
     "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
