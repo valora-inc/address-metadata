@@ -87,3 +87,9 @@ To add support for tokens on a new blockchain, you need to follow these steps:
 
 - `src/transforms.ts` - add mapping from environment and network to network ID
 - `src/index.ts` - add mapping from network to token info from jsons added in step 1
+
+## Adding new tokens in bulk
+
+There may be times where we want to add many new tokens at once. An example of how to do this is in `scripts/add-erc20-tokens-coingecko.ts`. This script utilizes Coingecko to get a list of tokens by market cap, and adds them to the specified tokens info file. It also adds the token images to the assets folder.
+
+Note that there are some expectations for the image assets, they should be 256x256 .png files and ideally under 60 KB in size. The above script will print warnings if the images do not meet these requirements, and manual intervention will be required to fix them. For resizing files, an online tool like [Tiny png](https://tinypng.com/) can be used.

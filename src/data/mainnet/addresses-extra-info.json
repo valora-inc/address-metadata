@@ -252,5 +252,9 @@
   "0xc11a02b5750fdea27d48c57ec8d3878bf21c43fd": {
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/valora.png",
     "name": "Valora Rewards"
+  },
+  "0x43d72ff17701b2da814620735c39c620ce0ea4a1": {
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/GoodDollar.png",
+    "name": "GoodDollar"
   }
 }

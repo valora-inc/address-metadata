@@ -15,6 +15,17 @@ function validateWithSchema(value: any, schema: Joi.Schema) {
   })
 }
 
+const networkIdToIsL2: Record<NetworkId, boolean> = {
+  [NetworkId['celo-mainnet']]: false,
+  [NetworkId['celo-alfajores']]: false,
+  [NetworkId['ethereum-mainnet']]: false,
+  [NetworkId['ethereum-sepolia']]: false,
+  [NetworkId['arbitrum-one']]: true,
+  [NetworkId['arbitrum-sepolia']]: true,
+  [NetworkId['op-mainnet']]: true,
+  [NetworkId['op-sepolia']]: true,
+}
+
 describe('Schema validation', () => {
   describe('Joi sanity checks', () => {
     describe('TokenInfoSchemaJSON', () => {
@@ -48,6 +59,19 @@ describe('Schema validation', () => {
             name: 'New normal token',
             symbol: 'XYZ',
             decimals: 18,
+          },
+          TokenInfoSchemaJSON,
+        )
+        expect(validationResult.error).toBeDefined()
+      })
+      it('requires tokens having `isCoreToken` property to have the `isFeeCurrency` property', () => {
+        const validationResult = validateWithSchema(
+          {
+            address: '0x471ece3750da237f93b8e339c536989b8978a438',
+            name: 'Fee currency token',
+            symbol: 'XYZ',
+            decimals: 18,
+            isCoreToken: true,
           },
           TokenInfoSchemaJSON,
         )
@@ -120,7 +144,8 @@ describe('Schema validation', () => {
               decimals: 18,
               imageUrl:
                 'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
-              isCoreToken: true,
+              isFeeCurrency: true,
+              canTransferWithComment: true,
               name: 'Celo',
               symbol: 'CELO',
               isSwappable: true,
@@ -171,6 +196,19 @@ describe('Schema validation', () => {
         for (const pegToAddress of pegToAddresses) {
           expect(addresses.includes(pegToAddress)).toEqual(true)
         }
+      }
+    })
+    it('L2 networks have all native tokens marked as L2', () => {
+      for (const { networkId, isL2Native, isNative } of tokensInfo) {
+        expect(!!isL2Native).toEqual(
+          !!(isNative && networkIdToIsL2[networkId as NetworkId]),
+        )
+      }
+    })
+
+    it('sets deprecated property `isCoreToken` equal to `isFeeCurrency`', () => {
+      for (const tokenInfo of tokensInfo) {
+        expect(tokenInfo.isCoreToken).toEqual(tokenInfo.isFeeCurrency)
       }
     })
   })

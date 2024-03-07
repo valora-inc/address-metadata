@@ -37,7 +37,12 @@ export interface TokenInfoJSON {
   address?: string
   imageUrl?: string
   isNative?: boolean
+  isL2Native?: boolean
   isCoreToken?: boolean
+  isFeeCurrency?: boolean
+  feeCurrencyAdapterAddress?: string
+  feeCurrencyAdapterDecimals?: number
+  canTransferWithComment?: boolean
   pegTo?: string
   isSupercharged?: boolean
   bridge?: string
@@ -60,6 +65,10 @@ export enum NetworkId {
   ['celo-alfajores'] = 'celo-alfajores',
   ['ethereum-mainnet'] = 'ethereum-mainnet',
   ['ethereum-sepolia'] = 'ethereum-sepolia',
+  ['arbitrum-one'] = 'arbitrum-one',
+  ['arbitrum-sepolia'] = 'arbitrum-sepolia',
+  ['op-mainnet'] = 'op-mainnet',
+  ['op-sepolia'] = 'op-sepolia',
 }
 
 export type Environment = 'mainnet' | 'testnet'

@@ -3,12 +3,39 @@ import CeloMainnetTokensInfo from './data/mainnet/celo-tokens-info.json'
 import CeloAlfajoresTokensInfo from './data/testnet/celo-alfajores-tokens-info.json'
 import EthereumMainnetTokensInfo from './data/mainnet/ethereum-tokens-info.json'
 import EthereumSepoliaTokensInfo from './data/testnet/ethereum-sepolia-tokens-info.json'
+import ArbitrumOneTokensInfo from './data/mainnet/arbitrum-one-tokens-info.json'
+import ArbitrumSepoliaTokensInfo from './data/testnet/arbitrum-sepolia-tokens-info.json'
+import OptimismMainnetTokensInfo from './data/mainnet/optimism-tokens-info.json'
+import OptimismSepoliaTokensInfo from './data/testnet/optimism-sepolia-tokens-info.json'
 
 const networkIdToTokensInfo: Record<NetworkId, TokenInfoJSON[]> = {
   [NetworkId['celo-mainnet']]: CeloMainnetTokensInfo,
   [NetworkId['celo-alfajores']]: CeloAlfajoresTokensInfo,
   [NetworkId['ethereum-mainnet']]: EthereumMainnetTokensInfo,
   [NetworkId['ethereum-sepolia']]: EthereumSepoliaTokensInfo,
+  [NetworkId['arbitrum-one']]: ArbitrumOneTokensInfo,
+  [NetworkId['arbitrum-sepolia']]: ArbitrumSepoliaTokensInfo,
+  [NetworkId['op-mainnet']]: OptimismMainnetTokensInfo,
+  [NetworkId['op-sepolia']]: OptimismSepoliaTokensInfo,
+}
+
+const networkIdToNetworkIconUrl: Record<NetworkId, string> = {
+  [NetworkId['ethereum-mainnet']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png',
+  [NetworkId['ethereum-sepolia']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png',
+  [NetworkId['celo-mainnet']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
+  [NetworkId['celo-alfajores']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CELO.png',
+  [NetworkId['arbitrum-one']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARB.png',
+  [NetworkId['arbitrum-sepolia']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARB.png',
+  [NetworkId['op-mainnet']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OP.png',
+  [NetworkId['op-sepolia']]:
+    'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OP.png',
 }
 
 export function getTokenId(
@@ -23,16 +50,18 @@ export function getTokensInfoByNetworkIds(networkIds: NetworkId[]): {
 } {
   const output: { [tokenId: string]: TokenInfo } = {}
   for (const networkId of networkIds) {
-    const nativeImageUrl = networkIdToTokensInfo[networkId].find(
-      (tokenInfo) => tokenInfo.isNative,
-    )?.imageUrl
+    const networkIconUrl = networkIdToNetworkIconUrl[networkId]
     for (const tokenInfo of networkIdToTokensInfo[networkId]) {
       const tokenId = getTokenId(tokenInfo, networkId)
       output[tokenId] = {
         ...tokenInfo,
         networkId,
         tokenId,
-        networkIconUrl: tokenInfo.isNative ? undefined : nativeImageUrl,
+        networkIconUrl:
+          tokenInfo.isNative && !tokenInfo.isL2Native
+            ? undefined
+            : networkIconUrl,
+        isCoreToken: tokenInfo.isFeeCurrency, // for backwards compatibility. `isCoreToken` is deprecated
       }
     }
   }

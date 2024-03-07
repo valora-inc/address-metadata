@@ -42,6 +42,10 @@ const BaseTokenInfoSchema = Joi.object({
   decimals: Joi.number().required(),
   symbol: Joi.string().required(),
   isCoreToken: Joi.boolean(),
+  isFeeCurrency: Joi.boolean(),
+  feeCurrencyAdapterAddress: AddressSchema,
+  feeCurrencyAdapterDecimals: Joi.number(),
+  canTransferWithComment: Joi.boolean(),
   isSupercharged: Joi.boolean(),
   pegTo: AddressSchema,
   // Forcing flag to be false if decimals is not 18
@@ -54,6 +58,7 @@ const BaseTokenInfoSchema = Joi.object({
     .pattern(/^\d+\.\d+\.\d+$/)
     .custom(checkMinVersion, 'has a valid version'),
   isNative: Joi.boolean(),
+  isL2Native: Joi.boolean(),
   infoUrl: Joi.string()
     .uri()
     .pattern(/^https:\/\/www.coingecko.com\/en\/coins/),
@@ -62,6 +67,15 @@ const BaseTokenInfoSchema = Joi.object({
   isCashInEligible: Joi.boolean(),
   isCashOutEligible: Joi.boolean(),
 })
+  // Ensure `isFeeCurrency` is present when `isCoreToken` (deprecated) is present.
+  .with('isCoreToken', 'isFeeCurrency')
+  // Ensure `isFeeCurrency` is false (or not set) and `feeCurrencyAdapterDecimals` is present when `feeCurrencyAdapterAddress` is set.
+  .when(Joi.object({ feeCurrencyAdapterAddress: Joi.exist() }).unknown(), {
+    then: Joi.object({
+      isFeeCurrency: Joi.valid(false),
+      feeCurrencyAdapterDecimals: Joi.required(),
+    }),
+  })
 
 const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(
   Joi.object({
@@ -69,7 +83,11 @@ const ProcessedTokenInfoSchema = BaseTokenInfoSchema.concat(
     tokenId: Joi.string().required(),
     networkIconUrl: Joi.alternatives().conditional('isNative', {
       is: true,
-      then: Joi.forbidden(),
+      then: Joi.alternatives().conditional('isL2Native', {
+        is: true,
+        then: imageUrlSchema.required(),
+        otherwise: Joi.forbidden(),
+      }),
       otherwise: imageUrlSchema.required(),
     }),
   }),

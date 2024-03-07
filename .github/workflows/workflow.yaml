@@ -39,6 +39,8 @@ jobs:
           check-latest: true
       - run: yarn
       - run: yarn test:ci
+      # update:mixpanel does a dry run by default
+      - run: yarn update:mixpanel
   update-testnet:
     name: Update Testnet (celo-mobile-alfajores) RTDB
     if: github.ref == 'refs/heads/main'
@@ -48,11 +50,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: google-github-actions/auth@v1
+      - uses: google-github-actions/auth@v2
         with:
           project_id: celo-mobile-alfajores
           credentials_json: ${{ secrets.ALFAJORES_SERVICE_ACCOUNT_KEY }}
-      - uses: google-github-actions/setup-gcloud@v1
+      - uses: google-github-actions/setup-gcloud@v2
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -67,11 +69,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: google-github-actions/auth@v1
+      - uses: google-github-actions/auth@v2
         with:
           project_id: celo-mobile-alfajores
           credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
-      - uses: google-github-actions/setup-gcloud@v1
+      - uses: google-github-actions/setup-gcloud@v2
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -84,17 +86,43 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: google-github-actions/auth@v1
+      - uses: google-github-actions/auth@v2
         with:
           project_id: celo-mobile-mainnet
           credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
-      - uses: google-github-actions/setup-gcloud@v1
+      - uses: google-github-actions/setup-gcloud@v2
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
           check-latest: true
       - run: yarn
       - run: yarn update:bq
+  update-mixpanel:
+    name: Update Mixpanel
+    if: github.ref == 'refs/heads/main'
+    needs:
+      - lint
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: google-github-actions/auth@v2
+        with:
+          project_id: celo-mobile-mainnet
+          credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          check-latest: true
+      - run: yarn
+      - id: secrets
+        uses: 'google-github-actions/get-secretmanager-secrets@v2'
+        with:
+          secrets: |-
+            mixpanel_credentials:projects/1027349420744/secrets/mixpanel-address-metadata-service-account
+      - run: yarn update:mixpanel --update-tables
+        env:
+          MIXPANEL_CREDENTIALS: '${{ steps.secrets.outputs.mixpanel_credentials }}'
   deploy-dev:
     name: Deploy dev cloud function
     if: github.ref == 'refs/heads/main'
@@ -104,18 +132,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: google-github-actions/auth@v1
+      - uses: google-github-actions/auth@v2
         with:
           project_id: celo-mobile-alfajores
           credentials_json: ${{ secrets.ALFAJORES_SERVICE_ACCOUNT_KEY }}
-      - uses: google-github-actions/setup-gcloud@v1
+      - uses: google-github-actions/setup-gcloud@v2
         with:
           install_components: 'beta'
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
           check-latest: true
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -134,18 +162,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: google-github-actions/auth@v1
+      - uses: google-github-actions/auth@v2
         with:
           project_id: celo-mobile-mainnet
           credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
-      - uses: google-github-actions/setup-gcloud@v1
+      - uses: google-github-actions/setup-gcloud@v2
         with:
           install_components: 'beta'
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
           check-latest: true
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             node_modules
