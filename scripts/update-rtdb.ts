@@ -33,7 +33,7 @@ async function main() {
             rtdbData,
             overrideType.keptInternalKeys,
           )
-          const updateDiff = diffString(rtdbData, data)
+          const updateDiff = diffString(rtdbData, updateRequest)
           if (!updateDiff) {
             console.log(
               `Diff is empty for data at ${rtdbLocation}, skipping...`,

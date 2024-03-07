@@ -3,21 +3,17 @@ export function keepInternalKeys(
   current: any,
   keptInternalKeys: string[],
 ) {
-  return Object.keys(expected).reduce((expectedResult, key) => {
-    const objectWithInternalKeys = keptInternalKeys.reduce(
-      (result, internalKey) => {
-        if (current[key] && current[key][internalKey]) {
-          result[internalKey] = current[key][internalKey]
-        }
+  const result: any = {}
 
-        return result
-      },
-      expected[key],
-    )
-
-    return {
-      ...expectedResult,
-      [key]: objectWithInternalKeys,
+  for (const key of Object.keys(expected)) {
+    result[key] = expected[key]
+    
+    for(const internalKey of keptInternalKeys) {
+      if (current[key] && current[key][internalKey]) {
+        result[key][internalKey] = current[key][internalKey]
+      }
     }
-  }, expected)
+  }
+
+  return result
 }
