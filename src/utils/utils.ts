@@ -7,8 +7,8 @@ export function keepInternalKeys(
 
   for (const key of Object.keys(expected)) {
     result[key] = expected[key]
-    
-    for(const internalKey of keptInternalKeys) {
+
+    for (const internalKey of keptInternalKeys) {
       if (current[key] && current[key][internalKey]) {
         result[key][internalKey] = current[key][internalKey]
       }
