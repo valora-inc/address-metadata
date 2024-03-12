@@ -1,14 +1,14 @@
 import Joi from 'joi'
 
 export class OverrideType {
-  static readonly OverrideAll = new OverrideType(true, true)
-  static readonly OnlyUpdates = new OverrideType(false, false)
-  static readonly DeleteMissingKeysAndUpdate = new OverrideType(false, true)
+  static readonly OverrideAll = new OverrideType(true, [])
+  static readonly KeepInternalKeys = (keepInternalKeys?: string[]) =>
+    new OverrideType(false, keepInternalKeys)
 
   // private to disallow creating other instances of this type
   private constructor(
     public readonly shouldOverride: boolean,
-    public readonly deleteMissingKeys: boolean,
+    public readonly keptInternalKeys: string[] = [],
   ) {}
 }
 
