@@ -684,7 +684,7 @@
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
     "name": "Tether USD",
-    "symbol": "USD₮",
+    "symbol": "USDT",
     "infoUrl": "https://www.coingecko.com/en/coins/tether"
   }
 ]
