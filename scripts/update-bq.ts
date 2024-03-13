@@ -22,7 +22,7 @@ const tokensInfo = getTokensInfoByNetworkIds([
   NetworkId['celo-mainnet'],
   NetworkId['ethereum-mainnet'],
   NetworkId['arbitrum-one'],
-  NetworkId['op-mainnet']
+  NetworkId['op-mainnet'],
 ])
 
 const rows = Object.entries(tokensInfo).map(([_, tokenInfo]) => {
