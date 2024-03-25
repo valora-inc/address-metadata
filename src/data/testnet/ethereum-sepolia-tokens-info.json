@@ -7,7 +7,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png",
     "showZeroBalance": true,
     "infoUrl": "https://www.coingecko.com/en/coins/ethereum",
-    "isCashInEligible": true
+    "isCashInEligible": true,
+    "isCashOutEligible": true
   },
   {
     "name": "USD Coin",
@@ -17,7 +18,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "isStableCoin": true,
     "infoUrl": "https://www.coingecko.com/en/coins/usdc",
-    "isCashInEligible": true
+    "isCashInEligible": true,
+    "isCashOutEligible": true
   },
   {
     "name": "Tether USD",
@@ -28,6 +30,7 @@
     "infoUrl": "https://www.coingecko.com/en/coins/tether",
     "minimumAppVersionToSwap": "1.72.0",
     "isStableCoin": true,
-    "isCashInEligible": true
+    "isCashInEligible": true,
+    "isCashOutEligible": true
   }
 ]
