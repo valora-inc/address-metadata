@@ -674,6 +674,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "USDC",
     "symbol": "USDC",
+    "feeCurrencyAdapterAddress": "0x2f25deb3848c207fc8e0c34035b3ba7fc157602b",
+    "feeCurrencyAdapterDecimals": 18,
     "showZeroBalance": true,
     "isCashInEligible": true,
     "minimumAppVersionToSwap": "1.68.0",
