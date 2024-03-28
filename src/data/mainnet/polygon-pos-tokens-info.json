@@ -2,6 +2,7 @@
   {
     "name": "Matic Token",
     "symbol": "MATIC",
+    "address": "0x0000000000000000000000000000000000001010",
     "decimals": 18,
     "isNative": true,
     "isL2Native": true,
