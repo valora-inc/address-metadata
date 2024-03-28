@@ -1,2 +1,2 @@
-NETWORK_IDS: 'celo-mainnet,ethereum-mainnet,arbitrum-one,op-mainnet'
+NETWORK_IDS: 'celo-mainnet,ethereum-mainnet,arbitrum-one,op-mainnet,polygon-pos-mainnet,base-mainnet'
 GCLOUD_PROJECT: 'celo-mobile-mainnet'
