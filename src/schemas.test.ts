@@ -24,8 +24,8 @@ const networkIdToIsL2: Record<NetworkId, boolean> = {
   [NetworkId['arbitrum-sepolia']]: true,
   [NetworkId['op-mainnet']]: true,
   [NetworkId['op-sepolia']]: true,
-  [NetworkId['polygon-pos-mainnet']]: true,
-  [NetworkId['polygon-pos-mumbai']]: true,
+  [NetworkId['polygon-pos-mainnet']]: false,
+  [NetworkId['polygon-pos-mumbai']]: false,
   [NetworkId['base-mainnet']]: true,
   [NetworkId['base-sepolia']]: true,
 }

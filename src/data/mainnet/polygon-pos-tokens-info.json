@@ -5,7 +5,6 @@
     "address": "0x0000000000000000000000000000000000001010",
     "decimals": 18,
     "isNative": true,
-    "isL2Native": true,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MATIC.png",
     "infoUrl": "https://www.coingecko.com/en/coins/polygon"
   },
