@@ -687,6 +687,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
     "name": "Tether USD",
     "symbol": "USDT",
+    "showZeroBalance": true,
     "minimumAppVersionToSwap": "1.68.0",
     "infoUrl": "https://www.coingecko.com/en/coins/tether"
   }
