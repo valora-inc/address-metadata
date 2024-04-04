@@ -904,5 +904,14 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PRIME.png",
     "isNative": false,
     "infoUrl": "https://www.coingecko.com/en/coins/echelon-prime"
+  },
+  {
+    "name": "Ethena",
+    "symbol": "ENA",
+    "decimals": 18,
+    "address": "0x57e114b691db790c35207b2e685d4a43181e6061",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ENA.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/ethena"
   }
 ]
