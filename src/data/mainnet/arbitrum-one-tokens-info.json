@@ -14,7 +14,7 @@
     "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
-    "name": "USD Coin",
+    "name": "USDC",
     "symbol": "USDC",
     "minimumAppVersionToSwap": "1.77.0",
     "isCashInEligible": true

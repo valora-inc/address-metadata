@@ -21,7 +21,7 @@
     "minimumAppVersionToSwap": "1.72.0"
   },
   {
-    "name": "USD Coin",
+    "name": "USDC",
     "symbol": "USDC",
     "decimals": 6,
     "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
