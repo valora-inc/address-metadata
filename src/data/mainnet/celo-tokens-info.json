@@ -19,6 +19,15 @@
     "address": "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UBE.png",
+    "name": "Old Ubeswap",
+    "symbol": "old-UBE",
+    "isSwappable": true,
+    "infoUrl": "https://www.coingecko.com/en/coins/ubeswap"
+  },
+  {
+    "address": "0x71e26d0e519d14591b9de9a0fe9513a398101490",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UBE.png",
     "name": "Ubeswap",
     "symbol": "UBE",
     "isSwappable": true,
@@ -689,6 +698,9 @@
     "feeCurrencyAdapterAddress": "0x0e2a3e05bc9a16f5292a6170456a710cb89c6f72",
     "feeCurrencyAdapterDecimals": 18,
     "symbol": "USDT",
+    "showZeroBalance": true,
+    "isCashInEligible": true,
+    "minimumAppVersionToSwap": "1.68.0",
     "infoUrl": "https://www.coingecko.com/en/coins/tether"
   }
 ]
