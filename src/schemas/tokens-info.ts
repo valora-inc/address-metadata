@@ -97,14 +97,15 @@ const getTokenInfoSchema = (base: Joi.ObjectSchema<any>) =>
   Joi.alternatives().try(
     Joi.object({
       // native tokens don't have an address except CELO and MATIC
+      // MATIC's contract doesn't have standard ERC-20 methods so we treat as native without address
       isNative: Joi.valid(true).required(),
-      symbol: Joi.string().invalid('CELO').invalid('MATIC').required(),
+      symbol: Joi.string().invalid('CELO').required(),
       address: Joi.forbidden(),
     }).concat(base),
     Joi.object({
       // CELO is native and has an address
       isNative: Joi.valid(true).required(),
-      symbol: Joi.valid('CELO').valid('MATIC').required(),
+      symbol: Joi.valid('CELO').required(),
       address: AddressSchema.required(),
     }).concat(base),
     Joi.object({
