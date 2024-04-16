@@ -6,7 +6,8 @@
     "isNative": true,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MATIC.png",
     "infoUrl": "https://www.coingecko.com/en/coins/polygon",
-    "minimumAppVersionToSwap": "1.82.0"
+    "minimumAppVersionToSwap": "1.82.0",
+    "isCashInEligible": true
   },
   {
     "name": "USDC",
@@ -14,6 +15,7 @@
     "decimals": 6,
     "address": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
-    "minimumAppVersionToSwap": "1.82.0"
+    "minimumAppVersionToSwap": "1.82.0",
+    "isCashInEligible": true
   }
 ]
