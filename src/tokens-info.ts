@@ -8,7 +8,7 @@ import ArbitrumSepoliaTokensInfo from './data/testnet/arbitrum-sepolia-tokens-in
 import OptimismMainnetTokensInfo from './data/mainnet/optimism-tokens-info.json'
 import OptimismSepoliaTokensInfo from './data/testnet/optimism-sepolia-tokens-info.json'
 import PolygonPoSMainnetTokensInfo from './data/mainnet/polygon-pos-tokens-info.json'
-import PolygonPoSMumbaiTokensInfo from './data/testnet/polygon-pos-mumbai-tokens-info.json'
+import PolygonPoSAmoyTokensInfo from './data/testnet/polygon-pos-amoy-tokens-info.json'
 import BaseMainnetTokensInfo from './data/mainnet/base-tokens-info.json'
 import BaseSepoliaTokensInfo from './data/testnet/base-sepolia-tokens-info.json'
 
@@ -22,7 +22,7 @@ const networkIdToTokensInfo: Record<NetworkId, TokenInfoJSON[]> = {
   [NetworkId['op-mainnet']]: OptimismMainnetTokensInfo,
   [NetworkId['op-sepolia']]: OptimismSepoliaTokensInfo,
   [NetworkId['polygon-pos-mainnet']]: PolygonPoSMainnetTokensInfo,
-  [NetworkId['polygon-pos-mumbai']]: PolygonPoSMumbaiTokensInfo,
+  [NetworkId['polygon-pos-amoy']]: PolygonPoSAmoyTokensInfo,
   [NetworkId['base-mainnet']]: BaseMainnetTokensInfo,
   [NetworkId['base-sepolia']]: BaseSepoliaTokensInfo,
 }
@@ -46,7 +46,7 @@ const networkIdToNetworkIconUrl: Record<NetworkId, string> = {
     'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OP.png',
   [NetworkId['polygon-pos-mainnet']]:
     'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MATIC.png',
-  [NetworkId['polygon-pos-mumbai']]:
+  [NetworkId['polygon-pos-amoy']]:
     'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MATIC.png',
   [NetworkId['base-mainnet']]:
     'https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/BASE.png',
