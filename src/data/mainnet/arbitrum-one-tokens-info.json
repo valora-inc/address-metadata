@@ -38,5 +38,12 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ARB.png",
     "minimumAppVersionToSwap": "1.77.0"
+  },
+  {
+    "address": "0x724dc807b04555b71ed48a6896b6f41593b8c637",
+    "name": "Aave Arbitrum USDCn",
+    "symbol": "aArbUSDCn",
+    "decimals": 6,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png"
   }
 ]
