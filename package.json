@@ -42,7 +42,7 @@
     "firebase-admin": "^12.1.0",
     "joi": "^17.13.1",
     "json-diff": "^1.0.6",
-    "semver": "^7.6.1",
+    "semver": "^7.6.2",
     "typescript": "~5.4.5",
     "viem": "^2.8.11",
     "yargs": "^17.7.2"
