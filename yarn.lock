@@ -430,7 +430,7 @@
   dependencies:
     tslib "^2.1.0"
 
-"@google-cloud/bigquery@^7.6.1":
+"@google-cloud/bigquery@^7.7.0":
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/@google-cloud/bigquery/-/bigquery-7.7.0.tgz#b606acda3262fc47308909dbe9afa558c1a8871f"
   integrity sha512-KK0t7j0RAwqRxt3vc0mtoR+DBSiBmbeJaRv7tAIWlQsyE43pxMu7t94i0kUvR1SKnQBZYX9+iBr+mjdmNORPSQ==
