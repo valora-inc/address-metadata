@@ -702,5 +702,14 @@
     "isCashInEligible": true,
     "minimumAppVersionToSwap": "1.68.0",
     "infoUrl": "https://www.coingecko.com/en/coins/tether"
+  },
+  {
+    "address": "0x456a3D042C0DbD3db53D5489e98dFb038553B0d0",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cKES.png",
+    "isFeeCurrency": true,
+    "canTransferWithComment": true,
+    "name": "Celo Kenyan Shilling",
+    "symbol": "cKES"
   }
 ]
