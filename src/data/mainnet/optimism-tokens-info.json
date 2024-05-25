@@ -38,5 +38,12 @@
     "minimumAppVersionToSwap": "1.77.0",
     "isCashInEligible": true,
     "isCashOutEligible": true
-  }
+  },
+  {
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "address": "0x4200000000000000000000000000000000000006",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png"
+  },
 ]
