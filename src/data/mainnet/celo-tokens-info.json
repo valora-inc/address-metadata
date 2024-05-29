@@ -687,6 +687,7 @@
     "feeCurrencyAdapterDecimals": 18,
     "showZeroBalance": true,
     "isCashInEligible": true,
+    "isStableCoin": true,
     "minimumAppVersionToSwap": "1.68.0",
     "infoUrl": "https://www.coingecko.com/en/coins/usdc"
   },
@@ -700,6 +701,7 @@
     "symbol": "USDT",
     "showZeroBalance": true,
     "isCashInEligible": true,
+    "isStableCoin": true,
     "minimumAppVersionToSwap": "1.68.0",
     "infoUrl": "https://www.coingecko.com/en/coins/tether"
   },

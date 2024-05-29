@@ -6,13 +6,16 @@
     "isNative": true,
     "isL2Native": true,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png",
-    "infoUrl": "https://www.coingecko.com/en/coins/ethereum"
+    "infoUrl": "https://www.coingecko.com/en/coins/ethereum",
+    "isCashInEligible": true
   },
   {
     "name": "USD Coin",
     "symbol": "USDC",
     "decimals": 6,
     "address": "0xd74cc5d436923b8ba2c179b4bca2841d8a52c5b5",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png"
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
+    "isCashInEligible": true,
+    "isStableCoin": true
   }
 ]
