@@ -46,5 +46,11 @@
     "decimals": 6,
     "pegTo": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png"
+  },
+  {
+    "address": "0x845c8bc94610807fcbab5dd2bc7ac9dabaff3c55",
+    "name": "TriCRV-ARBITRUM",
+    "symbol": "crvUSDARBCRV",
+    "decimals": 18
   }
 ]
