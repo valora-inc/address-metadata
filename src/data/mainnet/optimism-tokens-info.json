@@ -27,7 +27,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "minimumAppVersionToSwap": "1.77.0",
     "isCashInEligible": true,
-    "isCashOutEligible": true
+    "isCashOutEligible": true,
+    "isStableCoin": true
   },
   {
     "name": "Tether USD",
@@ -37,6 +38,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
     "minimumAppVersionToSwap": "1.77.0",
     "isCashInEligible": true,
-    "isCashOutEligible": true
+    "isCashOutEligible": true,
+    "isStableCoin": true
   }
 ]

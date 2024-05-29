@@ -19,7 +19,8 @@
     "symbol": "USDC",
     "minimumAppVersionToSwap": "1.77.0",
     "isCashInEligible": true,
-    "isCashOutEligible": true
+    "isCashOutEligible": true,
+    "isStableCoin": true
   },
   {
     "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
@@ -29,7 +30,8 @@
     "symbol": "USDT",
     "minimumAppVersionToSwap": "1.77.0",
     "isCashInEligible": true,
-    "isCashOutEligible": true
+    "isCashOutEligible": true,
+    "isStableCoin": true
   },
   {
     "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
