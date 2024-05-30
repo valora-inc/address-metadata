@@ -5,13 +5,16 @@
     "decimals": 18,
     "isNative": true,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MATIC.png",
-    "infoUrl": "https://www.coingecko.com/en/coins/polygon"
+    "infoUrl": "https://www.coingecko.com/en/coins/polygon",
+    "isCashInEligible": true
   },
   {
     "name": "USD Coin",
     "symbol": "USDC",
     "decimals": 6,
     "address": "0xe6b8a5cf854791412c1f6efc7caf629f5df1c747",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png"
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
+    "isCashInEligible": true,
+    "isStableCoin": true
   }
 ]
