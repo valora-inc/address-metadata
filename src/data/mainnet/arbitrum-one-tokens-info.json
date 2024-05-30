@@ -54,5 +54,11 @@
     "name": "TriCRV-ARBITRUM",
     "symbol": "crvUSDARBCRV",
     "decimals": 18
+  },
+  {
+    "address": "0xfbf7b624a7af73ef699ffc09078d17667973f456",
+    "name": "Stake DAO sdcrvUSDARBCRV-vault Gauge",
+    "symbol": "sdcrvUSDARBCRV-vault-gauge",
+    "decimals": 18
   }
 ]
