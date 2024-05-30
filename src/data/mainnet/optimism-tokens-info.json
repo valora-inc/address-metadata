@@ -36,7 +36,7 @@
     "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
-
+    "minimumAppVersionToSwap": "1.77.0",
     "isCashInEligible": true,
     "isCashOutEligible": true,
     "isStableCoin": true
