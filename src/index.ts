@@ -27,7 +27,11 @@ export function getCeloRTDBMetadata(environment: Environment): RTDBMetadata[] {
       data: transformCeloTokensForRTDB(tokensInfo),
       schema: RTDBAddressToTokenInfoSchema,
       rtdbLocation: 'tokensInfo',
-      overrideType: OverrideType.DeleteMissingKeysAndUpdate,
+      overrideType: OverrideType.KeepInternalKeys([
+        'historicalUsdPrices',
+        'usdPrice',
+        'priceFetchedAt',
+      ]),
     },
   ]
 }
