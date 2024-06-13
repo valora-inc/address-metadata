@@ -713,5 +713,12 @@
     "canTransferWithComment": true,
     "name": "Celo Kenyan Shilling",
     "symbol": "cKES"
+  },
+  {
+    "address": "0x7ff62f59e3e89ea34163ea1458eebcc81177cfb6",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MENTO.png",
+    "name": "Mento Token",
+    "symbol": "MENTO"
   }
 ]
