@@ -299,12 +299,5 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MENTO.png",
     "name": "Mento Token",
     "symbol": "MENTO"
-  },
-  {
-    "address": "0x537CaE97C588C6DA64A385817F3D3563DDCf0591",
-    "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/veMENTO.png",
-    "name": "Mento Vote-Escrow",
-    "symbol": "veMENTO"
   }
 ]
