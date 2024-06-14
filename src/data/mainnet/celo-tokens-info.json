@@ -197,6 +197,15 @@
     "address": "0x46c9757c5497c5b1f2eb73ae79b6b67d119b0b58",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PACT.png",
+    "name": "Old impactMarket",
+    "symbol": "old-PACT",
+    "minimumAppVersionToSwap": "1.60.0",
+    "infoUrl": "https://www.coingecko.com/en/coins/impactmarket"
+  },
+  {
+    "address": "0x2b9018ceb303d540bbf08de8e7de64fddd63396c",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PACT.png",
     "name": "impactMarket",
     "symbol": "PACT",
     "minimumAppVersionToSwap": "1.60.0",
