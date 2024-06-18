@@ -256,5 +256,9 @@
   "0x43d72ff17701b2da814620735c39c620ce0ea4a1": {
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/GoodDollar.png",
     "name": "GoodDollar"
+  },
+  "0xb902224fb0fd2cd996febba0a569bba05aab9df6": {
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/valora.png",
+    "name": "Valora Gas Reimbursement"
   }
 }
