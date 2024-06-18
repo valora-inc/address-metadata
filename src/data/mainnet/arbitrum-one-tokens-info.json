@@ -95,13 +95,15 @@
     "address": "0x75289388d50364c3013583d97bd70ced0e183e32",
     "name": "Aladdin sdCRV",
     "symbol": "asdCRV",
-    "decimals": 18
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png"
   },
   {
     "address": "0x62d5a59e0d67c0381aad53b201b4a1b8dcd2c833",
     "name": "Vote Boosted sdCRV",
     "symbol": "vsdCRV",
-    "decimals": 18
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png"
   },
   {
     "address": "0xb85246768cfea42b0c935265db798c9ae457646f",
