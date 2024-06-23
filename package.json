@@ -43,7 +43,7 @@
     "joi": "^17.13.3",
     "json-diff": "^1.0.6",
     "semver": "^7.6.2",
-    "typescript": "~5.4.5",
+    "typescript": "~5.5.2",
     "viem": "^2.15.1",
     "yargs": "^17.7.2"
   },
