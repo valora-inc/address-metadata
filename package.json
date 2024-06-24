@@ -44,7 +44,7 @@
     "json-diff": "^1.0.6",
     "semver": "^7.6.2",
     "typescript": "~5.5.2",
-    "viem": "^2.16.0",
+    "viem": "^2.16.1",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
