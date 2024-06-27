@@ -294,7 +294,7 @@
     "showZeroBalance": true
   },
   {
-    "address": "0x3eDd2f7c90e2E931c817a44302Af7112E84be6Cc",
+    "address": "0x3edd2f7c90e2e931c817a44302af7112e84be6cc",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MENTO.png",
     "name": "Mento Token",
