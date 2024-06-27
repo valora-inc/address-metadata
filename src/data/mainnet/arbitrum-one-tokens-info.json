@@ -117,5 +117,13 @@
     "symbol": "sdVASDCRV-vault-gauge",
     "decimals": 18,
     "pegTo": "0xb85246768cfea42b0c935265db798c9ae457646f"
+  },
+  {
+    "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png",
+    "minimumAppVersionToSwap": "1.77.0"
   }
 ]
