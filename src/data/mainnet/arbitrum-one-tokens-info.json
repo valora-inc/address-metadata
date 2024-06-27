@@ -77,5 +77,45 @@
     "symbol": "sdcrvUSDARBCRV-vault-gauge",
     "decimals": 18,
     "pegTo": "0x845c8bc94610807fcbab5dd2bc7ac9dabaff3c55"
+  },
+  {
+    "address": "0x73af1150f265419ef8a5db41908b700c32d49135",
+    "name": "crvUSD/USDT",
+    "symbol": "crvUSDT",
+    "decimals": 18
+  },
+  {
+    "address": "0x627b57ad0a2219c44e9b5ae11ea8802a9411433b",
+    "name": "Stake DAO sdcrvUSDT-vault Gauge",
+    "symbol": "sdcrvUSDT-vault-gauge",
+    "decimals": 18,
+    "pegTo": "0x73af1150f265419ef8a5db41908b700c32d49135"
+  },
+  {
+    "address": "0x75289388d50364c3013583d97bd70ced0e183e32",
+    "name": "Aladdin sdCRV",
+    "symbol": "asdCRV",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png"
+  },
+  {
+    "address": "0x62d5a59e0d67c0381aad53b201b4a1b8dcd2c833",
+    "name": "Vote Boosted sdCRV",
+    "symbol": "vsdCRV",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png"
+  },
+  {
+    "address": "0xb85246768cfea42b0c935265db798c9ae457646f",
+    "name": "CRV/asdCRV/vsdCRV",
+    "symbol": "VASDCRV",
+    "decimals": 18
+  },
+  {
+    "address": "0xd038af8545662af0625a11d15b18015fcd28b7fb",
+    "name": "Stake DAO sdVASDCRV-vault Gauge",
+    "symbol": "sdVASDCRV-vault-gauge",
+    "decimals": 18,
+    "pegTo": "0xb85246768cfea42b0c935265db798c9ae457646f"
   }
 ]
