@@ -125,5 +125,13 @@
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png",
     "minimumAppVersionToSwap": "1.77.0"
+  },
+  {
+    "address": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8",
+    "name": "Aave Arbitrum WETH",
+    "symbol": "aArbWETH",
+    "decimals": 18,
+    "pegTo": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png"
   }
 ]
