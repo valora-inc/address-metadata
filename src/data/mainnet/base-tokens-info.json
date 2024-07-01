@@ -8,7 +8,8 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ETH.png",
     "infoUrl": "https://www.coingecko.com/en/coins/ethereum",
     "minimumAppVersionToSwap": "1.81.0",
-    "isCashInEligible": true
+    "isCashInEligible": true,
+    "isCashOutEligible": true
   },
   {
     "name": "USDC",
