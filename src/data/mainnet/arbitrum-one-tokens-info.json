@@ -133,5 +133,14 @@
     "decimals": 18,
     "pegTo": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png"
+  },
+  {
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ethWBTC.png",
+    "infoUrl": "https://www.coingecko.com/en/coins/wrapped-bitcoin",
+    "minimumAppVersionToSwap": "1.77.0"
   }
 ]
