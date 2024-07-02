@@ -430,13 +430,13 @@
   dependencies:
     tslib "^2.1.0"
 
-"@google-cloud/bigquery@^7.7.0":
-  version "7.7.0"
-  resolved "https://registry.yarnpkg.com/@google-cloud/bigquery/-/bigquery-7.7.0.tgz#b606acda3262fc47308909dbe9afa558c1a8871f"
-  integrity sha512-KK0t7j0RAwqRxt3vc0mtoR+DBSiBmbeJaRv7tAIWlQsyE43pxMu7t94i0kUvR1SKnQBZYX9+iBr+mjdmNORPSQ==
+"@google-cloud/bigquery@^7.8.0":
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/@google-cloud/bigquery/-/bigquery-7.8.0.tgz#b3301155442b1520df2f565c0e2685c9856513ac"
+  integrity sha512-SVWjoNkLixBGi6ZZSuQYDviSJJwUHd3LDCWoy3IDDXP10MxZWjfClc2FLILgsYz2BL4y4L/tdy3DEqSSt+92EA==
   dependencies:
     "@google-cloud/common" "^5.0.0"
-    "@google-cloud/paginator" "^5.0.0"
+    "@google-cloud/paginator" "^5.0.2"
     "@google-cloud/precise-date" "^4.0.0"
     "@google-cloud/promisify" "^4.0.0"
     arrify "^2.0.1"
@@ -515,10 +515,10 @@
     stream-events "^1.0.5"
     uuid "^9.0.0"
 
-"@google-cloud/paginator@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@google-cloud/paginator/-/paginator-5.0.0.tgz#b8cc62f151685095d11467402cbf417c41bf14e6"
-  integrity sha512-87aeg6QQcEPxGCOthnpUjvw4xAZ57G7pL8FS0C4e/81fr3FjkpUpibf1s2v5XGyGhUVGF4Jfg7yEcxqn2iUw1w==
+"@google-cloud/paginator@^5.0.0", "@google-cloud/paginator@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@google-cloud/paginator/-/paginator-5.0.2.tgz#86ad773266ce9f3b82955a8f75e22cd012ccc889"
+  integrity sha512-DJS3s0OVH4zFDB1PzjxAsHqJT6sKVbRwwML0ZBP9PbU7Yebtu/7SWMRzvO2J3nUi9pRNITCfu4LJeooM2w4pjg==
   dependencies:
     arrify "^2.0.0"
     extend "^3.0.2"
@@ -1990,10 +1990,10 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axios@^1.6.8:
-  version "1.6.8"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.8.tgz#66d294951f5d988a00e87a0ffb955316a619ea66"
-  integrity sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==
+axios@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.2.tgz#b625db8a7051fbea61c35a3cbb3a1daa7b9c7621"
+  integrity sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
