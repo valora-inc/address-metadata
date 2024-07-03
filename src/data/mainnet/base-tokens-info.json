@@ -105,7 +105,7 @@
   {
     "name": "Propy",
     "symbol": "PRO",
-    "decimals": 18,
+    "decimals": 8,
     "address": "0x18dd5b087bca9920562aff7a0199b96b9230438b",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PRO.png",
     "isNative": false,
