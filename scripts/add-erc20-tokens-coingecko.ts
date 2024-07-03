@@ -51,8 +51,9 @@ async function fetchAndSaveTokenImage(imageUrl: string, filePath: string) {
 
   console.log('Saving image...')
   if (fs.existsSync(filePath)) {
-    logImageWarning('A token image already exists ')
-    return
+    logImageWarning(
+      'A token image already exists and was overwritten, please check the git diff',
+    )
   }
   fs.writeFileSync(filePath, resizedImage, 'binary')
 
