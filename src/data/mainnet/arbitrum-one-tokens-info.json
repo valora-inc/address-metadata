@@ -142,5 +142,149 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ethWBTC.png",
     "infoUrl": "https://www.coingecko.com/en/coins/wrapped-bitcoin",
     "minimumAppVersionToSwap": "1.77.0"
+  },
+  {
+    "name": "ChainLink Token",
+    "symbol": "LINK",
+    "decimals": 18,
+    "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/LINK.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/chainlink"
+  },
+  {
+    "name": "Uniswap",
+    "symbol": "UNI",
+    "decimals": 18,
+    "address": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UNI.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/uniswap"
+  },
+  {
+    "name": "Dai Stablecoin",
+    "symbol": "DAI",
+    "decimals": 18,
+    "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/dai"
+  },
+  {
+    "name": "Wrapped eETH",
+    "symbol": "weETH",
+    "decimals": 18,
+    "address": "0x35751007a407ca6feffe80b3cb397736d2cf4dbe",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/weETH.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/wrapped-eeth"
+  },
+  {
+    "name": "Pepe",
+    "symbol": "PEPE",
+    "decimals": 18,
+    "address": "0x25d887ce7a35172c62febfd67a1856f20faebb00",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PEPE.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/pepe"
+  },
+  {
+    "name": "Renzo Restaked ETH",
+    "symbol": "ezETH",
+    "decimals": 18,
+    "address": "0x2416092f143378750bb29b79ed961ab195cceea5",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ezETH.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/renzo-restaked-eth"
+  },
+  {
+    "name": "Graph Token",
+    "symbol": "GRT",
+    "decimals": 18,
+    "address": "0x9623063377ad1b27544c965ccd7342f7ea7e88c7",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/GRT.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/the-graph"
+  },
+  {
+    "name": "Rocket Pool ETH",
+    "symbol": "rETH",
+    "decimals": 18,
+    "address": "0xec70dcb4a1efa46b8f2d97c310c9c4790ba5ffa8",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/rETH.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/rocket-pool-eth"
+  },
+  {
+    "name": "Lido DAO Token",
+    "symbol": "LDO",
+    "decimals": 18,
+    "address": "0x13ad51ed4f1b7e9dc168d8a00cb3f4ddd85efa60",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/LDO.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/lido-dao"
+  },
+  {
+    "name": "Bonk",
+    "symbol": "Bonk",
+    "decimals": 5,
+    "address": "0x09199d9a5f4448d0848e4395d065e1ad9c4a1f74",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/Bonk.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/bonk"
+  },
+  {
+    "name": "Decentralized USD",
+    "symbol": "USDD",
+    "decimals": 18,
+    "address": "0x680447595e8b7b3aa1b43beb9f6098c79ac2ab3f",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDD.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/usdd"
+  },
+  {
+    "name": "Gnosis Token",
+    "symbol": "GNO",
+    "decimals": 18,
+    "address": "0xa0b862f60edef4452f25b4160f177db44deb6cf1",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/GNO.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/gnosis"
+  },
+  {
+    "name": "Frax",
+    "symbol": "FRAX",
+    "decimals": 18,
+    "address": "0x17fc002b466eec40dae837fc4be5c67993ddbd6f",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/FRAX.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/frax"
+  },
+  {
+    "name": "Frax Ether",
+    "symbol": "frxETH",
+    "decimals": 18,
+    "address": "0x178412e79c25968a32e89b11f63b33f733770c2a",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/frxETH.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/frax-ether"
+  },
+  {
+    "name": "Coinbase Wrapped Staked ETH",
+    "symbol": "cbETH",
+    "decimals": 18,
+    "address": "0x1debd73e752beaf79865fd6446b0c970eae7732f",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cbETH.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/coinbase-wrapped-staked-eth"
+  },
+  {
+    "name": "Pendle",
+    "symbol": "PENDLE",
+    "decimals": 18,
+    "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PENDLE.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/pendle"
   }
 ]
