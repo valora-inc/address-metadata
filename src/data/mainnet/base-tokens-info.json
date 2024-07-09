@@ -22,156 +22,174 @@
     "isStableCoin": true
   },
   {
-    "name": "Cartesi Token",
-    "symbol": "CTSI",
+    "name": "Dai Stablecoin",
+    "symbol": "DAI",
     "decimals": 18,
-    "address": "0x259fac10c5cbfefe3e710e1d9467f70a76138d45",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CTSI.png",
+    "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/cartesi"
+    "infoUrl": "https://www.coingecko.com/en/coins/dai"
   },
   {
-    "name": "Curve.Fi USD Stablecoin",
-    "symbol": "crvUSD",
+    "name": "Renzo Restaked ETH",
+    "symbol": "ezETH",
     "decimals": 18,
-    "address": "0x417ac0e078398c154edfadd9ef675d30be60af93",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/crvUSD.png",
+    "address": "0x2416092f143378750bb29b79ed961ab195cceea5",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ezETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/crvusd"
+    "infoUrl": "https://www.coingecko.com/en/coins/renzo-restaked-eth"
   },
   {
-    "name": "SmarDex Token",
-    "symbol": "SDEX",
+    "name": "Rocket Pool ETH",
+    "symbol": "rETH",
     "decimals": 18,
-    "address": "0xfd4330b0312fdeec6d4225075b82e00493ff2e3f",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SDEX.png",
+    "address": "0xb6fe221fe9eef5aba221c348ba20a1bf5e73624c",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/rETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/smardex"
+    "infoUrl": "https://www.coingecko.com/en/coins/rocket-pool-eth"
   },
   {
-    "name": "WEXO",
-    "symbol": "WEXO",
+    "name": "Brett",
+    "symbol": "BRETT",
     "decimals": 18,
-    "address": "0xac12f930318be4f9d37f602cbf89cd33e99aa9d4",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WEXO.png",
+    "address": "0x532f27101965dd16442e59d40670faf5ebb142e4",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/BRETT.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/wexo"
+    "infoUrl": "https://www.coingecko.com/en/coins/based-brett"
   },
   {
-    "name": "Toshi",
-    "symbol": "TOSHI",
+    "name": "MANTRA",
+    "symbol": "OM",
     "decimals": 18,
-    "address": "0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/TOSHI.png",
+    "address": "0x3992b27da26848c2b19cea6fd25ad5568b68ab98",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OM.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/toshi"
+    "infoUrl": "https://www.coingecko.com/en/coins/mantra-dao"
   },
   {
-    "name": "Wuffi",
-    "symbol": "WUF",
-    "decimals": 4,
-    "address": "0x4da78059d97f155e18b37765e2e042270f4e0fc4",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WUF.png",
-    "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/wuffi"
-  },
-  {
-    "name": "LimeWire Token",
-    "symbol": "LMWR",
+    "name": "Coinbase Wrapped Staked ETH",
+    "symbol": "cbETH",
     "decimals": 18,
-    "address": "0xe997017e0cb0ceb503565f181e9ea922cd979c35",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/LMWR.png",
+    "address": "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cbETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/limewire-token"
+    "infoUrl": "https://www.coingecko.com/en/coins/coinbase-wrapped-staked-eth"
   },
   {
-    "name": "Dola USD Stablecoin",
-    "symbol": "DOLA",
+    "name": "Wormhole Token",
+    "symbol": "W",
     "decimals": 18,
-    "address": "0x4621b7a9c75199271f773ebd9a499dbd165c3191",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DOLA.png",
+    "address": "0xb0ffa8000886e57f86dd5264b9582b2ad87b2b91",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/W.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/dola-usd"
+    "infoUrl": "https://www.coingecko.com/en/coins/wormhole"
   },
   {
-    "name": "Degen",
-    "symbol": "DEGEN",
+    "name": "Mog Coin",
+    "symbol": "Mog",
     "decimals": 18,
-    "address": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DEGEN.png",
+    "address": "0x2da56acb9ea78330f947bd57c54119debda7af71",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/Mog.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/degen-base"
+    "infoUrl": "https://www.coingecko.com/en/coins/mog-coin"
   },
   {
-    "name": "Propy",
-    "symbol": "PRO",
-    "decimals": 8,
-    "address": "0x18dd5b087bca9920562aff7a0199b96b9230438b",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PRO.png",
-    "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/propy"
-  },
-  {
-    "name": "Spectral Token",
-    "symbol": "SPEC",
-    "decimals": 18,
-    "address": "0x96419929d7949d6a801a6909c145c8eef6a40431",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SPEC.png",
-    "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/spectral"
-  },
-  {
-    "name": "WELL",
-    "symbol": "WELL",
-    "decimals": 18,
-    "address": "0xa88594d404727625a9437c3f886c7643872296ae",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WELL.png",
-    "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/moonwell-artemis"
-  },
-  {
-    "name": "The Doge NFT",
-    "symbol": "DOG",
-    "decimals": 18,
-    "address": "0xafb89a09d82fbde58f18ac6437b3fc81724e4df6",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DOG.png",
-    "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/the-doge-nft"
-  },
-  {
-    "name": "USD+",
-    "symbol": "USD+",
+    "name": "Axelar",
+    "symbol": "AXL",
     "decimals": 6,
-    "address": "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USD+.png",
+    "address": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/AXL.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/usd"
+    "infoUrl": "https://www.coingecko.com/en/coins/axelar"
   },
   {
-    "name": "Aavegotchi GHST Token",
-    "symbol": "GHST",
+    "name": "LayerZero",
+    "symbol": "ZRO",
     "decimals": 18,
-    "address": "0xcd2f22236dd9dfe2356d7c543161d4d260fd9bcb",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/GHST.png",
+    "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ZRO.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/aavegotchi"
+    "infoUrl": "https://www.coingecko.com/en/coins/layerzero"
   },
   {
-    "name": "Basenji",
-    "symbol": "BENJI",
+    "name": "IoTeX Network",
+    "symbol": "IOTX",
     "decimals": 18,
-    "address": "0xbc45647ea894030a4e9801ec03479739fa2485f0",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/BENJI.png",
+    "address": "0xbcbaf311cec8a4eac0430193a528d9ff27ae38c1",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/IOTX.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/basenji"
+    "infoUrl": "https://www.coingecko.com/en/coins/iotex"
   },
   {
-    "name": "ViciCoin",
-    "symbol": "VCNT",
+    "name": "Prime",
+    "symbol": "PRIME",
     "decimals": 18,
-    "address": "0xdcf5130274753c8050ab061b1a1dcbf583f5bfd0",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/VCNT.png",
+    "address": "0xfa980ced6895ac314e7de34ef1bfae90a5add21b",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PRIME.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/vicicoin"
+    "infoUrl": "https://www.coingecko.com/en/coins/echelon-prime"
+  },
+  {
+    "name": "Aerodrome",
+    "symbol": "AERO",
+    "decimals": 18,
+    "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/AERO.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/aerodrome-finance"
+  },
+  {
+    "name": "Reserve Rights",
+    "symbol": "RSR",
+    "decimals": 18,
+    "address": "0xab36452dbac151be02b16ca17d8919826072f64a",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/RSR.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/reserve-rights-token"
+  },
+  {
+    "name": "yearn.finance",
+    "symbol": "YFI",
+    "decimals": 18,
+    "address": "0x9eaf8c1e34f05a589eda6bafdf391cf6ad3cb239",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/YFI.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/yearn-finance"
+  },
+  {
+    "name": "Osaka Protocol",
+    "symbol": "OSAK",
+    "decimals": 18,
+    "address": "0xbfd5206962267c7b4b4a8b3d76ac2e1b2a5c4d5e",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OSAK.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/osaka-protocol"
+  },
+  {
+    "name": "Base tBTC v2",
+    "symbol": "tBTC",
+    "decimals": 18,
+    "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/tBTC.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/tbtc"
+  },
+  {
+    "name": "Balancer",
+    "symbol": "BAL",
+    "decimals": 18,
+    "address": "0x4158734d47fc9692176b5085e0f52ee0da5d47f1",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/BAL.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/balancer"
+  },
+  {
+    "name": "OMI Token",
+    "symbol": "OMI",
+    "decimals": 18,
+    "address": "0x3792dbdd07e87413247df995e692806aa13d3299",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OMI.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/ecomi"
   }
 ]
