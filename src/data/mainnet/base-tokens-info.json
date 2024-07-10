@@ -28,7 +28,9 @@
     "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/dai"
+    "infoUrl": "https://www.coingecko.com/en/coins/dai",
+    "minimumAppVersionToSwap": "1.81.0",
+    "isStableCoin": true
   },
   {
     "name": "Renzo Restaked ETH",
