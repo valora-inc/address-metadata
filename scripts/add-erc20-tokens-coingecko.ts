@@ -2,9 +2,11 @@
 import axios from 'axios'
 import fs from 'fs'
 import Jimp from 'jimp'
-import { createPublicClient, erc20Abi, http } from 'viem'
+import { Address, createPublicClient, erc20Abi, http } from 'viem'
 import * as viemChains from 'viem/chains'
 import yargs from 'yargs'
+
+const coingeckoApiUrl = 'https://api.coingecko.com/api/v3'
 
 // This function is used to log a warning if resizing an original token image
 // that is too far from a square shape (since we expect a 256x256 square).
@@ -21,7 +23,7 @@ function isSquareEnough(width: number, height: number) {
 // manual intervention.
 async function fetchAndSaveTokenImage(imageUrl: string, filePath: string) {
   function logImageWarning(warning: string) {
-    console.warn(`⚠️ ${filePath}: ${warning}. Image url: ${imageUrl}`)
+    console.warn(`👀 ${filePath}: ${warning}. Image url: ${imageUrl}`)
   }
 
   const response = await axios.get(imageUrl, {
@@ -70,7 +72,7 @@ async function getTokensByMarketCap(
   pageNumber: number,
 ) {
   const coingeckoResponse = await axios.get(
-    'https://api.coingecko.com/api/v3/coins/markets',
+    `${coingeckoApiUrl}/coins/markets`,
     {
       params: {
         vs_currency: 'usd',
@@ -90,28 +92,31 @@ async function getTokensByMarketCap(
   return coingeckoResponse.data
 }
 
-async function getTokenDetails(id: string, platformId: string) {
-  const coingeckoResponse = await axios.get(
-    `https://api.coingecko.com/api/v3/coins/${id}`,
-    {
-      params: {
-        localization: false,
-        tickers: false,
-        market_data: false,
-        community_data: false,
-        developer_data: false,
-        sparkline: false,
-      },
+interface CoinListItem {
+  id: string
+  symbol: string
+  name: string
+  platforms: { [key: string]: Address }
+}
+
+async function getCoinsListAsMap() {
+  const coingeckoResponse = await axios.get(`${coingeckoApiUrl}/coins/list`, {
+    params: {
+      include_platform: true,
     },
-  )
-  if (
-    coingeckoResponse.status !== 200 ||
-    !coingeckoResponse.data?.detail_platforms?.[platformId]
-  ) {
-    throw new Error(`Encountered error fetching token details for token ${id}`)
+  })
+  if (coingeckoResponse.status !== 200 || !coingeckoResponse.data) {
+    throw new Error(`Encountered error fetching coins list from Coingecko`)
   }
 
-  return coingeckoResponse.data.detail_platforms[platformId]
+  const coinsList: CoinListItem[] = coingeckoResponse.data
+  return coinsList.reduce(
+    (acc, item) => {
+      acc[item.id] = item
+      return acc
+    },
+    {} as Record<string, CoinListItem>,
+  )
 }
 
 // This function adds new supported tokens to the app by querying the top coins
@@ -127,6 +132,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
     tokensInfoFilePath,
     viemChainId,
     pageNumber,
+    enableSwap,
   } = args
 
   console.log('Reading existing tokens info from ', tokensInfoFilePath)
@@ -137,18 +143,17 @@ async function main(args: ReturnType<typeof parseArgs>) {
   const newTokensInfo = [...existingTokensInfo]
   const fetchFailedTokenIds = []
 
-  console.log('Fetching tokens list by market cap from Coingecko')
-  const tokensByMarketCap = await getTokensByMarketCap(
-    categoryId,
-    numberOfResults,
-    pageNumber,
-  )
+  console.log('Fetching tokens list by market cap and coin list from Coingecko')
+  const [tokensByMarketCap, coingeckoTokensMap] = await Promise.all([
+    getTokensByMarketCap(categoryId, numberOfResults, pageNumber),
+    getCoinsListAsMap(),
+  ])
 
   for (let i = 0; i < tokensByMarketCap.length; i++) {
     const token = tokensByMarketCap[i]
     const { id, image } = token
     if (!id) {
-      console.warn(`⚠️ No id found for token ${token}`)
+      console.warn(`❌ No id found for token ${token}`)
       continue
     }
 
@@ -156,37 +161,19 @@ async function main(args: ReturnType<typeof parseArgs>) {
       `(${i + 1}/${tokensByMarketCap.length}) Processing token ${id}...`,
     )
     if (existingLowerCaseTokenSymbols.has(token.symbol.toLowerCase())) {
-      console.log(`Token ${id} already exists`)
+      console.log(`✌🏻 Token ${id} already exists`)
       continue
     }
     if (!image) {
-      console.warn(`⚠️ No id or image found for token ${token}`)
+      console.warn(`❌ No id or image found for token ${token}`)
       fetchFailedTokenIds.push(id)
       continue
     }
 
-    // avoid rate limit 10-30 requests / minute
-    // https://apiguide.coingecko.com/getting-started/error-and-rate-limit#rate-limit
-    await new Promise((resolve) => setTimeout(resolve, 15_000))
-
-    // get token address from coingecko /coins/{id} endpoint, annoyingly this is
-    // not returned in the /coins/markets response
-    let address = undefined
-    let decimals = undefined
-    try {
-      console.log('Fetching token details from Coingecko...')
-      const tokenDetails = await getTokenDetails(id, platformId)
-      decimals = tokenDetails.decimal_place
-      address = tokenDetails.contract_address
-
-      if (!address || !decimals) {
-        throw new Error(
-          `No address or decimals returned from Coingecko for token ${id}`,
-        )
-      }
-    } catch (error) {
+    const address = coingeckoTokensMap[id]?.platforms[platformId]
+    if (!address) {
       console.warn(
-        `⚠️ Encountered error fetching token address for ${id} from Coingecko: ${error}`,
+        `❌ No address found for token ${id} on platform ${platformId}`,
       )
       fetchFailedTokenIds.push(id)
       continue
@@ -199,7 +186,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
       chain: (viemChains as any)[viemChainId],
       transport: http(),
     })
-    const [symbol, name] = await client.multicall({
+    const [symbol, name, decimals] = await client.multicall({
       contracts: [
         {
           address,
@@ -210,6 +197,11 @@ async function main(args: ReturnType<typeof parseArgs>) {
           address,
           abi: erc20Abi,
           functionName: 'name',
+        },
+        {
+          address,
+          abi: erc20Abi,
+          functionName: 'decimals',
         },
       ],
       allowFailure: false,
@@ -222,7 +214,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
       await fetchAndSaveTokenImage(image, filePath)
     } catch (error) {
       console.warn(
-        `⚠️ Encountered error fetching/resizing/writing image, skipping ${id}. ${error}`,
+        `❌ Encountered error fetching/resizing/writing image, skipping ${id}. ${error}`,
       )
       fetchFailedTokenIds.push(id)
       continue
@@ -236,6 +228,7 @@ async function main(args: ReturnType<typeof parseArgs>) {
       imageUrl: `https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/${symbol}.png`,
       isNative: false,
       infoUrl: `https://www.coingecko.com/en/coins/${id}`,
+      ...(enableSwap && { minimumAppVersionToSwap: '1.77.0' }),
     })
 
     // update the file after every token is fetched because the coingecko rate
@@ -283,13 +276,18 @@ function parseArgs() {
     .option('page-number', {
       description: 'Page number of the tokens requested.',
       type: 'number',
-      default: 2,
+      default: 1,
     })
     .option('tokens-info-file-path', {
       description:
         'e.g. src/data/mainnet/ethereum-tokens-info.json. Path of the tokens info file relative to the root folder.',
       type: 'string',
       demandOption: true,
+    })
+    .option('enable-swap', {
+      description: 'Enable swap for the new tokens from app version 1.77.0',
+      type: 'boolean',
+      default: true,
     })
     .parseSync()
 }
