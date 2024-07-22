@@ -210,5 +210,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OCEAN.png",
     "isNative": false,
     "infoUrl": "https://www.coingecko.com/en/coins/ocean-protocol"
+  },
+  {
+    "address": "0xeb466342c4d449bc9f53a865d5cb90586f405215",
+    "decimals": 6,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
+    "name": "Axelar Wrapped USDC",
+    "symbol": "axlUSDC"
   }
 ]

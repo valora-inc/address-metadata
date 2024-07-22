@@ -18,5 +18,12 @@
     "minimumAppVersionToSwap": "1.82.0",
     "isCashInEligible": true,
     "isStableCoin": true
+  },
+  {
+    "address": "0x750e4c4984a9e0f12978ea6742bc1c5d248f40ed",
+    "decimals": 6,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
+    "name": "Axelar Wrapped USDC",
+    "symbol": "axlUSDC"
   }
 ]
