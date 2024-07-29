@@ -729,5 +729,12 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/MENTO.png",
     "name": "Mento Token",
     "symbol": "MENTO"
+  },
+  {
+    "address": "0x7a6c668af7697fef8c44d55269653fcd28e10715",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/KTTD.png",
+    "name": "Kolektivo TTD",
+    "symbol": "KTTD"
   }
 ]
