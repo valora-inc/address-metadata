@@ -56,7 +56,8 @@
     "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WBTC.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/wrapped-bitcoin"
+    "infoUrl": "https://www.coingecko.com/en/coins/wrapped-bitcoin",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "ChainLink Token",
@@ -65,7 +66,8 @@
     "address": "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/LINK.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/chainlink"
+    "infoUrl": "https://www.coingecko.com/en/coins/chainlink",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Uniswap",
@@ -74,7 +76,8 @@
     "address": "0x6fd9d7ad17242c41f7131d257212c54a0e816691",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UNI.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/uniswap"
+    "infoUrl": "https://www.coingecko.com/en/coins/uniswap",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Dai Stablecoin",
@@ -83,7 +86,8 @@
     "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/dai"
+    "infoUrl": "https://www.coingecko.com/en/coins/dai",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Rocket Pool ETH",
@@ -92,7 +96,8 @@
     "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/rETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/rocket-pool-eth"
+    "infoUrl": "https://www.coingecko.com/en/coins/rocket-pool-eth",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Lido DAO Token",
@@ -101,7 +106,8 @@
     "address": "0xfdb794692724153d1488ccdbe0c56c252596735f",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/LDO.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/lido-dao"
+    "infoUrl": "https://www.coingecko.com/en/coins/lido-dao",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Aave Token",
@@ -110,7 +116,8 @@
     "address": "0x76fb31fb4af56892a25e32cfc43de717950c9278",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/AAVE.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/aave"
+    "infoUrl": "https://www.coingecko.com/en/coins/aave",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Frax",
@@ -119,7 +126,8 @@
     "address": "0x2e3d870790dc77a83dd1d18184acc7439a53f475",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/FRAX.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/frax"
+    "infoUrl": "https://www.coingecko.com/en/coins/frax",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Frax Ether",
@@ -128,7 +136,8 @@
     "address": "0x6806411765af15bddd26f8f544a34cc40cb9838b",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/frxETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/frax-ether"
+    "infoUrl": "https://www.coingecko.com/en/coins/frax-ether",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Coinbase Wrapped Staked ETH",
@@ -137,7 +146,8 @@
     "address": "0xaddb6a0412de1ba0f936dcaeb8aaa24578dcf3b2",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cbETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/coinbase-wrapped-staked-eth"
+    "infoUrl": "https://www.coingecko.com/en/coins/coinbase-wrapped-staked-eth",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Worldcoin",
@@ -146,7 +156,8 @@
     "address": "0xdc6ff44d5d932cbd77b52e5612ba0529dc6226f1",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WLD.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/worldcoin-wld"
+    "infoUrl": "https://www.coingecko.com/en/coins/worldcoin-wld",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Pendle",
@@ -155,7 +166,8 @@
     "address": "0xbc7b1ff1c6989f006a1185318ed4e7b5796e66e1",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PENDLE.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/pendle"
+    "infoUrl": "https://www.coingecko.com/en/coins/pendle",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Synthetix Network Token",
@@ -164,7 +176,8 @@
     "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SNX.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/havven"
+    "infoUrl": "https://www.coingecko.com/en/coins/havven",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Staked Frax Ether",
@@ -173,7 +186,8 @@
     "address": "0x484c2d6e3cdd945a8b2df735e079178c1036578c",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/sfrxETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/staked-frax-ether"
+    "infoUrl": "https://www.coingecko.com/en/coins/staked-frax-ether",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Axelar",
@@ -182,7 +196,8 @@
     "address": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/AXL.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/axelar"
+    "infoUrl": "https://www.coingecko.com/en/coins/axelar",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "LayerZero",
@@ -191,7 +206,8 @@
     "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ZRO.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/layerzero"
+    "infoUrl": "https://www.coingecko.com/en/coins/layerzero",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Curve DAO Token",
@@ -200,7 +216,8 @@
     "address": "0x0994206dfe8de6ec6920ff4d779b0d950605fb53",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/curve-dao-token"
+    "infoUrl": "https://www.coingecko.com/en/coins/curve-dao-token",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Ocean Token",
@@ -209,13 +226,15 @@
     "address": "0x2561aa2bb1d2eb6629edd7b0938d7679b8b49f9e",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OCEAN.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/ocean-protocol"
+    "infoUrl": "https://www.coingecko.com/en/coins/ocean-protocol",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0xeb466342c4d449bc9f53a865d5cb90586f405215",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "Axelar Wrapped USDC",
-    "symbol": "axlUSDC"
+    "symbol": "axlUSDC",
+    "minimumAppVersionToSwap": "1.77.0"
   }
 ]
