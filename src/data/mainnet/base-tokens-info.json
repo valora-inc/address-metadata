@@ -39,7 +39,8 @@
     "address": "0x2416092f143378750bb29b79ed961ab195cceea5",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ezETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/renzo-restaked-eth"
+    "infoUrl": "https://www.coingecko.com/en/coins/renzo-restaked-eth",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Rocket Pool ETH",
@@ -48,7 +49,8 @@
     "address": "0xb6fe221fe9eef5aba221c348ba20a1bf5e73624c",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/rETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/rocket-pool-eth"
+    "infoUrl": "https://www.coingecko.com/en/coins/rocket-pool-eth",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Brett",
@@ -57,7 +59,8 @@
     "address": "0x532f27101965dd16442e59d40670faf5ebb142e4",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/BRETT.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/based-brett"
+    "infoUrl": "https://www.coingecko.com/en/coins/based-brett",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "MANTRA",
@@ -66,7 +69,8 @@
     "address": "0x3992b27da26848c2b19cea6fd25ad5568b68ab98",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OM.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/mantra-dao"
+    "infoUrl": "https://www.coingecko.com/en/coins/mantra-dao",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Coinbase Wrapped Staked ETH",
@@ -75,7 +79,8 @@
     "address": "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cbETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/coinbase-wrapped-staked-eth"
+    "infoUrl": "https://www.coingecko.com/en/coins/coinbase-wrapped-staked-eth",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Wormhole Token",
@@ -84,7 +89,8 @@
     "address": "0xb0ffa8000886e57f86dd5264b9582b2ad87b2b91",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/W.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/wormhole"
+    "infoUrl": "https://www.coingecko.com/en/coins/wormhole",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Mog Coin",
@@ -93,7 +99,8 @@
     "address": "0x2da56acb9ea78330f947bd57c54119debda7af71",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/Mog.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/mog-coin"
+    "infoUrl": "https://www.coingecko.com/en/coins/mog-coin",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Axelar",
@@ -102,7 +109,8 @@
     "address": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/AXL.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/axelar"
+    "infoUrl": "https://www.coingecko.com/en/coins/axelar",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "LayerZero",
@@ -111,7 +119,8 @@
     "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ZRO.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/layerzero"
+    "infoUrl": "https://www.coingecko.com/en/coins/layerzero",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "IoTeX Network",
@@ -120,7 +129,8 @@
     "address": "0xbcbaf311cec8a4eac0430193a528d9ff27ae38c1",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/IOTX.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/iotex"
+    "infoUrl": "https://www.coingecko.com/en/coins/iotex",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Prime",
@@ -129,7 +139,8 @@
     "address": "0xfa980ced6895ac314e7de34ef1bfae90a5add21b",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PRIME.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/echelon-prime"
+    "infoUrl": "https://www.coingecko.com/en/coins/echelon-prime",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Aerodrome",
@@ -138,7 +149,8 @@
     "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/AERO.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/aerodrome-finance"
+    "infoUrl": "https://www.coingecko.com/en/coins/aerodrome-finance",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Reserve Rights",
@@ -147,7 +159,8 @@
     "address": "0xab36452dbac151be02b16ca17d8919826072f64a",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/RSR.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/reserve-rights-token"
+    "infoUrl": "https://www.coingecko.com/en/coins/reserve-rights-token",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "yearn.finance",
@@ -156,7 +169,8 @@
     "address": "0x9eaf8c1e34f05a589eda6bafdf391cf6ad3cb239",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/YFI.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/yearn-finance"
+    "infoUrl": "https://www.coingecko.com/en/coins/yearn-finance",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Osaka Protocol",
@@ -165,7 +179,8 @@
     "address": "0xbfd5206962267c7b4b4a8b3d76ac2e1b2a5c4d5e",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OSAK.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/osaka-protocol"
+    "infoUrl": "https://www.coingecko.com/en/coins/osaka-protocol",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Base tBTC v2",
@@ -174,7 +189,8 @@
     "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/tBTC.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/tbtc"
+    "infoUrl": "https://www.coingecko.com/en/coins/tbtc",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "Balancer",
@@ -183,7 +199,8 @@
     "address": "0x4158734d47fc9692176b5085e0f52ee0da5d47f1",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/BAL.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/balancer"
+    "infoUrl": "https://www.coingecko.com/en/coins/balancer",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "name": "OMI Token",
@@ -192,13 +209,15 @@
     "address": "0x3792dbdd07e87413247df995e692806aa13d3299",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/OMI.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/ecomi"
+    "infoUrl": "https://www.coingecko.com/en/coins/ecomi",
+    "minimumAppVersionToSwap": "1.81.0"
   },
   {
     "address": "0xeb466342c4d449bc9f53a865d5cb90586f405215",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "Axelar Wrapped USDC",
-    "symbol": "axlUSDC"
+    "symbol": "axlUSDC",
+    "minimumAppVersionToSwap": "1.81.0"
   }
 ]

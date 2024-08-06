@@ -47,7 +47,8 @@
     "symbol": "aArbUSDCn",
     "decimals": 6,
     "pegTo": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png"
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978",
@@ -69,54 +70,62 @@
     "address": "0x845c8bc94610807fcbab5dd2bc7ac9dabaff3c55",
     "name": "TriCRV-ARBITRUM",
     "symbol": "crvUSDARBCRV",
-    "decimals": 18
+    "decimals": 18,
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0xfbf7b624a7af73ef699ffc09078d17667973f456",
     "name": "Stake DAO sdcrvUSDARBCRV-vault Gauge",
     "symbol": "sdcrvUSDARBCRV-vault-gauge",
     "decimals": 18,
-    "pegTo": "0x845c8bc94610807fcbab5dd2bc7ac9dabaff3c55"
+    "pegTo": "0x845c8bc94610807fcbab5dd2bc7ac9dabaff3c55",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0x73af1150f265419ef8a5db41908b700c32d49135",
     "name": "crvUSD/USDT",
     "symbol": "crvUSDT",
-    "decimals": 18
+    "decimals": 18,
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0x627b57ad0a2219c44e9b5ae11ea8802a9411433b",
     "name": "Stake DAO sdcrvUSDT-vault Gauge",
     "symbol": "sdcrvUSDT-vault-gauge",
     "decimals": 18,
-    "pegTo": "0x73af1150f265419ef8a5db41908b700c32d49135"
+    "pegTo": "0x73af1150f265419ef8a5db41908b700c32d49135",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0x75289388d50364c3013583d97bd70ced0e183e32",
     "name": "Aladdin sdCRV",
     "symbol": "asdCRV",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png"
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0x62d5a59e0d67c0381aad53b201b4a1b8dcd2c833",
     "name": "Vote Boosted sdCRV",
     "symbol": "vsdCRV",
     "decimals": 18,
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png"
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0xb85246768cfea42b0c935265db798c9ae457646f",
     "name": "CRV/asdCRV/vsdCRV",
     "symbol": "VASDCRV",
-    "decimals": 18
+    "decimals": 18,
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0xd038af8545662af0625a11d15b18015fcd28b7fb",
     "name": "Stake DAO sdVASDCRV-vault Gauge",
     "symbol": "sdVASDCRV-vault-gauge",
     "decimals": 18,
-    "pegTo": "0xb85246768cfea42b0c935265db798c9ae457646f"
+    "pegTo": "0xb85246768cfea42b0c935265db798c9ae457646f",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
@@ -132,7 +141,8 @@
     "symbol": "aArbWETH",
     "decimals": 18,
     "pegTo": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
-    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png"
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Wrapped BTC",
@@ -150,7 +160,8 @@
     "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/LINK.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/chainlink"
+    "infoUrl": "https://www.coingecko.com/en/coins/chainlink",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Uniswap",
@@ -159,7 +170,8 @@
     "address": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/UNI.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/uniswap"
+    "infoUrl": "https://www.coingecko.com/en/coins/uniswap",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Dai Stablecoin",
@@ -168,7 +180,8 @@
     "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/DAI.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/dai"
+    "infoUrl": "https://www.coingecko.com/en/coins/dai",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Wrapped eETH",
@@ -177,7 +190,8 @@
     "address": "0x35751007a407ca6feffe80b3cb397736d2cf4dbe",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/weETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/wrapped-eeth"
+    "infoUrl": "https://www.coingecko.com/en/coins/wrapped-eeth",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Pepe",
@@ -186,7 +200,8 @@
     "address": "0x25d887ce7a35172c62febfd67a1856f20faebb00",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PEPE.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/pepe"
+    "infoUrl": "https://www.coingecko.com/en/coins/pepe",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Renzo Restaked ETH",
@@ -195,7 +210,8 @@
     "address": "0x2416092f143378750bb29b79ed961ab195cceea5",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/ezETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/renzo-restaked-eth"
+    "infoUrl": "https://www.coingecko.com/en/coins/renzo-restaked-eth",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Graph Token",
@@ -204,7 +220,8 @@
     "address": "0x9623063377ad1b27544c965ccd7342f7ea7e88c7",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/GRT.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/the-graph"
+    "infoUrl": "https://www.coingecko.com/en/coins/the-graph",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Rocket Pool ETH",
@@ -213,7 +230,8 @@
     "address": "0xec70dcb4a1efa46b8f2d97c310c9c4790ba5ffa8",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/rETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/rocket-pool-eth"
+    "infoUrl": "https://www.coingecko.com/en/coins/rocket-pool-eth",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Lido DAO Token",
@@ -222,7 +240,8 @@
     "address": "0x13ad51ed4f1b7e9dc168d8a00cb3f4ddd85efa60",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/LDO.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/lido-dao"
+    "infoUrl": "https://www.coingecko.com/en/coins/lido-dao",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Bonk",
@@ -231,7 +250,8 @@
     "address": "0x09199d9a5f4448d0848e4395d065e1ad9c4a1f74",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/Bonk.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/bonk"
+    "infoUrl": "https://www.coingecko.com/en/coins/bonk",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Decentralized USD",
@@ -240,7 +260,8 @@
     "address": "0x680447595e8b7b3aa1b43beb9f6098c79ac2ab3f",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDD.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/usdd"
+    "infoUrl": "https://www.coingecko.com/en/coins/usdd",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Gnosis Token",
@@ -249,7 +270,8 @@
     "address": "0xa0b862f60edef4452f25b4160f177db44deb6cf1",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/GNO.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/gnosis"
+    "infoUrl": "https://www.coingecko.com/en/coins/gnosis",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Frax",
@@ -258,7 +280,8 @@
     "address": "0x17fc002b466eec40dae837fc4be5c67993ddbd6f",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/FRAX.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/frax"
+    "infoUrl": "https://www.coingecko.com/en/coins/frax",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Frax Ether",
@@ -267,7 +290,8 @@
     "address": "0x178412e79c25968a32e89b11f63b33f733770c2a",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/frxETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/frax-ether"
+    "infoUrl": "https://www.coingecko.com/en/coins/frax-ether",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Coinbase Wrapped Staked ETH",
@@ -276,7 +300,8 @@
     "address": "0x1debd73e752beaf79865fd6446b0c970eae7732f",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cbETH.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/coinbase-wrapped-staked-eth"
+    "infoUrl": "https://www.coingecko.com/en/coins/coinbase-wrapped-staked-eth",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "name": "Pendle",
@@ -285,13 +310,15 @@
     "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PENDLE.png",
     "isNative": false,
-    "infoUrl": "https://www.coingecko.com/en/coins/pendle"
+    "infoUrl": "https://www.coingecko.com/en/coins/pendle",
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0xeb466342c4d449bc9f53a865d5cb90586f405215",
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "name": "Axelar Wrapped USDC",
-    "symbol": "axlUSDC"
+    "symbol": "axlUSDC",
+    "minimumAppVersionToSwap": "1.77.0"
   }
 ]
