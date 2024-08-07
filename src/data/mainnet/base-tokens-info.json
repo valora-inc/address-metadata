@@ -12,6 +12,16 @@
     "isCashOutEligible": true
   },
   {
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "decimals": 18,
+    "address": "0x4200000000000000000000000000000000000006",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WETH.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/weth",
+    "minimumAppVersionToSwap": "1.81.0"
+  },
+  {
     "name": "USDC",
     "symbol": "USDC",
     "decimals": 6,
