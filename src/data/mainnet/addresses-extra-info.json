@@ -264,5 +264,9 @@
   "0x2d5d7d31f671f86c782533cc367f14109a082712": {
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/gas-refund.png",
     "name": "Swap Fee Refund"
+  },
+  "0xef2a1f57db85b6bc1e095131a44c1bdc47b59472": {
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/addresses/valora.png",
+    "name": "Valora Learn & Earn Reward"
   }
 }
