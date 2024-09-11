@@ -34,7 +34,7 @@
   },
   {
     "name": "Tether USD",
-    "symbol": "USDT",
+    "symbol": "USD₮",
     "decimals": 6,
     "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
