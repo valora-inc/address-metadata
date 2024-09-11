@@ -27,7 +27,7 @@
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
     "name": "Tether USD",
-    "symbol": "USDT",
+    "symbol": "USD₮",
     "minimumAppVersionToSwap": "1.77.0",
     "isCashInEligible": true,
     "isCashOutEligible": true,

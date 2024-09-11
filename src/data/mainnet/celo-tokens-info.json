@@ -560,7 +560,7 @@
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
     "name": "Tether USD",
-    "symbol": "USDT",
+    "symbol": "USD₮",
     "minimumAppVersionToSwap": "1.68.0",
     "bridge": "Wormhole"
   },
@@ -650,7 +650,7 @@
     "decimals": 6,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDT.png",
     "name": "Tether USD",
-    "symbol": "USDT",
+    "symbol": "USD₮",
     "bridge": "Optics v2"
   },
   {
@@ -707,7 +707,7 @@
     "name": "Tether USD",
     "feeCurrencyAdapterAddress": "0x0e2a3e05bc9a16f5292a6170456a710cb89c6f72",
     "feeCurrencyAdapterDecimals": 18,
-    "symbol": "USDT",
+    "symbol": "USD₮",
     "showZeroBalance": true,
     "isCashInEligible": true,
     "isStableCoin": true,
