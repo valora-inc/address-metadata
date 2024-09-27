@@ -739,5 +739,14 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/KTTD.png",
     "name": "Kolektivo TTD",
     "symbol": "KTTD"
+  },
+  {
+    "address": "0x105d4a9306d2e55a71d2eb95b81553ae1dc20d7b",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/PUSO.png",
+    "name": "PUSO",
+    "isStableCoin": true,
+    "minimumAppVersionToSwap": "1.68.0",
+    "symbol": "PUSO"
   }
 ]
