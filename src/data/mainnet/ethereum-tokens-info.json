@@ -991,5 +991,15 @@
     "isNative": false,
     "infoUrl": "https://www.coingecko.com/en/coins/ethena",
     "minimumAppVersionToSwap": "1.72.0"
+  },
+  {
+    "name": "Humanode",
+    "symbol": "eHMND",
+    "decimals": 18,
+    "address": "0x0000000000000000000000000000000000000802",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/HMND.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/humanode",
+    "minimumAppVersionToSwap": "1.72.0"
   }
 ]
