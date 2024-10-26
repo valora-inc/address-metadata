@@ -748,5 +748,14 @@
     "isStableCoin": true,
     "minimumAppVersionToSwap": "1.68.0",
     "symbol": "PUSO"
+  },
+  {
+    "address": "XXXXXXX",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cCOP.png",
+    "name": "cCOP",
+    "isStableCoin": true,
+    "minimumAppVersionToSwap": "1.68.0",
+    "symbol": "cCOP"
   }
 ]
