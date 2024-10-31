@@ -750,7 +750,7 @@
     "symbol": "PUSO"
   },
   {
-    "address": "0x8A567e2aE79CA692Bd748aB832081C45de4041eA",
+    "address": "0x8a567e2ae79ca692bd748ab832081c45de4041ea",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cCOP.png",
     "name": "Celo Colombian Peso",
