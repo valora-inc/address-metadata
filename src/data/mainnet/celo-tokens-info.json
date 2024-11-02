@@ -748,5 +748,13 @@
     "isStableCoin": true,
     "minimumAppVersionToSwap": "1.68.0",
     "symbol": "PUSO"
+  },
+  {
+    "address": "0x8a567e2ae79ca692bd748ab832081c45de4041ea",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cCOP.png",
+    "name": "Celo Colombian Peso",
+    "isStableCoin": true,
+    "symbol": "cCOP"
   }
 ]
