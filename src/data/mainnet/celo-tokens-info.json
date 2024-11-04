@@ -724,7 +724,8 @@
     "isCashInEligible": true,
     "isStableCoin": true,
     "minimumAppVersionToSwap": "1.68.0",
-    "symbol": "cKES"
+    "symbol": "cKES",
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-kenyan-shilling"
   },
   {
     "address": "0x7ff62f59e3e89ea34163ea1458eebcc81177cfb6",
