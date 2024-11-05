@@ -991,5 +991,15 @@
     "isNative": false,
     "infoUrl": "https://www.coingecko.com/en/coins/ethena",
     "minimumAppVersionToSwap": "1.72.0"
+  },
+  {
+    "name": "WalletConnect",
+    "symbol": "WCT",
+    "decimals": 18,
+    "address": "0x61cc6af18c351351148815c5f4813a16dee7a7e4",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WCT.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/walletconnect-token",
+    "minimumAppVersionToSwap": "1.72.0"
   }
 ]

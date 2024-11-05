@@ -236,5 +236,15 @@
     "name": "Axelar Wrapped USDC",
     "symbol": "axlUSDC",
     "minimumAppVersionToSwap": "1.77.0"
+  },
+  {
+    "name": "WalletConnect",
+    "symbol": "WCT",
+    "decimals": 18,
+    "address": "0xef4461891dfb3ac8572ccf7c794664a8dd927945",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/WCT.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/walletconnect-token",
+    "minimumAppVersionToSwap": "1.77.0"
   }
 ]
