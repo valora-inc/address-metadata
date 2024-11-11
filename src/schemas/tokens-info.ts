@@ -57,6 +57,11 @@ const BaseTokenInfoSchema = Joi.object({
   minimumAppVersionToSwap: Joi.string()
     .pattern(/^\d+\.\d+\.\d+$/)
     .custom(checkMinVersion, 'has a valid version'),
+  maxSupportedVersion: Joi.object({
+    valora: Joi.string()
+      .pattern(/^\d+\.\d+\.\d+$/)
+      .custom(checkMinVersion, 'has a valid version'),
+  }),
   isNative: Joi.boolean(),
   isL2Native: Joi.boolean(),
   infoUrl: Joi.string()
