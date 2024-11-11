@@ -50,7 +50,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/USDC.png",
     "minimumAppVersionToSwap": "1.77.0",
     "maxSupportedVersion": {
-      "valora": "1.96.0"
+      "valora": "1.95.1"
     }
   },
   {
