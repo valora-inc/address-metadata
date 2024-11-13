@@ -60,7 +60,6 @@ const BaseTokenInfoSchema = Joi.object({
   maxSupportedVersion: Joi.object({
     valora: Joi.string()
       .pattern(/^\d+\.\d+\.\d+$/)
-      .custom(checkMinVersion, 'has a valid version'),
   }),
   isNative: Joi.boolean(),
   isL2Native: Joi.boolean(),
