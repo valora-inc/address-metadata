@@ -59,7 +59,10 @@
     "symbol": "CRV",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png",
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "maxSupportedVersion": {
+      "valora": "1.95.1"
+    }
   },
   {
     "address": "0x498bf2b1e120fed3ad3d42ea2165e9b73f99c1e5",
@@ -67,14 +70,20 @@
     "symbol": "crvUSD",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/crvUSD.png",
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "maxSupportedVersion": {
+      "valora": "1.95.1"
+    }
   },
   {
     "address": "0x845c8bc94610807fcbab5dd2bc7ac9dabaff3c55",
     "name": "TriCRV-ARBITRUM",
     "symbol": "crvUSDARBCRV",
     "decimals": 18,
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "maxSupportedVersion": {
+      "valora": "1.95.1"
+    }
   },
   {
     "address": "0xfbf7b624a7af73ef699ffc09078d17667973f456",
@@ -82,14 +91,20 @@
     "symbol": "sdcrvUSDARBCRV-vault-gauge",
     "decimals": 18,
     "pegTo": "0x845c8bc94610807fcbab5dd2bc7ac9dabaff3c55",
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "maxSupportedVersion": {
+      "valora": "1.95.1"
+    }
   },
   {
     "address": "0x73af1150f265419ef8a5db41908b700c32d49135",
     "name": "crvUSD/USDT",
     "symbol": "crvUSDT",
     "decimals": 18,
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "maxSupportedVersion": {
+      "valora": "1.95.1"
+    }
   },
   {
     "address": "0x627b57ad0a2219c44e9b5ae11ea8802a9411433b",
@@ -97,7 +112,10 @@
     "symbol": "sdcrvUSDT-vault-gauge",
     "decimals": 18,
     "pegTo": "0x73af1150f265419ef8a5db41908b700c32d49135",
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "maxSupportedVersion": {
+      "valora": "1.95.1"
+    }
   },
   {
     "address": "0x75289388d50364c3013583d97bd70ced0e183e32",
@@ -105,7 +123,10 @@
     "symbol": "asdCRV",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png",
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "maxSupportedVersion": {
+      "valora": "1.95.1"
+    }
   },
   {
     "address": "0x62d5a59e0d67c0381aad53b201b4a1b8dcd2c833",
@@ -113,14 +134,20 @@
     "symbol": "vsdCRV",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/CRV.png",
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "maxSupportedVersion": {
+      "valora": "1.95.1"
+    }
   },
   {
     "address": "0xb85246768cfea42b0c935265db798c9ae457646f",
     "name": "CRV/asdCRV/vsdCRV",
     "symbol": "VASDCRV",
     "decimals": 18,
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "maxSupportedVersion": {
+      "valora": "1.95.1"
+    }
   },
   {
     "address": "0xd038af8545662af0625a11d15b18015fcd28b7fb",
@@ -128,7 +155,10 @@
     "symbol": "sdVASDCRV-vault-gauge",
     "decimals": 18,
     "pegTo": "0xb85246768cfea42b0c935265db798c9ae457646f",
-    "minimumAppVersionToSwap": "1.77.0"
+    "minimumAppVersionToSwap": "1.77.0",
+    "maxSupportedVersion": {
+      "valora": "1.95.1"
+    }
   },
   {
     "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
