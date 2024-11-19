@@ -722,6 +722,7 @@
     "canTransferWithComment": true,
     "name": "Celo Kenyan Shilling",
     "isCashInEligible": true,
+    "isCashOutEligible": true,
     "isStableCoin": true,
     "minimumAppVersionToSwap": "1.68.0",
     "symbol": "cKES",
