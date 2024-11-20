@@ -67,10 +67,7 @@
     "symbol": "crvUSD",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/crvUSD.png",
-    "minimumAppVersionToSwap": "1.77.0",
-    "maxSupportedVersion": {
-      "valora": "1.95.1"
-    }
+    "minimumAppVersionToSwap": "1.77.0"
   },
   {
     "address": "0x845c8bc94610807fcbab5dd2bc7ac9dabaff3c55",
