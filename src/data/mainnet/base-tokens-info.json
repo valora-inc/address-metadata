@@ -241,6 +241,7 @@
     "address": "0x34c990ee5aa627e9304234cc59b0734163eac06b",
     "decimals": 18,
     "name": "BRUNETTE",
-    "symbol": "BRUNETTE"
+    "symbol": "BRUNETTE",
+    "minimumAppVersionToSwap": "1.81.0"
   }
 ]
