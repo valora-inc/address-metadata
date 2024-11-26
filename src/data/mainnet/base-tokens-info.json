@@ -229,5 +229,19 @@
     "name": "Axelar Wrapped USDC",
     "symbol": "axlUSDC",
     "minimumAppVersionToSwap": "1.81.0"
+  },
+  {
+    "address": "0x28bc44f9754f590da1564c1a7ba35f8e1d1b134a",
+    "decimals": 18,
+    "name": "Blonde",
+    "symbol": "BLONDE",
+    "minimumAppVersionToSwap": "1.81.0"
+  },
+  {
+    "address": "0x34c990ee5aa627e9304234cc59b0734163eac06b",
+    "decimals": 18,
+    "name": "BRUNETTE",
+    "symbol": "BRUNETTE",
+    "minimumAppVersionToSwap": "1.81.0"
   }
 ]
