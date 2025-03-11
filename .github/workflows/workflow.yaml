@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.18.3'
           check-latest: true
       - run: yarn
       - run: yarn typecheck
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.18.3'
           check-latest: true
       - run: yarn
       - run: yarn test:ci
@@ -57,7 +57,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v2
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.18.3'
           check-latest: true
       - run: yarn
       - run: yarn update:rtdb --project=testnet --database-url=https://celo-mobile-alfajores.firebaseio.com/
@@ -76,7 +76,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v2
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.18.3'
           check-latest: true
       - run: yarn
       - run: yarn update:rtdb --project=mainnet --database-url=https://celo-mobile-mainnet.firebaseio.com/
@@ -93,7 +93,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v2
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.18.3'
           check-latest: true
       - run: yarn
       - run: yarn update:bq
@@ -112,7 +112,7 @@ jobs:
           credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.18.3'
           check-latest: true
       - run: yarn
       - id: secrets
@@ -141,7 +141,7 @@ jobs:
           install_components: 'beta'
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.18.3'
           check-latest: true
       - uses: actions/cache@v4
         with:
@@ -171,7 +171,7 @@ jobs:
           install_components: 'beta'
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.18.3'
           check-latest: true
       - uses: actions/cache@v4
         with:
