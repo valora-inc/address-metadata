@@ -252,7 +252,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cbBTC.png",
     "isNative": false,
     "infoUrl": "https://www.coingecko.com/en/coins/coinbase-wrapped-btc",
-    "minimumAppVersionToSwap": "1.81.0"
+    "minimumAppVersionToSwap": "1.105.0"
   },
   {
     "name": "Keeta",
@@ -262,7 +262,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/KTA.png",
     "isNative": false,
     "infoUrl": "https://www.coingecko.com/en/coins/keeta",
-    "minimumAppVersionToSwap": "1.81.0"
+    "minimumAppVersionToSwap": "1.105.0"
   },
   {
     "name": "Virtual Protocol",
@@ -272,7 +272,7 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/VIRTUAL.png",
     "isNative": false,
     "infoUrl": "https://www.coingecko.com/en/coins/virtual-protocol",
-    "minimumAppVersionToSwap": "1.81.0"
+    "minimumAppVersionToSwap": "1.105.0"
   },
   {
     "name": "Lombard Staked BTC",
@@ -282,6 +282,6 @@
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/LBTC.png",
     "isNative": false,
     "infoUrl": "https://www.coingecko.com/en/coins/lombard-staked-btc",
-    "minimumAppVersionToSwap": "1.81.0"
+    "minimumAppVersionToSwap": "1.105.0"
   }
 ]
