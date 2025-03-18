@@ -283,5 +283,15 @@
     "isNative": false,
     "infoUrl": "https://www.coingecko.com/en/coins/lombard-staked-btc",
     "minimumAppVersionToSwap": "1.81.0"
+  },
+  {
+    "name": "Super OETH",
+    "symbol": "SUPEROETHB",
+    "decimals": 18,
+    "address": "0xdbfefd2e8460a6ee4955a68582f85708baea60a3",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SUPEROETHB.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/super-oeth",
+    "isSwappable": false
   }
 ]
