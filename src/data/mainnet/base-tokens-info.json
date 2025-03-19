@@ -243,5 +243,55 @@
     "name": "BRUNETTE",
     "symbol": "BRUNETTE",
     "minimumAppVersionToSwap": "1.81.0"
+  },
+  {
+    "name": "Coinbase Wrapped Bitcoin",
+    "symbol": "cbBTC",
+    "decimals": 8,
+    "address": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cbBTC.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/coinbase-wrapped-btc",
+    "minimumAppVersionToSwap": "1.81.0"
+  },
+  {
+    "name": "Keeta",
+    "symbol": "KTA",
+    "decimals": 18,
+    "address": "0xc0634090f2fe6c6d75e61be2b949464abb498973",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/KTA.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/keeta",
+    "minimumAppVersionToSwap": "1.81.0"
+  },
+  {
+    "name": "Virtual Protocol",
+    "symbol": "VIRTUAL",
+    "decimals": 18,
+    "address": "0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/VIRTUAL.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/virtual-protocol",
+    "minimumAppVersionToSwap": "1.81.0"
+  },
+  {
+    "name": "Lombard Staked BTC",
+    "symbol": "LBTC",
+    "decimals": 8,
+    "address": "0xecac9c5f704e954931349da37f60e39f515c11c1",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/LBTC.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/lombard-staked-btc",
+    "minimumAppVersionToSwap": "1.81.0"
+  },
+  {
+    "name": "Super OETH",
+    "symbol": "SUPEROETHB",
+    "decimals": 18,
+    "address": "0xdbfefd2e8460a6ee4955a68582f85708baea60a3",
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/SUPEROETHB.png",
+    "isNative": false,
+    "infoUrl": "https://www.coingecko.com/en/coins/super-oeth",
+    "isSwappable": false
   }
 ]
