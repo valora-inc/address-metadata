@@ -761,5 +761,65 @@
     "isStableCoin": true,
     "minimumAppVersionToSwap": "1.68.0",
     "symbol": "cCOP"
+  },
+  {
+    "address": "0xfaea5f3404bba20d3cc2f8c4b0a888f55a3c7313",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cGHS.png",
+    "isFeeCurrency": true,
+    "canTransferWithComment": true,
+    "name": "Celo Ghanaian Cedi",
+    "isStableCoin": true,
+    "minimumAppVersionToSwap": "1.68.0",
+    "symbol": "cGHS",
+    "infoUrl": "https://www.coingecko.com/en/coins/cghs"
+  },
+  {
+    "address": "0xccf663b1ff11028f0b19058d0f7b674004a40746",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cGBP.png",
+    "isFeeCurrency": true,
+    "canTransferWithComment": true,
+    "name": "Celo British Pound",
+    "isStableCoin": true,
+    "minimumAppVersionToSwap": "1.68.0",
+    "symbol": "cGBP",
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-british-pound"
+  },
+  {
+    "address": "0x4c35853a3b4e647fd266f4de678dcc8fec410bf6",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cZAR.png",
+    "isFeeCurrency": true,
+    "canTransferWithComment": true,
+    "name": "Celo South African Rand",
+    "isStableCoin": true,
+    "minimumAppVersionToSwap": "1.68.0",
+    "symbol": "cZAR",
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-south-african-rand"
+  },
+  {
+    "address": "0xff4ab19391af240c311c54200a492233052b6325",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cCAD.png",
+    "isFeeCurrency": true,
+    "canTransferWithComment": true,
+    "name": "Celo Canadian Dollar",
+    "isStableCoin": true,
+    "minimumAppVersionToSwap": "1.68.0",
+    "symbol": "cCAD",
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-canadian-dollar"
+  },
+  {
+    "address": "0x7175504c455076f15c04a2f90a8e352281f492f9",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cAUD.png",
+    "isFeeCurrency": true,
+    "canTransferWithComment": true,
+    "name": "Celo Australian Dollar",
+    "isStableCoin": true,
+    "minimumAppVersionToSwap": "1.68.0",
+    "symbol": "cAUD",
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-australian-dollar"
   }
 ]
