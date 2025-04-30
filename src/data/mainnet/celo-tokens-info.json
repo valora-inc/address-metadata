@@ -763,7 +763,7 @@
     "symbol": "cCOP"
   },
   {
-    "address": "0xfAeA5F3404bbA20D3cc2f8C4B0A888F55a3c7313",
+    "address": "0xfaea5f3404bba20d3cc2f8c4b0a888f55a3c7313",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cGHS.png",
     "isFeeCurrency": true,
@@ -775,7 +775,7 @@
     "infoUrl": "https://www.coingecko.com/en/coins/cghs"
   },
   {
-    "address": "0xCCF663b1fF11028f0b19058d0f7B674004a40746",
+    "address": "0xccf663b1ff11028f0b19058d0f7b674004a40746",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cGBP.png",
     "isFeeCurrency": true,
@@ -787,7 +787,7 @@
     "infoUrl": "https://www.coingecko.com/en/coins/celo-british-pound"
   },
   {
-    "address": "0x4c35853A3B4e647fD266f4de678dCc8fEC410BF6",
+    "address": "0x4c35853a3b4e647fd266f4de678dcc8fec410bf6",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cZAR.png",
     "isFeeCurrency": true,
@@ -799,7 +799,7 @@
     "infoUrl": "https://www.coingecko.com/en/coins/celo-south-african-rand"
   },
   {
-    "address": "0xff4Ab19391af240c311c54200a492233052B6325",
+    "address": "0xff4ab19391af240c311c54200a492233052b6325",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cCAD.png",
     "isFeeCurrency": true,
@@ -811,7 +811,7 @@
     "infoUrl": "https://www.coingecko.com/en/coins/celo-canadian-dollar"
   },
   {
-    "address": "0x7175504C455076F15c04A2F90a8e352281F492F9",
+    "address": "0x7175504c455076f15c04a2f90a8e352281f492f9",
     "decimals": 18,
     "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cAUD.png",
     "isFeeCurrency": true,
