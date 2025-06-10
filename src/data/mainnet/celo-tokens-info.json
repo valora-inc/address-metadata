@@ -772,6 +772,7 @@
     "isStableCoin": true,
     "minimumAppVersionToSwap": "1.68.0",
     "symbol": "cGHS",
+    "isCashInEligible": true,
     "infoUrl": "https://www.coingecko.com/en/coins/cghs"
   },
   {
