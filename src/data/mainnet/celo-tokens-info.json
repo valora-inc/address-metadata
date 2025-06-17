@@ -822,5 +822,41 @@
     "minimumAppVersionToSwap": "1.68.0",
     "symbol": "cAUD",
     "infoUrl": "https://www.coingecko.com/en/coins/celo-australian-dollar"
+  },
+  {
+    "address": "0xb55a79f398e759e43c95b979163f30ec87ee131d",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cCHF.png",
+    "isFeeCurrency": true,
+    "canTransferWithComment": true,
+    "name": "Celo Swiss Franc",
+    "isStableCoin": true,
+    "minimumAppVersionToSwap": "1.68.0",
+    "symbol": "cCHF",
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-swiss-franc"
+  },
+  {
+    "address": "0xc45ecf20f3cd864b32d9794d6f76814ae8892e20",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cJPY.png",
+    "isFeeCurrency": true,
+    "canTransferWithComment": true,
+    "name": "Celo Japanese Yen",
+    "isStableCoin": true,
+    "minimumAppVersionToSwap": "1.68.0",
+    "symbol": "cJPY",
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-japanese-yen"
+  },
+  {
+    "address": "0xe2702bd97ee33c88c8f6f92da3b733608aa76f71",
+    "decimals": 18,
+    "imageUrl": "https://raw.githubusercontent.com/valora-inc/address-metadata/main/assets/tokens/cNGN.png",
+    "isFeeCurrency": true,
+    "canTransferWithComment": true,
+    "name": "Celo Nigerian Naira",
+    "isStableCoin": true,
+    "minimumAppVersionToSwap": "1.68.0",
+    "symbol": "cNGN",
+    "infoUrl": "https://www.coingecko.com/en/coins/celo-nigerian-naira"
   }
 ]
