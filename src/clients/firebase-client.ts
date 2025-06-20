@@ -1,5 +1,4 @@
 import * as admin from 'firebase-admin'
-import { mapNestedJsonIntoPlain } from '../utils/utils'
 import { UpdateRTDBConfig } from '../types'
 
 export class FirebaseClient {
@@ -19,11 +18,6 @@ export class FirebaseClient {
   async readFromPath(path: string): Promise<any> {
     const data = await this.firebaseDb.ref(path).get()
     return data.val()
-  }
-
-  async updateToPath(path: string, data: any): Promise<void> {
-    const ref = await this.firebaseDb.ref(path)
-    await ref.update(mapNestedJsonIntoPlain(data))
   }
 
   async writeToPath(path: string, data: any): Promise<void> {
