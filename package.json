@@ -65,7 +65,7 @@
     "eslint-plugin-react-native": "^4.1.0",
     "husky": "^9.0.11",
     "image-size": "^1.1.1",
-    "jest": "^30.0.0",
+    "jest": "^30.0.3",
     "jimp": "^0.22.12",
     "prettier": "^3.5.3",
     "ts-jest": "^29.4.0",
