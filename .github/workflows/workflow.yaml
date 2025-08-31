@@ -54,7 +54,7 @@ jobs:
         with:
           project_id: celo-mobile-alfajores
           credentials_json: ${{ secrets.ALFAJORES_SERVICE_ACCOUNT_KEY }}
-      - uses: google-github-actions/setup-gcloud@26f734c2779b00b7dda794207734c511110a4368 # v3.0.0
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '20.19.4'
@@ -73,7 +73,7 @@ jobs:
         with:
           project_id: celo-mobile-alfajores
           credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
-      - uses: google-github-actions/setup-gcloud@26f734c2779b00b7dda794207734c511110a4368 # v3.0.0
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '20.19.4'
@@ -90,7 +90,7 @@ jobs:
         with:
           project_id: celo-mobile-mainnet
           credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
-      - uses: google-github-actions/setup-gcloud@26f734c2779b00b7dda794207734c511110a4368 # v3.0.0
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '20.19.4'
@@ -136,7 +136,7 @@ jobs:
         with:
           project_id: celo-mobile-alfajores
           credentials_json: ${{ secrets.ALFAJORES_SERVICE_ACCOUNT_KEY }}
-      - uses: google-github-actions/setup-gcloud@26f734c2779b00b7dda794207734c511110a4368 # v3.0.0
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
         with:
           install_components: 'beta'
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
@@ -166,7 +166,7 @@ jobs:
         with:
           project_id: celo-mobile-mainnet
           credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
-      - uses: google-github-actions/setup-gcloud@26f734c2779b00b7dda794207734c511110a4368 # v3.0.0
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
         with:
           install_components: 'beta'
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
