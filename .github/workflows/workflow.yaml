@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           check-latest: true
       - run: yarn
       - run: yarn typecheck
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           check-latest: true
       - run: yarn
       - run: yarn test:ci
@@ -57,7 +57,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           check-latest: true
       - run: yarn
       - run: yarn update:rtdb --project=testnet --database-url=https://celo-mobile-alfajores.firebaseio.com/
@@ -76,7 +76,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           check-latest: true
       - run: yarn
       - run: yarn update:rtdb --project=mainnet --database-url=https://celo-mobile-mainnet.firebaseio.com/
@@ -93,7 +93,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           check-latest: true
       - run: yarn
       - run: yarn update:bq
@@ -112,7 +112,7 @@ jobs:
           credentials_json: ${{ secrets.MAINNET_SERVICE_ACCOUNT_KEY }}
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           check-latest: true
       - run: yarn
       - id: secrets
@@ -141,7 +141,7 @@ jobs:
           install_components: 'beta'
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           check-latest: true
       - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
         with:
@@ -171,7 +171,7 @@ jobs:
           install_components: 'beta'
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
-          node-version: '20.19.5'
+          node-version: '22.20.0'
           check-latest: true
       - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
         with:
